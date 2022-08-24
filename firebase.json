@@ -1,0 +1,941 @@
+{
+  "hosting": {
+    "public": "build",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "redirects": [
+      {
+        "source": "/maruti-vitara-brezza/maruti-vitara-brezza-zxi.html",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/about.php",
+        "destination": "/about-maruti-suzuki-dealers",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift/maruti-swift-vxi.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift/maruti-swift-vxi.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-s-presso/Maruti-Suzuki-Spresso-Front-Left-Side-View.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-Left-Side.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-swift/Colors/Maruti-Suzuki-Swift-Metallic-Silky-Silver.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/swift/colors/Maruti-Suzuki-Swift-Metallic-Silky-Silver.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift/maruti-swift-zxi.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza/maruti-vitara-brezza-vdi.html",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-dzire/Colors/Maruti-Suzuki-Dzire-SilkySilver.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-dzire/DzireSilkySilvermerged-v6.webp",
+        "type": 301
+      },
+      {
+        "source": "/driving-school",
+        "destination": "/maruti-driving-school-locations",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-swift/Colors/Maruti-Suzuki-Swift-Pearl-Metallic-Midnight-Blue.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/swift/colors/Maruti-Suzuki-Swift-Pearl-Metallic-Midnight-Blue.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-x-on-road-price-in-hyderabad",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-alto-800/Maruti-Suzuki-Alto-Seats.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Seats.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-alto-800/Maruti-Suzuki-Alto-Seats.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Seats.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-x.php",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/S-Presso-Broucher.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_S-Presso_brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-on-road-price-in-hyderabad",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/outlet/driving.html",
+        "destination": "/maruti-suzuki-driving-school",
+        "type": 301
+      },
+      {
+        "source": "/outlet/workshop-malakpet-hyderabad.html",
+        "destination": "/maruti-suzuki-car-service-center",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-eeco/colors.html",
+        "destination": "/maruti-eeco-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza-on-road-price-in-hyderabad",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-eeco/maruti-eeco-5-seater-ac.html",
+        "destination": "/maruti-eeco-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza.php",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-suzuki-Spresso.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-s-presso/s-presso-banner.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-celerio-x/Colors/Maruti-Suzuki-CelerioX-Torque-Blue.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/colors/Maruti-Suzuki-Clerio-Speedy-Blue.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio/maruti-celerio-zxi.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/pdf/Saboo_RKS_Dzire_Product_Brouchure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Dzire_Brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/img/new-maruti-celerio/Maruti-Suzuki-Celerio-grille.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/Maruti-Suzuki-Celerio-grille.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift.php",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/contact-us.html",
+        "destination": "/contact-maruti-suzuki-showroom",
+        "type": 301
+      },
+      {
+        "source": "/maruti-suzuki-car-finance-services.php",
+        "destination": "/maruti-suzuki-car-finance-services",
+        "type": 301
+      },
+      {
+        "source": "/maruti-suzuki-images",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio/colors.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/new-maruti-celerio/colors/Maruti-Suzuki-Clerio-Fire-Red.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/colors/Maruti-Suzuki-Clerio-Fire-Red.webp",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-dzire-tour-s-on-road-price-in-hyderabad",
+        "destination": "/maruti-dzire-tour-s-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-wagnor-tour-h3-on-road-price-in-hyderabad",
+        "destination": "/maruti-wagnor-tour-h3-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-dzire/Colors/Maruti-Suzuki-Dzire-GallantRed.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-dzire/DzireGallantRedmerged-v1.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-dzire/Maruti-Suzuki-Dzire-Dashboard.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/maruti-dzire/Maruti-Suzuki-Dzire-Steering-Wheel.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift/maruti-swift-vdi.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-ertiga-cng-on-road-price-in-hyderabad",
+        "destination": "/maruti-ertiga-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-eeco-tour-v-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-eeco-tour-v-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/outlet/workshop-uppal-hyderabad.html",
+        "destination": "/maruti-suzuki-car-service-center",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-accessories/Saboo-RKS-Arena-Maruti-Suzuki-genuine-accessories-seat-covers.webp",
+        "destination": "/maruti-genuine-accessories",
+        "type": 301
+      },
+      {
+        "source": "/pdf/Saboo_RKS_Maruti-Suzuki-Brezza-Brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Brezza2022_Hot_Techy_SUV_Broucher.pdf",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800/maruti-alto-800-vxi-plus.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/Saboo-Maruti-Suzuki-Insurance-Banner.webp",
+        "destination": "https://saboomaruti.in/static/media/Saboo-Maruti-Suzuki-Insurance-Banner.16d04821edcdedf7b5fe.webp",
+        "type": 301
+      },
+      {
+        "source": "/true-value.php",
+        "destination": "/true-value",
+        "type": 301
+      },
+      {
+        "source": "/driving-school.html",
+        "destination": "/maruti-suzuki-driving-school",
+        "type": 301
+      },
+      {
+        "source": "/outlet.html",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-ertiga/specification.html",
+        "destination": "/maruti-ertiga-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-s-presso.html",
+        "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-car-terms-and-conditions.php",
+        "destination": "/maruti-car-terms-and-conditions",
+        "type": 301
+      },
+      {
+        "source": "/img/new-maruti-celerio/colors/Maruti-Suzuki-Clerio-white.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/colors/Maruti-Suzuki-Clerio-white.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-suzuki-swift.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Maruti-New-swift/Saboo-RKS-Maurti-Suzuki-Arena-New-Swift.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-eeco/colors/Maruti-Suzuki-Ecco-Superior-White.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Ecco-Superior-White.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/new-maruti-celerio/colors/Maruti-Suzuki-Clerio-GLISTENING_GREY.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/colors/Maruti-Suzuki-Clerio-GLISTENING_GREY.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/og-tags/celerio.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-new-celerio/Maruti-Suzuki-Celerio-January18.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/Maruti-New-swift/maruti-suzuki-new-swift-head-lamps.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/swift/maruti-suzuki-new-swift-head-lamps.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Dzire_Product_brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Dzire_Brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Highest-Spares-Sales-Award-Saboo-RKS.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza/maruti-vitara-brezza-vxi.html",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-swift-dzire-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-swift-dzire-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-wagon-r/colors/Maruti-Suzuki-WagonR-SUPERIOR-WHITE.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/wagonr/colors/SOLID-WHITE.webp",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio-x/specification.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/Maruti-New-swift/maruti-suzuki-new-swift-rear-left-side-view.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/swift/maruti-suzuki-new-swift-rear-left-side-view.webp",
+        "type": 301
+      },
+      {
+        "source": "/contact-us.php",
+        "destination": "/contact-maruti-suzuki-showroom",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-s-presso/colors/Maruti-Suzuki-Spresso-White.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/colors/Maruti-Suzuki-Spresso-Silver.webp",
+        "type": 301
+      },
+      {
+        "source": "/gallery.php",
+        "destination": "/blog",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-swift.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-eeco.html",
+        "destination": "/maruti-eeco-on-road-price-in-hyderabad",
+        "type": 301
+      },
+
+      {
+        "source": "/cng/maruti-celerio-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-celerio-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio/pictures.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800/maruti-alto-800-lxi-opt.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/workshops/Maruti-Suzuki-Service-Center-Uppal.webp",
+        "destination": "/maruti-suzuki-car-service-center",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-x",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio/price-in-secunderabad.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/contact-us",
+        "destination": "/contact-maruti-suzuki-showroom",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio-x/colors.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-wagon-r/colors.html",
+        "destination": "/maruti-wagon-r-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/outlet/maruti-workshop-in-hyderabad.html",
+        "destination": "/maruti-suzuki-car-service-center",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-dzire/colors.html",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-dzire/specification.html",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-eeco/pictures.html",
+        "destination": "/maruti-eeco-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Alto_Brand_Brochure.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Alto_Brand_Brochure.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio-x/pictures.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Service-Quality-Award-Saboo-RKS.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/awards/Maruti-Suzuki-Best-Performance-Training-Status-Service-Saboo-RKS.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-ertiga/Maruti-Suzuki-Ertiga-Seats.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/Airbags.jpg",
+        "type": 301
+      },
+      {
+        "source": "/img/og-tags/alto.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/alto-banner.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/Saboo-Maruti-Suzuki-Outlet.webp",
+        "destination": "https://saboomaruti.in/static/media/Saboo-Maruti-Suzuki-Outlet.97bdf4603a998a58c341.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Achievers-Club-2013-Award-Saboo-RKS.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-eeco/colors/Maruti-Suzuki-Eeco-Silky-Silver.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Silky-Silver.webp",
+        "type": 301
+      },
+      {
+        "source": "/outlet",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Vitara-Brezza_Brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Brezza2022_Hot_Techy_SUV_Broucher.pdf",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-All-India-Skill-Competition-Award-Saboo-RKS.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Excellence-In-Service-Saboo-RKS.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/awards/Maruti-Suzuki-Best-Performance-Training-Status-Service-Saboo-RKS.webp",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-swift/colors.html",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-on-road-price-in-hyderabad.php",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/gallery.html",
+        "destination": "/blog",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Recognized-as-2nd-Runner-Up-in-Efficient-Warranty-Handling-Systems-at-Maruti-Suzuki-Dealer-Conference-Bangkok-Thailand-2009.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-s-presso/colors/Maruti-Suzuki-Spresso-Red.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/colors/Maruti-Suzuki-Spresso-Red.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Best-Performance-Winner-RKS-Motor.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/awards/Maruti-Suzuki-Best-Performance-Training-Status-Service-Saboo-RKS.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/og-tags/wagonr.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/newwagonr_banner.webp.png",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Alloy-Wheels-Champion-RKS-Motor.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-wagon-r/Maruti-Suzuki-WagonR-Headlight.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/wagonr/Grill.png",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/WagonR_Brand_Brochure.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_WagonR_Brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/images/maruti-suzuki-dzire.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-dzire/Maruti-Suzuki-Breeza-Taillight-SlideShow.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/Maruti-New-swift/maruti-suzuki-new-swift-front-grill.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/swift/maruti-suzuki-new-swift-front-grill.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-AF-STN-Begumpet.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Best-Work-Shop-Award.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/awards/Maruti-Suzuki-Regional-Dealer-Award-RKS-Motor.webp",
+        "destination": "/awards",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-eeco/Maruti-Suzuki-Eeco-Front-Left-Side.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-wagonr-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-wagonr-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-wagon-r/maruti-wagon-r-lxi-opt.html",
+        "destination": "/maruti-wagon-r-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/gallery/showrooms/Kushaiguda-Maruti-Suzuki-Location.webp",
+        "destination": "https://saboomaruti.in/static/media/Saboo-Maruti-Suzuki-Outlet.97bdf4603a998a58c341.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800/maruti-alto-800-vxi.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-vitara-brezza/Colors/Maruti-Suzuki-Vitaara-Brezza-Orange.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/brezza/exterior_web_03.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift-car-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-driving-school-locations.php",
+        "destination": "/maruti-suzuki-driving-school",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio-x-on-road-price-in-hyderabad.php",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-ertiga/colors.html",
+        "destination": "/maruti-ertiga-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-wagon-r/maruti-wagon-r-vxi-opt-1.2.html",
+        "destination": "/maruti-wagon-r-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/contact-maruti-suzuki-showroom.php",
+        "destination": "/contact-maruti-suzuki-showroom",
+        "type": 301
+      },
+      {
+        "source": "/outlet/maruti-showroom-in-hyderabad.html",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-eeco-tour-v-on-road-price-in-hyderabad",
+        "destination": "/maruti-eeco-tour-v-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800/maruti-alto-800-lxi.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-celerio-cng-on-road-price-in-hyderabad",
+        "destination": "/maruti-celerio-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/book-service.html",
+        "destination": "/maruti-car-service-centers-near-me",
+        "type": 301
+      },
+      {
+        "source": "/insurance.html",
+        "destination": "/maruti-suzuki-car-insurance-renewal",
+        "type": 301
+      },
+      {
+        "source": "/subscribe.php",
+        "destination": "/subscribe",
+        "type": 301
+      },
+      {
+        "source": "/index.php",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-eeco-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-eeco-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-s-presso-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-s-presso-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-celerio",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-alto-800.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/outlet/workshop-tadbund-secunderabad.html",
+        "destination": "/maruti-suzuki-car-service-center",
+        "type": 301
+      },
+      {
+        "source": "/driving-school.php",
+        "destination": "/maruti-driving-school-locations",
+        "type": 301
+      },
+      {
+        "source": "/maruti-wagon-r.php",
+        "destination": "/maruti-wagon-r-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-dzire.html",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+       {
+        "source": "/new-cars/maruti-vitara-brezza.html",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift-dzire-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-alto-tour-h1-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-alto-tour-h1-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/service-center.php",
+        "destination": "/maruti-car-service-centers-near-me",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Eeco_Brand_brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf",
+        "type": 301
+      },
+      {
+        "source": "/maruti-car-service-centers-in-hyderabad.php",
+        "destination": "/maruti-car-service-centers-near-me",
+        "type": 301
+      },
+      {
+        "source": "/service-center",
+        "destination": "/maruti-car-service-centers-near-me",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-s-presso-cng-on-road-price-in-hyderabad",
+        "destination": "/maruti-s-presso-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/about-us.html",
+        "destination": "/about-maruti-suzuki-dealers",
+        "type": 301
+      },
+      {
+        "source": "/outlet.php",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/maruti-s-presso-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-suzuki-car-service-center.php",
+        "destination": "/maruti-car-service-centers-near-me",
+        "type": 301
+      },
+      {
+        "source": "/showrooms.php",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/tour/maruti-ertiga-tour-m-on-road-price-in-hyderabad",
+        "destination": "/maruti-ertiga-tour-m-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-ertiga-cng-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-ertiga-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/about",
+        "destination": "/about-maruti-suzuki-dealers",
+        "type": 301
+      },
+      {
+        "source": "/outlets.php",
+        "destination": "/showrooms",
+        "type": 301
+      },
+      {
+        "source": "/maruti-ertiga-on-road-price-in-hyderabad.php",
+        "destination": "/maruti-ertiga-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/about-maruti-suzuki-dealers.php",
+        "destination": "/about-maruti-suzuki-dealers",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-alto-800-cng-on-road-price-in-hyderabad",
+        "destination": "/maruti-alto-800-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-genuine-accessories.php",
+        "destination": "/maruti-genuine-accessories",
+        "type": 301
+      },
+      {
+        "source": "/maruti-dzire.php",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-suzuki-car-offers-page.php",
+        "destination": "/maruti-suzuki-car-offers-page",
+        "type": 301
+      },
+      {
+        "source": "/maruti-suzuki-car-offers-page.php",
+        "destination": "/maruti-suzuki-car-offers-page",
+        "type": 301
+      },
+      {
+        "source": "/cng/maruti-eeco-cng-on-road-price-in-hyderabad",
+        "destination": "/maruti-eeco-cng-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/corporate.php",
+        "destination": "/corporate",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-dzire/Colors/Maruti-Suzuki-Dzire-White.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-dzire/DzireWhitemerged-v4.webp",
+        "type": 301
+      },
+      {
+        "source": "/new-cars.html",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/Celerio-x_brand_brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_All_New_Celerio.pdf",
+        "type": 301
+      },
+      {
+        "source": "/maruti-ertiga.php",
+        "destination": "/maruti-ertiga-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/finance.html",
+        "destination": "/maruti-suzuki-car-finance-services",
+        "type": 301
+      },
+      {
+        "source": "/new-cars/maruti-celerio-x.html",
+        "destination": "/the-all-new-celerio",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-alto-800/Colors/Maruti-Suzuki-Alto800-Silky-Silver.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Silky-Silver.webp",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800/maruti-alto-800-lxi-bsiv.html",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/img/maruti-vitara-brezza/Colors/Maruti-Suzuki-Vitaara-Brezza-Silver.webp",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/brezza/colors/splendid_silver.webp",
+        "type": 301
+      },
+      {
+        "source": "/img/pdfs/All_New_Celerio.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_All_New_Celerio.pdf",
+        "type": 301
+      },
+      {
+        "source": "/maruti-s-presso/maruti-s-presso-vxi-opt.html",
+        "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-vitara-brezza/maruti-vitara-brezza-zdi.html",
+        "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-s-presso/maruti-s-presso-lxi-opt.html",
+        "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
+        "type": 301
+      }
+      
+    ],  
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

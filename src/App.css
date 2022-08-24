@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Sora', sans-serif;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 426px) {
+    .desktop_slider{
+        display: none;
+    }
+}
+
+@media (min-width: 426px) {
+    .mobile_slider{
+        display: none;
+    }
+    .desktop_slider{
+        display: block;
+    }
+}
+
+
+
+.service_header{
+    display: none;
+}
+.service_link:hover{
+    color: red;
+}
+.service_link:hover +  .service_header{
+    display: block;
+    z-index: 100;
+}
+
+.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
+    height: 30px !important;
+    width: 30px !important;
+    background-color: #293e91;
+    border-radius: 100%;
+}
