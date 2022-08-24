@@ -6,7 +6,7 @@ import { Tab } from "@headlessui/react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
 import { toast } from "react-toastify";
-import axios from "axios";
+// import axios from "axios";
 import { CgSpinner } from "react-icons/cg";
 
 function CelerioCNG() {
@@ -62,7 +62,7 @@ function CelerioCNG() {
             </p>
 
             <p className="text-s">
-              The All-New Celerio now comes equipped with the revolutionary
+              The All-New Celerio CNG now comes equipped with the revolutionary
               S-CNG Technology by Maruti Suzuki. The stylish hatchback is
               powered by a K10C CNG engine which makes 41.7 kW @5300 rpm of
               power and 82.1 Nm @ 3400 rpm of torque, ensuring a lively and
