@@ -93,7 +93,7 @@ const VehicleProducts = () => {
 
         <div className="sm:col-span-2">
           <img
-            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/new-alto-k10-grid.png"
+            src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/new-alto-k10-grid.webp"
             className="mx-auto product_image h-full w-full"
             alt="banner"
           />

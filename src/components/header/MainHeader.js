@@ -162,11 +162,23 @@ function MainHeader() {
               Vehicles <ChevronDownIcon className="h-5 w-5" />
             </a>
             <ul className="sub-menu">
-              {navigation.vehicles.map((vehicle, index) => (
+              {/* {navigation.vehicles.map((vehicle, index) => (
                 <li className="sub-item" key={index}>
                   <Link to={vehicle.to}>{vehicle.name}</Link>
                 </li>
-              ))}
+              ))} */}
+              <li className="sub-item more arena">
+                <a href="javascript:void(0)" className="more-btn">
+                  ARENA
+                </a>
+                <ul className="more-menu">
+                  {navigation.vehicles.map((vehicle, index) => (
+                    <li className="more-item" key={index}>
+                      <Link to={vehicle.to}>{vehicle.name}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
               <li className="sub-item more cng">
                 <a href="javascript:void(0)" className="more-btn">
                   S-CNG

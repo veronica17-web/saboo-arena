@@ -63,7 +63,7 @@ function Wagonr() {
         <meta property="twitter:image" content="img/og-tags/wagonr.webp" />
       </Helmet>
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/newwagonr_banner.webp.png"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/newwagonr_banner.webp"
         className="max-w-full w-full lg:mt-16"
         alt="1"
       />
@@ -73,7 +73,7 @@ function Wagonr() {
         <Table />
       </div>
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/new_WagonR_Brochure.webp.png"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/new_WagonR_Brochure.webp"
         alt="brochure"
         className="w-full"
       />

@@ -20,7 +20,7 @@
   header {
     z-index: 20;
     position: absolute;
-    top: 48px;
+    top: px;
     left: 0;
     width: 100%;
     display: flex;
@@ -62,7 +62,7 @@
     background: #23252b;
     /* background: linear-gradient(90deg, #293e91 33%, rgb(0 212 255) 100%); */
     top: 74px;
-    line-height: 40px;
+    line-height: 46px;
     list-style: none;
     border-radius: 0 0 8px 8px;
     box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
@@ -108,13 +108,26 @@
         rgb(0 212 255 / 70%) 100%) !important;
   }
 
+  /* arena */
+  .menu-item .sub-menu .arena:hover {
+    background: linear-gradient(90deg,
+        #121aad 33%,
+        rgb(0 212 255 / 70%) 100%) !important;
+  }
+
+  .menu-item .sub-menu .tour:hover {
+    background: linear-gradient(90deg,
+        #121aad 33%,
+        rgb(0 212 255 / 70%) 100%) !important;
+  }
+
   .menu-item .sub-menu .sub-item:last-child:hover {
     border-radius: 0 0 8px 8px;
   }
 
   .more .more-menu {
     position: absolute;
-    top: -239px;
+    top: 0px;
     left: 101%;
     background: #23252b;
     list-style: none;
@@ -142,6 +155,8 @@
   .more .more-menu .more-item:hover {
     background: #4080ef;
   }
+
+
 }
 
 /* min width closes */
