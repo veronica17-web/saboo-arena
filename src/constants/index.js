@@ -175,7 +175,7 @@ export const products = [
     name: "S-Presso",
     price: "4.25 - 5.99 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/spresso.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/maruti-suzuki-Spresso.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/s-presso_banner_new+edit.png",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_S-Presso_brochure.pdf",
     explore: "/maruti-s-presso-on-road-price-in-hyderabad",

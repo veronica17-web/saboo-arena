@@ -9,7 +9,7 @@ const blogsData = [
   },
   {
     id: 2,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/2.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/front-left-side-47.jpg",
     title: "MONEYCONTROL NEWS",
     subTitle: "2021 Maruti Suzuki Swift review: Should you buy it?",
     href: "https://www.moneycontrol.com/news/technology/auto/2021-maruti-suzuki-swift-review-should-you-buy-it-6681491.html",
@@ -19,15 +19,17 @@ const blogsData = [
     id: 3,
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/3.webp",
     title: "News Telanganatoday",
-    subTitle: "Md Mahmood Ali, Vinay Saboo, CMD - Saboo RKS, Tanay Saboo, NK Patel, directors, Saboo RKS Motor, and Mozzam, TSM, Maruti Suzuki India.",
-    href: "/",
+    subTitle:
+      "Md Mahmood Ali, Vinay Saboo, CMD - Saboo RKS, Tanay Saboo, NK Patel, directors, Saboo RKS Motor, and Mozzam, TSM, Maruti Suzuki India.",
+    href: "#",
     desc: " Maruti Suzuki’s stylish mini SUV S-Presso launched at Saboo RKS. The new vehicle S-Presso was launched at Saboo RKS Somajiguda",
   },
   {
     id: 4,
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/4.webp",
     title: "MONEYCONTROL NEWS",
-    subTitle: "Maruti Suzuki India to hike prices of cars again from April 2021",
+    subTitle:
+      "Maruti Suzuki India to hike prices of cars again from April 2021",
     href: "https://www.moneycontrol.com/news/automobile/maruti-suzuki-india-to-hike-prices-of-cars-again-from-april-2021-6678041.html",
     desc: "To deal with a rise in various input costs, India's leading automobile manufacturer Maruti Suzuki India Ltd will increase prices for different car models from April.",
   },
@@ -35,7 +37,8 @@ const blogsData = [
     id: 5,
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/5.webp",
     title: "Facebook",
-    subTitle: "#MarutiSuzuki #Bs-6 #MarutiPetrolCars #SabooMaruti #ThinkMarutiThinkSaboo",
+    subTitle:
+      "#MarutiSuzuki #Bs-6 #MarutiPetrolCars #SabooMaruti #ThinkMarutiThinkSaboo",
     href: "https://www.facebook.com/saboomaruti/photos/a.735425553239179/3193521747429535/?type=3&theater",
     desc: "Schoose to be the best, explore our driving school, with customised driving lessons from certified and highly trained instructors. Make the right decision.",
   },
@@ -51,7 +54,8 @@ const blogsData = [
     id: 7,
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/blogScreen/7.webp",
     title: "youtube",
-    subTitle: "Saboo RKS | Fully Sanitized Vehicle I Home Delivery | We are Safe and Ready",
+    subTitle:
+      "Saboo RKS | Fully Sanitized Vehicle I Home Delivery | We are Safe and Ready",
     href: "https://www.youtube.com/watch?v=0KCUR1BToDQ",
     desc: "We remain committed to serving our customers while keeping the health and safety front and center. As always, we have and will continue to enable customers to transact from the comfort and safety of their homes. ",
   },

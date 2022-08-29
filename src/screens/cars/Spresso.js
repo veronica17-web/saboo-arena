@@ -63,7 +63,7 @@ function Spresso() {
       </Helmet>
       <Header />
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-s-presso/s-presso-banner.webp"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/new-spresso-banner.webp"
         className="max-w-full w-full lg:mt-16"
         alt="1"
       />
@@ -73,7 +73,7 @@ function Spresso() {
         <Table />
       </div>
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-s-presso/s-presso-broucher.webp"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/new-spresso-brochure.webp"
         alt="brochure"
         className="w-full"
       />
@@ -172,7 +172,7 @@ const CarsSlider = () => {
             Our professional and well-trained staff is ready to assist you
           </p>
           <a
-            href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_S-Presso_brochure.pdf"
+            href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Spresso_brochure_2022.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase"

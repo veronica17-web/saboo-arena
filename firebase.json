@@ -724,7 +724,7 @@
         "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
         "type": 301
       },
-       {
+      {
         "source": "/new-cars/maruti-vitara-brezza.html",
         "destination": "/maruti-new-brezza-on-road-price-in-hyderabad",
         "type": 301
@@ -928,9 +928,23 @@
         "source": "/maruti-s-presso/maruti-s-presso-lxi-opt.html",
         "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
         "type": 301
+      },
+      {
+        "source": "/pdf/Saboo_RKS_Celerio_Brand_Brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_All_New_Celerio.pdf",
+        "type": 301
+      },
+      {
+        "source": "/pdf/Saboo_RKS_S-Presso_product_brochure.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Spresso_brochure_2022.pdf",
+        "type": 301
+      },
+      {
+        "source": "/pdf/Saboo_RKS_Eeco_Passenger_2021.pdf",
+        "destination": "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf",
+        "type": 301
       }
-      
-    ],  
+    ],
     "rewrites": [
       {
         "source": "**",

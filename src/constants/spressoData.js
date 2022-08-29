@@ -1,107 +1,109 @@
 const spressoSliders = [
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-Left-Side-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/feel+a+live-web.png",
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-Left-Side-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/feel+a+live-web.png",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-Left-Side.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_01.webp",
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-Left-Side.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_01.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_02.webp",
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Front-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_02.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-Left-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_03.webp",
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-Left-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_03.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_04.webp",
+    thumbnail:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_04.webp",
+  },
+  {
+    original:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_05.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_5.webp",
   },
   {
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Headlight-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_01.webp",
 
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Headlight-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_01.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Headlight.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_02.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Headlight.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_02.webp",
   },
   {
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Side-View-Left.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_03.webp",
 
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Side-View-Left.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_03.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Steering-Wheel.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_04.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Steering-Wheel.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_04.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Right-Corner-Front-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_05.webp",
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Right-Corner-Front-View.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/exterior_web_05.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Steering-Wheel.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_01.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Steering-Wheel.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_01.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Seats.webp",
-    thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Seats.webp",
-  },
-  {
-    original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-View-Mirror-Courtesy-Lamps.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_02.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Rear-View-Mirror-Courtesy-Lamps.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_02.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Ac-Controls.webp",
-    thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Ac-Controls.webp",
-  },
-  {
-    original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Airbags.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_03.webp",
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Airbags.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_03.webp",
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Dashboard.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_04.webp",
+
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/spresso/Maruti-Suzuki-Spresso-Dashboard.webp",
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_04.webp",
+  },
+  {
+    original:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_05.webp",
+
+    thumbnail:
+      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/Interior_web_05.webp",
   },
 ];
 
