@@ -262,7 +262,7 @@ function ErtigaCNG() {
             <p className="font-bold text-green-900">
               <div className="object-fill">
                 <img
-                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/ertiga/Ertiga.jpg"
+                  src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/ertiga/Ertiga.webp"
                   alt="alto-logo"
                 />
               </div>{" "}

@@ -47,7 +47,7 @@ function EecoCNG() {
     <>
       <Header />
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/eeco/Eeco_CNG_Banner.jpg"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/Eeco_CNG_Banner.webp"
         className="max-w-full w-full lg:mt-16"
         alt="1"
       />

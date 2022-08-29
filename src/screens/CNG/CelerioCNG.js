@@ -48,7 +48,7 @@ function CelerioCNG() {
     <>
       <Header />
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/celerio/Celerio_Web-Banner.png"
+        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/Celerio_Web-Banner.webp"
         className="max-w-full w-full lg:mt-16"
         alt="1"
       />
