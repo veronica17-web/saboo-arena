@@ -51,7 +51,7 @@ function About() {
       />
       <img
         src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/about/about.webp"
-        className=" w-full h-[250px] mb-8 container mx-auto"
+        className=" w-full mb-8 container mx-auto"
         alt="Maruti-Suzuki-Nexa_Lumbini"
       />
       <div className="container mx-auto px-5">

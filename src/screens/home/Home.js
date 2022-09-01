@@ -69,7 +69,7 @@ function Home() {
       <MobileSlider />
       <CarEnquiry />
       <Cars />
-      <About />
+      {/* <About /> */}
       <Accomplishments />
       <Testimonials />
     </>
