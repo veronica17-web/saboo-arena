@@ -270,6 +270,9 @@ function Contact() {
                             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                           >
                             <option>Select Model</option>
+                            <option value="Maruti Alto K10">
+                              Maruti Alto K10
+                            </option>
                             <option value="Maruti Alto 800">Maruti Alto</option>
                             <option value="Maruti Wagon R">
                               Maruti Wagon R
@@ -283,9 +286,7 @@ function Contact() {
                               Maruti S-Presso
                             </option>
                             <option value="Maruti Ertiga">Maruti Ertiga</option>
-                            <option value="Maruti Brezza">
-                              Maruti Brezza
-                            </option>
+                            <option value="Maruti Brezza">Maruti Brezza</option>
                             <option value="Maruti Eeco">Maruti Eeco</option>
                           </select>
                         </div>
@@ -543,6 +544,9 @@ function Contact() {
                             className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                           >
                             <option>Select Model</option>
+                            <option value="Maruti Alto K10">
+                              Maruti Alto K10
+                            </option>
                             <option value="Maruti Alto 800">Maruti Alto</option>
                             <option value="Maruti Wagon R">
                               Maruti Wagon R
@@ -556,9 +560,7 @@ function Contact() {
                               Maruti S-Presso
                             </option>
                             <option value="Maruti Ertiga">Maruti Ertiga</option>
-                            <option value="Maruti Brezza">
-                              Maruti Brezza
-                            </option>
+                            <option value="Maruti Brezza">Maruti Brezza</option>
                             <option value="Maruti Eeco">Maruti Eeco</option>
                           </select>
                         </div>

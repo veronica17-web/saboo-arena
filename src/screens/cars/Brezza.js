@@ -174,14 +174,25 @@ const CarsSlider = () => {
         <p className="mt-2 mb-5 font-semibold">
           Our professional and well-trained staff is ready to assist you
         </p>
-        <a
-          href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Brezza2022_Hot_Techy_SUV_Broucher.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase"
-        >
-          View Brochure
-        </a>
+        <div className="flex items-center space-x-2 mt-5 mb-1">
+          <a
+            href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Brezza2022_Hot_Techy_SUV_Broucher.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase"
+          >
+            View Brochure
+          </a>
+          <a
+            href="/compare-cars"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm"
+          >
+            Compare
+          </a>
+        </div>
+
         <Transition.Root show={open} as={Fragment}>
           <Dialog
             as="div"

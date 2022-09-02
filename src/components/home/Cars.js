@@ -70,7 +70,7 @@ const VehicleProducts = () => {
                     <p className="font-light">ex-showroom</p>
                   </div>
                 </div>
-                <div className="flex items-center justify-center space-x-2 p-1.5">
+                <div className="flex items-center justify-center space-x-2 p-2.5 mb-2">
                   <Link
                     to="/compare-cars"
                     className="bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center"
@@ -94,7 +94,7 @@ const VehicleProducts = () => {
         <div className="sm:col-span-2">
           <img
             src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/new-alto-k10-grid.webp"
-            className="mx-auto product_image h-full w-full"
+            className="mx-auto product_image h-[400px] w-full"
             alt="banner"
           />
         </div>

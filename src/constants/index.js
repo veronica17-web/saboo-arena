@@ -523,15 +523,15 @@ export const workshop = [
 
 export const school = [
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.377274869404!2d78.46788691435336!3d17.393672957203172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb976366ed87d9%3A0x7cb0979b572d6610!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604388473279!5m2!1sen!2sin",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15229.437285566019!2d78.4705114!3d17.3945354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b74d02486adeb57!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098458836!5m2!1sen!2sin",
     address: "Maruti Suzuki Driving School (RKS Motor, Nampally, Hyderabad)",
   },
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.278105801397!2d78.55207721487648!3d17.39843628807201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x533d4356086d5aba!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Uppal%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386877556!5m2!1sen!2sin",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15231.280819816904!2d78.5101313!3d17.3723825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xafee645695b27b85!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098587896!5m2!1sen!2sin",
     address: "Maruti Suzuki Driving School (RKS Motor, Malakpet, Hyderabad)",
   },
   {
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.161882759987!2d78.48441831487719!3d17.451964288039893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b782fa83589a15!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Tadbund%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386981332!5m2!1sen!2sin",
+    map: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.855376657519!2d78.5706205!3d17.4734051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c675a1b86451b98!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(Driving%20School%2C%20Kushaiguda%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1662098683076!5m2!1sen!2sin",
     address: "Maruti Suzuki Driving School (RKS Motor, Kushaiguda, Hyderabad)",
   },
 ];

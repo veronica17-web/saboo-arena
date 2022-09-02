@@ -169,17 +169,27 @@ const CarsSlider = () => {
           <BsCalendarCheck className="mr-1" />
           Delivery from Saboo RKS, 7-30 days
         </p> */}
-          <p className="mt-2 font-semibold mb-5">
+          <p className="mt-2 mb-5">
             Our professional and well-trained staff is ready to assist you
           </p>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_New_Swift_brouchre.pdf"
-            className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase mt-5"
-          >
-            View Brochure
-          </a>
+          <div className="flex items-center space-x-2 mt-5 mb-1">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_New_Swift_brouchre.pdf"
+              className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase"
+            >
+              View Brochure
+            </a>
+            <a
+              href="/compare-cars"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm"
+            >
+              Compare
+            </a>
+          </div>
         </div>
       </div>
       <Transition.Root show={open} as={Fragment}>
