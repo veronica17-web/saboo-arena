@@ -1,5 +1,9 @@
 export const sliders = [
   {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-banner-2022.webp",
+    alt: "september-banner",
+  },
+  {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-web-banner.webp",
     alt: "new alto k10",
   },
@@ -8,10 +12,6 @@ export const sliders = [
     alt: "new swift cng",
   },
 
-  {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/saboo-maruti-august-banner.webp",
-    alt: "new august banner",
-  },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Brezza2022_June30_banner.webp",
     alt: "Maruti Vitara Brezza",
@@ -32,17 +32,18 @@ export const sliders = [
 
 export const mobileSliders = [
   {
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-mobile-banner-2022.webp",
+    alt: "september-banner",
+  },
+  {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-mobile-banner.webp",
-    alt: "swift-cng",
+    alt: "alto-k10",
   },
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/swift-cng-mobile-banner.png",
     alt: "swift-cng",
   },
-  {
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/saboo-maruti-august-mobile.webp",
-    alt: "banner-1",
-  },
+
   {
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp",
     alt: "banner-2",

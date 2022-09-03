@@ -18,20 +18,20 @@ import { Helmet } from "react-helmet";
 const offer_products = [
   {
     name: "Alto",
-    price: "23100",
+    price: "20000",
     logo: "Alto",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-alto-2021.webp",
     explore: "/maruti-alto-800-on-road-price-in-hyderabad",
   },
   {
     name: "WagonR ",
-    price: "58100",
+    price: "30000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/New_WagonR2022.webp",
     explore: "/maruti-wagon-r-on-road-price-in-hyderabad",
   },
   {
     name: "S-Presso",
-    price: "60100",
+    price: "35000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-Spresso.webp",
     explore: "/maruti-s-presso-on-road-price-in-hyderabad",
   },
@@ -43,25 +43,25 @@ const offer_products = [
   // },
   {
     name: "Dzire",
-    price: "34100",
+    price: "30000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-dzire.webp",
     explore: "/maruti-swift-dzire-on-road-price-in-hyderabad",
   },
   {
     name: "Swift",
-    price: "45100",
+    price: "35000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-swift.webp",
     explore: "/maruti-swift-car-on-road-price-in-hyderabad",
   },
   {
     name: "Celerio",
-    price: "70100",
+    price: "35000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/Maruti-Suzuki-Celerio-Front-Left-Side.webp",
     explore: "/the-all-new-celerio",
   },
   {
     name: "EECO",
-    price: "30100",
+    price: "20000",
     img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-eeco.webp",
     explore: "/maruti-eeco-on-road-price-in-hyderabad",
   },
@@ -75,7 +75,7 @@ const offer_products = [
   // {
   //   name: "Tour H1",
   //   price: "28000",
-  
+
   //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/TOUR/alto-tour-h1/Alto800_car.png",
   //   explore: "/maruti-alto-tour-h1-on-road-price-in-hyderabad",
   // },

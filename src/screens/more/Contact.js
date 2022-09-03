@@ -148,7 +148,7 @@ function Contact() {
                 <Tab.Panel>
                   <form
                     action="https://crm.zoho.in/crm/WebToLeadForm"
-                    name="WebToLeads54158000009570156"
+                    name="WebToLeads54158000001051349"
                     method="POST"
                     acceptCharset="UTF-8"
                   >
@@ -198,13 +198,15 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
                             type="text"
-                            id="Phone"
-                            minLength="10"
                             maxLength="10"
+                            minLength="10"
+                            required
+                            id="Phone"
+                            name="Phone"
                             value={phone}
                             onChange={(e) =>
                               setPhone(
-                                e.target.value.replace(/[^1-9]/g, "") &&
+                                e.target.value.replace(/[^1-9 ]/g, "") &&
                                   e.target.value.replace(/ /g, "")
                               )
                             }
@@ -371,7 +373,7 @@ function Contact() {
                 <Tab.Panel>
                   <form
                     action="https://crm.zoho.in/crm/WebToLeadForm"
-                    name="WebToLeads54158000009570156"
+                    name="WebToLeads54158000001051349"
                     method="POST"
                     acceptCharset="UTF-8"
                   >
@@ -421,14 +423,15 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
                             type="text"
-                            id="Phone"
-                            minLength="10"
                             maxLength="10"
+                            minLength="10"
                             required
+                            id="Phone"
+                            name="Phone"
                             value={phone}
                             onChange={(e) =>
                               setPhone(
-                                e.target.value.replace(/[^1-9]/g, "") &&
+                                e.target.value.replace(/[^1-9 ]/g, "") &&
                                   e.target.value.replace(/ /g, "")
                               )
                             }
@@ -657,7 +660,7 @@ function Contact() {
                 <Tab.Panel>
                   <form
                     action="https://crm.zoho.in/crm/WebToLeadForm"
-                    name="WebToLeads54158000009570156"
+                    name="WebToLeads54158000001051349"
                     method="POST"
                     acceptCharset="UTF-8"
                   >
@@ -707,14 +710,15 @@ function Contact() {
                           <input
                             className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
                             type="text"
-                            id="Phone"
-                            minLength="10"
                             maxLength="10"
+                            minLength="10"
                             required
+                            id="Phone"
+                            name="Phone"
                             value={phone}
                             onChange={(e) =>
                               setPhone(
-                                e.target.value.replace(/[^1-9]/g, "") &&
+                                e.target.value.replace(/[^1-9 ]/g, "") &&
                                   e.target.value.replace(/ /g, "")
                               )
                             }

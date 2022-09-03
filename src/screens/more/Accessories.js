@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { GrFormNext, GrFormPrevious } from "react-icons/gr";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { toast } from "react-toastify";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -22,9 +22,18 @@ function Accessories() {
   const [phone, setPhone] = useState("");
   const [categories, setCategories] = useState("");
 
-  const handleSubmit = () => {
-    console.log("submit");
-  };
+  const pattern = /^[6-9][0-9]{6,9}$/;
+  if (phone !== "" && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error("Enter valid phone number", {
+        theme: "colored",
+      });
+    }
+  }
+
+  // const handleSubmit = () => {
+  //   console.log("submit");
+  // };
   return (
     <>
       <Helmet>
@@ -110,10 +119,192 @@ function Accessories() {
       </Swiper>
 
       <h1 className="text-center text-xl md:text-2xl lg:text-3xl pt-16 font-semibold">
-        EXPLORE ACCESSORIES BY CAR
+        ACCESSORY ENQUIRY
       </h1>
       <div className="container mx-auto my-10 px-5">
-        <form onSubmit={handleSubmit}>
+        <form
+          action="https://crm.zoho.in/crm/WebToLeadForm"
+          name="WebToLeads54158000001051349"
+          // method={methodpopup}
+          method="POST"
+          acceptCharset="UTF-8"
+          className="space-y-5"
+        >
+          <input
+            type="text"
+            className="hidden"
+            name="xnQsjsdp"
+            value="5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b"
+          />
+          <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+          <input
+            type="text"
+            className="hidden"
+            name="xmIwtLD"
+            value="3e4c511e1bfac462fb9ac158b261b0d3a71de3d00f508dc0492cb2893d56c4b9"
+          />
+          <input
+            type="text"
+            className="hidden"
+            name="actionType"
+            value="TGVhZHM="
+          />
+          <input
+            type="text"
+            className="hidden"
+            name="returnURL"
+            value="https://www.saboomaruti.in/thank-you-for-contact-us"
+          />
+          <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-3 mb-3">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="Last Name"
+                  name="Last Name"
+                  className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
+                  required
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Phone
+                </label>
+                <input
+                  className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
+                  type="text"
+                  maxLength="10"
+                  minLength="10"
+                  required
+                  id="Phone"
+                  name="Phone"
+                  value={phone}
+                  onChange={(e) =>
+                    setPhone(
+                      e.target.value.replace(/[^1-9 ]/g, "") &&
+                        e.target.value.replace(/ /g, "")
+                    )
+                  }
+                />
+                {!pattern.test(phone) && phone.length === 10 ? (
+                  <small className="text-red-500">
+                    phone number is invalid
+                  </small>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Email
+                </label>
+                <input
+                  className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
+                  type="email"
+                  ftype="email"
+                  id="Email"
+                  name="Email"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Category
+                </label>
+                <select
+                  id="LEADCF23"
+                  name="LEADCF23"
+                  className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                >
+                  <option>Select Accessory</option>
+                  <option>Select Categories</option>
+                  <option value="Exterior">Exterior</option>
+                  <option value="Interior">Interior</option>
+                  <option value="Car Care">Car Care</option>
+                  <option value="LifeStyle">LifeStyle</option>
+                  <option value="Safety &amp; Security">
+                    Safety &amp; Security
+                  </option>
+                  <option value="Infotainment">Infotainment</option>
+                </select>
+              </div>
+
+              <div className="zcwf_row wfrm_fld_dpNn hidden">
+                <div className="zcwf_col_fld">
+                  <select
+                    className="zcwf_col_fld_slt"
+                    id="Lead Source"
+                    name="Lead Source"
+                  >
+                    <option selected value="WEBSITE&#x20;VISIT">
+                      WEBSITE ENQUIRY
+                    </option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div className="zcwf_row wfrm_fld_dpNn hidden">
+              <div className="zcwf_col_fld">
+                <select
+                  className="zcwf_col_fld_slt"
+                  id="LEADCF4"
+                  name="LEADCF4"
+                >
+                  <option selected value="ARENA">
+                    ARENA
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div className="zcwf_row wfrm_fld_dpNn hidden">
+              <div className="zcwf_col_fld">
+                <select
+                  className="zcwf_col_fld_slt"
+                  id="LEADCF3"
+                  name="LEADCF3"
+                >
+                  <option selected value="INBOUND">
+                    INBOUND
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <p className="text-gray-700">
+              <span className="text-black font-bold">Disclaimer</span>: I agree
+              that by clicking the ‘Submit’ button below, I am explicitly
+              soliciting a call/Message from Saboo Maruti (RKS Motor Pvt. Ltd)
+              or its Representatives on my ‘Mobile’.
+            </p>
+            <div className="flex my-3">
+              <input
+                id="disclaimer"
+                name="disclaimer"
+                type="checkbox"
+                className="h-4 w-4 rounded"
+              />
+              <div className="ml-2 text-sm">
+                <label
+                  htmlFor="disclaimer"
+                  className="font-medium text-gray-700"
+                >
+                  Please Agree with following Disclaimer
+                </label>
+              </div>
+            </div>
+            <button
+              className="bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10"
+              type="submit"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+        {/* <form onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div className="grid md:grid-cols-2 gap-3">
               <div>
@@ -200,7 +391,7 @@ function Accessories() {
               Submit
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
 
       <h3 className="text-center text-xl md:text-2xl lg:text-3xl pt-2 font-bold">
