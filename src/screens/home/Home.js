@@ -37,7 +37,7 @@ function Home() {
         />
         <meta
           name="keywords"
-          content="Maruti Suzuki Dealers, Maruti Authorized Dealers, Nexa Dealers Maruti Car Dealers in Hyderabad, Offers on Maruti Cars, offers on maruti cars hyderabad, maruti car offers 2022, maruti showroom near me, maruti service center near me"
+          content="Maruti Suzuki Dealers, Maruti Authorized Dealers, Nexa Dealers Maruti Car Dealers in Hyderabad, Offers on Maruti Cars, offers on maruti cars Hyderabad, maruti car offers 2022, maruti showroom near me, maruti service center near me"
         />
         <meta name="author" content="Broaddcast" />
         <meta property="og:type" content="website" />
@@ -69,7 +69,7 @@ function Home() {
       <MobileSlider />
       <CarEnquiry />
       <Cars />
-      {/* <About /> */}
+      <About />
       <Accomplishments />
       <Testimonials />
     </>

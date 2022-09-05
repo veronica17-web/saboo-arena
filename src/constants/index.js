@@ -108,7 +108,7 @@ export const products = [
     name: "Alto K10",
     price: "3.99 - 5.83 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-logo-bw.webp",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-new-thumb.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-k10/new-alto-k10.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-brochure.pdf",
     explore: "/all-new-maruti-alto-k10-on-road-price-in-hyderabad",
@@ -142,7 +142,7 @@ export const products = [
     name: "SWIFT",
     price: "5.91 - 8.85 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Swift.jpg",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/front-left-side-47.jpg",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/swift/new-swift.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_New_Swift_brouchre.pdf",
     explore: "/maruti-swift-car-on-road-price-in-hyderabad",
@@ -159,7 +159,7 @@ export const products = [
     name: "Dzire",
     price: "6.24 - 9.17 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Dzire.jpg",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/maruti-suzuki-dzire.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/dzire/new-dzire.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Dzire_Brochure.pdf",
     explore: "/maruti-swift-dzire-on-road-price-in-hyderabad",
@@ -176,7 +176,7 @@ export const products = [
     name: "S-Presso",
     price: "4.25 - 5.99 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/spresso.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/s-presso_banner_new+edit.png",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/spresso/new-spresso.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_S-Presso_brochure.pdf",
     explore: "/maruti-s-presso-on-road-price-in-hyderabad",
@@ -193,7 +193,7 @@ export const products = [
     name: "Wagon R",
     price: "5.47 - 7.20 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/wagonr.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/New_WagonR2022.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/wagon-r/new-wagonr.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_WagonR_Brochure.pdf",
     explore: "/maruti-wagon-r-on-road-price-in-hyderabad",
@@ -210,7 +210,7 @@ export const products = [
     name: "Alto",
     price: "3.39 - 4.05 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/alto.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/maruti-suzuki-alto-2021.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/new-alto.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf",
     explore: "/maruti-alto-800-on-road-price-in-hyderabad",
@@ -244,7 +244,7 @@ export const products = [
     name: "Celerio",
     price: "5.25 - 7.00 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/celerio.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/new-maruti-celerio.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/celerio/new-celerio.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_All_New_Celerio.pdf",
     explore: "/the-all-new-celerio",
@@ -261,7 +261,7 @@ export const products = [
     name: "Eeco",
     price: "4.63 - 4.92 L",
     logo: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/eeco.png",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/maruti-suzuki-eeco.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/eeco-new.webp",
     brouchure:
       "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf",
     explore: "/maruti-eeco-on-road-price-in-hyderabad",

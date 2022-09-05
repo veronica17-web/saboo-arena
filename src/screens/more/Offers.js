@@ -17,22 +17,29 @@ import { Helmet } from "react-helmet";
 
 const offer_products = [
   {
-    name: "Alto",
-    price: "20000",
+    name: "Alto K10",
+    price: "30000",
     logo: "Alto",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-alto-2021.webp",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-k10/new-alto-k10.webp",
+    explore: "/maruti-alto-800-on-road-price-in-hyderabad",
+  },
+  {
+    name: "Alto",
+    price: "30000",
+    logo: "Alto",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/new-alto.webp",
     explore: "/maruti-alto-800-on-road-price-in-hyderabad",
   },
   {
     name: "WagonR ",
-    price: "30000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/New_WagonR2022.webp",
+    price: "45000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/wagon-r/new-wagonr.webp",
     explore: "/maruti-wagon-r-on-road-price-in-hyderabad",
   },
   {
     name: "S-Presso",
-    price: "35000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-Spresso.webp",
+    price: "55000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/spresso/new-spresso.webp",
     explore: "/maruti-s-presso-on-road-price-in-hyderabad",
   },
   // {
@@ -43,26 +50,26 @@ const offer_products = [
   // },
   {
     name: "Dzire",
-    price: "30000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-dzire.webp",
+    price: "45000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/dzire/new-dzire.webp",
     explore: "/maruti-swift-dzire-on-road-price-in-hyderabad",
   },
   {
     name: "Swift",
-    price: "35000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-swift.webp",
+    price: "55000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/swift/new-swift.webp",
     explore: "/maruti-swift-car-on-road-price-in-hyderabad",
   },
   {
     name: "Celerio",
-    price: "35000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/celerio/Maruti-Suzuki-Celerio-Front-Left-Side.webp",
+    price: "55000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/celerio/new-celerio.webp",
     explore: "/the-all-new-celerio",
   },
   {
     name: "EECO",
-    price: "20000",
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/offers/maruti-suzuki-eeco.webp",
+    price: "25000",
+    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/eeco-new.webp",
     explore: "/maruti-eeco-on-road-price-in-hyderabad",
   },
   // {
@@ -219,7 +226,7 @@ function Offers() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 px-5 sm:px-0 gap-4 container mx-auto pb-5">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 px-5 sm:px-0 gap-4 container mx-auto pb-5">
         {offer_products.map((item) => (
           <div
             className="flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden"
@@ -251,9 +258,9 @@ function Offers() {
                 <div className="flex flex-col w-full px-5 mb-3">
                   <Link
                     to={item.explore}
-                    className="bg-blue-900 rounded text-white text-center font-bold uppercase py-2"
+                    className="bg-blue-900 rounded-md text-white text-center font-bold uppercase py-2 hover:animate-pulse"
                   >
-                    View More Details
+                    View
                   </Link>
                 </div>
               </div>

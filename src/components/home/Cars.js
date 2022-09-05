@@ -13,7 +13,7 @@ function Cars() {
           </p>
 
           <p className="text-base max-w-5xl md:max-w-3xl md:pb-8 mx-auto ">
-            Saboo RKS is the leading Maruti Suzuki dealer in hyderabad. Built
+            Saboo RKS is the leading Maruti Suzuki dealer in Hyderabad. Built
             with innovations that stand out with a whole new world of enhanced
             driving experience. Any Questions? Our professional and well-trained
             staff are always ready to assist!
@@ -73,7 +73,7 @@ const VehicleProducts = () => {
                 <div className="flex items-center justify-center space-x-2 p-2.5 mb-2">
                   <Link
                     to="/compare-cars"
-                    className="bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center"
+                    className="bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded"
                   >
                     Compare
                   </Link>
@@ -81,7 +81,7 @@ const VehicleProducts = () => {
                     href={item.brouchure}
                     target="_blank"
                     rel="noreferrer"
-                    className="border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase"
+                    className="border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase rounded"
                   >
                     View Brochure
                   </a>

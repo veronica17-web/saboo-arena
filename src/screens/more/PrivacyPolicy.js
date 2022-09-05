@@ -11,10 +11,12 @@ function PrivacyPolicy() {
         alt="privacy banner"
       />
       <div className="container mx-auto px-5">
-        <p className="text-xl font-semibold uppercase">Privacy Polciy</p>
+        <p className="text-xl font-bold uppercase">Privacy Polciy</p>
 
         <div className="my-4 space-y-1">
-          <h5>Saboo RKS Maruti Suzuki Statement of Privacy</h5>
+          <h5 className="font-semibold">
+            Saboo RKS Maruti Suzuki Statement of Privacy
+          </h5>
           <p className="text-sm">
             At Saboo RKS we take your privacy seriously. Please read the
             following to learn more about our terms and conditions.
@@ -22,7 +24,7 @@ function PrivacyPolicy() {
         </div>
 
         <div className="my-4 space-y-1">
-          <h5>What the terms and conditions cover</h5>
+          <h5 className="font-semibold">What the terms and conditions cover</h5>
           <p className="text-sm">
             This covers Saboo RKS Maruti Suzuki treatment of personally
             identifiable information that Saboo RKS Maruti Suzuki collects when
@@ -39,7 +41,7 @@ function PrivacyPolicy() {
         </div>
 
         <div className="my-4 space-y-1">
-          <h5>Information Collection and Use</h5>
+          <h5 className="font-semibold">Information Collection and Use</h5>
           <p className="text-sm">
             Saboo RKS Maruti Suzuki collects personally identifiable information
             when you register for a Saboo RKS Maruti Suzuki account. When you
@@ -61,7 +63,7 @@ function PrivacyPolicy() {
         </div>
 
         <div className="my-4 space-y-1">
-          <h5>Information Sharing and Disclosure</h5>
+          <h5 className="font-semibold">Information Sharing and Disclosure</h5>
           <p className="text-sm">
             Saboo RKS Maruti Suzuki will not sell or rent your Personally
             Identifiable Information to anyone.
@@ -86,7 +88,7 @@ function PrivacyPolicy() {
         </div>
 
         <div className="my-4 space-y-1">
-          <h5>Security</h5>
+          <h5 className="font-semibold">Security</h5>
           <p className="text-sm">
             Your Saboo RKS Maruti Suzuki account information is
             password-protected for your privacy and security We have taken
@@ -94,7 +96,7 @@ function PrivacyPolicy() {
           </p>
         </div>
         <div className="my-4 space-y-1">
-          <h5>Changes to this Policy</h5>
+          <h5 className="font-semibold">Changes to this Policy</h5>
           <p className="text-sm">
             Saboo RKS Maruti Suzuki may edit this policy from time to time. If
             we make any substantial changes ,we will notify you by posting a

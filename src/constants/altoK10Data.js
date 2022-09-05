@@ -125,7 +125,7 @@ const altoK10Variants = [
   },
   {
     id: 5,
-    title: "vgi+",
+    title: "vxi+",
     transmission: "manual",
     mileage: "-",
     price: "5.33",

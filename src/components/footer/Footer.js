@@ -12,34 +12,35 @@ import { ImLinkedin } from "react-icons/im";
 
 const navigation = {
   cars: [
+    { name: "ALTO", to: "/maruti-alto-800-on-road-price-in-hyderabad" },
     {
-      name: "MARUTI ALTO K10",
+      name: "ALTO K10",
       to: "/all-new-maruti-alto-k10-on-road-price-in-hyderabad",
     },
-    { name: "MARUTI ALTO", to: "/maruti-alto-800-on-road-price-in-hyderabad" },
+
     {
-      name: "MARUTI WAGON R",
+      name: "WAGON R",
       to: "/maruti-wagon-r-on-road-price-in-hyderabad",
     },
-    { name: "MARUTI NEW CELERIO", to: "/the-all-new-celerio" },
+    { name: "CELERIO", to: "/the-all-new-celerio" },
     {
-      name: "MARUTI SWIFT",
+      name: "SWIFT",
       to: "/maruti-swift-car-on-road-price-in-hyderabad",
     },
     {
-      name: "MARUTI DZIRE",
+      name: "DZIRE",
       to: "/maruti-swift-dzire-on-road-price-in-hyderabad",
     },
     {
-      name: "MARUTI S-PRESSO",
+      name: "S-PRESSO",
       to: "/maruti-s-presso-on-road-price-in-hyderabad",
     },
-    { name: "MARUTI ERTIGA", to: "/maruti-ertiga-on-road-price-in-hyderabad" },
+    { name: "ERTIGA", to: "/maruti-ertiga-on-road-price-in-hyderabad" },
     {
-      name: "MARUTI BREZZA",
+      name: "BREZZA",
       to: "/maruti-new-brezza-on-road-price-in-hyderabad",
     },
-    { name: "MARUTI EECO", to: "/maruti-eeco-on-road-price-in-hyderabad" },
+    { name: "EECO", to: "/maruti-eeco-on-road-price-in-hyderabad" },
   ],
   corporate: [
     { name: "SHOWROOMS", to: "/showrooms" },
@@ -80,7 +81,7 @@ function Footer() {
                 <span className="text-2xl text-rose-600 font-black">| </span>
                 MARUTI CARS
               </p>
-              <div className="flex flex-col space-y-3 font-semibold text-black">
+              <div className="flex flex-col space-y-3 font-semibold text-black scale-100">
                 {navigation.cars.map((item, index) => (
                   <div
                     className="flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:text-gray-800"
