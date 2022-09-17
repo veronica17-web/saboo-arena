@@ -59,6 +59,10 @@ const navigation = {
   ],
   servicepages: [
     {
+      name: "Payments",
+      to: "/payment",
+    },
+    {
       name: "Insurance",
       to: "/maruti-suzuki-car-insurance-renewal",
     },
