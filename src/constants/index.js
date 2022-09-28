@@ -1,5 +1,9 @@
 export const sliders = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/navaratri-web-banner.webp',
+    alt: 'navatri-banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
     alt: 'september-banner-2',
   },
@@ -31,6 +35,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/navaratri-mobile-banner.webp',
+    alt: 'navatri-banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner-mobile.webp',
     alt: 'september-banner-2',
@@ -67,10 +75,7 @@ export const offersSliders = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
     alt: 'september banner 2',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/webp+converted/saboo-maruti-august-banner.webp',
-    alt: 'august banner',
-  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
     alt: 'banner-1',
@@ -91,10 +96,10 @@ export const mobileOffersSliders = [
     alt: 'september-banner-2',
   },
 
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/offers_mobile.webp',
-    alt: 'banner-2',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/offers_mobile.webp',
+  //   alt: 'banner-2',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',
