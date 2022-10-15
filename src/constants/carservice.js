@@ -7,10 +7,10 @@ const serviceCenterBanner = [
   //   id: 1,
   //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/service_banner_1.webp",
   // },
-  // {
-  //   id: 1,
-  //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/august-service-banner.png",
-  // },
+  {
+    id: 1,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-service-banner.webp',
+  },
   {
     id: 2,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/service_banner_2.webp',

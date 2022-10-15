@@ -1,12 +1,12 @@
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/navaratri-web-banner.webp',
-    alt: 'navatri-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
+    alt: 'diwali-banner',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
-    alt: 'september-banner-2',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
+  //   alt: 'september-banner-2',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-banner-2022.webp',
   //   alt: 'september-banner',
@@ -36,13 +36,13 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/navaratri-mobile-banner.webp',
-    alt: 'navatri-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-mobile-banner.webp',
+    alt: 'diwali-banner',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner-mobile.webp',
-    alt: 'september-banner-2',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner-mobile.webp',
+  //   alt: 'september-banner-2',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-mobile-banner.webp',
     alt: 'alto-k10',
@@ -72,8 +72,8 @@ export const offersSliders = [
   //   alt: "offers",
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
-    alt: 'september banner 2',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
+    alt: 'diwali banner',
   },
 
   {
@@ -92,8 +92,8 @@ export const offersSliders = [
 
 export const mobileOffersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner-mobile.webp',
-    alt: 'september-banner-2',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-mobile-banner.webp',
+    alt: 'diwali-banner',
   },
 
   // {
