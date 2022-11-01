@@ -1,140 +1,150 @@
 const altoSliders = [
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Exterior.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_01.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Exterior.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_01.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Front-Left-View-Angle.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_02.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Front-Left-View-Angle.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_02.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Front-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_03.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Front-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_03.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Window-Line.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_04.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Window-Line.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_04.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Headlight.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_05.webp',
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Headlight.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/exterior_web_05.webp',
   },
   {
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Wheel.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_1.webp',
 
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Wheel.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_1.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Passenger-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_2.webp',
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Passenger-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_2.webp',
   },
   {
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Seats.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_3.webp',
 
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Seats.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_3.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Steering.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_4.webp',
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Steering.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_4.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Interior.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_5.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto-Interior.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/Interior_web_5.webp',
+  },
+  {
+    original:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_01.webp',
+    thumbnail:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_01.webp',
+  },
+  {
+    original:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_03.webp',
+    thumbnail:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_03.webp',
+  },
+  {
+    original:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_05.webp',
+    thumbnail:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/sliders/High_web_05.webp',
   },
 ];
 
 const altoColors = [
   {
     id: 1,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Blazing-Red.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/colors/Alto800_Blazing_Red_new.webp',
   },
   {
     id: 2,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Cerulean-BLue.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/colors/Alto800_Granite_GREY.webp',
   },
   {
     id: 3,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Granite-GREY.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/colors/Alto800_Silky_Silver.webp',
   },
   {
     id: 4,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Mojito-Green.webp",
-  },
-  {
-    id: 5,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Silky-Silver.webp",
-  },
-  {
-    id: 6,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/Maruti-Suzuki-Alto800-Superior-White.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/colors/Alto800_Superior_White_New.webp',
   },
 ];
 
 const altoVariants = [
   {
     id: 1,
-    title: "std opt-petrol",
-    transmission: "manual",
-    mileage: "22.0",
-    price: "3.39",
+    title: 'std opt-petrol',
+    transmission: 'manual',
+    mileage: '22.0',
+    price: '3.39',
   },
   {
     id: 2,
-    title: "lxi opt-petrol",
-    transmission: "manual",
-    mileage: "22.0",
-    price: "4.08",
+    title: 'lxi opt-petrol',
+    transmission: 'manual',
+    mileage: '22.0',
+    price: '4.08',
   },
   {
     id: 3,
-    title: "vxi petrol",
-    transmission: "manual",
-    mileage: "22.0",
-    price: "4.28",
+    title: 'vxi petrol',
+    transmission: 'manual',
+    mileage: '22.0',
+    price: '4.28',
   },
   {
     id: 4,
-    title: "vxi plus-petrol",
-    transmission: "manual",
-    mileage: "22.0",
-    price: "4.41",
+    title: 'vxi plus-petrol',
+    transmission: 'manual',
+    mileage: '22.0',
+    price: '4.41',
   },
   {
     id: 5,
-    title: "lxi opt-cng",
-    transmission: "manual",
-    mileage: "31.6",
-    price: "5.03",
+    title: 'lxi opt-cng',
+    transmission: 'manual',
+    mileage: '31.6',
+    price: '5.03',
   },
   {
     id: 6,
-    title: "tour h1 opt-petrol",
-    transmission: "manual",
-    mileage: "24.7",
-    price: "4.05",
+    title: 'tour h1 opt-petrol',
+    transmission: 'manual',
+    mileage: '24.7',
+    price: '4.05',
   },
 ];
 

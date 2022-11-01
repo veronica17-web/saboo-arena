@@ -102,20 +102,20 @@ function App() {
       }
     }
 
-    // function handleSubmit() {
-    //   setLoading(true);
-    //   try {
-    //     axios.post("https://saboogroups.com/admin/api/arena-popup", {
-    //       phone: number,
-    //     });
-    //     setMethodPopup("POST");
-    //     setLoading(false);
-    //   } catch (error) {
-    //     toast.error("Something went wrong");
-    //     setLoading(false);
-    //     console.log(error);
-    //   }
-    // }
+    function handleSubmit() {
+      setLoading(true);
+      try {
+        axios.post('https://saboogroups.com/admin/api/arena-popup', {
+          phone: number,
+        });
+        setMethodPopup('POST');
+        setLoading(false);
+      } catch (error) {
+        toast.error('Something went wrong');
+        setLoading(false);
+        console.log(error);
+      }
+    }
 
     return (
       <Transition.Root show={open} as={Fragment}>
@@ -299,7 +299,7 @@ function App() {
 
                         <button
                           type='submit'
-                          // onClick={handleSubmit}
+                          onClick={handleSubmit}
                           className='w-full rounded-md border shadow-sm py-2 mb-3 bg-blue-800 font-medium text-white hover:bg-red-700 text-sm'
                         >
                           {loading ? (
