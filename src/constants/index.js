@@ -1,16 +1,16 @@
 export const sliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
-    alt: 'diwali-banner',
-  },
   // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
-  //   alt: 'september-banner-2',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
+  //   alt: 'diwali-banner',
   // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-banner-2022.webp',
-  //   alt: 'september-banner',
-  // },
+  // // {
+  // //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
+  // //   alt: 'september-banner-2',
+  // // },
+  // // {
+  // //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-banner-2022.webp',
+  // //   alt: 'september-banner',
+  // // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-web-banner.webp',
     alt: 'new alto k10',
@@ -71,10 +71,10 @@ export const offersSliders = [
   //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/offers_banner.webp",
   //   alt: "offers",
   // },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
-    alt: 'diwali banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
+  //   alt: 'diwali banner',
+  // },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
