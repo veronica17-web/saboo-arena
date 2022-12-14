@@ -1,16 +1,18 @@
 export const sliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
-  //   alt: 'diwali-banner',
-  // },
-  // // {
-  // //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner.webp',
-  // //   alt: 'september-banner-2',
-  // // },
-  // // {
-  // //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-september-banner-2022.webp',
-  // //   alt: 'september-banner',
-  // // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-web.webp',
+    alt: 'dec-offer-banner',
+  },
+
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-k10-cng-homepage-banner.webp',
+    alt: 'alto-k10-cng-banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-service-banner.webp',
+    alt: 'new-service-center-banner',
+  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-web-banner.webp',
     alt: 'new alto k10',
@@ -36,13 +38,19 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-mobile-banner.webp',
-    alt: 'diwali-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-mobile.webp',
+    alt: 'dec-offer-mobile-banner',
   },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-sept-offer-banner-mobile.webp',
-  //   alt: 'september-banner-2',
-  // },
+
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-k10-cng-mobile-banner.webp',
+    alt: 'new-alto-k10-cng-banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-service-center-mobile-banner.webp',
+    alt: 'new-service-center-banner',
+  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-mobile-banner.webp',
     alt: 'alto-k10',
@@ -67,14 +75,10 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  // {
-  //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/offers_banner.webp",
-  //   alt: "offers",
-  // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-banner-2022.webp',
-  //   alt: 'diwali banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-web.webp',
+    alt: 'dec-offer-banner',
+  },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
@@ -92,14 +96,10 @@ export const offersSliders = [
 
 export const mobileOffersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/diwali-mobile-banner.webp',
-    alt: 'diwali-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-mobile.webp',
+    alt: 'dec-offer-banner',
   },
 
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/offers_mobile.webp',
-  //   alt: 'banner-2',
-  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',

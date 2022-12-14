@@ -1,98 +1,98 @@
 const eecoSliders = [
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp',
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Front-Left-Side-View.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Third-Row-Seat-Belts.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Third-Row-Seat-Belts.webp',
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Third-Row-Seat-Belts.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Third-Row-Seat-Belts.webp',
   },
   {
     original:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Top-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Top-View.webp',
 
     thumbnail:
-      "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Top-View.webp",
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/Maruti-Suzuki-Eeco-Top-View.webp',
   },
 ];
 
 const eecoColors = [
   {
     id: 1,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Ecco-Superior-White.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Ecco-Superior-White.webp',
   },
   {
     id: 2,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Breeze-Blue.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Breeze-Blue.webp',
   },
   {
     id: 3,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Mettalic-Grey.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Mettalic-Grey.webp',
   },
   {
     id: 4,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Midnight-Black.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Midnight-Black.webp',
   },
   {
     id: 5,
-    img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Silky-Silver.webp",
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/data/eeco/colors/Maruti-Suzuki-Eeco-Silky-Silver.webp',
   },
 ];
 
 const eecoVariants = [
   {
     id: 1,
-    title: "5 str std (o) 1.2l",
-    transmission: "manual",
-    mileage: "20.52",
-    price: "4.63",
+    title: '5 str std (o) 1.2l',
+    transmission: 'manual',
+    mileage: '20.52',
+    price: '5.13',
   },
   {
     id: 2,
-    title: "5 str ac (o) 1.2l",
-    transmission: "manual",
-    mileage: "20.52",
-    price: "4.99",
+    title: '5 str ac (o) 1.2l',
+    transmission: 'manual',
+    mileage: '20.52',
+    price: '4.49',
   },
   {
     id: 3,
-    title: "7 str std (o) 1.2l",
-    transmission: "manual",
-    mileage: "20.52",
-    price: "4.92",
+    title: '7 str std (o) 1.2l',
+    transmission: 'manual',
+    mileage: '20.52',
+    price: '5.42',
   },
   {
     id: 4,
-    title: "cargo - cng",
-    transmission: "manual",
-    mileage: "16.11",
-    price: "5.73",
+    title: 'cargo - cng',
+    transmission: 'manual',
+    mileage: '16.11',
+    price: '6.23',
   },
   {
     id: 5,
-    title: "cargo ac - cng",
-    transmission: "manual",
-    mileage: "16.11",
-    price: "6.15",
+    title: 'cargo ac - cng',
+    transmission: 'manual',
+    mileage: '16.11',
+    price: '6.65',
   },
   {
     id: 6,
-    title: "cargo - petrol",
-    transmission: "manual",
-    mileage: "16.11",
-    price: "4.78",
+    title: 'cargo - petrol',
+    transmission: 'manual',
+    mileage: '16.11',
+    price: '5.28',
   },
   {
     id: 7,
-    title: "5 str ac (o) cng 1.2l",
-    transmission: "manual",
-    mileage: "20.52",
-    price: "5.94",
+    title: '5 str ac (o) cng 1.2l',
+    transmission: 'manual',
+    mileage: '20.52',
+    price: '6.44',
   },
 ];
 

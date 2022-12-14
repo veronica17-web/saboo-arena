@@ -101,13 +101,13 @@ const ertigaVariants = [
     mileage: "20.51 ",
     price: "8.41",
   },
-  {
-    id: 2,
-    title: "new ertiga vxi",
-    transmission: "manual",
-    mileage: "20.30 ",
-    price: "9.49",
-  },
+  // {
+  //   id: 2,
+  //   title: "new ertiga vxi",
+  //   transmission: "manual",
+  //   mileage: "20.30 ",
+  //   price: "9.49",
+  // },
   {
     id: 3,
     title: "new ertiga vxi (o)",

@@ -18,33 +18,33 @@ import { Helmet } from 'react-helmet';
 const offer_products = [
   {
     name: 'Alto K10',
-    price: '55000',
+    price: '85100',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-k10/new-alto-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'Alto',
-    price: '35000',
+    price: '70100',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/new-alto.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'S-Presso',
-    price: '55000',
+    price: '78100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/spresso/new-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'Celerio',
-    price: '40000',
+    price: '63100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/celerio/new-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'WagonR ',
-    price: '50000',
+    price: '70100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/wagon-r/new-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
@@ -57,20 +57,20 @@ const offer_products = [
   // },
   {
     name: 'Dzire',
-    price: '35000',
+    price: '40000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/dzire/new-dzire.webp',
     explore: '/maruti-swift-dzire-on-road-price-in-hyderabad',
   },
   {
     name: 'Swift',
-    price: '38000',
+    price: '43100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/swift/new-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
 
   {
     name: 'EECO',
-    price: '10100',
+    price: '36100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/eeco-new.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },
@@ -223,7 +223,7 @@ function Offers() {
           <strong>Note:</strong> This Saboo RKS Maruti Suzuki offer is updated
           on 01-{months[new Date().getMonth()]}-{new Date().getFullYear()}. This
           offers is provided for only information purpose. This is a limited
-          period offer till 31-{months[new Date().getMonth()]}-
+          period offer till the end of {months[new Date().getMonth()]}-
           {new Date().getFullYear()}.
         </p>
       </div>

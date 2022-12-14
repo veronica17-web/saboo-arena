@@ -1,86 +1,91 @@
-import { Fragment, useState } from "react";
-import { Dialog, Tab, Transition } from "@headlessui/react";
-import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment, useState } from 'react';
+import { Dialog, Tab, Transition } from '@headlessui/react';
+import {
+  MenuIcon,
+  SearchIcon,
+  ShoppingBagIcon,
+  XIcon,
+} from '@heroicons/react/outline';
 import {
   FaHome,
   FaCar,
   FaPhoneAlt,
   FaBars,
   FaPercentage,
-} from "react-icons/fa";
-import "./mobile.css";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+} from 'react-icons/fa';
+import './mobile.css';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const navigation = {
   pages: [
-    { name: "Home", to: "/" },
-    { name: "About us", to: "/about-maruti-suzuki-dealers" },
-    {name: "Arena Vehicles", to: "/maruti-suzuki-new-cars"},
-    {name: "CNG Vehicles", to: "/maruti-suzuki-cng-cars"},
-    {name: "Tour Vehicles", to: "/maruti-suzuki-tour-cars"},
+    { name: 'Home', to: '/' },
+    { name: 'About us', to: '/about-maruti-suzuki-dealers' },
+    { name: 'Arena Vehicles', to: '/maruti-suzuki-new-cars' },
+    { name: 'CNG Vehicles', to: '/maruti-suzuki-cng-cars' },
+    { name: 'Tour Vehicles', to: '/maruti-suzuki-tour-cars' },
   ],
   servicepages: [
     {
-      name: "Insurance",
-      to: "/maruti-suzuki-car-insurance-renewal",
+      name: 'Insurance',
+      to: '/maruti-suzuki-car-insurance-renewal',
     },
     {
-      name: "Finance",
-      to: "/maruti-suzuki-car-finance-services",
+      name: 'Finance',
+      to: '/maruti-suzuki-car-finance-services',
     },
     {
-      name: "Corporate",
-      to: "/corporate",
+      name: 'Corporate',
+      to: '/corporate',
     },
     {
-      name: "Subscribe",
-      to: "/subscribe",
+      name: 'Subscribe',
+      to: '/subscribe',
     },
     {
-      name: "Driving School",
-      to: "/maruti-suzuki-driving-school",
+      name: 'Driving School',
+      to: '/maruti-suzuki-driving-school',
     },
   ],
 
   outlets: [
     {
-      name: "Arena",
-      to: "/showrooms",
+      name: 'Arena',
+      to: '/showrooms',
     },
     {
-      name: "Truevalue",
-      to: "/true-value",
+      name: 'Truevalue',
+      to: '/true-value',
     },
     {
-      name: "Workshop",
-      to: "/maruti-suzuki-car-service-center",
+      name: 'Workshop',
+      to: '/maruti-suzuki-car-service-center',
     },
     {
-      name: "Driving School",
-      to: "/maruti-driving-school-locations",
+      name: 'Driving School',
+      to: '/maruti-driving-school-locations',
     },
   ],
   more: [
     {
-      name: "Covid 19",
-      to: "/covid-19",
+      name: 'Covid 19',
+      to: '/covid-19',
     },
     {
-      name: "Blog",
-      to: "/blog",
+      name: 'Blog',
+      to: '/blog',
     },
     {
-      name: "Awards",
-      to: "/awards",
+      name: 'Awards',
+      to: '/awards',
     },
     {
-      name: "Contact Us",
-      to: "/contact-maruti-suzuki-showroom",
+      name: 'Contact Us',
+      to: '/contact-maruti-suzuki-showroom',
     },
     {
-      name: "Accessories",
-      to: "/maruti-genuine-accessories",
+      name: 'Accessories',
+      to: '/maruti-genuine-accessories',
     },
   ],
 };
@@ -98,7 +103,7 @@ function MobileHeader() {
   };
 
   const location = window.location.pathname;
-  window.addEventListener("scroll", fixedNavbar);
+  window.addEventListener('scroll', fixedNavbar);
 
   function handleMenu() {
     setOpen(true);
@@ -106,69 +111,69 @@ function MobileHeader() {
   }
 
   useEffect(() => {
-    if (location === "/maruti-suzuki-car-offers-page") {
+    if (location === '/maruti-suzuki-car-offers-page') {
       setTabs(4);
     }
   }, [location]);
 
   return (
-    <div className="main_header">
+    <div className='main_header'>
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog
-          as="div"
-          className="fixed inset-0 flex z-40 lg:hidden"
+          as='div'
+          className='fixed inset-0 flex z-40 lg:hidden'
           onClose={setOpen}
         >
           <Transition.Child
             as={Fragment}
-            enter="transition-opacity ease-linear duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition-opacity ease-linear duration-300"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            enter='transition-opacity ease-linear duration-300'
+            enterFrom='opacity-0'
+            enterTo='opacity-100'
+            leave='transition-opacity ease-linear duration-300'
+            leaveFrom='opacity-100'
+            leaveTo='opacity-0'
           >
-            <Dialog.Overlay className="fixed inset-0 bg-black bg-opacity-25" />
+            <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-25' />
           </Transition.Child>
 
           <Transition.Child
             as={Fragment}
-            enter="transition ease-in-out duration-300 transform"
-            enterFrom="-translate-x-full"
-            enterTo="translate-x-0"
-            leave="transition ease-in-out duration-300 transform"
-            leaveFrom="translate-x-0"
-            leaveTo="-translate-x-full"
+            enter='transition ease-in-out duration-300 transform'
+            enterFrom='-translate-x-full'
+            enterTo='translate-x-0'
+            leave='transition ease-in-out duration-300 transform'
+            leaveFrom='translate-x-0'
+            leaveTo='-translate-x-full'
           >
-            <div className="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
-              <div className="px-4 pt-5 pb-2 flex">
+            <div className='relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto'>
+              <div className='px-4 pt-5 pb-2 flex'>
                 <button
-                  type="button"
-                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                  type='button'
+                  className='-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400'
                   onClick={() => setOpen(false)}
                 >
-                  <span className="sr-only">Close menu</span>
-                  <XIcon className="h-6 w-6" aria-hidden="true" />
+                  <span className='sr-only'>Close menu</span>
+                  <XIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
 
               {/* Links */}
               <Tab.Group
-                as="div"
-                className="mt-2"
+                as='div'
+                className='mt-2'
                 onClick={() => setOpen(false)}
               ></Tab.Group>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.pages.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-normal text-gray-700"
+                      className='-m-2 p-2 block font-normal text-gray-700'
                     >
                       {page.name}
                     </Link>
@@ -177,14 +182,14 @@ function MobileHeader() {
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.servicepages.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-normal text-gray-700"
+                      className='-m-2 p-2 block font-normal text-gray-700'
                     >
                       {page.name}
                     </Link>
@@ -193,14 +198,14 @@ function MobileHeader() {
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.outlets.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-normal text-gray-700"
+                      className='-m-2 p-2 block font-normal text-gray-700'
                     >
                       {page.name}
                     </Link>
@@ -209,14 +214,14 @@ function MobileHeader() {
               </div>
 
               <div
-                className="border-t border-gray-200 py-6 px-4 space-y-6"
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
                 {navigation.more.map((page) => (
-                  <div key={page.name} className="flow-root">
+                  <div key={page.name} className='flow-root'>
                     <Link
                       to={page.to}
-                      className="-m-2 p-2 block font-normal text-gray-700"
+                      className='-m-2 p-2 block font-normal text-gray-700'
                     >
                       {page.name}
                     </Link>
@@ -232,32 +237,32 @@ function MobileHeader() {
       <div
         className={
           navbar
-            ? "fixed top-0 z-20 w-full px-0 shadow-2xl drop-shadow-2xl"
-            : ""
+            ? 'fixed top-0 z-20 w-full px-0 shadow-2xl drop-shadow-2xl'
+            : ''
         }
       >
-        <header className="relative bg-gradient-to-r from-blue-800 to-cyan-500">
-          <nav aria-label="Top" className="container mx-auto ">
-            <div className="border-gray-200">
-              <div className="h-16 flex items-center justify-between px-5">
+        <header className='relative bg-gradient-to-r from-blue-800 to-cyan-500'>
+          <nav aria-label='Top' className='container mx-auto '>
+            <div className='border-gray-200'>
+              <div className='h-16 flex items-center justify-between px-5'>
                 {/* Logo */}
                 {/* <div className="mr-auto flex lg:ml-0 ml-2"> */}
-                <Link to="/">
+                <Link to='/'>
                   <img
-                    className="h-12 w-auto mx-auto"
-                    src={require("../../assets/whitelogo.webp")}
-                    alt="logo"
+                    className='h-12 w-auto mx-auto'
+                    src={require('../../assets/whitelogo.webp')}
+                    alt='logo'
                   />
                 </Link>
                 {/* </div> */}
 
                 <button
-                  type="button"
-                  className="p-2 rounded-md text-gray-200 lg:hidden"
+                  type='button'
+                  className='p-2 rounded-md text-gray-200 lg:hidden'
                   onClick={() => setOpen(true)}
                 >
-                  <span className="sr-only">Open menu</span>
-                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                  <span className='sr-only'>Open menu</span>
+                  <MenuIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
             </div>

@@ -69,6 +69,8 @@ import AltoK10 from './screens/cars/AltoK10';
 import SwiftCNG from './screens/CNG/SwiftCNG';
 import Payment from './screens/services/Payment';
 import PaymentTest from './screens/services/PaymentTest';
+import AltoK10CNG from './screens/CNG/AltoK10CNG';
+import Metaverse from './screens/services/Metaverse';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -378,6 +380,7 @@ function App() {
             path='/maruti-alto-800-cng-on-road-price-in-hyderabad'
             element={<AltoCNG />}
           />
+          <Route path='/alto-k10-cng' element={<AltoK10CNG />} />
           <Route
             path='/maruti-wagonr-cng-on-road-price-in-hyderabad'
             element={<WagonrCNG />}
@@ -465,7 +468,7 @@ function App() {
           />
           <Route path='/payment' element={<PaymentTest />} />
           {/* <Route path="/paymenttest" element={<PaymentTest />} /> */}
-
+          <Route path='/metaverse' element={<Metaverse />} />
           <Route path='/covid-19' element={<Covid />} />
           <Route path='/compare-cars' element={<Compare />} />
           <Route path='/blog' element={<Blog />} />
