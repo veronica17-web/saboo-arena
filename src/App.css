@@ -2,57 +2,83 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Sora', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Sora', sans-serif;
 }
 
 html:focus-within {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 426px) {
-    .desktop_slider{
-        display: none;
-    }
+  .desktop_slider {
+    display: none;
+  }
 }
 
 @media (min-width: 426px) {
-    .mobile_slider{
-        display: none;
-    }
-    .desktop_slider{
-        display: block;
-    }
-}
-
-
-
-.service_header{
+  .mobile_slider {
     display: none;
-}
-.service_link:hover{
-    color: red;
-}
-.service_link:hover +  .service_header{
+  }
+  .desktop_slider {
     display: block;
-    z-index: 100;
+  }
 }
 
-.image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg {
-    height: 30px !important;
-    width: 30px !important;
-    background-color: #293e91;
-    border-radius: 100%;
+.service_header {
+  display: none;
+}
+.service_link:hover {
+  color: red;
+}
+.service_link:hover + .service_header {
+  display: block;
+  z-index: 100;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  height: 30px !important;
+  width: 30px !important;
+  background-color: #293e91;
+  border-radius: 100%;
+}
+
+/* Pagination css */
+.paginationButtons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-top: 20px;
+  list-style: none;
+}
+
+.paginationButtons > li {
+  margin-left: 10px;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 5px 10px;
+}
+
+.activePage {
+  background-color: #f01b23;
+  color: #fff;
+  border: none !important;
+}
+
+.disabledPage,
+.disabledPage > a {
+  cursor: not-allowed;
+  opacity: 0.6;
 }

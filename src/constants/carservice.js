@@ -5,7 +5,7 @@ const serviceCenterBanner = [
   // },
   {
     id: 1,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-service-banner.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/dec-service-banner-2022.webp',
   },
 
   {

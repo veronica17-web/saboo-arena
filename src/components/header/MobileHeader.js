@@ -68,8 +68,8 @@ const navigation = {
   ],
   more: [
     {
-      name: 'Covid 19',
-      to: '/covid-19',
+      name: 'Gallery',
+      to: '/gallery',
     },
     {
       name: 'Blog',

@@ -71,6 +71,7 @@ import Payment from './screens/services/Payment';
 import PaymentTest from './screens/services/PaymentTest';
 import AltoK10CNG from './screens/CNG/AltoK10CNG';
 import Metaverse from './screens/services/Metaverse';
+import Gallery from './screens/more/Gallery';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -473,6 +474,7 @@ function App() {
           <Route path='/compare-cars' element={<Compare />} />
           <Route path='/blog' element={<Blog />} />
           <Route path='/awards' element={<Awards />} />
+          <Route path='/gallery' element={<Gallery />} />
           <Route path='/contact-maruti-suzuki-showroom' element={<Contact />} />
           <Route path='/maruti-genuine-accessories' element={<Accessories />} />
           <Route
