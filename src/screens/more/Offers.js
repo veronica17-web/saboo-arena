@@ -25,20 +25,20 @@ const offer_products = [
   },
   {
     name: 'Alto',
-    price: '70100',
+    price: '75100',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/new-alto.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'S-Presso',
-    price: '78100',
+    price: '93100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/spresso/new-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'Celerio',
-    price: '63100',
+    price: '73100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/celerio/new-celerio.webp',
     explore: '/the-all-new-celerio',
   },
@@ -70,7 +70,7 @@ const offer_products = [
 
   {
     name: 'EECO',
-    price: '36100',
+    price: '41100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/eeco-new.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },

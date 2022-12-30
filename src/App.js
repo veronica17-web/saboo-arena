@@ -24,6 +24,8 @@ import ServiceSubscribe from './screens/services/ServiceSubscribe';
 import DrivingSchool from './screens/services/DrivingSchool';
 import loginkey from './assets/login_key.svg';
 
+//confetti
+import Confetti from 'react-confetti';
 //cars screens
 import Alto from './screens/cars/Alto';
 import Brezza from './screens/cars/Brezza';

@@ -1,5 +1,9 @@
 export const sliders = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-banner-dec23.webp',
+    alt: 'dec-offer-banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-web.webp',
     alt: 'dec-offer-banner',
   },
@@ -38,9 +42,10 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-mobile.webp',
-    alt: 'dec-offer-mobile-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/new-spresso-mobile-banner.webp',
+    alt: 'new-alto-k10-cng-banner',
   },
+  
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-k10-cng-mobile-banner.webp',
