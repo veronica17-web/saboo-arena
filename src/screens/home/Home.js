@@ -69,7 +69,7 @@ function Home() {
       <Header />
       {/* {width > 425 ? <Slider /> : <MobileSlider />} */}
       <Slider />
-      <Confetti />
+      {/* <Confetti /> */}
       <MobileSlider />
       <CarEnquiry />
       <Cars />
