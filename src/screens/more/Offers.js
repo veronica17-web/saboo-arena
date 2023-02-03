@@ -18,33 +18,33 @@ import { Helmet } from 'react-helmet';
 const offer_products = [
   {
     name: 'Alto K10',
-    price: '85100',
+    price: '73100',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-k10/new-alto-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'Alto',
-    price: '75100',
+    price: '61100',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/alto-800/new-alto.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'S-Presso',
-    price: '93100',
+    price: '70100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/spresso/new-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'Celerio',
-    price: '73100',
+    price: '60100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/celerio/new-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'WagonR ',
-    price: '70100',
+    price: '53100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/wagon-r/new-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
@@ -57,20 +57,20 @@ const offer_products = [
   // },
   {
     name: 'Dzire',
-    price: '40000',
+    price: '10000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/dzire/new-dzire.webp',
     explore: '/maruti-swift-dzire-on-road-price-in-hyderabad',
   },
   {
     name: 'Swift',
-    price: '43100',
+    price: '40100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/swift/new-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
 
   {
     name: 'EECO',
-    price: '41100',
+    price: '30100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/eeco-new.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },

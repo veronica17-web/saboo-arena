@@ -3,10 +3,7 @@ const serviceCenterBanner = [
   //   id: 3,
   //   img: "https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/monsoon_banner.webp",
   // },
-  {
-    id: 1,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/dec-service-banner-2022.webp',
-  },
+  // 
 
   {
     id: 2,

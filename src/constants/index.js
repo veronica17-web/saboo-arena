@@ -1,7 +1,15 @@
 export const sliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-republic-day-banner-2023.webp',
+  //   alt: 'arena-republic-day-banner',
+  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/saboomaruti-arena-feb-offer-banner-web.webp',
+    alt: 'feb-2023-offer-banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-banner-dec23.webp',
-    alt: 'dec-offer-banner',
+    alt: 'new-spresso-banner',
   },
 
   {
@@ -37,6 +45,14 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-republic-day-banner-2023-mobile.webp',
+  //   alt: 'arena-2023-republic-day-mobile-banner',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023-mobile.webp',
+  //   alt: 'arena-2023-mobile-banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/new-spresso-mobile-banner.webp',
     alt: 'new-alto-k10-cng-banner',
@@ -76,10 +92,14 @@ export const mobileSliders = [
 
 export const offersSliders = [
   // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-web.webp',
-  //   alt: 'dec-offer-banner',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-republic-day-banner-2023.webp',
+  //   alt: 'jan-republic-jan-2023-banner',
   // },
 
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023.webp',
+  //   alt: 'janu-2023-offer-banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
     alt: 'banner-1',
@@ -95,19 +115,19 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-dec-offer-mobile.webp',
-  //   alt: 'dec-offer-banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023-mobile.webp',
+    alt: 'jan-2023-offer-banner',
+  },
 
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
-    alt: 'banner-1',
-  },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/mobile_sliders/S-cng_mobile.webp',
-    alt: 'banner-3',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
+  //   alt: 'banner-1',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/mobile_sliders/S-cng_mobile.webp',
+  //   alt: 'banner-3',
+  // },
 ];
 
 export const products = [
@@ -495,6 +515,11 @@ export const truevalue = [
 ];
 
 export const workshop = [
+  {
+    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15230.247208443354!2d78.5071734!3d17.3848063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eec84cd9e149fab!2sSaboo%20RKS%20-%20Maruti%20Suzuki%20Car%20Dealer%20(%20Service%20Center%2C%20Moosarambagh)!5e0!3m2!1sen!2sin!4v1674123920531!5m2!1sen!2sin',
+    address:
+      'Maruti Suzuki Service Center (RKS Motor, Moosarambagh, Hyderabad)',
+  },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xad74c2cc38240458!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387026319!5m2!1sen!2sin',
     address: 'Maruti Suzuki Workshop (RKS Motor, Somajiguda, Hyderabad)',
