@@ -65,7 +65,8 @@ const navigation = {
     { name: 'SUBSCRIBE', to: '/subscribe' },
     { name: 'TERMS & CONDITIONS', to: '/maruti-car-terms-and-conditions' },
     { name: 'FAQ', to: '/faq' },
-    { name: 'ANNUAL REPORT', to: '/' },
+    { name: "ANNUAL REPORT '21", to: '/Annual_Return_2021' },
+    { name: "ANNUAL REPORT '22", to: '/Annual_Return_2022' },
     { name: 'CSR POLICY', to: '/' },
   ],
 };
