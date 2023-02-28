@@ -8,17 +8,25 @@ function Cars() {
     <>
       <div className='container mx-auto px-5 lg:px-0 md:px-3 mt-5'>
         <div className='grid  grid-cols-1 gap-2'>
+          <div className='flex items-center justify-center my-3'>
+            <Link
+              to='/maruti-suzuki-car-offers-page'
+              className='animate-pulse bg-blue-800 text-white py-2 font-light tracking-wide px-4 md:px-6 md:py-2 text-sm md:text-base rounded hover:bg-rose-700 hover:border-red duration-300 ease-in'
+            >
+              View Offers
+            </Link>
+          </div>
           <div className='text-center space-y-3'>
-            <p className='uppercase font-bold text-xl md:py-4 text-red-500'>
+            <p className='uppercase font-bold text-2xl md:py-4 text-red-500'>
               The Maruti Suzuki Fleet
             </p>
 
-            <p className='text-base max-w-5xl md:max-w-3xl md:pb-8 mx-auto '>
+            {/* <p className='text-base max-w-5xl md:max-w-3xl md:pb-8 mx-auto '>
               Saboo RKS is the leading Maruti Suzuki dealer in Hyderabad. Built
               with innovations that stand out with a whole new world of enhanced
               driving experience. Any Questions? Our professional and
               well-trained staff are always ready to assist!
-            </p>
+            </p> */}
           </div>
         </div>
         <VehicleProducts />
@@ -29,14 +37,6 @@ function Cars() {
           alt="banner"
         />
       </div> */}
-        <div className='flex items-center justify-center my-3'>
-          <Link
-            to='/maruti-suzuki-car-offers-page'
-            className='bg-blue-800 text-white py-2 font-light tracking-wide px-4 md:px-6 md:py-2 text-sm md:text-base rounded hover:bg-rose-700 hover:border-red duration-300 ease-in'
-          >
-            View Offers
-          </Link>
-        </div>
       </div>
     </>
   );
@@ -96,7 +96,7 @@ const VehicleProducts = () => {
         <div className='sm:col-span-2'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/new-alto-k10-grid.webp'
-            className='mx-auto product_image h-[400px] w-full'
+            className='lg:mx-auto product_image lg:h-[400px] lg:w-full'
             alt='banner'
           />
         </div>

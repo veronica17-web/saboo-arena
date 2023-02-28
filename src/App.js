@@ -489,6 +489,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
         <Subscribe />
+
         <Footer />
       </BrowserRouter>
     </>

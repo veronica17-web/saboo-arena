@@ -57,6 +57,7 @@ const navigation = {
     { name: 'CONTACT US', to: '/contact-maruti-suzuki-showroom' },
   ],
   financeInsurance: [
+    { name: 'CAREERS', to: '/' },
     { name: 'PAYMENTS', to: '/payment' },
     { name: 'CORPORATE', to: '/corporate' },
     { name: 'FINANCE', to: '/maruti-suzuki-car-finance-services' },

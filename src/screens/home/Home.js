@@ -74,7 +74,7 @@ function Home() {
       <CarEnquiry />
       <Cars />
       <About />
-      <Accomplishments />
+      {/* <Accomplishments /> */}
       <Testimonials />
     </>
   );

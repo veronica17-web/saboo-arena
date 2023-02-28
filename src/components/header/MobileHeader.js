@@ -68,6 +68,10 @@ const navigation = {
   ],
   more: [
     {
+      name: 'Careers',
+      to: '/',
+    },
+    {
       name: 'Gallery',
       to: '/gallery',
     },
