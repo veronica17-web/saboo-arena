@@ -6,10 +6,11 @@ import ReactReadMoreReadLess from 'react-read-more-read-less';
 
 import '../../App.css';
 
-const secondPara = '';
+const secondPara =
+  'With an excellent track record for the impeccable quality of our service and customer satisfaction, we look forward to growing in a dynamic business environment, and keep up with the need to anticipate and embrace change, and continuously reinvent ourselves. We strive for customer satisfaction. The testimony of our success is in having highest number of referral sales & repeat buyers in India. We have sold over 1, 00,000 Maruti Suzuki cars till date and have serviced over 10,00,000 cars. This, in short, sums up the commendable growth route of SABOO RKS.';
 
 const longText =
-  ' SABOO RKS is Hyderabad’s leading automobile dealership and has been driving growth in domains of automobile sales and service over the last four decades. We have been into automobile business since 1973 and have graduated from 2-wheeler to 4-wheeler with the prestigious dealership of Maruti Suzuki in 1997. We are extensively spread across the city with five sales outlets, nine workshops, four true value(pre-owned) sales outlets, one commercial outlet and two premium car outlets NEXA.&nbsp; At SABOO RKS Group, we consider understanding and anticipating customer needs as crucial to our continued success. We believe in Customers for Life concept and strive to provide the best value for money to our customers by offering world-class products and services. Dependability, Assurance, Trust Worthy and Loyal – values synonymous to the SABOO RKS Group, have helped us gain the trust of our customers, since inception.';
+  'We are extensively spread across the city with five sales outlets, nine workshops, four true value(pre-owned) sales outlets, one commercial outlet and two premium car outlets NEXA. SABOO RKS is Hyderabad’s leading automobile dealership and has been driving growth in domains of automobile sales and service over the last four decades. We have been into automobile business since 1973 and have graduated from 2-wheeler to 4-wheeler with the prestigious dealership of Maruti Suzuki in 1997. We are extensively spread across the city with five sales outlets, nine workshops, four true value(pre-owned) sales outlets, one commercial outlet and two premium car outlets NEXA. At SABOO RKS Group, we consider understanding and anticipating customer needs as crucial to our continued success. We believe in Customers for Life concept and strive to provide the best value for money to our customers by offering world-class products and services. Dependability, Assurance, Trust Worthy and Loyal – values synonymous to the SABOO RKS Group, have helped us gain the trust of our customers, since inception.';
 
 function About() {
   return (
@@ -70,14 +71,31 @@ function About() {
             driving growth in domains of automobile sales and service over the
             last four decades. We have been into automobile business since 1973
             and have graduated from 2-wheeler to 4-wheeler with the prestigious
-            dealership of Maruti Suzuki in 1997. We are extensively spread
-            across the city with five sales outlets, nine workshops, four true
-            value(pre-owned) sales outlets, one commercial outlet and two
-            premium car outlets NEXA.<br></br>
-          </span>{' '}
+            dealership of Maruti Suzuki in 1997.{' '}
+            {/* <ReadMoreReact
+              text={}
+              min={80}
+              ideal={100}
+              max={200}
+              readMoreText='Read More'
+            /> */}
+          </span>
         </p>
         <p className='text-gray-100 py-3'>
           <span className='text-gray-500 font-medium'>
+            <ReadMoreReact
+              text={longText}
+              min={80}
+              ideal={100}
+              max={200}
+              readMoreText='Read More'
+            />
+          </span>{' '}
+        </p>
+
+        {/* <p className='text-gray-100 py-3'>
+          <span className='text-gray-500 font-medium'>
+            <br></br>
             At SABOO RKS Group, we consider understanding and anticipating
             customer needs as crucial to our continued success. We believe in
             "Customers for Life" concept and strive to provide the best value
@@ -86,24 +104,22 @@ function About() {
             synonymous to the SABOO RKS Group, have helped us gain the trust of
             our customers, since inception.
           </span>{' '}
-        </p>
-        <p className='text-gray-100 py-3'>
+        </p> */}
+        {/* <p className='text-gray-100 py-3'>
           <span className='text-gray-500 font-medium'>
-            With an excellent track record for the impeccable quality of our
-            service and customer satisfaction, we look forward to growing in a
-            dynamic business environment, and keep up with the need to
-            anticipate and embrace change, and continuously reinvent ourselves.
+            <ReadMoreReact
+              text={secondPara}
+              min={150}
+              ideal={150}
+              max={200}
+              readMoreText='Read More'
+            />
+            <br></br>
           </span>{' '}
         </p>
         <p className='text-gray-100 py-3'>
-          <span className='text-gray-500 font-medium'>
-            We strive for customer satisfaction. The testimony of our success is
-            in having highest number of referral sales & repeat buyers in India.
-            We have sold over 1, 00,000 Maruti Suzuki cars till date and have
-            serviced over 10,00,000 cars. This, in short, sums up the
-            commendable growth route of SABOO RKS.
-          </span>{' '}
-        </p>
+          <span className='text-gray-500 font-medium'></span>{' '}
+        </p> */}
       </div>
       <div className='container mx-auto px-5 text-center py-6'>
         <h2 className='text-red-500 font-medium text-3xl'>OUR MANAGEMENT</h2>
