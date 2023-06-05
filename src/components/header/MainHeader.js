@@ -29,6 +29,9 @@ const navigation = {
   ],
   cng: [
     {
+      name: 'Brezza CNG',
+      to: '/maruti-brezza-cng-on-road-price',
+    },    {
       name: 'Alto K10 CNG',
       to: '/alto-k10-cng',
     },

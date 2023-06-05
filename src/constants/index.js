@@ -1,19 +1,21 @@
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-ugadi-banner.webp',
-    alt: 'ugadi-banner',
-  },{
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp",
-    alt:"Maruti Suzuki Arena Brezza S-CNG"
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
+    alt: 'may offer',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
+    alt: 'royal platinum',
   },
   // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/saboomaruti-arena-feb-offer-banner-web.webp',
-  //   alt: 'feb-2023-offer-banner',
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/akshaya-tritiya-web-banner.webp',
+  //   alt: 'akshaya tritiya banner',
   // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-holi-service-banner.webp',
-  //   alt: 'new-holi-march-banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
+    alt: 'Maruti Suzuki Arena Brezza S-CNG',
+  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-banner-dec23.webp',
     alt: 'new-spresso-banner',
@@ -53,11 +55,12 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-ugadi-banner-mobile.webp',
-    alt: 'ugadi-mobile-banner',
-  },{
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp",
-    alt:"Maruti Suzuki Arena Brezza S-CNG"
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
+    alt: 'may offer mobile banner',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
+    alt: 'Maruti Suzuki Arena Brezza S-CNG',
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023-mobile.webp',
@@ -102,8 +105,8 @@ export const mobileSliders = [
 
 export const offersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-ugadi-banner.webp',
-    alt: 'ugadi-offers-banner',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
+    alt: 'may offer banner',
   },
 
   // {
@@ -125,10 +128,10 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023-mobile.webp',
-  //   alt: 'jan-2023-offer-banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
+    alt: 'may offer',
+  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
   //   alt: 'banner-1',

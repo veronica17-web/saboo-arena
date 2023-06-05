@@ -44,15 +44,14 @@ function Blog() {
         className="w-full lg:mt-16"
         alt="blog-screen-banner"
       />
-      <p className="text-center text-red-600">News and Social Media Articles</p>
-      <p className="text-center mt-2 mb-14">
-        Stay up to date with the latest activity from your favorite Maruti
-        Suzuki Dealer!
+      <p className="text-center text-red-600 text-3xl">News and Social Media Articles</p>
+      <p className="text-center mt-2 mb-1 animate-pulse">
+      "Stay connected and always be in the know with the most recent updates and exciting happenings from your beloved Maruti Suzuki Dealer!"
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto px-5 sm:px-0">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 container mx-auto p-5 sm:px-0">
         {blogsData.map((blog) => (
           <div
-            className="flex flex-col bg-white border shadow-md rounded-lg overflow-hidden relative max-h-max"
+            className="flex flex-col bg-white border shadow-md rounded-lg overflow-hidden relative max-h-max "
             key={blog.id}
           >
             <img src={blog.img} alt={blog.id} />

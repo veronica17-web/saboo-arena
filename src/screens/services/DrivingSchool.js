@@ -125,6 +125,7 @@ const RegisterInterest = () => {
   const [phone, setPhone] = useState('');
   const [outlet, setOutlet] = useState();
   const [email, setEmail] = useState();
+
   const navigate = useNavigate();
 
   // const [methodpopup, setMethodPopup] = useState();
@@ -142,7 +143,7 @@ const RegisterInterest = () => {
     e.preventDefault();
     setLoading(true);
     try {
-      axios.post('https://saboogroups.com/admin/api/arena-driving-school', {
+      axios.post('https://saboogroups.com/admin/api/arena-driving-school',{
         name: name,
         email: email,
         phone: phone,
@@ -158,6 +159,11 @@ const RegisterInterest = () => {
       console.log(error);
     }
   }
+
+
+
+ 
+ 
 
   return (
     <div className='py-12 bg-[#232053]'>

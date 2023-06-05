@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './header.css';
 import {
@@ -126,15 +126,23 @@ const TopHeader = () => {
         <div className='flex items-center justify-center space-x-5'>
           <div className='flex items-center space-x-1 font-bold'>
             Contact Us &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href='mailto:info@saboomaruti.in'>
-              <FaEnvelope />
+            <a href='https://wa.me/+919848898488'>
+              <FaWhatsapp size={20} />
             </a>
+            
           </div>
           &nbsp;&nbsp;
           <div className='border text-black h-5 lg:flex space-y-4'></div>
           <div className='flex items-center space-x-1 justify-center sm:justify-start'>
             <a href='tel:9848898488'>
               <FaPhoneAlt size={12} />
+            </a>
+          </div>
+          &nbsp;&nbsp;
+          <div className='border text-black h-5 lg:flex space-y-4'></div>
+          <div className='flex items-center space-x-1 justify-center sm:justify-start'>
+          <a href='mailto:info@saboomaruti.in'>
+              <FaEnvelope />
             </a>
           </div>
         </div>

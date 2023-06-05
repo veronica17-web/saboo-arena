@@ -74,6 +74,7 @@ import PaymentTest from './screens/services/PaymentTest';
 import AltoK10CNG from './screens/CNG/AltoK10CNG';
 import Metaverse from './screens/services/Metaverse';
 import Gallery from './screens/more/Gallery';
+import BrezzaCNG from './screens/CNG/BrezzaCNG';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -383,6 +384,10 @@ function App() {
             path='/maruti-alto-800-cng-on-road-price-in-hyderabad'
             element={<AltoCNG />}
           />
+          <Route
+          path='/maruti-brezza-cng-on-road-price'
+          element={<BrezzaCNG />}
+        />
           <Route path='/alto-k10-cng' element={<AltoK10CNG />} />
           <Route
             path='/maruti-wagonr-cng-on-road-price-in-hyderabad'

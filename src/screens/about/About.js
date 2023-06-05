@@ -7,10 +7,10 @@ import ReactReadMoreReadLess from 'react-read-more-read-less';
 import '../../App.css';
 
 const secondPara =
-  'With an excellent track record for the impeccable quality of our service and customer satisfaction, we look forward to growing in a dynamic business environment, and keep up with the need to anticipate and embrace change, and continuously reinvent ourselves. We strive for customer satisfaction. The testimony of our success is in having highest number of referral sales & repeat buyers in India. We have sold over 1, 00,000 Maruti Suzuki cars till date and have serviced over 10,00,000 cars. This, in short, sums up the commendable growth route of SABOO RKS.';
+  'Our unwavering commitment to exceptional service quality and customer satisfaction has established a stellar reputation, and we are excited to continue growing in an ever-evolving business landscape. As a customer-centric organization, we strive to exceed your expectations every time. Our dedication to this vision is reflected in our remarkable sales numbers, with the highest referral sales and repeat buyers in India. We are proud to have sold over 1,00,000 Maruti Suzuki cars to date and serviced over 10,00,000 cars, a testament to our commendable growth trajectory at Saboo RKS';
 
 const longText =
-  'We are extensively spread across the city with five sales outlets, nine workshops, four true value(pre-owned) sales outlets, one commercial outlet and two premium car outlets NEXA. SABOO RKS is Hyderabad’s leading automobile dealership and has been driving growth in domains of automobile sales and service over the last four decades. We have been into automobile business since 1973 and have graduated from 2-wheeler to 4-wheeler with the prestigious dealership of Maruti Suzuki in 1997. We are extensively spread across the city with five sales outlets, nine workshops, four true value(pre-owned) sales outlets, one commercial outlet and two premium car outlets NEXA. At SABOO RKS Group, we consider understanding and anticipating customer needs as crucial to our continued success. We believe in Customers for Life concept and strive to provide the best value for money to our customers by offering world-class products and services. Dependability, Assurance, Trust Worthy and Loyal – values synonymous to the SABOO RKS Group, have helped us gain the trust of our customers, since inception.';
+  "At Saboo RKS Group, we have a robust presence in Hyderabad with extensive coverage that includes five sales outlets, nine workshops, four True Value (pre-owned) sales outlets, one commercial outlet, and two premium car outlets, Nexa. As Hyderabad's leading automobile dealership, we have been at the forefront of driving growth in automobile sales and service over the last four decades. Our unwavering commitment to customer satisfaction is reflected in our extensive network and our belief in the 'Customers for Life' concept. We consistently strive to offer world-class products and services that provide the best value for money to our customers. Saboo RKS Group's values of dependability, assurance, trustworthiness, and loyalty have gained the trust of our customers since our inception, and we continue to prioritize understanding and anticipating their needs to ensure our continued success.";
 
 function About() {
   return (
@@ -64,14 +64,15 @@ function About() {
         className=' w-full mb-8 container mx-auto'
         alt='Maruti-Suzuki-Nexa_Lumbini'
       />
-      <div className='container mx-auto px-5'>
+      <div className='container mx-auto px-5 shadow-md border rounded-md p-2 leading-loose text-center'>
         <p className='text-gray-100'>
-          <span className='text-gray-500 font-medium'>
-            SABOO RKS is Hyderabad’s leading automobile dealership and has been
-            driving growth in domains of automobile sales and service over the
-            last four decades. We have been into automobile business since 1973
-            and have graduated from 2-wheeler to 4-wheeler with the prestigious
-            dealership of Maruti Suzuki in 1997.{' '}
+          <span className='text-blue-900 font-medium'>
+            For over four decades, Saboo RKS has been the driving force behind
+            the growth of automobile sales and service in Hyderabad, solidifying
+            our position as the city's premier automobile dealership. Since our
+            inception in 1973, we have evolved from a 2-wheeler dealership to a
+            4-wheeler dealership and gained the prestigious Maruti Suzuki
+            dealership in 1997.{' '}
             {/* <ReadMoreReact
               text={}
               min={80}
@@ -82,7 +83,7 @@ function About() {
           </span>
         </p>
         <p className='text-gray-100 py-3'>
-          <span className='text-gray-500 font-medium'>
+          <span className='text-blue-900 font-medium'>
             <ReadMoreReact
               text={longText}
               min={80}
@@ -121,11 +122,16 @@ function About() {
           <span className='text-gray-500 font-medium'></span>{' '}
         </p> */}
       </div>
+      <br></br>
       <div className='container mx-auto px-5 text-center py-6'>
-        <h2 className='text-red-500 font-medium text-3xl'>OUR MANAGEMENT</h2>
-        <p>
-          Our experts are the finest in the industry and leaders in their field,
-          meaning you have access to the best possible resources.
+        <h2 className='text-red-500 font-medium text-5xl p-2'>
+          OUR MANAGEMENT
+        </h2>
+        <p className='text-blue-900'>
+          At Saboo RKS, we pride ourselves on the quality of our team - our
+          experts are not only the finest in the industry but also leaders in
+          their field, giving you unparalleled access to the best and most
+          up-to-date resources available.
         </p>
       </div>
 
@@ -141,7 +147,7 @@ function About() {
         </h1>
       </div>
 
-      <div className='container grid  md:grid-cols-4 sm:grid-cols-2 gap-8 mx-auto px-5'>
+      <div className='container grid  md:grid-cols-4 sm:grid-cols-2 gap-8 mx-auto px-5 p-2'>
         <div className='text-center shadow-md border rounded-md'>
           <img
             src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/about/Madhu-madam.webp'

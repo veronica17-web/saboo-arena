@@ -81,7 +81,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '24.35 ',
-    price: '5.53',
+    price: '5.54',
   },
   {
     id: 2,
@@ -89,7 +89,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '24.35 ',
-    price: '5.98',
+    price: '5.99',
   },
   {
     id: 3,
@@ -97,7 +97,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '23.56 ',
-    price: '6.26',
+    price: '6.28  ',
   },
   {
     id: 4,
@@ -105,7 +105,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '34.05 ',
-    price: '6.43',
+    price: '6.44',
   },
   {
     id: 5,
@@ -113,7 +113,7 @@ const wagonrVariants = [
     transmission: 'automatic',
     engine: '998 cc',
     mileage: '25.19 ',
-    price: '6.53',
+    price: '6.54',
   },
   {
     id: 6,
@@ -121,7 +121,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '1197 cc',
     mileage: '23.56 ',
-    price: '6.26',
+    price: '6.28',
   },
   {
     id: 7,
@@ -129,7 +129,7 @@ const wagonrVariants = [
     transmission: 'automatic',
     engine: '1197 cc',
     mileage: '24.43 ',
-    price: '6.81',
+    price: '6.83',
   },
   {
     id: 8,
@@ -137,7 +137,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '23.56 ',
-    price: '6.86',
+    price: '6.87',
   },
   {
     id: 9,
@@ -145,7 +145,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '1197 cc',
     mileage: '23.56 ',
-    price: '6.74',
+    price: '6.75',
   },
   {
     id: 10,
@@ -153,7 +153,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '34.05 ',
-    price: '6.88',
+    price: '6.89 ',
   },
   {
     id: 11,
@@ -161,7 +161,7 @@ const wagonrVariants = [
     transmission: 'automatic',
     engine: '998 cc',
     mileage: '24.43 ',
-    price: '7.41',
+    price: '7.42',
   },
   {
     id: 12,
@@ -169,7 +169,7 @@ const wagonrVariants = [
     transmission: 'automatic',
     engine: '1197 cc',
     mileage: '24.43 ',
-    price: '7.29',
+    price: '7.30',
   },
   {
     id: 13,
@@ -177,7 +177,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '32.5 ',
-    price: '5.50',
+    price: '5.51',
   },
   {
     id: 14,
@@ -185,7 +185,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '32.5 ',
-    price: '6.40',
+    price: '6.41',
   },
 ];
 

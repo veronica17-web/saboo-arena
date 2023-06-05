@@ -1,5 +1,14 @@
 const galleryData = [
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/gallery/govt-car-deliveries-tricor/Vehicle-distribution-1.webp',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/gallery/govt-car-deliveries-tricor/vehicle-distribution-2.webp',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/gallery/govt-car-deliveries-tricor/vehicle-distribution-3.webp',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/gallery/moosarambagh+opening/DSC02877.webp',
   },
   {

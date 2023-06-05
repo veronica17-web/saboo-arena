@@ -99,7 +99,7 @@ const ertigaVariants = [
     title: 'new ertiga lxi (o)',
     transmission: 'manual',
     mileage: '20.51 ',
-    price: '8.49',
+    price: '8.64',
   },
   // {
   //   id: 2,
@@ -113,7 +113,7 @@ const ertigaVariants = [
     title: 'new ertiga vxi (o)',
     transmission: 'manual',
     mileage: '20.30 ',
-    price: '9.63',
+    price: '9.78',
   },
 
   {
@@ -121,49 +121,49 @@ const ertigaVariants = [
     title: 'new ertiga zxi (o)',
     transmission: 'manual',
     mileage: '20.30 ',
-    price: '10.73',
+    price: '10.88',
   },
   {
     id: 6,
     title: 'new ertiga zxi+',
     transmission: 'manual',
     mileage: '20.30 ',
-    price: '11.43',
+    price: '11.58',
   },
   {
     id: 7,
     title: 'new ertiga vxi at',
     transmission: 'automatic',
     mileage: '20.30 ',
-    price: '11.13',
+    price: '11.28',
   },
   {
     id: 8,
     title: 'new ertiga zxi at',
     transmission: 'automatic',
     mileage: '20.30 ',
-    price: '12.23',
+    price: '12.38',
   },
   {
     id: 9,
     title: 'new ertiga zxi+ at',
     transmission: 'automatic',
     mileage: '20.51 ',
-    price: '12.93',
+    price: '13.08',
   },
-  {
-    id: 10,
-    title: 'new ertiga vxi cng',
-    transmission: 'manual',
-    mileage: '26.11 ',
-    price: '10.44',
-  },
+  // {
+  //   id: 10,
+  //   title: 'new ertiga vxi cng',
+  //   transmission: 'manual',
+  //   mileage: '26.11 ',
+  //   price: '10.44',
+  // },
   {
     id: 11,
     title: 'new ertiga vxi (o) cng',
     transmission: 'manual',
     mileage: '26.11 ',
-    price: '10.58',
+    price: '10.73',
   },
   // {
   //   id: 12,
@@ -177,7 +177,7 @@ const ertigaVariants = [
     title: 'new ertiga zxi (o) cng',
     transmission: 'manual',
     mileage: '26.11 ',
-    price: '11.68',
+    price: '11.83',
   },
   // {
   //   id: 14,
@@ -191,7 +191,7 @@ const ertigaVariants = [
     title: 'ertiga tour m (o) petrol',
     transmission: 'manual',
     mileage: '18.04 ',
-    price: '9.60',
+    price: '9.75',
   },
   // {
   //   id: 15,
@@ -205,7 +205,7 @@ const ertigaVariants = [
     title: 'ertiga tour m (o) cng',
     transmission: 'manual',
     mileage: '26.08 ',
-    price: '10.55',
+    price: '10.70',
   },
 ];
 

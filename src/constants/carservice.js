@@ -1,13 +1,13 @@
 const serviceCenterBanner = [
   {
     id: 3,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-holi-service-banner.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Summer+Service.webp',
   },
 
-  // {
-  //   id: 2,
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/service_banner_2.webp',
-  // },
+  {
+    id: 2,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/service_banner_2.webp',
+  },
 ];
 
 const serviceIcons = [

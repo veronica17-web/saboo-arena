@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet';
 const offer_products = [
   {
     name: 'Alto K10',
-    price: '50000',
+    price: '52000',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
@@ -32,26 +32,26 @@ const offer_products = [
   // },
   {
     name: 'Alto',
-    price: '35000',
+    price: '25000',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   },
   {
     name: 'S-Presso',
-    price: '50000',
+    price: '62000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'Celerio',
-    price: '45000',
+    price: '65000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'WagonR ',
-    price: '55000',
+    price: '57000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
@@ -77,7 +77,7 @@ const offer_products = [
 
   {
     name: 'EECO',
-    price: '30000',
+    price: '25000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },

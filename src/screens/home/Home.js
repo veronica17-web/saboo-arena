@@ -84,7 +84,7 @@ const Testimonials = () => {
   return (
     <div className='container mx-auto my-5'>
       <p className='text-3xl text-blue-800 text-center '>Testimonials</p>
-      <p className='mb-8 text-center'>What people have to say</p>
+      <p className='mb-8 text-center'>Discover what others have to say</p>
       <Swiper
         slidesPerView={1}
         loop={true}
