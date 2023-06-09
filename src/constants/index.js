@@ -1,8 +1,8 @@
 export const sliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
-    alt: 'may offer',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'may offer',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
     alt: 'royal platinum',
@@ -54,10 +54,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
-    alt: 'may offer mobile banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
+  //   alt: 'may offer mobile banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
     alt: 'Maruti Suzuki Arena Brezza S-CNG',
@@ -104,10 +104,10 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
-    alt: 'may offer banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'may offer banner',
+  // },
 
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023.webp',
@@ -128,18 +128,18 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
+  //   alt: 'may offer',
+  // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
-    alt: 'may offer',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
+    alt: 'banner-1',
   },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
-  //   alt: 'banner-1',
-  // },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/mobile_sliders/S-cng_mobile.webp',
-  //   alt: 'banner-3',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/mobile_sliders/S-cng_mobile.webp',
+    alt: 'banner-3',
+  },
 ];
 
 export const products = [
