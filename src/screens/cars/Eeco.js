@@ -221,6 +221,12 @@ function Eeco() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>
@@ -291,7 +297,7 @@ const CarsSlider = () => {
           <p className="text-3xl font-semibold">Maruti Eeco</p>
           <p className="font-semibold">
             Ex-Showroom Price
-            <span className="text-red-600 ml-3">₹&nbsp;4.63 - 4.99 Lakh*</span>
+            <span className="text-red-600 ml-3">₹&nbsp;5.27 - 8.27 Lakh*</span>
           </p>
           <div className="flex items-center flex-wrap mt-5">
             <div className="flex items-center space-x-3 mr-7">

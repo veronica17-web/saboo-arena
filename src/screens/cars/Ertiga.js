@@ -221,6 +221,12 @@ function Ertiga() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>
@@ -293,7 +299,7 @@ const CarsSlider = () => {
           <p className="font-semibold">
             Ex-Showroom Price
             <span className="text-red-600 ml-3">
-              ₹&nbsp;9.55 - 12.79 Lakhs*
+              ₹&nbsp;8.64 - 13.08 Lakhs*
             </span>
           </p>
           <div className="flex items-center flex-wrap mt-5">

@@ -268,6 +268,12 @@ function AltoCNG() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>

@@ -223,6 +223,12 @@ function AltoK10() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>
@@ -294,7 +300,7 @@ const CarsSlider = () => {
           <p className='text-3xl font-semibold'>Maruti Alto K10</p>
           <p className='font-semibold'>
             Ex-Showroom Price
-            <span className='text-red-600 ml-3'>₹&nbsp;3.99 - 5.83 Lakh*</span>
+            <span className='text-red-600 ml-3'>₹&nbsp;3.99 - 5.96 Lakh*</span>
           </p>
           <div className='flex items-center flex-wrap mt-5'>
             <div className='flex items-center space-x-3 mr-7'>

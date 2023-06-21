@@ -111,7 +111,7 @@ function Wagonr() {
         <div className='bg-[#1b72b7] py-12 mt-12'>
         <div className='container mx-auto space-y-5 lg:px-0 px-5'>
           <h3 className='text-xl font-semibold text-white'>
-            GET EECO ON-ROAD PRICE IN HYDERABAD
+            GET WAGON R ON-ROAD PRICE IN HYDERABAD
           </h3>
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
@@ -220,6 +220,12 @@ function Wagonr() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>
@@ -291,7 +297,7 @@ const CarsSlider = () => {
           <p className="text-3xl font-semibold">Maruti Wagon R</p>
           <p className="font-semibold">
             Ex-Showroom Price
-            <span className="text-red-600 ml-3">₹&nbsp;5.47 - 7.20 Lakh*</span>
+            <span className="text-red-600 ml-3">₹&nbsp;5.54 - 7.42 Lakh*</span>
           </p>
           <div className="flex items-center flex-wrap mt-5">
             <div className="flex items-center space-x-3 mr-7">

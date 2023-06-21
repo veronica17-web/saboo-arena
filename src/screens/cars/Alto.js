@@ -17,7 +17,7 @@ import { CgSpinner } from 'react-icons/cg';
 
 
 
-function Alto() {
+export function Alto() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
@@ -225,6 +225,12 @@ function Alto() {
                   <option value='RKS Motor - Shamirpet'>
                     RKS Motor - Shamirpet
                   </option>
+                  <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                 </select>
               </div>
             </div>
@@ -296,7 +302,7 @@ const CarsSlider = () => {
           <p className='text-3xl font-semibold'>Maruti Alto</p>
           <p className='font-semibold'>
             Ex-Showroom Price
-            <span className='text-red-600 ml-3'>₹&nbsp;3.39 - 4.41 Lakh*</span>
+            <span className='text-red-600 ml-3'>₹&nbsp;3.54 - 5.13 Lakh*</span>
           </p>
           <div className='flex items-center flex-wrap mt-5'>
             <div className='flex items-center space-x-3 mr-7'>

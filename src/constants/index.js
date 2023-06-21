@@ -505,6 +505,10 @@ export const showrooms = [
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.4992833446645!2d78.56797331487971!3d17.626496387935717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb81bc18d30c3b%3A0x5f74a496d6d6fd97!2sMaruti%20Suzuki%20Car%20Dealer%20-%20Shamirpet!5e0!3m2!1sen!2sin!4v1629796936830!5m2!1sen!2sin',
     address: 'Maruti Suzuki (RKS Motor, Shamirpet, Hyderabad)',
   },
+  {
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.583458680358!2d78.3631478!3d17.383765399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb958150dd4c01%3A0x2d0aecdb5b3523de!2sMaruti%20Suzuki%20Arena%20(RKS%20Motor)!5e0!3m2!1sen!2sin!4v1687258050053!5m2!1sen!2sin',
+    address: 'Maruti Suzuki (RKS Motor, Narsingi, Hyderabad)',
+  },
 ];
 
 export const truevalue = [

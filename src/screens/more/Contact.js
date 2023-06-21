@@ -259,6 +259,12 @@ function Contact() {
                             <option value="Shamirpet">
                               RKS Motor - Shamirpet
                             </option>
+                            <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                           </select>
                         </div>
 
@@ -496,6 +502,12 @@ function Contact() {
                               <option value="Showroom - Shamirpet">
                                 RKS Motor - Shamirpet
                               </option>
+                              <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                             </optgroup>
                             <optgroup label="Workshop">
                               <option value="Workshop - Somajiguda">
@@ -783,6 +795,12 @@ function Contact() {
                               <option value="Showroom - Shamirpet">
                                 RKS Motor - Shamirpet
                               </option>
+                              <option value='RKS Motor - Narsingi'>
+                    RKS Motor - Narsingi
+                  </option>
+                  <option value='RKS Motor - Kodangal'>
+                    RKS Motor - Kodangal
+                  </option>
                             </optgroup>
                             <optgroup label="Workshop">
                               <option value="Workshop - Somajiguda">

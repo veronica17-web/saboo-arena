@@ -131,6 +131,8 @@ const PreferenceForm = () => {
                 <option value="Nampally">Nampally</option>
                 <option value="Kukatpally">Kukatpally</option>
                 <option value="shamirpet">Shamirpet</option>
+                <option value = "narsingi">Narsingi</option>
+                <option value="kondangal">Kodangal</option>
               </select>
             </div>
 
