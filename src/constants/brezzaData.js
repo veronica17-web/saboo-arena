@@ -163,14 +163,14 @@ const brezzaVariants = [
     title: 'zXi',
     transmission: 'manual',
     mileage: '18.76',
-    price: '11,20,500',
+    price: '11,04,500',
   },
   {
     id: 5,
     title: 'ZXi (D)',
     transmission: 'manual',
     mileage: '17.03',
-    price: '11,12,000',
+    price: '11,20,500',
   },
 
   {
@@ -189,7 +189,7 @@ const brezzaVariants = [
   },
   {
     id: 8,
-    title: 'ZXi +',
+    title: 'ZXi+',
     transmission: 'manual',
     mileage: '17.03',
     price: '12,48,500',

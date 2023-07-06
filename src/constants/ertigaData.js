@@ -177,7 +177,7 @@ const ertigaVariants = [
     title: 'zxi (o) cng',
     transmission: 'manual',
     mileage: '26.11 ',
-    price: '10,73,000',
+    price: '11,83,000',
   },
   // {
   //   id: 14,

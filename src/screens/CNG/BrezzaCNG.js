@@ -96,7 +96,7 @@ function BrezzaCNG() {
       </Helmet>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/brezza/Brezza_CNG_page.webp'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/brezza/Website+Maruti+Suzuki+Arena+Brezza+Scng+Offers(1).webp'
         className='max-w-full w-full lg:mt-16'
         alt='1'
       />

@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet';
 const offer_products = [
   {
     name: 'Alto K10',
-    price: '56000',
+    price: '57000',
     logo: 'Alto k10',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
@@ -31,29 +31,36 @@ const offer_products = [
   //   explore: '/maruti-alto-800-on-road-price-in-hyderabad',
   // },
   {
-    name: 'Alto',
-    price: '18100',
-    logo: 'Alto',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
-    explore: '/maruti-alto-800-on-road-price-in-hyderabad',
-  },
-  {
     name: 'S-Presso',
-    price: '66000',
+    price: '67000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
+    name: 'WagonR ',
+    price: '62000',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
+    explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
+  },
+  {
+    name: 'Alto',
+    price: '30000',
+    logo: 'Alto',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
+    explore: '/maruti-alto-800-on-road-price-in-hyderabad',
+  },
+
+  {
     name: 'Celerio',
-    price: '66000',
+    price: '95000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
-    name: 'WagonR ',
-    price: '61000',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
-    explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
+    name: 'Swift',
+    price: '45100',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
+    explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
 
   // {
@@ -68,16 +75,10 @@ const offer_products = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp',
     explore: '/maruti-swift-dzire-on-road-price-in-hyderabad',
   },
-  {
-    name: 'Swift',
-    price: '54100',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
-    explore: '/maruti-swift-car-on-road-price-in-hyderabad',
-  },
 
   {
     name: 'EECO',
-    price: '29000',
+    price: '25000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },

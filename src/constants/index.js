@@ -317,10 +317,40 @@ export const products = [
 
 export const cngProducts = [
   {
+    name: 'Brezza CNG',
+    price: '4.76 Lakh',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/logo/brezza-new-logo.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-brezza.webp',
+    brouchure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf',
+    explore: '/maruti-brezza-cng-on-road-price',
+    bookNow: '/',
+  },
+  {
+    name: 'Alto K10 CNG',
+    price: '4.76 Lakh',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-logo-bw.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
+    brouchure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf',
+    explore: '/alto-k10-cng',
+    bookNow: '/',
+  },
+  {
+    name: 'Swift CNG',
+    price: '4.76 Lakh',
+    logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Swift.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
+    brouchure:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf',
+    explore: '/maruti-new-swift-cng',
+    bookNow: '/',
+  },
+  {
     name: 'Alto',
     price: '4.76 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/alto.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/Alto_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Alto_Brand_Brochure.pdf',
     explore: '/maruti-alto-800-cng-on-road-price-in-hyderabad',
@@ -332,7 +362,7 @@ export const cngProducts = [
     price: '8.14 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Dzire.jpg',
 
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/dzire_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Dzire_Brochure.pdf',
     explore: '/maruti-swift-dzire-cng-on-road-price-in-hyderabad',
@@ -342,7 +372,7 @@ export const cngProducts = [
     name: 'S-Presso',
     price: '5.11 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/spresso.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/S-Presso_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_S-Presso_brochure.pdf',
     explore: '/maruti-s-presso-cng-on-road-price-in-hyderabad',
@@ -352,7 +382,7 @@ export const cngProducts = [
     name: 'Wagon R',
     price: '6.34 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/wagonr.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/WagonR_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_WagonR_Brochure.pdf',
     explore: '/maruti-wagonr-cng-on-road-price-in-hyderabad',
@@ -362,7 +392,7 @@ export const cngProducts = [
     name: 'Ertiga',
     price: '8.35 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Ertiga.jpg',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/ertiga_2.png',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-ertiga.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Ertiga_Brochure.pdf',
     explore: '/maruti-ertiga-cng-on-road-price-in-hyderabad',
@@ -372,7 +402,7 @@ export const cngProducts = [
     name: 'Celerio',
     price: '6.58 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/celerio.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/Celerio_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_All_New_Celerio.pdf',
     explore: '/maruti-celerio-cng-on-road-price-in-hyderabad',
@@ -382,7 +412,7 @@ export const cngProducts = [
     name: 'Eeco',
     price: '5.60 Lakh',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/eeco.png',
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cng/EECO_cng.jpg',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     brouchure:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf',
     explore: '/maruti-eeco-cng-on-road-price-in-hyderabad',
@@ -487,29 +517,43 @@ export const testimonials = [
 export const showrooms = [
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1625239013742!2d78.48431231487722!3d17.451933588040045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a72a843d403%3A0xd11fa91defdbce1b!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Tadbund%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386448972!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Tadbund/Tar Bund, Secunderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Tadbund/Tar Bund, Secunderabad)',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb974b6feb9ea5%3A0x1e0a3e3dabcb8701!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386525754!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Somajiguda, Hyderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Somajiguda, Hyderabad)',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8485953412464!2d78.51037021487612!3d17.37101698808845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb985a78a7f883%3A0xad5bb6113d36bffc!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386585098!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Malakpet, Hyderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Malakpet, Hyderabad)',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.7169347462946!2d78.56817041487753!3d17.47325728802727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Kushaiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386635898!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Kushaiguda, Hyderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Kushaiguda, Hyderabad)',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.4992833446645!2d78.56797331487971!3d17.626496387935717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb81bc18d30c3b%3A0x5f74a496d6d6fd97!2sMaruti%20Suzuki%20Car%20Dealer%20-%20Shamirpet!5e0!3m2!1sen!2sin!4v1629796936830!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Shamirpet, Hyderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Shamirpet, Hyderabad)',
   },
   {
     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.583458680358!2d78.3631478!3d17.383765399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb958150dd4c01%3A0x2d0aecdb5b3523de!2sMaruti%20Suzuki%20Arena%20(RKS%20Motor)!5e0!3m2!1sen!2sin!4v1687258050053!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor, Narsingi, Hyderabad)',
+    address: 'Maruti Suzuki (RKS Motor - Narsingi, Hyderabad)',
+  },
+  {
+    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.23000989164!2d77.6145696!3d17.110276100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc96d29623dee8d%3A0x80ac3a193f40c080!2sMaruti%20Suzuki%20Arena%20(RKS%20Motor)!5e0!3m2!1sen!2sin!4v1688534695512!5m2!1sen!2sin',
+    address: 'Maruti Suzuki (RKS Motor - Kodangal, Vikarabad)',
   },
 ];
+
+<iframe
+  src=''
+  width='600'
+  height='450'
+  style='border:0;'
+  allowfullscreen=''
+  loading='lazy'
+  referrerpolicy='no-referrer-when-downgrade'
+></iframe>;
 
 export const truevalue = [
   {

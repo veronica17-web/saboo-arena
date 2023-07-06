@@ -177,7 +177,7 @@ const spressoVariants = [
     id: 7,
     title: 'VXI (O) AGS 1L',
     transmission: 'manual',
-    mileage: '21.7',  
+    mileage: '21.7',
     price: '5,76,500',
   },
   {

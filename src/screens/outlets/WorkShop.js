@@ -87,7 +87,7 @@ const Banner = () => {
         </div>
         <div>
           <img
-            src={require("../../assets/banners/Saboo-Maruti-Suzuki-Outlet.webp")}
+            src={require("../../assets/banners/outlets-banner.webp")}
             alt="Saboo-Maruti-Suzuki-Outlet"
           />
         </div>

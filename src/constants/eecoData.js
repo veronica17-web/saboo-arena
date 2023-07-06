@@ -68,7 +68,7 @@ const eecoVariants = [
   },
   {
     id: 4,
-    title: '5 STR CNG 1.2L',
+    title: '7 STR CNG 1.2L',
     transmission: 'manual',
     mileage: '16.11',
     price: '5,56,000',

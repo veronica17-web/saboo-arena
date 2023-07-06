@@ -95,7 +95,7 @@ function TourH1Alto() {
       </Helmet>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/TOUR/alto-tour-h1/Alto800-tour_BANNER.jpg'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/TOUR/alto-tour-h1/saboo-maruti-tour-h1.webp'
         className='max-w-full w-full lg:mt-16'
         alt='1'
       />
@@ -105,10 +105,13 @@ function TourH1Alto() {
           <img className='object-left' src={TourH1Logo} alt='vehicle_banner' />
 
           <div className='col-span-1 '>
-            <p className='font-thin '>Petrol (MT)</p>
+            <p className='font-thin '>CNG</p>
             <h4>
               <strong>
-                22.05<span>km/l*</span>
+                34.56
+                <span>
+                  &nbsp; km/kg<sup>*</sup>
+                </span>
               </strong>
             </h4>
             <div className='text-xs p-5'>
@@ -117,7 +120,7 @@ function TourH1Alto() {
             </div>
           </div>
           <div className=''>
-            <strong>₹ 4,05,000*</strong>
+            <strong>₹ 4,80,500*</strong>
             <p>Select Car Variant</p>
             <select className='w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'>
               <option selected>ALTO TOUR H1 (O)</option>
@@ -159,7 +162,7 @@ function TourH1Alto() {
             </ul>
           </div>
           <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/TOUR/alto-tour-h1/Alto800_car.png'
+            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/TOUR/alto-tour-h1/new-tour-h1-thumbnail.webp'
             className='w-full md:w-auto'
             alt='1'
           />
