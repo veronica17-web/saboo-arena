@@ -6,7 +6,7 @@ const serviceCenterBanner = [
 
   {
     id: 2,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/service_banner_2.webp',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.webp',
   },
 ];
 

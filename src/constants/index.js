@@ -67,6 +67,10 @@ export const mobileSliders = [
   //   alt: 'arena-2023-mobile-banner',
   // },
   {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile++Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.psd.webp',
+    alt: 'Maruti Suzuki service banner',
+  },
+  {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/new-spresso-mobile-banner.webp',
     alt: 'new-alto-k10-cng-banner',
   },

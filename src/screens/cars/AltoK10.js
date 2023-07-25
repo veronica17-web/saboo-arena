@@ -14,14 +14,61 @@ import { toast } from 'react-toastify';
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
 
-
 function AltoK10() {
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
+  const [method, setMethod] = useState();
+  const [loader, setLoader] = useState(false);
   const [outlet, setOutlet] = useState('');
-  const [method, setMethod] = useState('');
-  const [loading, setLoading] = useState(false);
+
+  function handleSubmit() {
+    setLoader(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
+  }
 
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
@@ -31,23 +78,6 @@ function AltoK10() {
         theme: 'colored',
       });
     }
-  }
-
-  function handleSubmit() {
-    setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      });
-      setMethod('POST');
-    } catch (err) {
-      toast.error('Something went wrong!');
-      console.log(err);
-    }
-    setLoading(false);
   }
 
   return (
@@ -119,8 +149,8 @@ function AltoK10() {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000007156717'
-            // method={method}
-            method='POST'
+            method={method}
+            // method='POST'
             acceptCharset='UTF-8'
           >
             <input
@@ -249,7 +279,7 @@ function AltoK10() {
               onClick={handleSubmit}
               className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
             >
-              {loading ? (
+              {loader ? (
                 <div className='flex items-center justify-center'>
                   <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
                   Loading
@@ -358,7 +388,6 @@ const CarsSlider = () => {
             >
               Get Best Offers
             </button>
-       
           </div>
           <p className='h-px my-6 w-full bg-gray-300'></p>
           {/* <p className="flex items-center">

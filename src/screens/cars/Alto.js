@@ -11,19 +11,65 @@ import {
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
-import { Link } from 'react-router-dom';
+
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
 
-
-
 export function Alto() {
   const [name, setName] = useState('');
+  // const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
-  const [outlet, setOutlet] = useState('');
-  const [method, setMethod] = useState('');
+  const [method, setMethod] = useState();
   const [loading, setLoading] = useState(false);
+  const [outlet, setOutlet] = useState('');
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+
+        phone: phone,
+        model: model,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
 
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
@@ -34,24 +80,6 @@ export function Alto() {
       });
     }
   }
-
-  function handleSubmit() {
-    setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      });
-      setMethod('POST');
-    } catch (err) {
-      toast.error('Something went wrong!');
-      console.log(err);
-    }
-    setLoading(false);
-  }
-
 
   return (
     <>
@@ -121,8 +149,8 @@ export function Alto() {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000007156717'
-            // method={method}
-            method='POST'
+            method={method}
+            // method='POST'
             acceptCharset='UTF-8'
           >
             <input
@@ -273,9 +301,63 @@ export function Alto() {
 }
 
 const CarsSlider = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [model, setModel] = useState('');
+  const [method, setMethod] = useState();
+  const [loading, setLoading] = useState(false);
+  // const [outlet, setOutlet] = useState('');
   const [phone, setPhone] = useState('');
   const [open, setOpen] = useState(false);
   const cancelButtonRef = useRef(null);
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -354,18 +436,18 @@ const CarsSlider = () => {
             </div>
           </div>
           <div className='flex items-center space-x-2 mt-5 mb-1'>
-            <button
+            {/* <button
               className='px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm'
-              onClick={() => setOpen(true)}
+              onClick={handleSubmit}
             >
               Get Best Offers
-            </button>
-            {/* <button
+            </button> */}
+            <button
               className='px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm'
               onClick={() => setOpen(true)}
             >
               Book a Test Drive
-            </button> */}
+            </button>
           </div>
           <p className='h-px my-6 w-full bg-gray-300'></p>
           {/* <p className="flex items-center">
@@ -429,7 +511,8 @@ const CarsSlider = () => {
                 <form
                   action='https://crm.zoho.in/crm/WebToLeadForm'
                   name='WebToLeads54158000000752015'
-                  method='POST'
+                  method={method}
+                  // method='POST'
                   acceptCharset='UTF-8'
                 >
                   <input
@@ -490,6 +573,7 @@ const CarsSlider = () => {
                                 id='Last_Name'
                                 required
                                 name='Last Name'
+                                onChange={(e) => setName(e.target.value)}
                                 className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
                             </div>
@@ -503,6 +587,7 @@ const CarsSlider = () => {
                                 ftype='email'
                                 id='Email'
                                 name='Email'
+                                onChange={(e) => setEmail(e.target.value)}
                                 className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
                             </div>
@@ -543,6 +628,7 @@ const CarsSlider = () => {
                               <select
                                 id='LEADCF6'
                                 name='LEADCF6'
+                                onChange={(e) => setModel(e.target.value)}
                                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                               >
                                 <option>Select Model</option>
@@ -599,6 +685,7 @@ const CarsSlider = () => {
                     <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
                       <button
                         type='submit'
+                        onClick={handleSubmit}
                         className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
                       >
                         Submit
