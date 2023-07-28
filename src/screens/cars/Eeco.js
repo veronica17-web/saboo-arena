@@ -1,19 +1,18 @@
-import React, { useState, Fragment, useRef } from "react";
+import React, { useState, Fragment, useRef } from 'react';
 // import { BsCalendarCheck } from "react-icons/bs";
-import "react-image-gallery/styles/css/image-gallery.css";
-import ImageGallery from "react-image-gallery";
-import { Dialog, Transition } from "@headlessui/react";
+import 'react-image-gallery/styles/css/image-gallery.css';
+import ImageGallery from 'react-image-gallery';
+import { Dialog, Transition } from '@headlessui/react';
 import {
   eecoColors,
   eecoSliders,
   eecoVariants,
-} from "../../constants/eecoData";
-import Header from "../../components/header/Header";
-import { Helmet } from "react-helmet";
-import { toast } from "react-toastify";
+} from '../../constants/eecoData';
+import Header from '../../components/header/Header';
+import { Helmet } from 'react-helmet';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
-
 
 function Eeco() {
   const [name, setName] = useState('');
@@ -22,6 +21,52 @@ function Eeco() {
   const [outlet, setOutlet] = useState('');
   const [method, setMethod] = useState('');
   const [loading, setLoading] = useState(false);
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        phone: phone,
+        model: model,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
 
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
@@ -33,23 +78,6 @@ function Eeco() {
     }
   }
 
-  function handleSubmit() {
-    setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      });
-      setMethod('POST');
-    } catch (err) {
-      toast.error('Something went wrong!');
-      console.log(err);
-    }
-    setLoading(false);
-  }
-
   return (
     <>
       <Helmet>
@@ -57,55 +85,55 @@ function Eeco() {
           Maruti Eeco On Road Price in Hyderabad | Maruti Eeco Offers
         </title>
         <meta
-          name="title"
-          content="Maruti Eeco On Road Price in Hyderabad | Maruti Eeco Offers"
+          name='title'
+          content='Maruti Eeco On Road Price in Hyderabad | Maruti Eeco Offers'
         />
         <meta
-          name="description"
-          content="Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online."
+          name='description'
+          content='Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online.'
         />
         {/* <meta
           name="keywords"
           content="eeco on road price, eeco offers, eeco price, eeco service center, maruti eeco on road price, maruti eeco offers, maruti eeco price, maruti eeco service center, maruti eeco service center near me, maruti suzuki eeco price, maruti suzuki eeco on road price, maruti suzuki eeco offers,maruti suzuki eeco, eeco on road price, eeco 2022 offers, eeco 2022 price, eeco on road price in hyderabad, breza offers in hyderabad, eeco price in hyderabad, maruti eeco 2022 price, maruti eeco 2022 on road price, maruti eeco 2022 offers, maruti eeco 2022 price in hyderabad, maruti eeco 2022 on road price in hyderabad, Maruti Suzuki eeco 2022 price, Maruti Suzuki eeco 2022 on road price, maruti suzuki eeco 2022 offers,  vitara eeco offers, Vitara eeco price, vitara eeco on road price, vitara eeco 2022 offers, vitara eeco 2022 price, vitara eeco 2022 on road price, vitara eeco 2022 offers"
         /> */}
-        <meta name="author" content="Broaddcast" />
-        <meta property="og:type" content="website" />
+        <meta name='author' content='Broaddcast' />
+        <meta property='og:type' content='website' />
         <meta
-          property="og:url"
-          content="https://www.saboomaruti.in/maruti-eeco-on-road-price-in-hyderabad"
+          property='og:url'
+          content='https://www.saboomaruti.in/maruti-eeco-on-road-price-in-hyderabad'
         />
         <meta
-          property="og:title"
-          content="Maruti Suzuki Eeco Van Price | Eeco Mileage, Features, Specification | Saboo Maruti"
+          property='og:title'
+          content='Maruti Suzuki Eeco Van Price | Eeco Mileage, Features, Specification | Saboo Maruti'
         />
         <meta
-          property="og:description"
-          content="Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online."
+          property='og:description'
+          content='Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online.'
         />
-        <meta property="og:image" content="img/og-tags/eeco.webp" />
-        <meta property="twitter:card" content="summary_large_image" />
+        <meta property='og:image' content='img/og-tags/eeco.webp' />
+        <meta property='twitter:card' content='summary_large_image' />
         <meta
-          property="twitter:url"
-          content="https://www.saboomaruti.in/maruti-eeco-on-road-price-in-hyderabad"
-        />
-        <meta
-          property="twitter:title"
-          content="Maruti Suzuki Eeco Van Price | Eeco Mileage, Features, Specification | Saboo Maruti"
+          property='twitter:url'
+          content='https://www.saboomaruti.in/maruti-eeco-on-road-price-in-hyderabad'
         />
         <meta
-          property="twitter:description"
-          content="Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online."
+          property='twitter:title'
+          content='Maruti Suzuki Eeco Van Price | Eeco Mileage, Features, Specification | Saboo Maruti'
         />
-        <meta property="twitter:image" content="img/og-tags/eeco.webp" />
+        <meta
+          property='twitter:description'
+          content='Maruti Eeco in Secunderabad & Hyderabad. Eeco 2022 Price Starts at 4.63* Lakh. Best price & offers on Maruti Eeco at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Eeco online.'
+        />
+        <meta property='twitter:image' content='img/og-tags/eeco.webp' />
       </Helmet>
       <Header />
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-eeco/eeco-banner.webp"
-        className="max-w-full w-full lg:mt-16"
-        alt="1"
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-eeco/eeco-banner.webp'
+        className='max-w-full w-full lg:mt-16'
+        alt='1'
       />
       <CarsSlider />
-      <div className="mx-5">
+      <div className='mx-5'>
         <Colors />
         <Table />
       </div>
@@ -117,8 +145,8 @@ function Eeco() {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000007156717'
-            // method={method}
-            method='POST'
+            method={method}
+            // method='POST'
             acceptCharset='UTF-8'
           >
             <input
@@ -260,85 +288,139 @@ function Eeco() {
         </div>
       </div>
       <img
-        src="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-eeco/Eeco_Brand_brochure.webp"
-        alt="brochure"
-        className="w-full"
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-eeco/Eeco_Brand_brochure.webp'
+        alt='brochure'
+        className='w-full'
       />
     </>
   );
 }
 
 const CarsSlider = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [model, setModel] = useState('');
+  const [method, setMethod] = useState();
+  const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
-  const [phone, setPhone] = useState("");
+  const [phone, setPhone] = useState('');
+  const cancelButtonRef = useRef(null);
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        email: email,
+        phone: phone,
+        model: model,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== "" && phone.length === 10) {
+  if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
-      toast.error("Enter valid phone number", {
-        theme: "colored",
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
       });
     }
   }
-  const cancelButtonRef = useRef(null);
+
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 my-8 sm:px-0 px-5">
+      <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 my-8 sm:px-0 px-5'>
         <div>
           <ImageGallery
             lazyLoad={true}
             autoPlay={true}
-            thumbnailPosition="left"
+            thumbnailPosition='left'
             showPlayButton={false}
             items={eecoSliders}
           />
         </div>
 
-        <div className="my-auto">
-          <p className="text-3xl font-semibold">Maruti Eeco</p>
-          <p className="font-semibold">
+        <div className='my-auto'>
+          <p className='text-3xl font-semibold'>Maruti Eeco</p>
+          <p className='font-semibold'>
             Ex-Showroom Price
-            <span className="text-red-600 ml-3">₹&nbsp;5.27 - 8.27 Lakh*</span>
+            <span className='text-red-600 ml-3'>₹&nbsp;5.27 - 8.27 Lakh*</span>
           </p>
-          <div className="flex items-center flex-wrap mt-5">
-            <div className="flex items-center space-x-3 mr-7">
+          <div className='flex items-center flex-wrap mt-5'>
+            <div className='flex items-center space-x-3 mr-7'>
               <img
-                src={require("../../assets/icons/speedometer.png")}
-                className="h-8 w-8"
-                alt="speedometer"
+                src={require('../../assets/icons/speedometer.png')}
+                className='h-8 w-8'
+                alt='speedometer'
               />
-              <p className="text-sm">
+              <p className='text-sm'>
                 Engine <br />
                 <span>1196cc</span>
               </p>
             </div>
 
-            <div className="flex items-center space-x-3 mx-3 mb-1">
+            <div className='flex items-center space-x-3 mx-3 mb-1'>
               <img
-                src={require("../../assets/icons/gas-station.png")}
-                className="h-8 w-8"
-                alt="gas station"
+                src={require('../../assets/icons/gas-station.png')}
+                className='h-8 w-8'
+                alt='gas station'
               />
-              <p className="text-sm">
+              <p className='text-sm'>
                 Mileage <br />
                 <span>16.11 kmpl*</span>
               </p>
             </div>
 
-            <div className="flex items-center space-x-3 mr-7 mb-1">
+            <div className='flex items-center space-x-3 mr-7 mb-1'>
               <img
-                src={require("../../assets/icons/car.png")}
-                className="h-8 w-8"
-                alt="car icon"
+                src={require('../../assets/icons/car.png')}
+                className='h-8 w-8'
+                alt='car icon'
               />
-              <p className="text-sm">
+              <p className='text-sm'>
                 Power (kW) <br />
                 <span>54</span>
               </p>
             </div>
           </div>
-          <div className="flex items-center space-x-2 mt-5 mb-1">
+          <div className='flex items-center space-x-2 mt-5 mb-1'>
             <button
-              className="px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm"
+              className='px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm'
               onClick={() => setOpen(true)}
             >
               Get Best Offers
@@ -350,29 +432,29 @@ const CarsSlider = () => {
               Book a Test Drive
             </button> */}
           </div>
-          <p className="h-px my-6 w-full bg-gray-300"></p>
+          <p className='h-px my-6 w-full bg-gray-300'></p>
           {/* <p className="flex items-center">
           <BsCalendarCheck className="mr-1" />
           Delivery from Saboo RKS, 7-30 days
         </p> */}
 
-          <p className="mt-2 mb-5">
+          <p className='mt-2 mb-5'>
             Our professional and well-trained staff is ready to assist you
           </p>
-          <div className="flex items-center space-x-2 mt-5 mb-1">
+          <div className='flex items-center space-x-2 mt-5 mb-1'>
             <a
-              href="https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase"
+              href='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/brochures/Saboo_RKS_Eeco_Passenger_2022_brochure.pdf'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm uppercase'
             >
               View Brochure
             </a>
             <a
-              href="/compare-cars"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm"
+              href='/compare-cars'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-4 py-1.5 text-sm border border-red-600 text-red-600 hover:bg-red-600 hover:text-white duration-500 rounded shadow-sm'
             >
               Compare
             </a>
@@ -381,184 +463,195 @@ const CarsSlider = () => {
       </div>
       <Transition.Root show={open} as={Fragment}>
         <Dialog
-          as="div"
-          className="relative z-10"
+          as='div'
+          className='relative z-10'
           initialFocus={cancelButtonRef}
           onClose={setOpen}
         >
           <Transition.Child
             as={Fragment}
-            enter="ease-out duration-300"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="ease-in duration-200"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
+            enter='ease-out duration-300'
+            enterFrom='opacity-0'
+            enterTo='opacity-100'
+            leave='ease-in duration-200'
+            leaveFrom='opacity-100'
+            leaveTo='opacity-0'
           >
-            <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" />
+            <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
           </Transition.Child>
 
-          <div className="fixed z-10 inset-0 overflow-y-auto">
-            <div className="flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0">
+          <div className='fixed z-10 inset-0 overflow-y-auto'>
+            <div className='flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0'>
               <Transition.Child
                 as={Fragment}
-                enter="ease-out duration-300"
-                enterFrom="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
-                enterTo="opacity-100 translate-y-0 sm:scale-100"
-                leave="ease-in duration-200"
-                leaveFrom="opacity-100 translate-y-0 sm:scale-100"
-                leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                enter='ease-out duration-300'
+                enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+                enterTo='opacity-100 translate-y-0 sm:scale-100'
+                leave='ease-in duration-200'
+                leaveFrom='opacity-100 translate-y-0 sm:scale-100'
+                leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
               >
                 <form
-                  action="https://crm.zoho.in/crm/WebToLeadForm"
-                  name="WebToLeads54158000000752015"
-                  method="POST"
-                  acceptCharset="UTF-8"
+                  action='https://crm.zoho.in/crm/WebToLeadForm'
+                  name='WebToLeads54158000000752015'
+                  method={method}
+                  // method="POST"
+                  acceptCharset='UTF-8'
                 >
                   <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="xnQsjsdp"
-                    value="5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b"
+                    type='text'
+                    style={{ display: 'none' }}
+                    name='xnQsjsdp'
+                    value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
                   />
-                  <input type="hidden" name="zc_gad" id="zc_gad" value="" />
+                  <input type='hidden' name='zc_gad' id='zc_gad' value='' />
                   <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="xmIwtLD"
-                    value="3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92"
-                  />
-                  <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="actionType"
-                    value="TGVhZHM="
+                    type='text'
+                    style={{ display: 'none' }}
+                    name='xmIwtLD'
+                    value='3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92'
                   />
                   <input
-                    type="text"
-                    style={{ display: "none" }}
-                    name="returnURL"
-                    value="https://www.saboomaruti.in/thank-you-for-contact-us"
+                    type='text'
+                    style={{ display: 'none' }}
+                    name='actionType'
+                    value='TGVhZHM='
                   />
                   <input
-                    type="text"
-                    style={{ display: "none" }}
-                    id="ldeskuid"
-                    name="ldeskuid"
+                    type='text'
+                    style={{ display: 'none' }}
+                    name='returnURL'
+                    value='https://www.saboomaruti.in/thank-you-for-contact-us'
                   />
                   <input
-                    type="text"
-                    style={{ display: "none" }}
-                    id="LDTuvid"
-                    name="LDTuvid"
+                    type='text'
+                    style={{ display: 'none' }}
+                    id='ldeskuid'
+                    name='ldeskuid'
                   />
-                  <Dialog.Panel className="relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full">
-                    <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                      <div className="mt-3">
+                  <input
+                    type='text'
+                    style={{ display: 'none' }}
+                    id='LDTuvid'
+                    name='LDTuvid'
+                  />
+                  <Dialog.Panel className='relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full'>
+                    <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
+                      <div className='mt-3'>
                         <Dialog.Title
-                          as="h3"
-                          className="text-lg leading-6 font-medium text-gray-900 text-center"
+                          as='h3'
+                          className='text-lg leading-6 font-medium text-gray-900 text-center'
                         >
                           Book A Test Drive / Get Offers
                         </Dialog.Title>
-                        <div className="mt-2 space-y-3">
-                          <div className="mt-2 py-8 space-y-3">
+                        <div className='mt-2 space-y-3'>
+                          <div className='mt-2 py-8 space-y-3'>
                             <div>
-                              <label className="block text-sm font-medium text-gray-700">
+                              <label className='block text-sm font-medium text-gray-700'>
                                 Name
                               </label>
                               <input
-                                type="text"
-                                id="Last_Name"
-                                name="Last Name"
+                                type='text'
+                                id='Last_Name'
+                                name='Last Name'
+                                onChange={(e) => setName(e.target.value)}
                                 required
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
+                                className='mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
                             </div>
 
                             <div>
-                              <label className="block text-sm font-medium text-gray-700">
+                              <label className='block text-sm font-medium text-gray-700'>
                                 Email
                               </label>
                               <input
-                                type="email"
-                                ftype="email"
-                                id="Email"
-                                name="Email"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
+                                type='email'
+                                ftype='email'
+                                id='Email'
+                                name='Email'
+                                onChange={(e) => setEmail(e.target.value)}
+                                className='mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
                             </div>
 
                             <div>
-                              <label className="block text-sm font-medium text-gray-700">
+                              <label className='block text-sm font-medium text-gray-700'>
                                 Phone
                               </label>
                               <input
-                                type="text"
-                                id="Phone"
-                                name="Phone"
-                                minLength="10"
-                                maxLength="10"
+                                type='text'
+                                id='Phone'
+                                name='Phone'
+                                minLength='10'
+                                maxLength='10'
                                 value={phone}
                                 onChange={(e) =>
                                   setPhone(
-                                    e.target.value.replace(/[^1-9 ]/g, "") &&
-                                      e.target.value.replace(/ /g, "")
+                                    e.target.value.replace(/[^1-9 ]/g, '') &&
+                                      e.target.value.replace(/ /g, '')
                                   )
                                 }
-                                className="mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
+                                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
+                              {!pattern.test(phone) && phone.length === 10 ? (
+                                <small className='text-red-500'>
+                                  phone number is invalid
+                                </small>
+                              ) : (
+                                ''
+                              )}
                             </div>
 
                             <div>
-                              <label className="block text-sm font-medium text-gray-700">
+                              <label className='block text-sm font-medium text-gray-700'>
                                 Model
                               </label>
                               <select
-                                id="LEADCF6"
-                                name="LEADCF6"
-                                className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                id='LEADCF6'
+                                name='LEADCF6'
+                                onChange={(e) => setModel(e.target.value)}
+                                className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                               >
                                 <option>Select Model</option>
-                                <option value="Maruti Alto K10">
+                                <option value='Maruti Alto K10'>
                                   Maruti Alto K10
                                 </option>
-                                <option value="Maruti Wagon R">
+                                <option value='Maruti Wagon R'>
                                   Maruti Wagon R
                                 </option>
-                                <option value="Maruti Celerio">
+                                <option value='Maruti Celerio'>
                                   Maruti New Celerio
                                 </option>
-                                <option value="Maruti Swift">
+                                <option value='Maruti Swift'>
                                   Maruti Swift
                                 </option>
-                                <option value="Maruti Dzire">
+                                <option value='Maruti Dzire'>
                                   Maruti Dzire
                                 </option>
-                                <option value="Maruti S-Presso">
+                                <option value='Maruti S-Presso'>
                                   Maruti S-Presso
                                 </option>
-                                <option value="Maruti Ertiga">
+                                <option value='Maruti Ertiga'>
                                   Maruti Ertiga
                                 </option>
-                                <option value="Maruti Brezza">
+                                <option value='Maruti Brezza'>
                                   Maruti Brezza
                                 </option>
-                                <option value="Maruti Eeco">Maruti Eeco</option>
+                                <option value='Maruti Eeco'>Maruti Eeco</option>
                               </select>
                             </div>
                           </div>
 
-                          <div className="flex items-center space-x-2 mb-5">
+                          <div className='flex items-center space-x-2 mb-5'>
                             <input
-                              id="comments"
-                              type="checkbox"
-                              className=" h-4 w-4 border-gray-300 rounded"
+                              id='comments'
+                              type='checkbox'
+                              className=' h-4 w-4 border-gray-300 rounded'
                               required
                             />
                             <label
-                              htmlFor="comments"
-                              className="text-gray-700 text-sm"
+                              htmlFor='comments'
+                              className='text-gray-700 text-sm'
                             >
                               I agree to the Privacy Policy and Terms of
                               Service.
@@ -567,16 +660,17 @@ const CarsSlider = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                    <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
                       <button
-                        type="submit"
-                        className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm"
+                        type='submit'
+                        onClick={handleSubmit}
+                        className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
                       >
                         Submit
                       </button>
                       <button
-                        type="button"
-                        className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                        type='button'
+                        className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
                         onClick={() => setOpen(false)}
                         ref={cancelButtonRef}
                       >
@@ -597,53 +691,53 @@ const CarsSlider = () => {
 const Colors = () => {
   const [current, setCurrent] = useState(1);
   return (
-    <div className="container mx-auto bg-gray-100 rounded py-8">
+    <div className='container mx-auto bg-gray-100 rounded py-8'>
       {eecoColors.map((item) => (
         <img
           key={item.id}
           src={item.img}
-          className={item.id === current ? "mx-auto md:h-80" : "hidden"}
+          className={item.id === current ? 'mx-auto md:h-80' : 'hidden'}
           alt={item.id}
         />
       ))}
-      <div className="flex items-center justify-center space-x-3 sm:space-y-0 space-y-1">
+      <div className='flex items-center justify-center space-x-3 sm:space-y-0 space-y-1'>
         <p
           className={
             current === 1
-              ? "h-5 rounded-full w-5 bg-[#EFF0F2] animate-bounce"
-              : "h-5 rounded-full w-5 bg-[#EFF0F2]"
+              ? 'h-5 rounded-full w-5 bg-[#EFF0F2] animate-bounce'
+              : 'h-5 rounded-full w-5 bg-[#EFF0F2]'
           }
           onClick={(e) => setCurrent(1)}
         ></p>
         <p
           className={
             current === 2
-              ? "h-5 rounded-full w-5 bg-[#1F2FDC] animate-bounce"
-              : "h-5 rounded-full w-5 bg-[#1F2FDC]"
+              ? 'h-5 rounded-full w-5 bg-[#1F2FDC] animate-bounce'
+              : 'h-5 rounded-full w-5 bg-[#1F2FDC]'
           }
           onClick={(e) => setCurrent(2)}
         ></p>
         <p
           className={
             current === 3
-              ? "h-5 rounded-full w-5 bg-[#666666] animate-bounce"
-              : "h-5 rounded-full w-5 bg-[#666666]"
+              ? 'h-5 rounded-full w-5 bg-[#666666] animate-bounce'
+              : 'h-5 rounded-full w-5 bg-[#666666]'
           }
           onClick={(e) => setCurrent(3)}
         ></p>
         <p
           className={
             current === 4
-              ? "h-5 rounded-full w-5 bg-[#262B2E] animate-bounce"
-              : "h-5 rounded-full w-5 bg-[#262B2E]"
+              ? 'h-5 rounded-full w-5 bg-[#262B2E] animate-bounce'
+              : 'h-5 rounded-full w-5 bg-[#262B2E]'
           }
           onClick={(e) => setCurrent(4)}
         ></p>
         <p
           className={
             current === 5
-              ? "h-5 rounded-full w-5 bg-[#D2CFD0] animate-bounce"
-              : "h-5 rounded-full w-5 bg-[#D2CFD0]"
+              ? 'h-5 rounded-full w-5 bg-[#D2CFD0] animate-bounce'
+              : 'h-5 rounded-full w-5 bg-[#D2CFD0]'
           }
           onClick={(e) => setCurrent(5)}
         ></p>
@@ -654,20 +748,20 @@ const Colors = () => {
 
 const Table = () => {
   return (
-    <div className="overflow-scroll md:overflow-hidden">
-      <table className="table-auto border-collapse border border-slate-400 uppercase w-full container mx-auto my-8 text-left text-sm">
-        <thead className="bg-blue-800 text-white">
+    <div className='overflow-scroll md:overflow-hidden'>
+      <table className='table-auto border-collapse border border-slate-400 uppercase w-full container mx-auto my-8 text-left text-sm'>
+        <thead className='bg-blue-800 text-white'>
           <tr>
-            <th className="border border-slate-300 font-normal px-3 py-1.5">
+            <th className='border border-slate-300 font-normal px-3 py-1.5'>
               Variants
             </th>
-            <th className="border border-slate-300 font-normal px-3 py-1.5">
+            <th className='border border-slate-300 font-normal px-3 py-1.5'>
               Transmission
             </th>
-            <th className="border border-slate-300 font-normal px-3 py-1.5">
+            <th className='border border-slate-300 font-normal px-3 py-1.5'>
               Mileage
             </th>
-            <th className="border border-slate-300 font-normal px-3 py-1.5">
+            <th className='border border-slate-300 font-normal px-3 py-1.5'>
               Ex-Showroom Price
             </th>
           </tr>
@@ -675,16 +769,16 @@ const Table = () => {
         <tbody>
           {eecoVariants?.map((item) => (
             <tr key={item.id}>
-              <td className="border border-slate-300 px-3 py-1.5">
+              <td className='border border-slate-300 px-3 py-1.5'>
                 {item.title}
               </td>
-              <td className="border border-slate-300 px-3 py-1.5">
+              <td className='border border-slate-300 px-3 py-1.5'>
                 {item.transmission}
               </td>
-              <td className="border border-slate-300 px-3 py-1.5">
+              <td className='border border-slate-300 px-3 py-1.5'>
                 {item.mileage}KM/L*
               </td>
-              <td className="border border-slate-300 px-3 py-1.5">
+              <td className='border border-slate-300 px-3 py-1.5'>
                 ₹&nbsp;{item.price} Lakh*
               </td>
             </tr>

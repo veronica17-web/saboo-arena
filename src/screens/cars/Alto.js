@@ -17,7 +17,6 @@ import { CgSpinner } from 'react-icons/cg';
 
 export function Alto() {
   const [name, setName] = useState('');
-  // const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
   const [method, setMethod] = useState();
@@ -31,7 +30,6 @@ export function Alto() {
     axios
       .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
         name: name,
-
         phone: phone,
         model: model,
         outlet: outlet,
@@ -446,7 +444,7 @@ const CarsSlider = () => {
               className='px-4 py-1.5 text-sm bg-red-600 border hover:bg-red-500 text-white rounded shadow-sm'
               onClick={() => setOpen(true)}
             >
-              Book a Test Drive
+              Get Best Offers
             </button>
           </div>
           <p className='h-px my-6 w-full bg-gray-300'></p>
