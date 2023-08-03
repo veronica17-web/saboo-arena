@@ -123,13 +123,61 @@ function DrivingSchool() {
 const RegisterInterest = () => {
   const [name, setName] = useState();
   const [phone, setPhone] = useState('');
+  // const [model, setModel] = useState('');
   const [outlet, setOutlet] = useState();
+  const [method, setMethod] = useState();
   const [email, setEmail] = useState();
 
   const navigate = useNavigate();
 
   // const [methodpopup, setMethodPopup] = useState();
   const [loading, setLoading] = useState(false);
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-driving-school', {
+        name: name,
+        email: email,
+        phone: phone,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -139,32 +187,6 @@ const RegisterInterest = () => {
     }
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-driving-school',{
-        name: name,
-        email: email,
-        phone: phone,
-        outlet: outlet,
-      });
-      toast.success('Successfully Subscribed');
-      navigate('/thank-you-for-contact-us');
-      // setMethodPopup("POST");
-      setLoading(false);
-    } catch (error) {
-      toast.error('Something went wrong');
-      setLoading(false);
-      console.log(error);
-    }
-  }
-
-
-
- 
- 
-
   return (
     <div className='py-12 bg-[#232053]'>
       <div className='container mx-auto space-y-3 lg:px-0 px-5'>
@@ -172,36 +194,37 @@ const RegisterInterest = () => {
           Register your interest
         </h3>
         <form
-        // action="https://crm.zoho.in/crm/WebToLeadForm"
-        // name="WebToLeads54158000009604042"
-        // method="POST"
-        // acceptCharset="UTF-8"
+          action='https://crm.zoho.in/crm/WebToLeadForm'
+          name='WebToLeads54158000009604042'
+          method={method}
+          // method="POST"
+          acceptCharset='UTF-8'
         >
-          {/* <input
-            type="text"
-            className="hidden"
-            name="xnQsjsdp"
-            value="5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b"
-          />
-          <input type="hidden" name="zc_gad" id="zc_gad" value="" />
           <input
-            type="text"
-            className="hidden"
-            name="xmIwtLD"
-            value="3e4c511e1bfac462fb9ac158b261b0d3119b0d0a1efb77d4a63c24265a71a8c4"
+            type='text'
+            style={{ display: 'none' }}
+            name='xnQsjsdp'
+            value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
           />
+          <input type='hidden' name='zc_gad' id='zc_gad' value='' />
           <input
-            type="text"
-            className="hidden"
-            name="actionType"
-            value="TGVhZHM="
+            type='text'
+            style={{ display: 'none' }}
+            name='xmIwtLD'
+            value='3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92'
           />
           <input
-            type="text"
-            className="hidden"
-            name="returnURL"
-            value="https://saboomaruti.in"
-          /> */}
+            type='text'
+            style={{ display: 'none' }}
+            name='actionType'
+            value='TGVhZHM='
+          />
+          <input
+            type='text'
+            style={{ display: 'none' }}
+            name='returnURL'
+            value='https://www.saboomaruti.in/thank-you-for-contact-us'
+          />
 
           <div className='grid lg:grid-cols-5 md:grid-cols-2 grid-cols-1 gap-4'>
             <div>
@@ -217,26 +240,27 @@ const RegisterInterest = () => {
 
             <div>
               <input
-                className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
                 type='email'
                 ftype='email'
                 id='Email'
                 name='Email'
                 placeholder='Email'
                 onChange={(e) => setEmail(e.target.value)}
+                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
               />
             </div>
 
             <div>
               <input
-                className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                placeholder='Mobile'
-                value={phone}
+                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
+                type='text'
+                maxLength='10'
+                minLength='10'
+                required
                 id='Phone'
                 name='Phone'
-                required
-                minLength='10'
-                maxLength='10'
+                placeholder='Phone'
+                value={phone}
                 onChange={(e) =>
                   setPhone(
                     e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -276,11 +300,8 @@ const RegisterInterest = () => {
             <div>
               <button
                 type='submit'
-                disabled={
-                  pattern.test(phone) && phone.length === 10 ? false : true
-                }
                 onClick={handleSubmit}
-                className='w-full h-10 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>
@@ -288,7 +309,7 @@ const RegisterInterest = () => {
                     Loading
                   </div>
                 ) : (
-                  'Enquiry'
+                  'ENQUIRY'
                 )}
               </button>
             </div>

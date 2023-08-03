@@ -18,6 +18,52 @@ function WagonrCNG() {
   const [method, setMethod] = useState('');
   const [loading, setLoading] = useState(false);
 
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        phone: phone,
+        model: model,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -26,23 +72,6 @@ function WagonrCNG() {
         theme: 'colored',
       });
     }
-  }
-
-  function handleSubmit() {
-    setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      });
-      setMethod('POST');
-    } catch (err) {
-      toast.error('Something went wrong!');
-      console.log(err);
-    }
-    setLoading(false);
   }
 
   return (
@@ -167,8 +196,8 @@ function WagonrCNG() {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000007156717'
-            // method={method}
-            method='POST'
+            method={method}
+            // method='POST'
             acceptCharset='UTF-8'
           >
             <input

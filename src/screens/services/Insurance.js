@@ -11,6 +11,9 @@ function Insurance() {
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
   const [methodpopup, setMethodPopup] = useState();
+  const [model, setModel] = useState('');
+  const [outlet, setOutlet] = useState('');
+  const [method, setMethod] = useState();
 
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
@@ -23,19 +26,46 @@ function Insurance() {
 
   function handleSubmit() {
     setLoading(true);
-    try {
-      axios.post('https://saboogroups.com/admin/api/arena-insurance', {
+    axios
+      .post('https://saboogroups.com/admin/api/arena-insurance', {
         name: name,
         phone: phone,
-        email: email,
+        model: model,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
       });
-      setMethodPopup('POST');
-      setLoading(false);
-    } catch (error) {
-      toast.error('Something went wrong');
-      setLoading(false);
-      console.log(error);
-    }
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }
 
   return (
