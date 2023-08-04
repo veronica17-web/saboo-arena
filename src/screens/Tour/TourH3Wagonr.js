@@ -180,7 +180,7 @@ function TourH3Wagonr() {
               alt='1'
             />
             <p className='p-2'>
-              The Tour H1 is Powered by the 1.0 L Next Gen K-series Dual Jet
+              The Tour H3 is Powered by the 1.0 L Next Gen K-series Dual Jet
               Dual VVT Engine with Idle Start Stop Technology (In Petrol
               Variant) . It has manual air conditioner with heater, Front and
               Rear Integrated Headrest and Front power windows. All to make your

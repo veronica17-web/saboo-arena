@@ -212,7 +212,7 @@ function TourV() {
       <div className='bg-[#1b72b7] py-12 mt-12'>
         <div className='container mx-auto space-y-5 lg:px-0 px-5'>
           <h3 className='text-xl font-semibold text-white'>
-            GET DZIRE TOUR S ON-ROAD PRICE IN HYDERABAD
+            GET DZIRE TOUR V ON-ROAD PRICE IN HYDERABAD
           </h3>
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'

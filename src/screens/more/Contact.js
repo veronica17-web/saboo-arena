@@ -47,7 +47,9 @@ function Contact() {
       
       Regards
       RKS Motor Pvt. Ltd.
-      98488 98488git coe_id=1407168967467983613`
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
