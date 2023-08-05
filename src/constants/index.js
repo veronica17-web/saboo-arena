@@ -108,10 +108,10 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
-  //   alt: 'may offer banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor+(1).webp',
+    alt: 'august 2023 offer',
+  },
 
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023.webp',
@@ -132,10 +132,10 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
-  //   alt: 'may offer',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.jpg',
+    alt: 'august offer',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',
