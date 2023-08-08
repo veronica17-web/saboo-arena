@@ -1,8 +1,8 @@
 const serviceCenterBanner = [
-  // {
-  //   id: 3,
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Summer+Service.webp',
-  // },
+  {
+    id: 1,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+  },
 
   {
     id: 2,

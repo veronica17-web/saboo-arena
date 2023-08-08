@@ -18,7 +18,7 @@ import { Helmet } from 'react-helmet';
 const offer_products = [
   {
     name: 'Alto K10',
-    price: '57000',
+    price: '54100',
     logo: 'Alto k10',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
@@ -32,19 +32,19 @@ const offer_products = [
   // },
   {
     name: 'S-Presso',
-    price: '67000',
+    price: '54100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'WagonR ',
-    price: '62000',
+    price: '56000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
   {
     name: 'Alto',
-    price: '30000',
+    price: '15000',
     logo: 'Alto',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
@@ -52,13 +52,13 @@ const offer_products = [
 
   {
     name: 'Celerio',
-    price: '95000',
+    price: '57000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'Swift',
-    price: '45100',
+    price: '50100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
@@ -71,14 +71,14 @@ const offer_products = [
   // },
   {
     name: 'Dzire',
-    price: '17000',
+    price: '10000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp',
     explore: '/maruti-swift-dzire-on-road-price-in-hyderabad',
   },
 
   {
     name: 'EECO',
-    price: '25000',
+    price: '34000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },

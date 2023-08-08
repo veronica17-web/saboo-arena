@@ -1,16 +1,17 @@
 export const sliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.webp',
-  //   alt: 'may offer',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor+(1).webp',
+    alt: 'offers page',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
+    alt: 'offers page',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
     alt: 'royal platinum',
   },
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/akshaya-tritiya-web-banner.webp',
-  //   alt: 'akshaya tritiya banner',
-  // },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
     alt: 'Maruti Suzuki Arena Brezza S-CNG',
@@ -54,10 +55,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+May+Offers+Saboo+RKS+Motor.psd.webp',
-  //   alt: 'may offer mobile banner',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.webp',
+    alt: 'august mobile banner',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
     alt: 'Maruti Suzuki Arena Brezza S-CNG',
@@ -66,10 +67,7 @@ export const mobileSliders = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023-mobile.webp',
   //   alt: 'arena-2023-mobile-banner',
   // },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile++Maruti+Suzuki+Service+June+Offers+Saboo+RKS+Motor.psd.webp',
-    alt: 'Maruti Suzuki service banner',
-  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/new-spresso-mobile-banner.webp',
     alt: 'new-alto-k10-cng-banner',
