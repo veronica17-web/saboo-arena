@@ -1627,6 +1627,56 @@
         "source": "/maruti-swift-dzire-on-road-price-in-hyderabad.php",
         "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
         "type": 301
+      },
+      {
+        "source": "/maruti-swift.php",
+        "destination": "/maruti-swift-dzire-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift.php",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-swift.php",
+        "destination": "/maruti-swift-car-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/maruti-alto-800.php",
+        "destination": "/maruti-alto-800-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/products.php",
+        "destination": "/maruti-genuine-accessories",
+        "type": 301
+      },
+      {
+        "source": "/insurance-form.php",
+        "destination": "/maruti-suzuki-car-insurance-renewal",
+        "type": 301
+      },
+      {
+        "source": "/maruti-car-terms-and-conditions.php",
+        "destination": "/maruti-car-terms-and-conditions",
+        "type": 301
+      },
+      {
+        "source": "/faq.php",
+        "destination": "/maruti-car-terms-and-conditions",
+        "type": 301
+      },
+      {
+        "source": "/maruti-s-presso.php",
+        "destination": "/maruti-s-presso-on-road-price-in-hyderabad",
+        "type": 301
+      },
+      {
+        "source": "/saboomaruti",
+        "destination": "/",
+        "type": 301
       }
     ],
     "rewrites": [
