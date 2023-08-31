@@ -2,9 +2,64 @@ import React, { useState } from 'react';
 import Header from '../../components/header/Header';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+import { CgSpinner } from 'react-icons/cg';
 
 const PaymentTest = () => {
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+
+  const [method, setMethod] = useState();
+  const [loading, setLoading] = useState(false);
+
+  const [email, setEmail] = useState('');
+
+  function handleSubmit() {
+    setLoading(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        phone: phone,
+
+        email: email,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      });
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const pattern = /^[6-9][0-9]{6,9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
@@ -142,8 +197,9 @@ const PaymentTest = () => {
             <div className='overflow-hidden col-span-2 shadow sm:rounded-md p-4'>
               <form
                 action='https://crm.zoho.in/crm/WebToLeadForm'
-                name='WebToLeads54158000000752015'
-                method='POST'
+                name='WebToLeads54158000007156717'
+                method={method}
+                // method='POST'
                 acceptCharset='UTF-8'
               >
                 <input
@@ -169,7 +225,7 @@ const PaymentTest = () => {
                   type='text'
                   style={{ display: 'none' }}
                   name='returnURL'
-                  value='https://www.saboonexa.in/thank-you'
+                  value='https://www.saboomaruti.in/thank-you-for-contact-us'
                 />
                 <input
                   type='text'
@@ -207,6 +263,7 @@ const PaymentTest = () => {
                         type='text'
                         id='Last_Name'
                         name='Last Name'
+                        onChange={(e) => setName(e.target.value)}
                       />
                     </div>
                     <div>
@@ -218,6 +275,7 @@ const PaymentTest = () => {
                         type='text'
                         id='Email'
                         name='Email'
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
 
@@ -234,7 +292,12 @@ const PaymentTest = () => {
                         required
                         name='Phone'
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={(e) =>
+                          setPhone(
+                            e.target.value.replace(/[^1-9 ]/g, '') &&
+                              e.target.value.replace(/ /g, '')
+                          )
+                        }
                       />
                     </div>
                     <div>
@@ -277,10 +340,18 @@ const PaymentTest = () => {
                     </div>
                   </div>
                   <button
-                    className='bg-blue-700 text-white py-3 px-5 rounded'
                     type='submit'
+                    onClick={handleSubmit}
+                    className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                   >
-                    Submit
+                    {loading ? (
+                      <div className='flex items-center justify-center'>
+                        <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                        Loading
+                      </div>
+                    ) : (
+                      'SUBMIT'
+                    )}
                   </button>
                 </div>
               </form>

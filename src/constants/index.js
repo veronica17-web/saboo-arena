@@ -3,10 +3,7 @@ export const sliders = [
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor+(1).webp',
     alt: 'offers page',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Maruti+Suzuki+Freedom+Service+August+Independence+Day+Offers+Saboo+RKS+Motor.webp',
-    alt: 'offers page',
-  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
     alt: 'royal platinum',
@@ -55,6 +52,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Driving+School+August+Raksha+Bandhan+Offers+Saboo+RKS+Motor.webp',
+    alt: 'august driving school banner 2023',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.webp',
     alt: 'august mobile banner',
@@ -548,10 +549,11 @@ export const showrooms = [
 ];
 
 <iframe
+  title='Embedded Video'
   src=''
   width='600'
   height='450'
-  style='border:0;'
+  style={{ border: '0' }}
   allowfullscreen=''
   loading='lazy'
   referrerpolicy='no-referrer-when-downgrade'

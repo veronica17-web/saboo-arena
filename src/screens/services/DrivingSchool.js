@@ -61,7 +61,7 @@ function DrivingSchool() {
         />
       </Helmet>
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/subscribe_screen/driving-school-banner.webp'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Driving+School+August+Raksha+Bandhan+Offers+Saboo+RKS+Motor.webp'
         className='w-full mt-16'
         alt='1'
       />

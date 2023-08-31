@@ -25,7 +25,7 @@ import DrivingSchool from './screens/services/DrivingSchool';
 import loginkey from './assets/login_key.svg';
 
 //confetti
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 //cars screens
 import Alto from './screens/cars/Alto';
 import Brezza from './screens/cars/Brezza';
@@ -57,7 +57,7 @@ import Tourveeco from './screens/Tour/TourV';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { IoCloseCircle, IoLogoWhatsapp } from 'react-icons/io5';
-import { BsTelephoneForward } from 'react-icons/bs';
+// import { BsTelephoneForward } from 'react-icons/bs';
 import { Transition, Dialog } from '@headlessui/react';
 import axios from 'axios';
 import ThankYou from './screens/more/ThankYou';
@@ -69,14 +69,14 @@ import PrivacyPolicy from './screens/more/PrivacyPolicy';
 import Faq from './screens/more/Faq';
 import AltoK10 from './screens/cars/AltoK10';
 import SwiftCNG from './screens/CNG/SwiftCNG';
-import Payment from './screens/services/Payment';
+
 import PaymentTest from './screens/services/PaymentTest';
 import AltoK10CNG from './screens/CNG/AltoK10CNG';
 import Metaverse from './screens/services/Metaverse';
 import Gallery from './screens/more/Gallery';
 import BrezzaCNG from './screens/CNG/BrezzaCNG';
 import PriceList from './screens/more/PriceList';
-import CarEnquiry from './components/home/CarEnquiry';
+// import CarEnquiry from './components/home/CarEnquiry';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -100,44 +100,44 @@ function App() {
     const [number, setNumber] = useState('');
     const [methodpopup, setMethodPopup] = useState();
 
-    function handleSubmit() {
-      setLoading(true);
-      axios
-        .post('popup', {
-          phone: number,
-        })
-        .then((res) => {
-          setMethodPopup('POST');
-        })
-        .catch((err) => {
-          toast.error('Something went wrong');
-          setLoading(false);
-        });
-      axios
-        .get(
-          `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${number}&msg=Thank you for showing interest in Maruti Suzuki.
-        Our Sales consultant will contact you shortly.
+    // function handleSubmit() {
+    //   setLoading(true);
+    //   axios
+    //     .post('popup', {
+    //       phone: number,
+    //     })
+    //     .then((res) => {
+    //       setMethodPopup('POST');
+    //     })
+    //     .catch((err) => {
+    //       toast.error('Something went wrong');
+    //       setLoading(false);
+    //     });
+    //   axios
+    //     .get(
+    //       `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${number}&msg=Thank you for showing interest in Maruti Suzuki.
+    //     Our Sales consultant will contact you shortly.
         
-        Regards
-        RKS Motor Pvt. Ltd.
-        98488 98488
-        www.saboomaruti.in
-        www.saboonexa.in&type=1&template_id=1407168967467983613`
-        )
-        .then((res) => {
-          console.log('SMS API Response:', res.data);
-          // Handle the response from the SMS API if needed
-        })
-        .catch((err) => {
-          console.error('Error sending SMS:', err);
-          // Handle errors from the SMS API if needed
-        })
-        .finally(() => {
-          setLoading(false);
-        });
+    //     Regards
+    //     RKS Motor Pvt. Ltd.
+    //     98488 98488
+    //     www.saboomaruti.in
+    //     www.saboonexa.in&type=1&template_id=1407168967467983613`
+    //     )
+    //     .then((res) => {
+    //       console.log('SMS API Response:', res.data);
+    //       // Handle the response from the SMS API if needed
+    //     })
+    //     .catch((err) => {
+    //       console.error('Error sending SMS:', err);
+    //       // Handle errors from the SMS API if needed
+    //     })
+    //     .finally(() => {
+    //       setLoading(false);
+    //     });
 
-      setLoading(false);
-    }
+    //   setLoading(false);
+    // }
 
     const pattern = /^[6-9][0-9]{6,9}$/;
     if (number !== '' && number.length === 10) {
@@ -560,7 +560,7 @@ function LeadPopup() {
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       sessionStorage.setItem('popup', 'false');
-      toast.error('Enter valid phone number', {
+      toast.error('Enter valid phone number' ,{
         theme: 'colored',
       });
     }

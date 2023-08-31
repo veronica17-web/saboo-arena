@@ -288,7 +288,7 @@ function Swift() {
           </form>
         </div>
       </div>
-      <div className='bg-[#1b72b7] py-12 mt-12'>
+      {/* <div className='bg-[#1b72b7] py-12 mt-12'>
         <div className='container mx-auto space-y-5 lg:px-0 px-5'>
           <h3 className='text-xl font-semibold text-white'>
             GET CELERIO ON-ROAD PRICE IN HYDERABAD
@@ -437,7 +437,7 @@ function Swift() {
             </button>
           </form>
         </div>
-      </div>
+      </div> */}
       <img
         src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Maruti-New-swift/maruti-suzuki-new-swift-broucher.webp'
         alt='brochure'

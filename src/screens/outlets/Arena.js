@@ -56,6 +56,7 @@ function Arena() {
         <p className='font-semibold text-3xl text-center'>Arena</p>
         <div className='container mx-auto pt-16'>
           <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5 md:px-0 gap-5'>
+           
             {showrooms.map((item, index) => (
               <div className='shadow-lg bg-gray-200 rounded lg:mt-0 mt-10 mb-10'>
                 <div className='space-y-6 px-3 -mt-8 mb-5' key={index}>

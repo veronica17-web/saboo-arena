@@ -10,9 +10,7 @@ function Insurance() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
-  const [methodpopup, setMethodPopup] = useState();
-  const [model, setModel] = useState('');
-  const [outlet, setOutlet] = useState('');
+
   const [method, setMethod] = useState();
 
   const pattern = /^[6-9][0-9]{6,9}$/;
@@ -30,8 +28,8 @@ function Insurance() {
       .post('https://saboogroups.com/admin/api/arena-insurance', {
         name: name,
         phone: phone,
-        model: model,
-        outlet: outlet,
+
+        email: email,
       })
       .then((res) => {
         setMethod('POST');
@@ -136,8 +134,8 @@ function Insurance() {
         <form
           action='https://crm.zoho.in/crm/WebToLeadForm'
           name='WebToLeads54158000001051349'
-          // method={methodpopup}
-          method='POST'
+          method={method}
+          // method='POST'
           acceptCharset='UTF-8'
           className='space-y-5'
         >
