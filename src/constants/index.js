@@ -1,7 +1,7 @@
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor+(1).webp',
-    alt: 'offers page',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
+    alt: 'sep-01 2023 banner',
   },
 
   {
@@ -53,13 +53,13 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Driving+School+August+Raksha+Bandhan+Offers+Saboo+RKS+Motor.webp',
-    alt: 'august driving school banner 2023',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
+    alt: 'sep-01 teachers day banner 2023',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.webp',
-    alt: 'august mobile banner',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.webp',
+  //   alt: 'august mobile banner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Brezza+Scng+Offers.webp',
     alt: 'Maruti Suzuki Arena Brezza S-CNG',
@@ -107,15 +107,14 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor+(1).webp',
-    alt: 'august 2023 offer',
-  },
-
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023.webp',
   //   alt: 'janu-2023-offer-banner',
   // },
+  {
+    img:'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
+    alt:'sep-01 2023 bannner'
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
     alt: 'banner-1',
@@ -132,8 +131,8 @@ export const offersSliders = [
 
 export const mobileOffersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.jpg',
-    alt: 'august offer',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
+    alt: 'sep 2023 offer teachers day',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
