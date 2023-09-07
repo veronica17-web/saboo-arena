@@ -116,7 +116,7 @@ function Insurance() {
       </Helmet>
       <Header />
       <img
-        src={require('../../assets/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp')}
+        src={require('../.././assets/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='inusrance banner'
       />

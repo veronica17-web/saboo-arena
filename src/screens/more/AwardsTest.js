@@ -2,8 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/header/Header';
 //import awardsData from "../../constants/awardsData";
-
-function Awards() {
+function AwardsTest() {
   const awardsData = [
     {
       img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/awards/Maruti-Suzuki-Platinum-Award.webp',
@@ -287,4 +286,4 @@ function Awards() {
     </>
   );
 }
-export default Awards;
+export default AwardsTest;

@@ -112,8 +112,8 @@ export const offersSliders = [
   //   alt: 'janu-2023-offer-banner',
   // },
   {
-    img:'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
-    alt:'sep-01 2023 bannner'
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
+    alt: 'sep-01 2023 bannner',
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
@@ -518,32 +518,46 @@ export const testimonials = [
 
 export const showrooms = [
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.1625239013742!2d78.48431231487722!3d17.451933588040045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9a72a843d403%3A0xd11fa91defdbce1b!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Tadbund%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386448972!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Tadbund/Tar Bund, Secunderabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+Arena+-+Saboo+RKS+Motor+Pvt.+Ltd/@17.424164,78.457337,15z/data=!4m6!3m5!1s0x3bcb974b6feb9ea5:0x1e0a3e3dabcb8701!8m2!3d17.4241643!4d78.4573371!16s%2Fg%2F1tc_zym2?hl=en&entry=ttu',
+    address: 'RKS Motor - Somajiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Somajiguda.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb974b6feb9ea5%3A0x1e0a3e3dabcb8701!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386525754!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Somajiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Tadbund,+Secunderabad)/@17.451934,78.486501,15z/data=!4m6!3m5!1s0x3bcb9a72a843d403:0xd11fa91defdbce1b!8m2!3d17.4519336!4d78.486501!16s%2Fg%2F1q62d7c20?hl=en&entry=ttu',
+    address: 'RKS Motor - Tadbund',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Tadbund.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8485953412464!2d78.51037021487612!3d17.37101698808845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb985a78a7f883%3A0xad5bb6113d36bffc!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386585098!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Malakpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Malakpet,+Hyderabad)/@17.371254,78.512446,15z/data=!4m6!3m5!1s0x3bcb985a78a7f883:0xad5bb6113d36bffc!8m2!3d17.3712538!4d78.5124463!16s%2Fg%2F1pp2w_16k?hl=en&entry=ttu',
+    address: 'RKS Motor - Malakpet',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Malakpet.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.7169347462946!2d78.56817041487753!3d17.47325728802727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Kushaiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604386635898!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Kushaiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Kushaiguda,+Secunderabad)/@17.476452,78.573193,15z/data=!4m6!3m5!1s0x3bcb9c7c4829c807:0xe33d0f61aa143664!8m2!3d17.4764521!4d78.5731928!16s%2Fg%2F11gbffbwcn?hl=en&entry=ttu',
+    address: 'RKS Motor - Kushaiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Kushaiguda.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.4992833446645!2d78.56797331487971!3d17.626496387935717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb81bc18d30c3b%3A0x5f74a496d6d6fd97!2sMaruti%20Suzuki%20Car%20Dealer%20-%20Shamirpet!5e0!3m2!1sen!2sin!4v1629796936830!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Shamirpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Sales+%26+Service+(Shamirpet,+Secunderabad)/@17.627171,78.569861,15z/data=!4m6!3m5!1s0x3bcb81bc18d30c3b:0x5f74a496d6d6fd97!8m2!3d17.627171!4d78.5698606!16s%2Fg%2F11nx66bdfc?hl=en&entry=ttu',
+    address: 'RKS Motor - Shamirpet',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Shamirpet.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.583458680358!2d78.3631478!3d17.383765399999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb958150dd4c01%3A0x2d0aecdb5b3523de!2sMaruti%20Suzuki%20Arena%20(RKS%20Motor)!5e0!3m2!1sen!2sin!4v1687258050053!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Narsingi, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+Arena+(RKS+Motor)/@17.383765,78.363148,15z/data=!4m6!3m5!1s0x3bcb958150dd4c01:0x2d0aecdb5b3523de!8m2!3d17.3837654!4d78.3631478!16s%2Fg%2F11v07h42w1?hl=en&entry=ttu',
+    address: 'RKS Motor - Narsingi',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Narsingi.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3813.23000989164!2d77.6145696!3d17.110276100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc96d29623dee8d%3A0x80ac3a193f40c080!2sMaruti%20Suzuki%20Arena%20(RKS%20Motor)!5e0!3m2!1sen!2sin!4v1688534695512!5m2!1sen!2sin',
-    address: 'Maruti Suzuki (RKS Motor - Kodangal, Vikarabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+Arena+(RKS+Motor)/@17.110276,77.61457,15z/data=!4m6!3m5!1s0x3bc96d29623dee8d:0x80ac3a193f40c080!8m2!3d17.1102761!4d77.6145696!16s%2Fg%2F11sv_4m63q?hl=en&entry=ttu',
+    address: 'RKS Motor - Kodangal',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Kodangal.webp',
   },
 ];
 
@@ -558,81 +572,177 @@ export const showrooms = [
   referrerpolicy='no-referrer-when-downgrade'
 ></iframe>;
 
+// export const truevalue = [
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0c00b1605899f18!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387383241!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki True Value (RKS Motor, Somajiguda, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8199868878046!2d78.50790321487611!3d17.372392988087633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1ce78cbd36879558!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387407116!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki True Value (RKS Motor, Malakpet, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.9129374615923!2d78.4778035148781!3d17.511668988004185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x757d88157ab9a254!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Kompally%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604387421033!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki True Value (RKS Motor, Kompally, Secunderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30445.73569341907!2d78.570397!3d17.473256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x821143e99dbc4c67!2sMaruti%20Suzuki%20True%20Value%20(Kushaiguda)!5e0!3m2!1sen!2sin!4v1618911646493!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki True Value (RKS Motor, Kushaiguda, Secunderabad)',
+//   },
+// ];
+
+// export const workshop = [
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15230.247208443354!2d78.5071734!3d17.3848063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eec84cd9e149fab!2sSaboo%20RKS%20-%20Maruti%20Suzuki%20Car%20Dealer%20(%20Service%20Center%2C%20Moosarambagh)!5e0!3m2!1sen!2sin!4v1674123920531!5m2!1sen!2sin',
+//     address:
+//       'Maruti Suzuki Service Center (RKS Motor, Moosarambagh, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xad74c2cc38240458!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387026319!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Somajiguda, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.278105801397!2d78.55207721487648!3d17.39843628807201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x533d4356086d5aba!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Uppal%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386877556!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Uppal, Secunderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.161882759987!2d78.48441831487719!3d17.451964288039893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b782fa83589a15!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Tadbund%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386981332!5m2!1sen!2sin',
+//     address:
+//       'Maruti Suzuki Workshop (RKS Motor, Tadbund/Tar Bund, Secunderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3755089827937!2d78.46776271487646!3d17.393757788074744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7cb0979b572d6610!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387085079!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Nampally, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.7601224158398!2d78.50844131487617!3d17.37527198808587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd662e229fb9d2b63!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387143500!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Malakpet, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.716827758189!2d78.56817041435436!3d17.473262404923048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Kushaiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387198424!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Kushaiguda, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.5589629588712!2d78.41955181487766!3d17.480810988022668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbbc59173810f4bd8!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Kukatpally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387228568!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Kukatpally, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.4992833446645!2d78.56797331487971!3d17.626496387935717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb81bc18d30c3b%3A0x5f74a496d6d6fd97!2sMaruti%20Suzuki%20Car%20Dealer%20-%20Shamirpet!5e0!3m2!1sen!2sin!4v1629796936830!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Workshop (RKS Motor, Shamirpet, Hyderabad)',
+//   },
+// ];
+
+// export const school = [
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15229.437285566019!2d78.4705114!3d17.3945354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b74d02486adeb57!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098458836!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Driving School (RKS Motor, Nampally, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15231.280819816904!2d78.5101313!3d17.3723825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xafee645695b27b85!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098587896!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Driving School (RKS Motor, Malakpet, Hyderabad)',
+//   },
+//   {
+//     map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.855376657519!2d78.5706205!3d17.4734051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c675a1b86451b98!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(Driving%20School%2C%20Kushaiguda%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1662098683076!5m2!1sen!2sin',
+//     address: 'Maruti Suzuki Driving School (RKS Motor, Kushaiguda, Hyderabad)',
+//   },
+// ];
 export const truevalue = [
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0c00b1605899f18!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387383241!5m2!1sen!2sin',
-    address: 'Maruti Suzuki True Value (RKS Motor, Somajiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+True+Value(Saboo+RKS,+Hyderabad,+Somajiguda)/@17.424094,78.457389,15z/data=!4m6!3m5!1s0x3bcb97f91520505b:0xc0c00b1605899f18!8m2!3d17.4240943!4d78.4573885!16s%2Fg%2F11mvfz_ctt?hl=en&entry=ttu',
+    address: 'True Value - Somajiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-truevalue/RKS-Motor-Maruti-Suzuki-True-Value-Used-Cars-Center-Near-Me-Somajiguda.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.8199868878046!2d78.50790321487611!3d17.372392988087633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1ce78cbd36879558!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387407116!5m2!1sen!2sin',
-    address: 'Maruti Suzuki True Value (RKS Motor, Malakpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Malakpet,+Hyderabad)/@17.371254,78.512446,15z/data=!4m6!3m5!1s0x3bcb985a78a7f883:0xad5bb6113d36bffc!8m2!3d17.3712538!4d78.5124463!16s%2Fg%2F1pp2w_16k?hl=en&entry=ttu',
+    address: ' True Value - Malakpet',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-truevalue/RKS-Motor-Maruti-Suzuki-True-Value-Used-Cars-Center-Near-Me-Malakpet.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.9129374615923!2d78.4778035148781!3d17.511668988004185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x757d88157ab9a254!2sMaruti%20Suzuki%20True%20Value%20(RKS%20Motor%2C%20Kompally%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604387421033!5m2!1sen!2sin',
-    address: 'Maruti Suzuki True Value (RKS Motor, Kompally, Secunderabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+True+Value(Saboo+RKS+Motor,+Kompally,+Medchal)/@17.511668,78.479993,15z/data=!4m6!3m5!1s0x3bcb9aa8da34c7f1:0x85c400effae92ff6!8m2!3d17.5116684!4d78.4799925!16s%2Fg%2F11r87bcwv0?hl=en&entry=ttu',
+    address: 'True Value - Kompally',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-truevalue/RKS-Motor-Maruti-Suzuki-True-Value-Used-Cars-Center-Near-Me-Kompally.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d30445.73569341907!2d78.570397!3d17.473256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x821143e99dbc4c67!2sMaruti%20Suzuki%20True%20Value%20(Kushaiguda)!5e0!3m2!1sen!2sin!4v1618911646493!5m2!1sen!2sin',
-    address: 'Maruti Suzuki True Value (RKS Motor, Kushaiguda, Secunderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(True+Value,+Kushaiguda,+Secunderabad)/@17.473256,78.570397,12z/data=!4m6!3m5!1s0x3bcb9dc93cf03ab1:0x821143e99dbc4c67!8m2!3d17.4732557!4d78.5703966!16s%2Fg%2F11llcn0l_w?hl=en&entry=ttu',
+    address: 'True Value - Kushaiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-truevalue/RKS-Motor-Maruti-Suzuki-True-Value-Used-Cars-Center-Near-Me-Kushaiguda.webp',
   },
 ];
-
 export const workshop = [
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15230.247208443354!2d78.5071734!3d17.3848063!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6eec84cd9e149fab!2sSaboo%20RKS%20-%20Maruti%20Suzuki%20Car%20Dealer%20(%20Service%20Center%2C%20Moosarambagh)!5e0!3m2!1sen!2sin!4v1674123920531!5m2!1sen!2sin',
-    address:
-      'Maruti Suzuki Service Center (RKS Motor, Moosarambagh, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+Arena+-+Saboo+RKS+Motor+Pvt.+Ltd/@17.424164,78.457337,15z/data=!4m6!3m5!1s0x3bcb974b6feb9ea5:0x1e0a3e3dabcb8701!8m2!3d17.4241643!4d78.4573371!16s%2Fg%2F1tc_zym2?hl=en&entry=ttu',
+    address: ' Workshop - Somajiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Somajiguda.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.743472381001!2d78.45519981487682!3d17.42409428805667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xad74c2cc38240458!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Somajiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387026319!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Somajiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+-+Maruti+Suzuki+Car+Dealer+(+Service+Center,+Moosarambagh)/@17.384806,78.507173,13z/data=!4m6!3m5!1s0x3bcb992fc2460627:0x6eec84cd9e149fab!8m2!3d17.3848063!4d78.5071734!16s%2Fg%2F11jzcb46x8?hl=en&entry=ttu',
+    address: 'Workshop - Moosarambagh',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Malakpet-Moosarambagh.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.278105801397!2d78.55207721487648!3d17.39843628807201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x533d4356086d5aba!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Uppal%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386877556!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Uppal, Secunderabad)',
+    map: 'https://www.google.com/maps/place/Rks+Motors+Pvt.+Ltd.+-+Maruti+Service/@17.39843,78.554267,15z/data=!4m6!3m5!1s0x3bcb993aa273c193:0x31688c76343b7377!8m2!3d17.3984304!4d78.5542668!16s%2Fg%2F11pqcp886k?hl=en&entry=ttu',
+    address: 'Workshop - Uppal',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Uppal.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.161882759987!2d78.48441831487719!3d17.451964288039893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x94b782fa83589a15!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Tadbund%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1604386981332!5m2!1sen!2sin',
-    address:
-      'Maruti Suzuki Workshop (RKS Motor, Tadbund/Tar Bund, Secunderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Service+Center,+Tadbund,+Secunderabad)/@17.451964,78.486607,15z/data=!4m6!3m5!1s0x3bcb9b59fcccc4c3:0x94b782fa83589a15!8m2!3d17.4519643!4d78.486607!16s%2Fg%2F11h_sz_f3h?hl=en&entry=ttu',
+    address: 'Workshop - Tadbund',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Tadbund.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.3755089827937!2d78.46776271487646!3d17.393757788074744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7cb0979b572d6610!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387085079!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Nampally, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+Nampally+-+Maruti+Suzuki+Car+Dealer(NEXA,+ARENA,+Service+Center,+TrueValue+%26+Driving+School+)/@17.393985,78.46998,15z/data=!4m6!3m5!1s0x3bcb976366ed87d9:0x7cb0979b572d6610!8m2!3d17.3939849!4d78.4699801!16s%2Fg%2F11c1qryf39?hl=en&entry=ttu',
+    address: 'Workshop - Nampally',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Nampally.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.7601224158398!2d78.50844131487617!3d17.37527198808587!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd662e229fb9d2b63!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387143500!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Malakpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Kushaiguda,+Secunderabad)/@17.476452,78.573193,15z/data=!4m6!3m5!1s0x3bcb9c7c4829c807:0xe33d0f61aa143664!8m2!3d17.4764521!4d78.5731928!16s%2Fg%2F11gbffbwcn?hl=en&entry=ttu',
+    address: 'Workshop - Kushaiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Kushaiguda.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.716827758189!2d78.56817041435436!3d17.473262404923048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9c7c4829c807%3A0xe33d0f61aa143664!2sMaruti%20Suzuki%20ARENA%20(RKS%20Motor%2C%20Kushaiguda%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387198424!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Kushaiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor/@17.480811,78.421741,15z/data=!4m6!3m5!1s0x3bcb91ae48fe6963:0xbbc59173810f4bd8!8m2!3d17.480811!4d78.4217405!16s%2Fg%2F124yq1dsg?hl=en&entry=ttu',
+    address: 'Workshop - Kukatpally',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/Kukatpally.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.5589629588712!2d78.41955181487766!3d17.480810988022668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbbc59173810f4bd8!2sMaruti%20Suzuki%20Service%20Center%20(RKS%20Motor%2C%20Kukatpally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1604387228568!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Kukatpally, Hyderabad)',
-  },
-  {
-    map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3802.4992833446645!2d78.56797331487971!3d17.626496387935717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb81bc18d30c3b%3A0x5f74a496d6d6fd97!2sMaruti%20Suzuki%20Car%20Dealer%20-%20Shamirpet!5e0!3m2!1sen!2sin!4v1629796936830!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Workshop (RKS Motor, Shamirpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Sales+%26+Service+(Shamirpet,+Secunderabad)/@17.627171,78.569861,15z/data=!4m6!3m5!1s0x3bcb81bc18d30c3b:0x5f74a496d6d6fd97!8m2!3d17.627171!4d78.5698606!16s%2Fg%2F11nx66bdfc?hl=en&entry=ttu',
+    address: 'Workshop - Shamirpet',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Shamirpet.webp',
   },
 ];
 
 export const school = [
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15229.437285566019!2d78.4705114!3d17.3945354!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8b74d02486adeb57!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Nampally%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098458836!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Driving School (RKS Motor, Nampally, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer(Driving+School,+Nampally,+Hyderabad)/@17.394535,78.470511,13z/data=!4m6!3m5!1s0x3bcb97df65dd2b71:0x8b74d02486adeb57!8m2!3d17.3945354!4d78.4705114!16s%2Fg%2F11gyymdf67?hl=en&entry=ttu',
+    address: 'Driving School - Nampally',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-driving/RKS-Motor-Maruti-Suzuki-Driving-School-Center-Near-Me-Nampally.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15231.280819816904!2d78.5101313!3d17.3723825!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xafee645695b27b85!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer(Driving%20School%2C%20Malakpet%2C%20Hyderabad)!5e0!3m2!1sen!2sin!4v1662098587896!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Driving School (RKS Motor, Malakpet, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer(Driving+School,+Malakpet,+Hyderabad)/@17.372383,78.510131,13z/data=!4m6!3m5!1s0x3bcb990a2c2d8daf:0xafee645695b27b85!8m2!3d17.3723825!4d78.5101313!16s%2Fg%2F11fdyvrl5f?hl=en&entry=ttu',
+    address: 'Driving School - Malakpet',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-driving/RKS-Motor-Maruti-Suzuki-Driving-School-Center-Near-Me-Malakpet.webp',
   },
   {
-    map: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15222.855376657519!2d78.5706205!3d17.4734051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1c675a1b86451b98!2sSaboo%20RKS%20Motor%20-%20Maruti%20Suzuki%20Car%20Dealer%20(Driving%20School%2C%20Kushaiguda%2C%20Secunderabad)!5e0!3m2!1sen!2sin!4v1662098683076!5m2!1sen!2sin',
-    address: 'Maruti Suzuki Driving School (RKS Motor, Kushaiguda, Hyderabad)',
+    map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Driving+School,+Kushaiguda,+Secunderabad)/@17.473405,78.57062,13z/data=!4m6!3m5!1s0x3bcb9dce98c4abdf:0x1c675a1b86451b98!8m2!3d17.4734051!4d78.5706205!16s%2Fg%2F11m_wfxcj9?hl=en&entry=ttu',
+    address: 'Driving School - Kushaiguda',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-driving/RKS-Motor-Maruti-Suzuki-Driving-School-Center-Near-Me-Kushaiguda.webp',
   },
 ];
-
 export const accesoriessliders = [
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboonexa/nexa-accessories/Saboo-Maruti-Suzuk-Nexa-Accessories.webp',
@@ -653,5 +763,24 @@ export const accesoriessliders = [
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/accessories/Saboo-RKS-Maruti-Suzuki-Nexa-Face-Visor.jpg',
     alt: 'banner-5',
+  },
+];
+
+export const Newaccesoriessliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/accessory-page/new+banners/AltoK10_desktop_1500X470.webp',
+    alt: 'banner-1',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/accessory-page/new+banners/Brezza_Desktop_1500X470.webp',
+    alt: 'banner-2',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/accessory-page/new+banners/Order_desktop_1500X470.webp',
+    alt: 'banner-3',
+  },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/accessory-page/new+banners/Order_desktop_1500X470.webp',
+    alt: 'banner-4',
   },
 ];

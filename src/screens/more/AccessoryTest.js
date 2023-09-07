@@ -1,15 +1,20 @@
 import Header from '../../components/header/Header';
 import React, { useRef, useState, Fragment } from 'react';
+
 import { Dialog, Transition } from '@headlessui/react';
 import { toast } from 'react-toastify';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import { Newaccesoriessliders } from '../../constants';
+
+
 import CarEnquiry from '../../components/home/CarEnquiry';
 
-const Accessory = () => {
+const AccessoryTest = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
+
   const [phone, setPhone] = useState('');
 
   const pattern = /^[6-9][0-9]{6,9}$/;
@@ -20,6 +25,8 @@ const Accessory = () => {
       });
     }
   }
+
+  const cancelButtonRef = useRef(null);
 
   return (
     <>
@@ -147,205 +154,153 @@ export function CardDefault({ cardData }) {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as='div'
-          className='relative z-10'
+          className='fixed inset-0 z-50 overflow-y-auto'
           initialFocus={cancelButtonRef}
           onClose={setOpen}
         >
-          <Transition.Child
-            as={Fragment}
-            enter='ease-out duration-300'
-            enterFrom='opacity-0'
-            enterTo='opacity-100'
-            leave='ease-in duration-200'
-            leaveFrom='opacity-100'
-            leaveTo='opacity-0'
-          >
-            <div className='fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
-          </Transition.Child>
+          <div className='min-h-screen flex items-center justify-center'>
+            <Transition.Child
+              as={Fragment}
+              enter='ease-out duration-300'
+              enterFrom='opacity-0'
+              enterTo='opacity-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100'
+              leaveTo='opacity-0'
+            >
+              <div className='fixed inset-0 bg-gray-500 bg-opacity-75' />
+            </Transition.Child>
 
-          <div className='fixed z-10 inset-0 overflow-y-auto'>
-            <div className='flex items-end sm:items-center justify-center min-h-full p-4 text-center sm:p-0'>
-              <Transition.Child
-                as={Fragment}
-                enter='ease-out duration-300'
-                enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
-                enterTo='opacity-100 translate-y-0 sm:scale-100'
-                leave='ease-in duration-200'
-                leaveFrom='opacity-100 translate-y-0 sm:scale-100'
-                leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
-              >
-                <form
-                  action='https://crm.zoho.in/crm/WebToLeadForm'
-                  name='WebToLeads54158000000752015'
-                  method='POST'
-                  acceptCharset='UTF-8'
-                >
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='xnQsjsdp'
-                    value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
-                  />
-                  <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='xmIwtLD'
-                    value='3e4c511e1bfac462fb9ac158b261b0d3cf3883ed222bfea597b99f9e00397c92'
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='actionType'
-                    value='TGVhZHM='
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    name='returnURL'
-                    value='https://www.saboomaruti.in/thank-you-for-contact-us'
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    id='ldeskuid'
-                    name='ldeskuid'
-                  />
-                  <input
-                    type='text'
-                    style={{ display: 'none' }}
-                    id='LDTuvid'
-                    name='LDTuvid'
-                  />
-                  <Dialog.Panel className='relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full'>
-                    <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
-                      <div className='mt-3'>
-                        <Dialog.Title
-                          as='h3'
-                          className='text-lg leading-6 font-medium text-gray-900 text-center'
-                        >
-                          Explore our accessory options for an upgrade!
-                        </Dialog.Title>
-                        <div className='mt-2 space-y-3'>
-                          <div className='mt-2 py-8 space-y-3'>
-                            <div>
-                              <label className='block text-sm font-medium text-gray-700'>
-                                Name
-                              </label>
-                              <input
-                                type='text'
-                                id='Last_Name'
-                                name='Last Name'
-                                required
-                                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                              />
-                            </div>
-
-                            <div>
-                              <label className='block text-sm font-medium text-gray-700'>
-                                Email
-                              </label>
-                              <input
-                                type='email'
-                                ftype='email'
-                                id='Email'
-                                name='Email'
-                                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                              />
-                            </div>
-
-                            <div>
-                              <label className='block text-sm font-medium text-gray-700'>
-                                Phone
-                              </label>
-                              <input
-                                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                                type='text'
-                                maxLength='10'
-                                minLength='10'
-                                required
-                                id='Phone'
-                                name='Phone'
-                                value={phone}
-                                onChange={(e) =>
-                                  setPhone(
-                                    e.target.value.replace(/[^1-9 ]/g, '') &&
-                                      e.target.value.replace(/ /g, '')
-                                  )
-                                }
-                              />
-                              {!pattern.test(phone) && phone.length === 10 ? (
-                                <small className='text-red-500'>
-                                  phone number is invalid
-                                </small>
-                              ) : (
-                                ''
-                              )}
-                            </div>
-
-                            <div>
-                              <label className='block text-sm font-medium text-gray-700'>
-                                Model
-                              </label>
-                              <select
-                                id='LEADCF6'
-                                name='LEADCF6'
-                                required
-                                className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                              >
-                                <option>Select Category</option>
-                                <optgroup label='Accessories'>
-                                  <option value='Exterior'>Exterior</option>
-                                  <option value='Maruti Alto 800'>
-                                    Interior
-                                  </option>
-                                  <option value='Car Care'>Car Care</option>
-                                  <option value='Life Style'>Life Style</option>
-                                  <option value='Infotainment'>
-                                    Infotainment
-                                  </option>
-                                  <option value='Safety and Security'>
-                                    Safety and Security
-                                  </option>
-                                </optgroup>
-                              </select>
-                            </div>
-                          </div>
-
-                          <div className='flex items-center space-x-2 mb-5'>
-                            <p className='text-gray-900 mb-2 mt-1'>
-                              <span className='font-semibold'>
-                                Disclaimer :
-                              </span>{' '}
-                              I agree that by clicking the ‘Submit’ button
-                              below, I am explicitly soliciting a call / Message
-                              from Saboo Maruti (RKS Motor Pvt. Ltd) or its
-                              Representatives on my ‘Mobile.’
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+            <Transition.Child
+              as={Fragment}
+              enter='ease-out duration-300'
+              enterFrom='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+              enterTo='opacity-100 translate-y-0 sm:scale-100'
+              leave='ease-in duration-200'
+              leaveFrom='opacity-100 translate-y-0 sm:scale-100'
+              leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
+            >
+              <div className='bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:max-w-lg sm:w-full'>
+                <div className='bg-white px-4 py-5 sm:p-6'>
+                  <h3 className='text-lg leading-6 font-medium text-gray-900 text-center'>
+                    Book Your Maruti Suzuki Accessories
+                  </h3>
+                  <div className='mt-4 space-y-4'>
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
+                        Name
+                      </label>
+                      <input
+                        type='text'
+                        id='Last_Name'
+                        name='Last Name'
+                        required
+                        className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      />
                     </div>
-                    <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
-                      <button
-                        type='submit'
-                        className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
-                      >
-                        Submit
-                      </button>
-                      <button
-                        type='button'
-                        className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
-                        onClick={() => setOpen(false)}
-                        ref={cancelButtonRef}
-                      >
-                        Cancel
-                      </button>
+
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
+                        Email
+                      </label>
+                      <input
+                        type='email'
+                        id='Email'
+                        name='Email'
+                        className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      />
                     </div>
-                  </Dialog.Panel>
-                </form>
-              </Transition.Child>
-            </div>
+
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
+                        Phone
+                      </label>
+                      <input
+                        type='text'
+                        maxLength='10'
+                        minLength='10'
+                        required
+                        id='Phone'
+                        name='Phone'
+                        className='mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      />
+                      {!pattern.test(phone) && phone.length === 10 ? (
+                        <small className='text-red-500'>
+                          Phone number is invalid
+                        </small>
+                      ) : (
+                        ''
+                      )}
+                    </div>
+
+                    <div>
+                      <label className='block text-sm font-medium text-gray-700'>
+                        Category
+                      </label>
+                      <select
+                        id='LEADCF6'
+                        name='LEADCF6'
+                        required
+                        className='block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      >
+                        <option>Select Category</option>
+                        <optgroup label='Arena'>
+                          <option value='Enquiry for Exterior Accessories'>
+                            Exterior
+                          </option>
+                          <option value='Enquiry for Interior Accessories'>
+                            Interior
+                          </option>
+                          <option value='Enquiry for Car Care Accessories'>
+                            Car Care
+                          </option>
+                          <option value='Enquiry for Life Style Accessories'>
+                            Life Style
+                          </option>
+                          <option value='Enquiry for Infotainment Accessories'>
+                            Infotainment
+                          </option>
+                          <option value='Enquiry for Safety Accessories'>
+                            Safety and Security
+                          </option>
+                        </optgroup>
+                      </select>
+                    </div>
+
+                    <div className='flex items-center space-x-2'>
+                      <input
+                        id='comments'
+                        type='checkbox'
+                        className='h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500'
+                        required
+                      />
+                      <label
+                        htmlFor='comments'
+                        className='text-sm text-gray-700'
+                      >
+                        I agree to the Privacy Policy and Terms of Service.
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
+                  <button
+                    type='submit'
+                    className='w-full inline-flex justify-center px-4 py-2 text-base font-medium text-white bg-green-600 border border-transparent rounded-md shadow-sm hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
+                  >
+                    Submit
+                  </button>
+                  <button
+                    type='button'
+                    className='mt-3 w-full inline-flex justify-center px-4 py-2 text-base font-medium text-white bg-red-600 border border-gray-300 rounded-md shadow-sm hover:bg-red-700 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+                    onClick={() => setOpen(false)}
+                    ref={cancelButtonRef}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            </Transition.Child>
           </div>
         </Dialog>
       </Transition.Root>
@@ -1168,4 +1123,4 @@ const tabsData = [
   // Add more tabs and their card data as needed
 ];
 
-export default Accessory;
+export default AccessoryTest;

@@ -49,7 +49,7 @@ function WorkShop() {
       </Helmet>
       <Header />
       <Banner />
-      <div className="my-8">
+      {/* <div className="my-8">
         <p className="font-semibold text-3xl text-center">Workshop</p>
         <div className="container mx-auto pt-16">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-5 md:px-0 gap-5">
@@ -69,7 +69,48 @@ function WorkShop() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
+      <div className='my-8'>
+  <p className='font-semibold text-3xl text-center'>WorkShop</p>
+  <div className='container mx-auto pt-16'>
+    <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 px-3 md:px-0 gap-5'>
+      {workshop.map((item, index) => (
+     <div
+     className="w-full  h-60 pt-1 px-4 text-left py-3 p hover:text-white shadow-xl shadow-[#B0B0B0] group duration-500 border-t rounded-3xl relative overflow-hidden"
+   >
+     <div className="bg-blue-800  h-16 w-20 duration-500 group-hover:h-[130%] group-hover:w-[170%] group-hover:-top-11 group-hover:-right-20 rounded-full absolute -top-20 -right-20 -z-10"></div>
+     <div className="mb-2 mt-2 text-base  font-medium uppercase">
+      {item.address}
+     </div>
+     {/* <div className="mb-2">Adarsh Nagar, Hyderabad - 500063</div> */}
+     <a
+       href={item.map}
+       target="_blank"
+       rel="noreferrer"
+     >
+       <div
+         className="flex justify-center duration-500 bg-center my-5 h-32 lg:h-40 group-hover:saturate-200 rounded-3xl grayscale group-hover:grayscale-0"
+         style={{
+           backgroundImage:
+             `url(${item.image})`,
+           backgroundSize: "cover",
+           backgroundPosition: "center",
+         }}
+       ></div>
+     </a>
+   </div>
+      ))}
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
     </>
   );
 }
