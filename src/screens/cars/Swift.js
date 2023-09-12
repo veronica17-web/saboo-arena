@@ -1,4 +1,5 @@
 import React, { useState, Fragment, useRef } from 'react';
+import { useEffect } from "react";
 // import { BsCalendarCheck } from "react-icons/bs";
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
@@ -21,7 +22,7 @@ function Swift() {
   const [outlet, setOutlet] = useState('');
   const [method, setMethod] = useState('');
   const [loading, setLoading] = useState(false);
-
+  const [showToast, setShowToast] = useState(false);
   function handleSubmit() {
     setLoading(true);
 
@@ -68,15 +69,24 @@ function Swift() {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      sessionStorage.setItem('popup', 'false');
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  useEffect(() => {
+    if (
+      phone !== "" &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error("Enter a valid phone number", {
+          theme: "colored",
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   return (
     <>
@@ -187,21 +197,33 @@ function Swift() {
                 />
               </div>
               <div>
-                <input
-                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                  placeholder='Phone'
-                  minlength='10'
-                  maxlength='10'
-                  id='Mobile'
-                  name='Phone'
+              <input
+                  className="border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500"
+                  placeholder="Phone"
                   value={phone}
+                  id="Mobile"
+                  name="Phone"
+                  required
+                  minlength="10"
+                  maxlength="10"
                   onChange={(e) =>
                     setPhone(
-                      e.target.value.replace(/[^1-9 ]/g, '') &&
-                        e.target.value.replace(/ /g, '')
+                      e.target.value.replace(/[^1-9 ]/g, "") &&
+                        e.target.value.replace(/ /g, "")
                     )
                   }
                 />
+                {phone.length > 0 && phone.length < 10 ? (
+                  <small className="text-red-500">
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className="text-red-500">
+                    Phone number is invalid
+                  </small>
+                ) : (
+                  ""
+                )}
               </div>
 
               <div>
@@ -272,17 +294,22 @@ function Swift() {
               Representatives on my ‘Mobile’
             </p>
             <button
-              type='submit'
+              className="h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              type="submit"
+              disabled={
+                pattern.test(phone) && phone.length === 10 ? false : true
+              }
               onClick={handleSubmit}
-              className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+              // type='submit'
+              // onClick={handleSubmit}
             >
               {loading ? (
-                <div className='flex items-center justify-center'>
-                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                <div className="flex items-center justify-center">
+                  <CgSpinner className="animate-spin h-5 mr-2 text-white w-5" />
                   Loading
                 </div>
               ) : (
-                'SUBMIT'
+                "SUBMIT"
               )}
             </button>
           </form>
@@ -456,6 +483,7 @@ const CarsSlider = () => {
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
   const [phone, setPhone] = useState('');
+  const [showToast, setShowToast] = useState(false);
   const cancelButtonRef = useRef(null);
 
   function handleSubmit() {
@@ -504,14 +532,24 @@ const CarsSlider = () => {
       });
   }
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  useEffect(() => {
+    if (
+      phone !== "" &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error("Enter a valid phone number", {
+          theme: "colored",
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading]);
 
   return (
     <>
@@ -749,6 +787,16 @@ const CarsSlider = () => {
                                 </small>
                               ) : (
                                 ''
+                              )}  {phone.length > 0 && phone.length < 10 ? (
+                                <small className="text-red-500">
+                                  Phone number must be 10 digits
+                                </small>
+                              ) : !pattern.test(phone) && phone.length === 10 ? (
+                                <small className="text-red-500">
+                                  Phone number is invalid
+                                </small>
+                              ) : (
+                                ""
                               )}
                             </div>
 
@@ -816,6 +864,9 @@ const CarsSlider = () => {
                     <di className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
                       <button
                         type='submit'
+                        disabled={
+                          pattern.test(phone) && phone.length === 10 ? false : true
+                        }
                         onClick={handleSubmit}
                         className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
                       >

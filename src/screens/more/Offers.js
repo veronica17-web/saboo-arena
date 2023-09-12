@@ -32,13 +32,13 @@ const offer_products = [
   // },
   {
     name: 'S-Presso',
-    price: '54100',
+    price: '59100',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'WagonR ',
-    price: '56000',
+    price: '59000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
@@ -52,13 +52,13 @@ const offer_products = [
 
   {
     name: 'Celerio',
-    price: '57000',
+    price: '65000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'Swift',
-    price: '50100',
+    price: '55000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
@@ -220,20 +220,19 @@ function Offers() {
       </Swiper>
       <MobileSlider />
       <div className='my-10 text-center space-y-2'>
-        <p className='text-red-600 font-semibold text-3xl'>
-          Save with Saboo RKS Maruti Suzuki Offers in Hyderabad, India
-        </p>
-        <p>
-          Last Chance to buy, before price hike. Limited Period to avail
-          exciting offers before prices go up
-        </p>
-        <p className='text-xs'>
-          <strong>Note:</strong> This Saboo RKS Maruti Suzuki offer is updated
-          on 01-{months[new Date().getMonth()]}-{new Date().getFullYear()}. This
-          offers is provided for only information purpose. This is a limited
-          period offer till the end of {months[new Date().getMonth()]}-
+        <p className='text-red-600 font-semibold text-xl'>
+          Hurry and take advantage of these exciting offers available for a
+          limited time until the end of {months[new Date().getMonth()]}-
           {new Date().getFullYear()}.
         </p>
+        {/* <p>
+          Last Chance to buy, before price hike. Limited Period to avail
+          exciting offers before prices go up
+        </p> */}
+        {/* <p className='text-xs'>
+          <strong>Note:</strong> This Saboo RKS Maruti Suzuki offer is updated
+          on 01-{months[new Date().getMonth()]}-{new Date().getFullYear()}. 
+        </p> */}
       </div>
 
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 px-5 sm:px-0 gap-4 container mx-auto pb-5'>

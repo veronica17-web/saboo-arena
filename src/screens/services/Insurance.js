@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
 import axios from 'axios';
@@ -12,15 +13,28 @@ function Insurance() {
   const [loading, setLoading] = useState(false);
 
   const [method, setMethod] = useState();
+  const [showToast, setShowToast] = useState(false);
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   function handleSubmit() {
     setLoading(true);
@@ -116,7 +130,7 @@ function Insurance() {
       </Helmet>
       <Header />
       <img
-        src={require('../.././assets/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp')}
+        src={require('../../assets/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='inusrance banner'
       />
@@ -300,8 +314,12 @@ function Insurance() {
                   )
                 }
               />
-              {!pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-red-500'>phone number is invalid</small>
+              {phone.length > 0 && phone.length < 10 ? (
+                <small className='text-red-500'>
+                  Phone number must be 10 digits
+                </small>
+              ) : !pattern.test(phone) && phone.length === 10 ? (
+                <small className='text-red-500'>Phone number is invalid</small>
               ) : (
                 ''
               )}

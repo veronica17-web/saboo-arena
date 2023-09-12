@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import { Newaccesoriessliders } from '../../constants';
-import CarEnquiry from '../../components/home/CarEnquiry';
 
 const Accessory = () => {
   const navigationPrevRef = useRef(null);
@@ -45,7 +44,6 @@ const Accessory = () => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <CarEnquiry />
         <div className='text-center'>
           <h1 className='text-xl md:text-2xl lg:text-3xl pt-2 font-semibold'>
             ACCESSORIES
@@ -133,7 +131,10 @@ export function CardDefault({ cardData }) {
           </div>
           <p className='text-gray-600 font-normal'>{description}</p>
           <div className='mt-4 flex items-center justify-between'>
-            <div className='text-blue-700 font-medium text-lg'>₹ {price}</div>
+            <div className='text-blue-700 font-medium text-lg'>
+              ₹ {price}
+              <span className=''>*</span>
+            </div>
             <button
               onClick={() => setOpen(true)}
               className='bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-900 active:bg-blue-700 transition duration-300'
@@ -295,16 +296,16 @@ export function CardDefault({ cardData }) {
                               >
                                 <option>Select Category</option>
                                 <optgroup label='Accessories'>
-                                  <option value='Exterior'>Exterior</option>
-                                  <option value='Maruti Alto 800'>
-                                    Interior
+                                  <option value='Accessories'>Exterior</option>
+                                  <option value='Accessories'>Interior</option>
+                                  <option value='Accessories'>Car Care</option>
+                                  <option value='Accessories'>
+                                    Life Style
                                   </option>
-                                  <option value='Car Care'>Car Care</option>
-                                  <option value='Life Style'>Life Style</option>
-                                  <option value='Infotainment'>
+                                  <option value='Accessories'>
                                     Infotainment
                                   </option>
-                                  <option value='Safety and Security'>
+                                  <option value='Accessories'>
                                     Safety and Security
                                   </option>
                                 </optgroup>

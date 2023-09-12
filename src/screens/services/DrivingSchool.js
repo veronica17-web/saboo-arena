@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 function DrivingSchool() {
@@ -61,9 +62,9 @@ function DrivingSchool() {
         />
       </Helmet>
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Driving+School+August+Raksha+Bandhan+Offers+Saboo+RKS+Motor.webp'
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/driving-school-banner.webp'
         className='w-full mt-16'
-        alt='1'
+        alt='default - dont delete'
       />
       <RegisterInterest />
       <p className='mx-auto text-center max-w-4xl my-5 px-4 sm:px-0'>
@@ -127,8 +128,8 @@ const RegisterInterest = () => {
   const [outlet, setOutlet] = useState();
   const [method, setMethod] = useState();
   const [email, setEmail] = useState();
-
-  const navigate = useNavigate();
+  const [showToast, setShowToast] = useState(false);
+  // const navigate = useNavigate();
 
   // const [methodpopup, setMethodPopup] = useState();
   const [loading, setLoading] = useState(false);
@@ -178,14 +179,27 @@ const RegisterInterest = () => {
         setLoading(false);
       });
   }
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
+
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   return (
     <div className='py-12 bg-[#232053]'>
@@ -268,8 +282,12 @@ const RegisterInterest = () => {
                   )
                 }
               />
-              {!pattern.test(phone) && phone.length === 10 ? (
-                <small className='text-blue-500'>phone number is invalid</small>
+              {phone.length > 0 && phone.length < 10 ? (
+                <small className='text-red-500'>
+                  Phone number must be 10 digits
+                </small>
+              ) : !pattern.test(phone) && phone.length === 10 ? (
+                <small className='text-red-500'>Phone number is invalid</small>
               ) : (
                 ''
               )}
@@ -302,6 +320,9 @@ const RegisterInterest = () => {
                 type='submit'
                 onClick={handleSubmit}
                 className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                disabled={
+                  pattern.test(phone) && phone.length === 10 ? false : true
+                }
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>

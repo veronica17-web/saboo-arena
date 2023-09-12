@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
 import axios from 'axios';
@@ -17,25 +18,44 @@ function Finance() {
   const [formLoanAmount, setFormLoanAmount] = useState('');
   const [loanDuration, setLoanDuration] = useState('');
   const [loading, setLoading] = useState(false);
-  const [methodpopup, setMethodPopup] = useState();
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  const [showToast, setShowToast] = useState(false);
+
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
+
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   function handleSubmit() {
     setLoading(true);
     axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+      .post('https://saboogroups.com/admin/api/arena-finance', {
         name: name,
         phone: phone,
-        model: model,
+        email: email,
         outlet: outlet,
+        comments: comments,
+        model: model,
+        purchase_time: purchaseTime,
+        loan_amount: formLoanAmount,
+        loan_duration: loanDuration,
       })
       .then((res) => {
         setMethod('POST');
@@ -263,14 +283,18 @@ function Finance() {
                     minLength='10'
                     onChange={(e) =>
                       setPhone(
-                        e.target.value.replace(/[^1-9]/g, '') &&
+                        e.target.value.replace(/[^1-9 ]/g, '') &&
                           e.target.value.replace(/ /g, '')
                       )
                     }
                   />
-                  {!pattern.test(phone) && phone.length === 10 ? (
+                  {phone.length > 0 && phone.length < 10 ? (
                     <small className='text-red-500'>
-                      phone number is invalid
+                      Phone number must be 10 digits
+                    </small>
+                  ) : !pattern.test(phone) && phone.length === 10 ? (
+                    <small className='text-red-500'>
+                      Phone number is invalid
                     </small>
                   ) : (
                     ''

@@ -2,6 +2,9 @@
   "folders": [
     {
       "path": "../../.."
+    },
+    {
+      "path": "../../../../../smartwheels-10-nov-backup"
     }
   ],
   "settings": {}

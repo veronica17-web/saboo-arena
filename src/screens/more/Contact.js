@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { Tab } from '@headlessui/react';
 import { FaPhoneAlt, FaEnvelope, FaCar } from 'react-icons/fa';
@@ -16,7 +17,7 @@ function Contact() {
   const [model, setModel] = useState('');
   const [method, setMethod] = useState();
   const [loading, setLoading] = useState(false);
-
+  const [showToast, setShowToast] = useState(false);
   function handleSubmit() {
     setLoading(true);
 
@@ -63,15 +64,27 @@ function Contact() {
         setLoading(false);
       });
   }
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   return (
     <>
@@ -269,9 +282,13 @@ function Contact() {
                               )
                             }
                           />
-                          {!pattern.test(phone) && phone.length === 10 ? (
+                          {phone.length > 0 && phone.length < 10 ? (
                             <small className='text-red-500'>
-                              phone number is invalid
+                              Phone number must be 10 digits
+                            </small>
+                          ) : !pattern.test(phone) && phone.length === 10 ? (
+                            <small className='text-red-500'>
+                              Phone number is invalid
                             </small>
                           ) : (
                             ''
@@ -429,6 +446,11 @@ function Contact() {
                       <button
                         className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
                         type='submit'
+                        disabled={
+                          pattern.test(phone) && phone.length === 10
+                            ? false
+                            : true
+                        }
                         onClick={handleSubmit}
                       >
                         {loading ? (

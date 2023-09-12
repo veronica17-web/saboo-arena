@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import Header from '../../components/header/Header';
 import EecoLogo from '../../assets/banners/eeco-tour.png';
@@ -18,6 +19,7 @@ function TourV() {
   const [outlet, setOutlet] = useState('');
   const [method, setMethod] = useState('');
   const [loading, setLoading] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   function handleSubmit() {
     setLoading(true);
@@ -64,16 +66,27 @@ function TourV() {
         setLoading(false);
       });
   }
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      sessionStorage.setItem('popup', 'false');
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loading
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loading, showToast]);
 
   return (
     <>
@@ -273,6 +286,17 @@ function TourV() {
                     )
                   }
                 />
+                {phone.length > 0 && phone.length < 10 ? (
+                  <small className='text-red-500'>
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
+                  </small>
+                ) : (
+                  ''
+                )}
               </div>
 
               <div>
@@ -339,6 +363,9 @@ function TourV() {
             </p>
             <button
               type='submit'
+              disabled={
+                pattern.test(phone) && phone.length === 10 ? false : true
+              }
               onClick={handleSubmit}
               className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
             >

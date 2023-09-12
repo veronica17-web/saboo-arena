@@ -1,8 +1,12 @@
 export const sliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
-    alt: 'sep-01 2023 banner',
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
+    alt:"Website Maruti Suzuki Arena Ganesh Chaturthi September Offers Saboo RKS Motor"
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'sep-01 2023 banner',
+  // },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
@@ -53,9 +57,13 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
-    alt: 'sep-01 teachers day banner 2023',
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
+    alt:"Website Mobile Maruti Suzuki Arena Ganesh Chaturthi September Offer Saboo RKS Motor"
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
+  //   alt: 'sep-01 teachers day banner 2023',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/misc/Website+Mobile+Maruti+Suzuki+Arena+August+Independence+Day+Offers+Saboo+RKS+Motor.psd.webp',
   //   alt: 'august mobile banner',
@@ -112,9 +120,13 @@ export const offersSliders = [
   //   alt: 'janu-2023-offer-banner',
   // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
-    alt: 'sep-01 2023 bannner',
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
+    alt:"Website Maruti Suzuki Arena Ganesh Chaturthi September Offers Saboo RKS Motor"
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'sep-01 2023 bannner',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp',
     alt: 'banner-1',
@@ -131,9 +143,13 @@ export const offersSliders = [
 
 export const mobileOffersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
-    alt: 'sep 2023 offer teachers day',
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
+    alt:"Website Mobile Maruti Suzuki Arena Ganesh Chaturthi September Offer Saboo RKS Motor"
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
+  //   alt: 'sep 2023 offer teachers day',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',

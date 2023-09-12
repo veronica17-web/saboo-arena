@@ -1,11 +1,78 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import React from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 
 const Careers = () => {
+  const navigate = useNavigate();
   const [selectedCity, setSelectedCity] = useState('');
   const [postalCode, setPostalCode] = useState('');
   const [selectedState, setSelectedState] = useState('');
   const [selectedCountry, setSelectedCountry] = useState('');
+  const [salaryRequirements, setSalaryRequirements] = useState('');
+  const [expsalary, setExpsalary] = useState('');
+  const [startDate, setStartDate] = useState('');
+  // State to store the selected years of experience
+  const [yearsExperience, setYearsExperience] = useState('');
+  // State to store the selected notice period
+  const [noticePeriod, setNoticePeriod] = useState('');
+  const [previousCompany, setPreviousCompany] = useState('');
+  const [linkedinProfile, setLinkedinProfile] = useState('');
+  const [willingToRelocate, setWillingToRelocate] = useState('');
+  const [queries, setQueries] = useState('');
+  const [dob, setDob] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [phoneNumberError, setPhoneNumberError] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [disclaimerChecked, setDisclaimerChecked] = useState(false);
+  const [position, setPosition] = useState('');
+  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState('');
+
+  const handleReset = () => {
+    setSelectedCity('');
+    setPostalCode('');
+    setSelectedState('');
+    setSelectedCountry('');
+    setExpsalary('');
+    setStartDate('');
+    setYearsExperience('');
+    setNoticePeriod('');
+    setPreviousCompany('');
+    setLinkedinProfile('');
+    setWillingToRelocate('');
+    setQueries('');
+    setDob('');
+    setPhoneNumber('');
+    setSubmitted(false); // Optionally, reset the submitted state if needed
+  };
+
+  // email js config
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        'service_tx79oi9',
+        'template_t4q2mx1',
+        form.current,
+        'KDphtENMRH7e9YNWh'
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          // Redirect to the thank-you page upon successful submission
+          navigate('/thank-you-for-contact-us');
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   // Define city-to-postal code, city-to-state, and city-to-country mappings
   const cityData = {
@@ -44,8 +111,292 @@ const Careers = () => {
       state: 'Telangana',
       country: 'India',
     },
-    // Add more cities and data here
+    Visakhapatnam: {
+      postalCode: '530xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Vijayawada: {
+      postalCode: '520xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Guntur: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Nellore: {
+      postalCode: '524xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tirupati: {
+      postalCode: '517xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Rajahmundry: {
+      postalCode: '533xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Kakinada: {
+      postalCode: '533xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Anantapur: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Kadapa: {
+      postalCode: '516xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Machilipatnam: {
+      postalCode: '521xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Ongole: {
+      postalCode: '523xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Adilabad: {
+      postalCode: '504xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Siddipet: {
+      postalCode: '502xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Mahbubnagar: {
+      postalCode: '509xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Nalgonda: {
+      postalCode: '508xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Chittoor: {
+      postalCode: '517xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Srikakulam: {
+      postalCode: '532xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Vizianagaram: {
+      postalCode: '535xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Eluru: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tenali: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tadepalligudem: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Proddatur: {
+      postalCode: '516xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Kurnool: {
+      postalCode: '518xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Bhimavaram: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Suryapet: {
+      postalCode: '508xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Kothagudem: {
+      postalCode: '507xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Jagtial: {
+      postalCode: '505xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Miryalaguda: {
+      postalCode: '508xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Bhongir: {
+      postalCode: '508xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Sircilla: {
+      postalCode: '505xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Karur: {
+      postalCode: '505xxx',
+      state: 'Telangana',
+      country: 'India',
+    },
+    Adoni: {
+      postalCode: '518xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Nandyal: {
+      postalCode: '518xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Madanapalle: {
+      postalCode: '517xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Puttaparthi: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Hindupur: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Gudur: {
+      postalCode: '524xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Kovvur: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Palakollu: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tadipatri: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Amalapuram: {
+      postalCode: '533xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tanuku: {
+      postalCode: '534xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tenkasi: {
+      postalCode: '517xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Kavali: {
+      postalCode: '524xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Tuni: {
+      postalCode: '533xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Repalle: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+
+    Palasa: {
+      postalCode: '532xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+
+    Parvathipuram: {
+      postalCode: '535xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+
+    Kadiri: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Sattenapalle: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Narasaraopet: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Chirala: {
+      postalCode: '523xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Bapatla: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Markapur: {
+      postalCode: '523xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Piduguralla: {
+      postalCode: '522xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
+    Guntakal: {
+      postalCode: '515xxx',
+      state: 'Andhra Pradesh',
+      country: 'India',
+    },
   };
+
+  // You can continue to add more cities and their data as needed.
 
   // Handle city selection
   const handleCityChange = (event) => {
@@ -59,16 +410,143 @@ const Careers = () => {
     setSelectedCountry(cityInfo.country || '');
   };
 
+  // Define the handleDobChange function to update the selected date
+  const handleDobChange = (e) => {
+    setDob(e.target.value);
+  };
+
+  const handleExpsalaryChange = (event) => {
+    const input = event.target.value;
+
+    // Use a regular expression to check if the input consists of only numbers
+    if (/^\d*\.?\d*$/.test(input)) {
+      // If it's a valid number, update the state
+      setExpsalary(input);
+    }
+  };
+
+  const handlePreviousCompanyChange = (event) => {
+    const value = event.target.value;
+    setPreviousCompany(value);
+  };
+
+  // Handle changes in LinkedIn Profile field
+  const handleLinkedinProfileChange = (event) => {
+    const value = event.target.value;
+    setLinkedinProfile(value);
+  };
+
+  // Handle changes in Willing to Relocate radio buttons
+  const handleWillingToRelocateChange = (event) => {
+    const value = event.target.value;
+    setWillingToRelocate(value);
+  };
+
+  // Define a function to handle changes in the 'queries' state
+  const handleQueriesChange = (e) => {
+    setQueries(e.target.value);
+  };
+
+  const handlePhoneNumberChange = (event) => {
+    // Get the new phone number value from the input
+    const newPhoneNumber = event.target.value;
+
+    // Remove any non-digit characters (e.g., spaces or dashes)
+    const cleanedPhoneNumber = newPhoneNumber.replace(/\D/g, '');
+
+    // Check if the cleaned input has 10 digits or fewer
+    if (cleanedPhoneNumber.length <= 10) {
+      // Update the state with the cleaned phone number
+      setPhoneNumber(cleanedPhoneNumber);
+
+      // Clear the error message
+      setPhoneNumberError('');
+    } else {
+      // Display an error message
+      setPhoneNumberError('Phone number must be exactly 10 digits');
+    }
+  };
+
+  // Array to represent years of experience options
+  const experienceOptions = [
+    'Less than 1 year (Fresher)',
+    '1-2 years',
+    '3-5 years',
+    '6-10 years',
+    'More than 10 years',
+  ];
+
+  // Event handler to handle the change in selected experience
+  const handleExperienceChange = (event) => {
+    setYearsExperience(event.target.value);
+  };
+
+  // Options for the notice period
+  const noticePeriodOptions = ['Immediate', '10-15 Days', '30 Days'];
+
+  // Event handler to handle the change in selected notice period
+  const handleNoticePeriodChange = (event) => {
+    setNoticePeriod(event.target.value);
+  };
+
+  // Define a function to toggle the disclaimer checkbox state
+  const handleDisclaimerChange = () => {
+    setDisclaimerChecked(!disclaimerChecked);
+  };
+
+  // const handleEmailChange = (event) => {
+  //   // Get the new email value from the input
+  //   const newEmail = event.target.value;
+
+  //   // Define a regular expression pattern for email validation
+  //   const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+
+  //   if (emailPattern.test(newEmail) || newEmail === '') {
+  //     // Update the state with the new email
+  //     setEmail(newEmail);
+
+  //     // Clear the error message
+  //     setEmailError('');
+
+  //     // Log a message indicating the email is valid
+  //     console.log('Valid Email:', newEmail);
+  //   } else {
+  //     // Display an error message
+  //     setEmailError(
+  //       'Please enter a valid email address in the format "user@example.com"'
+  //     );
+
+  //     // Log an error message indicating the email is invalid
+  //     console.error('Invalid Email:', newEmail);
+  //   }
+  // };
+
+  // ...
+
   return (
-    <div className='container mx-auto p-8'>
-      <h1 className='text-4xl font-bold text-center p-4'>Registration</h1>
+    <div className='container mx-auto p-4 sm:p-8'>
+      <div className='flex flex-col justify-center items-center'>
+        <img
+          src='https://www.saboogroups.com/assets/images/black-logo.png'
+          alt='saboo rks logo'
+          className='w-17 h-10'
+        />
+        <h1 className='text-2xl sm:text-4xl font-bold text-center p-2 sm:p-4 text-blue-900'>
+          Join Our Team - Application Form
+        </h1>
+      </div>
+
       {/* Form layout */}
-      <div className='mt-10 sm:mt-0'>
-        <div className='md:grid md:grid-cols-3 md:gap-6'>
-          <div className='mt-5 md:col-span-3 md:mt-0'>
-            <div className='overflow-hidden shadow sm:rounded-md p-4'>
-              <form>
+      <div className='mt-4 sm:mt-8'>
+        <div className='md:grid md:grid-cols-1 sm:grid-cols-2 md:gap-6'>
+          <div className='mt-5 md:col-span-1 sm:col-span-2 md:mt-0'>
+            <div className='overflow-hidden shadow sm:rounded-md p-2 sm:p-4'>
+              {/* form starting */}
+              <form ref={form} onSubmit={sendEmail}>
                 <div className='space-y-4'>
+                  <div className='text-xl text-blue-900'>
+                    Personal Information
+                  </div>
                   <div className='grid md:grid-cols-2 gap-3 p-2'>
                     <div>
                       <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
@@ -79,7 +557,8 @@ const Careers = () => {
                         className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                         type='text'
                         id='Last_Name'
-                        name='Last Name'
+                        name='firstname'
+                        required
                       />
                     </div>
                     <div>
@@ -91,19 +570,29 @@ const Careers = () => {
                         className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                         type='text'
                         id='Last_Name'
-                        name='Last Name'
+                        name='lastname'
+                        required
                       />
                     </div>
                     <div>
                       <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
-                        Email
+                        Email{' '}
+                        <span className='text-xs text-red-600 font-normal'>
+                          "example@gmail.com"
+                        </span>
                       </label>
                       <input
                         className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                        type='text'
-                        id='Email'
-                        name='Email'
+                        type='email'
+                        id='email'
+                        name='email'
+                        required
                       />
+                      {emailError && (
+                        <span className='text-red-500 text-sm mt-1'>
+                          {emailError}
+                        </span>
+                      )}
                     </div>
 
                     <div>
@@ -112,108 +601,61 @@ const Careers = () => {
                       </label>
                       <input
                         className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                        type='text'
-                        id='Phone'
+                        type='tel'
+                        id='phone'
                         minLength='10'
                         maxLength='10'
                         required
-                        name='Phone'
-                        value=''
+                        name='phone'
+                        value={phoneNumber} // Bind the input value to the state
+                        onChange={handlePhoneNumberChange} // Handle changes
                       />
+                      {phoneNumberError && (
+                        <p className='text-red-500 text-sm mt-1'>
+                          {phoneNumberError}
+                        </p>
+                      )}
                     </div>
-                    <div>
+                    <div className='mt-4'>
                       <label
                         htmlFor='position'
                         className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
                       >
                         Position Applying For
                       </label>
-                      <select
+                      <input
+                        type='text'
                         id='position'
                         name='position'
-                        className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                      >
-                        <option value='' disabled>
-                          Select a position
-                        </option>
-                        <option value='Consultant'>Consultant</option>
-                        <option value='Developer'>Developer</option>
-                        <option value='Sales'>Sales</option>
-                        <option value='Service'>Service</option>
-                        <option value='Finance'>Finance</option>
-                        <option value='HR'>HR</option>
-                        <option value='Other'>Other</option>
-                        {/* Add more position options as needed */}
-                      </select>
+                        value={position}
+                        onChange={(e) => setPosition(e.target.value)} // Update the position state
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='Position Applying For'
+                      />
                     </div>
-                    <div>
+                    <div className='mt-4'>
                       <label
-                        htmlFor='dob'
+                        htmlFor='startDate'
                         className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
                       >
                         Date of Birth
                       </label>
-                      <div className='flex space-x-2'>
-                        <div className='w-1/4'>
-                          <select
-                            id='day'
-                            name='day'
-                            className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                          >
-                            <option value='' disabled>
-                              Day
-                            </option>
-                            {/* Add day options */}
-                            {Array.from({ length: 31 }, (_, i) => (
-                              <option key={i} value={i + 1}>
-                                {i + 1}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className='w-1/4'>
-                          <select
-                            id='month'
-                            name='month'
-                            className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                          >
-                            <option value='' disabled>
-                              Month
-                            </option>
-                            {/* Add month options */}
-                            {Array.from({ length: 12 }, (_, i) => (
-                              <option key={i} value={i + 1}>
-                                {i + 1}
-                              </option>
-                            ))}
-                          </select>
-                        </div>
-                        <div className='w-1/4'>
-                          <select
-                            id='year'
-                            name='year'
-                            className='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                          >
-                            <option value='' disabled>
-                              Year
-                            </option>
-                            {/* Add year options */}
-                            {Array.from({ length: 100 }, (_, i) => {
-                              const currentYear = new Date().getFullYear();
-                              const year = currentYear - i;
-                              return (
-                                <option key={year} value={year}>
-                                  {year}
-                                </option>
-                              );
-                            })}
-                          </select>
-                        </div>
-                      </div>
+                      <input
+                        type='date'
+                        id='dob'
+                        name='dob'
+                        value={dob}
+                        required
+                        onChange={(e) => setDob(e.target.value)}
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='Date of Birth'
+                      />
                     </div>
                   </div>
                   <hr className='border-t border-gray-300 my-6' />
-
+                  <div className='text-xl text-blue-900'>
+                    Address Information
+                  </div>
                   <div className='grid md:grid-cols-1 gap-3'>
                     <div>
                       <label
@@ -224,8 +666,8 @@ const Careers = () => {
                       </label>
                       <input
                         type='text'
-                        id='addressLine1'
-                        name='addressLine1'
+                        id='address1'
+                        name='address1'
                         className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                         placeholder='Address Line 1'
                       />
@@ -240,20 +682,24 @@ const Careers = () => {
                       </label>
                       <input
                         type='text'
-                        id='addressLine2'
-                        name='addressLine2'
+                        id='address2'
+                        name='address2'
                         className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                         placeholder='Address Line 2'
                       />
                     </div>
-                    <div className='grid grid-cols-2 gap-3'></div>
-                    <div className='grid grid-cols-2 gap-3'>
+
+                    <div className='grid md:grid-cols-2 gap-3 p-2'>
                       <div className='mt-4'>
                         <label
                           htmlFor='city'
                           className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
                         >
-                          City
+                          City&nbsp;&nbsp;
+                          <span className='text-xs text-red-600 font-normal'>
+                            Postal code, State and Country will be added
+                            automatically
+                          </span>
                         </label>
                         <select
                           id='city'
@@ -329,6 +775,126 @@ const Careers = () => {
                     </div>
                   </div>
 
+                  <hr className='border-t border-gray-300 my-6' />
+                  <div className='text-xl text-blue-900'>Work Experience</div>
+                  <div className='grid md:grid-cols-2 gap-3 p-2'>
+                    <div className='mt-4'>
+                      <label
+                        htmlFor='previousCompany'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        Last Worked Company
+                      </label>
+                      <input
+                        type='text'
+                        id='lastworked'
+                        name='lastworked'
+                        value={previousCompany}
+                        onChange={handlePreviousCompanyChange}
+                        required
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='Previous Company Name'
+                      />
+                    </div>
+                    {/* years of experience 1 */}
+                    <div className='mt-4'>
+                      <label
+                        htmlFor='experienceSelect'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        Years of Experience
+                      </label>
+                      <div className='flex space-x-2'>
+                        <select
+                          id='yearsexp'
+                          name='yearsexp'
+                          value={yearsExperience}
+                          onChange={handleExperienceChange}
+                          className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        >
+                          <option value=''>Select</option>
+                          {experienceOptions.map((experience, index) => (
+                            <option key={index} value={experience}>
+                              {experience}
+                            </option>
+                          ))}
+                        </select>
+                        <span className='text-xs text-red-600'>
+                          {' '}
+                          {yearsExperience && (
+                            <p>You selected {yearsExperience} of experience.</p>
+                          )}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className='mt-4'>
+                      <label
+                        htmlFor='expsalary'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        Last Drawn Salary (in lakhs)
+                      </label>
+                      <input
+                        type='text'
+                        id='expsalary'
+                        name='expsalary'
+                        value={expsalary}
+                        onChange={handleExpsalaryChange}
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='Salary Requirements'
+                      />
+                    </div>
+                    {/* add here */}
+                    {/* notice period */}
+                    <div className='mt-4'>
+                      <label
+                        htmlFor='noticeperiod'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        Notice Period
+                      </label>
+                      <select
+                        id='noticeperiod'
+                        name='noticeperiod'
+                        value={noticePeriod}
+                        onChange={handleNoticePeriodChange}
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                      >
+                        <option value=''>Select Notice Period</option>
+                        {noticePeriodOptions.map((option, index) => (
+                          <option key={index} value={option}>
+                            {option}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                  <div className='grid grid-cols-1 gap-3'>
+                    <div className='mt-4'>
+                      <label
+                        htmlFor='linkedinProfile'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        LinkedIn / Resume Profile URL{' '}
+                        <span className='text-xs text-red-600 font-normal'>
+                          "https://www.example.com/"
+                        </span>
+                      </label>
+                      <input
+                        type='url'
+                        id='profileurl'
+                        name='profileurl'
+                        value={linkedinProfile}
+                        onChange={handleLinkedinProfileChange}
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='LinkedIn Profile URL'
+                      />
+                    </div>
+                  </div>
+                  <div className='grid grid-cols-1 gap-3'>
+                    {/* add new field */}
+                  </div>
                   <p className='text-gray-700'>
                     <span className='text-black font-bold'>Disclaimer</span>: I
                     agree that by clicking the ‘Submit’ button below, I am
@@ -340,7 +906,10 @@ const Careers = () => {
                       id='disclaimer'
                       name='disclaimer'
                       type='checkbox'
+                      required
                       className='h-4 w-4 rounded'
+                      checked={disclaimerChecked}
+                      onChange={handleDisclaimerChange} // Use the function as the event handler
                     />
                     <div className='ml-2 text-sm'>
                       <label
@@ -351,12 +920,22 @@ const Careers = () => {
                       </label>
                     </div>
                   </div>
-                  <button
-                    className='bg-blue-700 text-white py-3 px-5 rounded'
-                    type='submit'
-                  >
-                    Submit
-                  </button>
+                  <div className='flex justify-center space-x-2'>
+                    <button
+                      className='bg-blue-700 text-white py-3 px-5 rounded'
+                      type='submit'
+                      value='Send'
+                    >
+                      Submit
+                    </button>
+                    <button
+                      className='bg-gray-300 text-gray-700 py-3 px-5 rounded ml-2'
+                      type='button'
+                      onClick={handleReset}
+                    >
+                      Reset
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>

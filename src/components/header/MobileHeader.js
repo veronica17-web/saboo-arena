@@ -69,7 +69,7 @@ const navigation = {
   more: [
     {
       name: 'Careers',
-      to: '/',
+      to: '/careers',
     },
     {
       name: 'Gallery',

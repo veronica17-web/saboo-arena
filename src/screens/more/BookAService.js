@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-
+import React, { useState, useMemo } from 'react';
+import { useEffect } from 'react';
 import { useRef } from 'react';
 import { Disclosure } from '@headlessui/react';
 import { ChevronUpIcon } from '@heroicons/react/solid';
@@ -14,7 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 // import required modules
-import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper';
+import { Autoplay, Navigation } from 'swiper';
 import {
   serviceCenterBanner,
   serviceIcons,
@@ -127,17 +127,29 @@ const BookMarutiService = () => {
   // const [model, setModel] = useState();
   const [pickup, setPickup] = useState();
   const [method, setMethod] = useState('');
-
+  const [showToast, setShowToast] = useState(false);
   const [loader, setLoader] = useState(false);
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loader
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
     }
-  }
+  }, [phone, pattern, loader, showToast]);
 
   function handleSubmit() {
     setLoader(true);
@@ -351,22 +363,26 @@ const BookMarutiService = () => {
                 <input
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                   type='text'
-                  minLength='10'
                   maxLength='10'
+                  minLength='10'
                   required
-                  id='Mobile'
-                  name='Mobile'
+                  id='Phone'
+                  name='Phone'
                   value={phone}
                   onChange={(e) =>
                     setPhone(
-                      e.target.value.replace(/[^1-9]/g, '') &&
+                      e.target.value.replace(/[^1-9 ]/g, '') &&
                         e.target.value.replace(/ /g, '')
                     )
                   }
                 />
-                {!pattern.test(phone) && phone.length === 10 ? (
+                {phone.length > 0 && phone.length < 10 ? (
                   <small className='text-red-500'>
-                    phone number is invalid
+                    Phone number must be 10 digits
+                  </small>
+                ) : !pattern.test(phone) && phone.length === 10 ? (
+                  <small className='text-red-500'>
+                    Phone number is invalid
                   </small>
                 ) : (
                   ''
@@ -460,11 +476,7 @@ const BookMarutiService = () => {
               className='bg-blue-800 text-white rounded py-2.5 px-5'
               type='submit'
               disabled={
-                pattern.test(phone) && phone.length === 10
-                  ? false
-                  : true && loader
-                  ? true
-                  : false
+                pattern.test(phone) && phone.length === 10 ? false : true
               }
               onClick={handleSubmit}
             >
