@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Careers = () => {
   const navigate = useNavigate();
@@ -30,8 +31,10 @@ const Careers = () => {
   const [position, setPosition] = useState('');
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('');
+  const [selectedGender, setSelectedGender] = useState('male');
 
   const handleReset = () => {
+    setSelectedGender('');
     setSelectedCity('');
     setPostalCode('');
     setSelectedState('');
@@ -494,6 +497,10 @@ const Careers = () => {
     setDisclaimerChecked(!disclaimerChecked);
   };
 
+  const handleGenderChange = (event) => {
+    setSelectedGender(event.target.value);
+  };
+
   // const handleEmailChange = (event) => {
   //   // Get the new email value from the input
   //   const newEmail = event.target.value;
@@ -594,7 +601,6 @@ const Careers = () => {
                         </span>
                       )}
                     </div>
-
                     <div>
                       <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
                         Phone
@@ -616,24 +622,35 @@ const Careers = () => {
                         </p>
                       )}
                     </div>
-                    <div className='mt-4'>
-                      <label
-                        htmlFor='position'
-                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
-                      >
-                        Position Applying For
-                      </label>
-                      <input
-                        type='text'
-                        id='position'
-                        name='position'
-                        value={position}
-                        onChange={(e) => setPosition(e.target.value)} // Update the position state
-                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                        placeholder='Position Applying For'
-                      />
+                    <div className='mt-2 block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
+                      <h2>Select Your Gender</h2>
+                      {/* Step 3: Create radio buttons */}
+                      <div className='flex items-center w-full px-3 py-2 text-sm space-x-4 my-2 font-normal'>
+                        <label>
+                          <input
+                            type='radio'
+                            value='male'
+                            name='gender'
+                            id='male'
+                            checked={selectedGender === 'male'}
+                            onChange={handleGenderChange}
+                          />
+                          &nbsp;Male
+                        </label>
+                        <label>
+                          <input
+                            type='radio'
+                            value='female'
+                            id='female'
+                            name='gender'
+                            checked={selectedGender === 'female'}
+                            onChange={handleGenderChange}
+                          />
+                          &nbsp;Female
+                        </label>
+                      </div>
                     </div>
-                    <div className='mt-4'>
+                    <div className='mt-2'>
                       <label
                         htmlFor='startDate'
                         className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
@@ -649,6 +666,25 @@ const Careers = () => {
                         onChange={(e) => setDob(e.target.value)}
                         className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
                         placeholder='Date of Birth'
+                      />
+                    </div>
+                  </div>
+                  <div className='grid md:grid-cols-1 gap-3'>
+                    <div className=''>
+                      <label
+                        htmlFor='position'
+                        className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
+                      >
+                        Position Applying For
+                      </label>
+                      <input
+                        type='text'
+                        id='position'
+                        name='position'
+                        value={position}
+                        onChange={(e) => setPosition(e.target.value)} // Update the position state
+                        className='block w-full px-3 py-2 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+                        placeholder='Position Applying For'
                       />
                     </div>
                   </div>
@@ -922,14 +958,14 @@ const Careers = () => {
                   </div>
                   <div className='flex justify-center space-x-2'>
                     <button
-                      className='bg-blue-700 text-white py-3 px-5 rounded'
+                      className='bg-blue-700 hover:bg-blue-800 text-white py-3 px-5 rounded transition duration-300'
                       type='submit'
                       value='Send'
                     >
                       Submit
                     </button>
                     <button
-                      className='bg-gray-300 text-gray-700 py-3 px-5 rounded ml-2'
+                      className='bg-gray-300 hover:bg-gray-400 text-gray-700 py-3 px-5 rounded ml-2 transition duration-300'
                       type='button'
                       onClick={handleReset}
                     >

@@ -3,6 +3,10 @@ const serviceCenterBanner = [
     id: 1,
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Saboo-Maruti-Suzuki-Service-Banner.webp',
   },
+  {
+    id: 2,
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp',
+  },
 ];
 
 const serviceIcons = [

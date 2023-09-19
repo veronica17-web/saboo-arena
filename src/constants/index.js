@@ -1,7 +1,7 @@
 export const sliders = [
   {
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
-    alt:"Website Maruti Suzuki Arena Ganesh Chaturthi September Offers Saboo RKS Motor"
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt:"Website Maruti Suzuki Service Ganesh Chaturthi September Offers Saboo RKS Motor"
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor.webp',
@@ -57,8 +57,8 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp",
-    alt:"Website Mobile Maruti Suzuki Arena Ganesh Chaturthi September Offer Saboo RKS Motor"
+    img:"https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp",
+    alt:"Website Mobile Maruti Suzuki Service Ganesh Chaturthi September Offers Saboo RKS Motor.webp"
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
