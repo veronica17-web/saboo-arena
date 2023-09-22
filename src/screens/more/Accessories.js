@@ -25,7 +25,7 @@ const Accessory = () => {
       <div>
         <Header />
         <Swiper
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           navigation={{
             nextEl: navigationNextRef.current,
             prevEl: navigationPrevRef.current,

@@ -44,7 +44,7 @@ function Compare() {
           modules={[Navigation, Autoplay]}
           slidesPerView={1}
           loop={true}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           breakpoints={{
             640: {
               slidesPerView: 2,

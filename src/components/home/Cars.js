@@ -94,11 +94,14 @@ const VehicleProducts = () => {
         ))}
 
         <div className='sm:col-span-2'>
-          <img
-            src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Down_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp'
-            className='lg:mx-auto product_image lg:h-[400px] lg:w-full'
-            alt='banner'
-          />
+          <a href='/maruti-car-service-centers-near-me'>
+            {' '}
+            <img
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Down_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp'
+              className='lg:mx-auto product_image lg:h-[400px] lg:w-full'
+              alt='banner'
+            />
+          </a>
         </div>
       </div>
     </>

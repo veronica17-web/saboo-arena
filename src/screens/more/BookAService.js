@@ -85,7 +85,7 @@ const Slider = () => {
   return (
     <>
       <Swiper
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         navigation={{
           nextEl: navigationNextRef.current,
           prevEl: navigationPrevRef.current,
@@ -520,7 +520,7 @@ const Testimonials = () => {
       <p className='text-3xl text-blue-800 text-center mb-8'>Reviews</p>
       <Swiper
         slidesPerView={1}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         breakpoints={{
           640: {
             slidesPerView: 2,

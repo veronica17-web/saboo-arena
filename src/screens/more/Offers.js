@@ -182,7 +182,7 @@ function Offers() {
       </Helmet>
       <Header />
       <Swiper
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         navigation={{
           nextEl: navigationNextRef.current,
           prevEl: navigationPrevRef.current,
@@ -287,7 +287,7 @@ function MobileSlider() {
       <Swiper
         spaceBetween={30}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         loop={true}
