@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import { BiRupee } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { products } from '../../constants';
+import downBanner from '../../assets/banners/Maruti_Suzuki_Navratri_ dussehra_Saboo_RKS_Motor_October_Offers_05.jpg';
 
 function Cars() {
   return (
@@ -97,7 +98,7 @@ const VehicleProducts = () => {
           <a href='/maruti-car-service-centers-near-me'>
             {' '}
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Down_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp'
+              src={downBanner}
               className='lg:mx-auto product_image lg:h-[400px] lg:w-full'
               alt='banner'
             />

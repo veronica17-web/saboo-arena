@@ -404,7 +404,7 @@ function Finance() {
                 </div>
               </div>
               <button
-                className='bg-black text-white rounded py-2.5 px-5'
+                className='bg-blue-800 rounded flex items-center text-white px-4 py-1.5'
                 type='submit'
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
@@ -468,7 +468,7 @@ function Finance() {
             </div>
             <div className='flex justify-center mt-3'>
               <button
-                className='bg-black text-white rounded py-2.5 px-5'
+                className='bg-blue-800 rounded flex items-center text-white px-4 py-1.5'
                 type='submit'
                 onClick={calculateEMI}
               >

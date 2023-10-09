@@ -4,12 +4,12 @@ import CarEnquiry from '../../components/home/CarEnquiry';
 import MobileSlider from '../../components/home/MobileSlider';
 import Cars from '../../components/home/Cars';
 import About from '../../components/home/About';
-import Accomplishments from '../../components/home/Accomplishments';
+// import Accomplishments from '../../components/home/Accomplishments';
 import { FaStar } from 'react-icons/fa';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 //confetti
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -41,6 +41,7 @@ function Home() {
           name='keywords'
           content='Maruti Suzuki Dealers, Maruti Authorized Dealers, Nexa Dealers Maruti Car Dealers in Hyderabad, Offers on Maruti Cars, offers on maruti cars Hyderabad, maruti car offers 2022, maruti showroom near me, maruti service center near me'
         />
+        <meta property="og:image" content="https://www.saboogroups.com/assets/images/black-logo.png"></meta>
         <meta name='author' content='Broaddcast' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.saboomaruti.in/' />
@@ -48,6 +49,8 @@ function Home() {
           property='og:title'
           content='Maruti Suzuki Authorized Dealers in Hyderabad & Secunderabad | Saboo Maruti'
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <meta
           property='og:description'
           content='Saboo Maruti authorized Maruti Suzuki dealer in Hyderabad & Secunderabad. Get best deals & offers on new Maruti Celerio, Maruti Swift, Maruti brezza,Maruti S-Presso, Maruti Wagon R, Maruti Ertiga, Maruti Alto 800, Maruti Eeco, Maruti Omni, Maruti Vitara brezza.'

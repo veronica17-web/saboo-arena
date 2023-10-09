@@ -17,6 +17,32 @@ function Corporate() {
   const [outlet, setOutlet] = useState('');
   const [email, setEmail] = useState('');
   const [showToast, setShowToast] = useState(false);
+
+  //testing second event
+
+  function handleSubmit2() {
+    setLoading(true);
+    // First API call
+    axios
+      .post('https://arena-backend-zj42.onrender.com/corporate', {
+        name: name,
+        phone: phone,
+        outlet: outlet,
+        email: email,
+      })
+      .then((res) => {
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   function handleSubmit() {
     setLoading(true);
 
@@ -455,7 +481,11 @@ function Corporate() {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
+                onClick={() => {
+                  handleSubmit();
+                  handleSubmit2();
+                }}
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>
