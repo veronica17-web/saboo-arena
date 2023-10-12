@@ -179,6 +179,31 @@ const RegisterInterest = () => {
         setLoading(false);
       });
   }
+
+  function handleSubmit2() {
+    setLoading(true);
+    // First API call
+    axios
+      .post('https://arena-backend-zj42.onrender.com/drvingSchool', {
+        name: name,
+        email: email,
+        phone: phone,
+        outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const pattern = useMemo(() => {
     return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   }, []);
@@ -318,7 +343,12 @@ const RegisterInterest = () => {
             <div>
               <button
                 type='submit'
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
+
+                onClick={() => {
+                  handleSubmit();
+                  handleSubmit2();
+                }}
                 className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true

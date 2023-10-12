@@ -154,20 +154,53 @@ const BookMarutiService = () => {
   function handleSubmit() {
     setLoader(true);
     try {
-      axios.post('https://saboogroups.com/admin/api/book-a-service', {
-        name: name,
-        phone: phone,
-        email: email,
-        // model: model,
-        pickup: pickup,
-      });
-      setMethod('POST');
-      setLoader(false);
+      // First API call
+      axios
+        .post('https://saboogroups.com/admin/api/book-a-service', {
+          name: name,
+          phone: phone,
+          email: email,
+          // model: model,
+          pickup: pickup,
+        })
+        .then((res) => {
+          setMethod('POST');
+          toast.success('Service request sent successfully');
+        })
+        .catch((err) => {
+          toast.error('Something went wrong with the service request!');
+          console.error(err);
+        });
+
+      // Second API call
+      axios
+        .get(
+          `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+        )
+        .then((res) => {
+          console.log('SMS API Response:', res.data);
+          // Handle the response from the SMS API if needed
+        })
+        .catch((err) => {
+          console.error('Error sending SMS:', err);
+          // Handle errors from the SMS API if needed
+        })
+        .finally(() => {
+          setLoader(false);
+        });
     } catch (error) {
-      toast.error('Something went wrong!');
+      toast.error('Something went wrong with the service request!');
       setLoader(false);
     }
   }
+
   return (
     <div className="bg-[url('https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/service_center_screen/our-service-bg.webp')] py-16">
       <div className='container mx-auto grid grid-cols-2 lg:grid-cols-3 md:gap-4 my-8 px-5'>

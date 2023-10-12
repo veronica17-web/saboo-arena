@@ -92,6 +92,35 @@ function Finance() {
       });
   }
 
+  function handleSubmit2() {
+    setLoading(true);
+    // First API call
+    axios
+      .post('https://arena-backend-zj42.onrender.com/finance', {
+        name: name,
+        phone: phone,
+        email: email,
+        outlet: outlet,
+        comments: comments,
+        model: model,
+        purchase_time: purchaseTime,
+        loan_amount: formLoanAmount,
+        loan_duration: loanDuration,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   const [loanAmount, setLoanAmount] = useState('');
   const [loanTerm, setLoanTerm] = useState('');
   const [interestRate, setInterestRate] = useState('');
@@ -409,7 +438,12 @@ function Finance() {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
+
+                onClick={() => {
+                  handleSubmit();
+                  handleSubmit2();
+                }}
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>

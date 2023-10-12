@@ -80,6 +80,30 @@ function Insurance() {
       });
   }
 
+  function handleSubmit2() {
+    setLoading(true);
+    // First API call
+    axios
+      .post('https://arena-backend-zj42.onrender.com/insurance', {
+        Last_Name: name,
+        Email: email,
+        Phone: phone,
+        // outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoading(false);
+        toast.error('Something went wrong!');
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
   return (
     <>
       <Helmet>
@@ -130,7 +154,7 @@ function Insurance() {
       </Helmet>
       <Header />
       <img
-        src={require('../../assets/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp')}
+        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Saboo-Maruti-Suzuki-Insurance-Banner.webp'
         className='max-w-full w-full lg:mt-16'
         alt='inusrance banner'
       />
@@ -362,7 +386,11 @@ function Insurance() {
             className='bg-blue-800 hover:bg-red-500 duration-500 text-white rounded py-2.5 px-5'
             type='submit'
             disabled={pattern.test(phone) && phone.length === 10 ? false : true}
-            onClick={handleSubmit}
+            // onClick={handleSubmit}
+            onClick={() => {
+              handleSubmit();
+              handleSubmit2();
+            }}
           >
             {loading ? (
               <div className='flex items-center justify-center'>
