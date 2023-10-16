@@ -332,7 +332,7 @@ function AltoCNG() {
                 </select>
               </div>
             </div>
-            <div className='flex items-center space-x-1 my-3'>
+            {/* <div className='flex items-center space-x-1 my-3'>
               <input id='comments' name='comments' type='checkbox' required />
               <label htmlFor='comments' className='font-medium text-gray-200'>
                 I Agree
@@ -343,10 +343,10 @@ function AltoCNG() {
               by clicking the ‘Submit’ button below, I am explicitly soliciting
               a call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its
               Representatives on my ‘Mobile’
-            </p>
-            <button
-              className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-              type='submit'
+            </p> */}
+             <button
+              className="h-10 inline-flex justify-center mr-3 py-2 px-4 mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+              type="submit"
               disabled={
                 pattern.test(phone) && phone.length === 10 ? false : true
               }
@@ -355,14 +355,34 @@ function AltoCNG() {
               // onClick={handleSubmit}
             >
               {loading ? (
-                <div className='flex items-center justify-center'>
-                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                <div className="flex items-center justify-center">
+                  <CgSpinner className="animate-spin h-5 mr-2 text-white w-5" />
                   Loading
                 </div>
               ) : (
-                'SUBMIT'
+                "SUBMIT"
               )}
             </button>
+            <div className='flex items-start py-1 ' >
+             
+             <div className='ml-2 text-sm'>
+               <label
+                 htmlFor='disclaimer'
+                 className='font-medium text-gray-700'
+               >
+                 <span className='text-white font-bold'>Disclaimer</span > 
+                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
+                 <a
+              href='/maruti-car-terms-and-conditions'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-2  text-sm  text-red-600 '
+            >
+            Terms and Conditions
+            </a>
+               </label>
+             </div>
+            </div>
           </form>
         </div>
       </div>

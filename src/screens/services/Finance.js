@@ -225,8 +225,8 @@ function Finance() {
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
             name='WebToLeads54158000001051349'
-            // method={methodpopup}
-            method='POST'
+            method={method}
+            // method='POST'
             acceptCharset='UTF-8'
           >
             <input
@@ -410,7 +410,7 @@ function Finance() {
                   />
                 </div>
               </div>
-              <p className='text-gray-700'>
+              {/* <p className='text-gray-700'>
                 <span className='text-black font-bold'>Disclaimer</span>: I
                 agree that by clicking the ‘Submit’ button below, I am
                 explicitly soliciting a call/Message from Saboo Maruti (RKS
@@ -431,7 +431,7 @@ function Finance() {
                     Please Agree with following Disclaimer
                   </label>
                 </div>
-              </div>
+              </div> */}
               <button
                 className='bg-blue-800 rounded flex items-center text-white px-4 py-1.5'
                 type='submit'
@@ -454,6 +454,26 @@ function Finance() {
                   'Get Your Loan Now'
                 )}
               </button>
+              <div className='flex items-start py-1 ' >
+             
+             <div className='ml-2 text-sm'>
+               <label
+                 htmlFor='disclaimer'
+                 className='font-medium text-gray-700'
+               >
+                 <span className='text-black font-bold'>Disclaimer</span > 
+                 <span  className='text-black'>: By clicking 'SUBMIT', you have agreed to our</span>
+                 <a
+              href='/maruti-car-terms-and-conditions'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-2  text-sm  text-red-600 '
+            >
+            Terms and Conditions
+            </a>
+               </label>
+             </div>
+            </div>
             </div>
           </form>
 

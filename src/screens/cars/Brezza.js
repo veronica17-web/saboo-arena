@@ -287,7 +287,7 @@ function Brezza() {
                 </select>
               </div>
             </div>
-            <div className='flex items-center space-x-1 my-3'>
+            {/* <div className='flex items-center space-x-1 my-3'>
               <input id='comments' name='comments' type='checkbox' required />
               <label htmlFor='comments' className='font-medium text-gray-200'>
                 I Agree
@@ -298,14 +298,14 @@ function Brezza() {
               by clicking the ‘Submit’ button below, I am explicitly soliciting
               a call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its
               Representatives on my ‘Mobile’
-            </p>
+            </p> */}
             <button
               type='submit'
               disabled={
                 pattern.test(phone) && phone.length === 10 ? false : true
               }
               onClick={handleSubmit}
-              className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+              className='h-10 inline-flex justify-center mr-3 py-2 px-4 mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
             >
               {loading ? (
                 <div className='flex items-center justify-center'>
@@ -316,6 +316,26 @@ function Brezza() {
                 'SUBMIT'
               )}
             </button>
+            <div className='flex items-start py-1 ' >
+             
+             <div className='ml-2 text-sm'>
+               <label
+                 htmlFor='disclaimer'
+                 className='font-medium text-gray-700'
+               >
+                 <span className='text-white font-bold'>Disclaimer</span > 
+                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
+                 <a
+              href='/maruti-car-terms-and-conditions'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-2  text-sm  text-red-600 '
+            >
+            Terms and Conditions
+            </a>
+               </label>
+             </div>
+            </div>
           </form>
         </div>
       </div>
@@ -406,7 +426,7 @@ const CarsSlider = () => {
     } else {
       setShowToast(false);
     }
-  }, [phone, pattern, loading]);
+  }, [phone, pattern,showToast, loading]);
 
   return (
     <div className='container mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 my-8 sm:px-0 px-5'>
@@ -581,131 +601,152 @@ const CarsSlider = () => {
                           >
                             Book A Test Drive / Get Offers
                           </Dialog.Title>
-                          <div className='mt-2 space-y-3'>
-                            <div className='mt-2 py-8 space-y-3'>
-                              <div>
-                                <label className='block text-sm font-medium text-gray-700'>
-                                  Name
-                                </label>
-                                <input
-                                  type='text'
-                                  id='Last_Name'
-                                  required
-                                  name='Last Name'
-                                  onChange={(e) => setName(e.target.value)}
-                                  className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                                />
-                              </div>
-
-                              <div>
-                                <label className='block text-sm font-medium text-gray-700'>
-                                  Email
-                                </label>
-                                <input
-                                  type='email'
-                                  ftype='email'
-                                  id='Email'
-                                  name='Email'
-                                  onChange={(e) => setEmail(e.target.value)}
-                                  className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                                />
-                              </div>
-
-                              <div>
-                                <label className='block text-sm font-medium text-gray-700'>
-                                  Phone
-                                </label>
-                                <input
-                                  type='text'
-                                  id='Phone'
-                                  name='Phone'
-                                  minLength='10'
-                                  maxLength='10'
-                                  value={phone}
-                                  onChange={(e) =>
-                                    setPhone(
-                                      e.target.value.replace(/[^1-9 ]/g, '') &&
-                                        e.target.value.replace(/ /g, '')
-                                    )
-                                  }
-                                  className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
-                                />
-
-                                {phone.length > 0 && phone.length < 10 ? (
-                                  <small className='text-red-500'>
-                                    Phone number must be 10 digits
-                                  </small>
-                                ) : !pattern.test(phone) &&
-                                  phone.length === 10 ? (
-                                  <small className='text-red-500'>
-                                    Phone number is invalid
-                                  </small>
-                                ) : (
-                                  ''
-                                )}
-                              </div>
-
-                              <div>
-                                <label className='block text-sm font-medium text-gray-700'>
-                                  Model
-                                </label>
-                                <select
-                                  id='LEADCF6'
-                                  name='LEADCF6'
-                                  onChange={(e) => setModel(e.target.value)}
-                                  className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                                >
-                                  <option>Select Model</option>
-                                  <option value='Maruti Alto 800'>
-                                    Maruti Alto K10
-                                  </option>
-                                  <option value='Maruti Alto 800'>
-                                    Maruti Alto
-                                  </option>
-                                  <option value='Maruti Wagon R'>
-                                    Maruti Wagon R
-                                  </option>
-                                  <option value='Maruti Celerio'>
-                                    Maruti New Celerio
-                                  </option>
-                                  <option value='Maruti Swift'>
-                                    Maruti Swift
-                                  </option>
-                                  <option value='Maruti Dzire'>
-                                    Maruti Dzire
-                                  </option>
-                                  <option value='Maruti S-Presso'>
-                                    Maruti S-Presso
-                                  </option>
-                                  <option value='Maruti Ertiga'>
-                                    Maruti Ertiga
-                                  </option>
-                                  <option value='Maruti Brezza'>
-                                    Maruti Brezza
-                                  </option>
-                                  <option value='Maruti Eeco'>
-                                    Maruti Eeco
-                                  </option>
-                                </select>
-                              </div>
+                          <div className="mt-2 space-y-3">
+                          <div className="mt-2 py-5 space-y-3">
+                            <div>
+                              <label className="block text-sm font-medium text-gray-700">
+                                Name
+                              </label>
+                              <input
+                                type="text"
+                                id="Last_Name"
+                                required
+                                name="Last Name"
+                                onChange={(e) => setName(e.target.value)}
+                                className="mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
+                              />
                             </div>
 
-                            <div className='flex items-center space-x-2 mb-5'>
+                            <div>
+                              <label className="block text-sm font-medium text-gray-700">
+                                Email
+                              </label>
                               <input
-                                id='comments'
-                                type='checkbox'
-                                className=' h-4 w-4 border-gray-300 rounded'
-                                required
+                                type="email"
+                                ftype="email"
+                                id="Email"
+                                name="Email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
                               />
-                              <label
-                                htmlFor='comments'
-                                className='text-gray-700 text-sm'
+                            </div>
+
+                            <div>
+                              <label className="block text-sm font-medium text-gray-700">
+                                Phone
+                              </label>
+                              <input
+                                className="mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10"
+                                type="text"
+                                maxLength="10"
+                                minLength="10"
+                                required
+                                id="Phone"
+                                name="Phone"
+                                value={phone}
+                                onChange={(e) =>
+                                  setPhone(
+                                    e.target.value.replace(/[^1-9 ]/g, "") &&
+                                      e.target.value.replace(/ /g, "")
+                                  )
+                                }
+                              />
+                              {phone.length > 0 && phone.length < 10 ? (
+                                <small className="text-red-500">
+                                  Phone number must be 10 digits
+                                </small>
+                              ) : !pattern.test(phone) &&
+                                phone.length === 10 ? (
+                                <small className="text-red-500">
+                                  Phone number is invalid
+                                </small>
+                              ) : (
+                                ""
+                              )}
+                            </div>
+
+                            <div>
+                              <label className="block text-sm font-medium text-gray-700">
+                                Model
+                              </label>
+                              <select
+                                id="LEADCF6"
+                                name="LEADCF6"
+                                onChange={(e) => setModel(e.target.value)}
+                                className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                               >
-                                I agree to the Privacy Policy and Terms of
-                                Service.
+                                <option>Select Model</option>
+                                <option value="Maruti Alto K10">
+                                  Maruti Alto K10
+                                </option>
+                                <option value="Maruti Alto 800">
+                                  Maruti Alto
+                                </option>
+                                <option value="Maruti Wagon R">
+                                  Maruti Wagon R
+                                </option>
+                                <option value="Maruti Celerio">
+                                  Maruti New Celerio
+                                </option>
+                                <option value="Maruti Swift">
+                                  Maruti Swift
+                                </option>
+                                <option value="Maruti Dzire">
+                                  Maruti Dzire
+                                </option>
+                                <option value="Maruti S-Presso">
+                                  Maruti S-Presso
+                                </option>
+                                <option value="Maruti Ertiga">
+                                  Maruti Ertiga
+                                </option>
+                                <option value="Maruti Brezza">
+                                  Maruti Brezza
+                                </option>
+                                <option value="Maruti Eeco">Maruti Eeco</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          {/* <div className='flex items-center space-x-2 mb-5'>
+                            <input
+                              id='comments'
+                              type='checkbox'
+                              className=' h-4 w-4 border-gray-300 rounded'
+                              required
+                            />
+                            <label
+                              htmlFor='comments'
+                              className='text-gray-700 text-sm'
+                            >
+                              I agree to the Privacy Policy and Terms of
+                              Service.
+                            </label>
+                          </div> */}
+                          <div className="flex items-start ">
+                            <div className="ml-2  text-sm">
+                              <label
+                                htmlFor="disclaimer"
+                                className="font-medium text-gray-700"
+                              >
+                                <span className="text-black font-bold">
+                                  Disclaimer
+                                </span>
+                                <span className="text-black">
+                                  : By clicking 'SUBMIT', you have agreed to our
+                                </span>
+                                <a
+                                  href="/maruti-car-terms-and-conditions"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-2  text-sm  text-red-600 "
+                                >
+                                  Terms and Conditions
+                                </a>
                               </label>
                             </div>
                           </div>
+                        </div>
                         </div>
                       </div>
                       <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>

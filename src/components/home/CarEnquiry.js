@@ -222,7 +222,7 @@ function CarEnquiry() {
                           Book A Test Drive / Get Offers
                         </Dialog.Title>
                         <div className='mt-2 space-y-3'>
-                          <div className='mt-2 py-8 space-y-3'>
+                          <div className='mt-2  space-y-3'>
                             <div>
                               <label className='block text-sm font-medium text-gray-700'>
                                 Name
@@ -328,7 +328,7 @@ function CarEnquiry() {
                             </div>
                           </div>
 
-                          <div className='flex items-center space-x-2 mb-5'>
+                          {/* <div className='flex items-center space-x-2 mb-5'>
                             <input
                               id='comments'
                               type='checkbox'
@@ -342,6 +342,29 @@ function CarEnquiry() {
                               I agree to the Privacy Policy and Terms of
                               Service.
                             </label>
+                          </div> */}
+                            <div className="flex items-start ">
+                            <div className="ml-2  text-sm">
+                              <label
+                                htmlFor="disclaimer"
+                                className="font-medium text-gray-700"
+                              >
+                                <span className="text-black font-bold">
+                                  Disclaimer
+                                </span>
+                                <span className="text-black">
+                                  : By clicking 'SUBMIT', you have agreed to our
+                                </span>
+                                <a
+                                  href="/maruti-car-terms-and-conditions"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="px-2  text-sm  text-red-600 "
+                                >
+                                  Terms and Conditions
+                                </a>
+                              </label>
+                            </div>
                           </div>
                         </div>
                       </div>

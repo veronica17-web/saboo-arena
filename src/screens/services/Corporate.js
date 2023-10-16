@@ -453,13 +453,13 @@ function Corporate() {
                 </div>
               </div>
 
-              <p className='text-gray-700'>
+              {/* <p className='text-gray-700'>
                 <span className='text-black font-bold'>Disclaimer</span>: I
                 agree that by clicking the ‘Submit’ button below, I am
                 explicitly soliciting a call/Message from Saboo Maruti (RKS
                 Motor Pvt. Ltd) or its Representatives on my ‘Mobile’.
-              </p>
-              <div className='flex my-3'>
+              </p> */}
+              {/* <div className='flex my-3'>
                 <input
                   id='disclaimer'
                   name='disclaimer'
@@ -474,7 +474,7 @@ function Corporate() {
                     Please Agree with following Disclaimer
                   </label>
                 </div>
-              </div>
+              </div> */}
               <button
                 className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
                 type='submit'
@@ -496,6 +496,26 @@ function Corporate() {
                   'SUBMIT'
                 )}
               </button>
+              <div className='flex items-start py-1 ' >
+             
+             <div className='ml-2 text-sm'>
+               <label
+                 htmlFor='disclaimer'
+                 className='font-medium text-gray-700'
+               >
+                 <span className='text-black font-bold'>Disclaimer</span > 
+                 <span  className='text-black'>: By clicking 'SUBMIT', you have agreed to our</span>
+                 <a
+              href='/maruti-car-terms-and-conditions'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-2  text-sm  text-red-600 '
+            >
+            Terms and Conditions
+            </a>
+               </label>
+             </div>
+            </div>
             </div>
           </form>
         </div>

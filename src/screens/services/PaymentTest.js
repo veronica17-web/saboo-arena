@@ -317,7 +317,7 @@ const PaymentTest = () => {
                     </div>
                   </div>
 
-                  <p className='text-gray-700'>
+                  {/* <p className='text-gray-700'>
                     <span className='text-black font-bold'>Disclaimer</span>: I
                     agree that by clicking the ‘Submit’ button below, I am
                     explicitly soliciting a call/Message from Saboo Maruti (RKS
@@ -338,7 +338,7 @@ const PaymentTest = () => {
                         Please agree with the disclaimer
                       </label>
                     </div>
-                  </div>
+                  </div> */}
                   <button
                     type='submit'
                     onClick={handleSubmit}
@@ -353,6 +353,26 @@ const PaymentTest = () => {
                       'SUBMIT'
                     )}
                   </button>
+                  <div className='flex items-start py-1 ' >
+             
+             <div className='ml-2 text-sm'>
+               <label
+                 htmlFor='disclaimer'
+                 className='font-medium text-gray-700'
+               >
+                 <span className='text-black font-bold'>Disclaimer</span > 
+                 <span  className='text-black'>: By clicking 'SUBMIT', you have agreed to our</span>
+                 <a
+              href='/maruti-car-terms-and-conditions'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='px-2  text-sm  text-red-600 '
+            >
+            Terms and Conditions
+            </a>
+               </label>
+             </div>
+            </div>
                 </div>
               </form>
             </div>
