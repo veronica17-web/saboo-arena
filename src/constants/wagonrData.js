@@ -97,7 +97,7 @@ const wagonrVariants = [
     transmission: 'automatic',
     engine: '998 cc',
     mileage: '23.56 ',
-    price: '6,54,000',
+    price: '6,54,500',
   },
   {
     id: 4,
@@ -115,7 +115,7 @@ const wagonrVariants = [
     mileage: '25.19 ',
     price: '6,83,000',
   },
-  
+
   {
     id: 6,
     title: 'zxi+ (D)',
@@ -130,7 +130,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '1197 cc',
     mileage: '23.56 ',
-    price: '6,75,000',
+    price: '6,75,500',
   },
   {
     id: 8,
@@ -170,7 +170,7 @@ const wagonrVariants = [
     transmission: 'manual',
     engine: '998 cc',
     mileage: '32.5 ',
-    price: '5,51,000',
+    price: '5,51,500',
   },
   {
     id: 13,

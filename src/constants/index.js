@@ -1,12 +1,13 @@
 export const sliders = [
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
+  //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
+  // },
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
-    alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+    alt: 'Website Dhanteras Saboo RKS Motor November Offers',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
-    alt: 'Website Gandhi Jayanti Saboo RKS Motor October Offers',
-  },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Website_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp',
     alt: 'Website Maruti Suzuki No1 SUV Maker Saboo RKS Motor October Offers',
@@ -69,21 +70,25 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
-    alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+    alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
-    alt: 'Website Mobile Gandhi Jayanti Saboo RKS Motor October Offers',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
+  //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
+  //   alt: 'Website Mobile Gandhi Jayanti Saboo RKS Motor October Offers',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Website_Mobile_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp',
     alt: 'Website Mobile Maruti Suzuki No1 SUV Maker Saboo RKS Motor October Offers',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp',
-    alt: 'Website Mobile Maruti Suzuki Service Ganesh Chaturthi September Offers Saboo RKS Motor.webp',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp',
+  //   alt: 'Website Mobile Maruti Suzuki Service Ganesh Chaturthi September Offers Saboo RKS Motor.webp',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
   //   alt: 'sep-01 teachers day banner 2023',
@@ -140,14 +145,14 @@ export const mobileSliders = [
 
 export const offersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
-    alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+    alt: 'Website Dhanteras Saboo RKS Motor November Offers',
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
+  //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
+  // },
 
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
-    alt: 'Website Gandhi Jayanti Saboo RKS Motor October Offers',
-  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-baner-jan-2023.webp',
   //   alt: 'janu-2023-offer-banner',
@@ -176,17 +181,21 @@ export const offersSliders = [
 
 export const mobileOffersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
-    alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+    alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
   },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
-    alt: 'Website Mobile Gandhi Jayanti Saboo RKS Motor October Offers',
-  },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp',
-    alt: 'Website Mobile Maruti Suzuki Arena Ganesh Chaturthi September Offer Saboo RKS Motor',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
+  //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Gandhi_Jayanti_Saboo_RKS_Motor_October_Offers.webp',
+  //   alt: 'Website Mobile Gandhi Jayanti Saboo RKS Motor October Offers',
+  // },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Ganesh+Chaturthi+September+Offers+Saboo+RKS+Motor.webp',
+  //   alt: 'Website Mobile Maruti Suzuki Arena Ganesh Chaturthi September Offer Saboo RKS Motor',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
   //   alt: 'sep 2023 offer teachers day',

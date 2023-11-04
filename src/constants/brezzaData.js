@@ -243,7 +243,6 @@ const brezzaVariants = [
     mileage: '18.76',
     price: '11,99,500',
   },
-
 ];
 
 export { brezzaSliders, brezzaColors, brezzaVariants };

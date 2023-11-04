@@ -32,13 +32,13 @@ const offer_products = [
   // },
   {
     name: 'S-Presso',
-    price: '61000',
+    price: '56000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'WagonR ',
-    price: '61000',
+    price: '56000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
@@ -58,7 +58,7 @@ const offer_products = [
   },
   {
     name: 'Swift',
-    price: '54000',
+    price: '49000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
@@ -78,7 +78,7 @@ const offer_products = [
 
   {
     name: 'EECO',
-    price: '41000',
+    price: '29000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     explore: '/maruti-eeco-on-road-price-in-hyderabad',
   },
