@@ -296,34 +296,30 @@ function CarEnquiry() {
                                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                               >
                                 <option>Select Model</option>
-                                <option value='Maruti Alto K10'>
-                                  Maruti Alto K10
-                                </option>
-                                <option value='Maruti Alto 800'>
-                                  Maruti Alto
-                                </option>
-                                <option value='Maruti Wagon R'>
-                                  Maruti Wagon R
-                                </option>
-                                <option value='Maruti Celerio'>
-                                  Maruti New Celerio
-                                </option>
-                                <option value='Maruti Swift'>
-                                  Maruti Swift
-                                </option>
-                                <option value='Maruti Dzire'>
-                                  Maruti Dzire
-                                </option>
-                                <option value='Maruti S-Presso'>
-                                  Maruti S-Presso
-                                </option>
-                                <option value='Maruti Ertiga'>
-                                  Maruti Ertiga
-                                </option>
-                                <option value='Maruti Brezza'>
-                                  Maruti Brezza
-                                </option>
-                                <option value='Maruti Eeco'>Maruti Eeco</option>
+                                <optgroup label='Hatchback'>
+                                  <option value='Alto K10'>Alto K10</option>
+                                  <option value='Alto 800'>Alto</option>
+                                  <option value='Wagon R'>Wagon R</option>
+                                  <option value='Celerio'>Celerio</option>
+                                  <option value='Swift'>Swift</option>
+                                </optgroup>
+
+                                <optgroup label='Sedan'>
+                                  <option value='Dzire'>Dzire</option>
+                                </optgroup>
+
+                                <optgroup label='micro SUV'>
+                                  <option value='S-Presso'>S-Presso</option>
+                                </optgroup>
+                                <optgroup label='MPV'>
+                                  <option value='Ertiga'>Ertiga</option>
+                                </optgroup>
+                                <optgroup label='SUV'>
+                                  <option value='Brezza'>Brezza</option>
+                                </optgroup>
+                                <optgroup label='Mini Van'>
+                                  <option value='Eeco'>Eeco</option>
+                                </optgroup>
                               </select>
                             </div>
                           </div>
@@ -343,23 +339,23 @@ function CarEnquiry() {
                               Service.
                             </label>
                           </div> */}
-                            <div className="flex items-start ">
-                            <div className="ml-2  text-sm">
+                          <div className='flex items-start '>
+                            <div className='ml-2  text-sm'>
                               <label
-                                htmlFor="disclaimer"
-                                className="font-medium text-gray-700"
+                                htmlFor='disclaimer'
+                                className='font-medium text-gray-700'
                               >
-                                <span className="text-black font-bold">
+                                <span className='text-black font-bold'>
                                   Disclaimer
                                 </span>
-                                <span className="text-black">
+                                <span className='text-black'>
                                   : By clicking 'SUBMIT', you have agreed to our
                                 </span>
                                 <a
-                                  href="/maruti-car-terms-and-conditions"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="px-2  text-sm  text-red-600 "
+                                  href='/maruti-car-terms-and-conditions'
+                                  target='_blank'
+                                  rel='noopener noreferrer'
+                                  className='px-2  text-sm  text-red-600 '
                                 >
                                   Terms and Conditions
                                 </a>

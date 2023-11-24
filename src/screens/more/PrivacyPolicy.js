@@ -1,9 +1,45 @@
 import React from 'react';
 import Header from '../../components/header/Header';
+import { Helmet } from 'react-helmet';
 
 function PrivacyPolicy() {
   return (
     <>
+      <Helmet>
+        <title>Terms & Conditions of Maruti Cars | Saboo Maruti</title>
+        <meta
+          name='title'
+          content='Terms & Conditions of Maruti Cars | Saboo Maruti'
+        />
+        <meta
+          name='description'
+          content='Please read all terms and conditions of Maruti Suzuki Cars, Insurance, Warranty, Offers & discounts finance services. For more information reach us 98488 98488.'
+        />
+        {/* <meta
+          name="keywords"
+          content="swift on road price, swift offers, swift price, swift service center, maruti swift on road price, maruti swift offers, maruti swift price, maruti swift service center, maruti swift service center near me, maruti suzuki swift price, maruti suzuki swift on road price, maruti suzuki swift offers,maruti suzuki swift, swift on road price, swift 2022 offers, swift 2022 price, swift on road price in hyderabad, breza offers in hyderabad, swift price in hyderabad, maruti swift 2022 price, maruti swift 2022 on road price, maruti swift 2022 offers, maruti swift 2022 price in hyderabad, maruti swift 2022 on road price in hyderabad, Maruti Suzuki swift 2022 price, Maruti Suzuki swift 2022 on road price, maruti suzuki swift 2022 offers,  vitara swift offers, Vitara swift price, vitara swift on road price, vitara swift 2022 offers, vitara swift 2022 price, vitara swift 2022 on road price, vitara swift 2022 offers"
+        /> */}
+        <meta name='author' content='Broaddcast' />
+        <meta property='og:type' content='website' />
+        <meta
+          property='og:url'
+          content='https://saboomaruti.in/maruti-new-brezza-on-road-price-in-hyderabad'
+        />
+        <meta
+          property='og:title'
+          content='Terms & Conditions of Maruti Cars | Saboo Maruti'
+        />
+        <meta
+          property='og:description'
+          content='Please read all terms and conditions of Maruti Suzuki Cars, Insurance, Warranty, Offers & discounts finance services. For more information reach us 98488 98488.'
+        />
+        <meta property='og:image' content='img/og-tags/swift.webp' />
+        <meta property='twitter:card' content='summary_large_image' />
+        <meta
+          property='twitter:url'
+          content='https://www.saboomaruti.in/maruti-swift-car-on-road-price-in-hyderabad'
+        />
+      </Helmet>
       <Header />
       <img
         src={require('../../assets/privacy_banner.webp')}

@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import { Newaccesoriessliders } from '../../constants';
+import { Helmet } from 'react-helmet';
 
 const Accessory = () => {
   const navigationPrevRef = useRef(null);
@@ -22,6 +23,20 @@ const Accessory = () => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          Maruti Suzuki Genuine Accessories & Spare Parts in Hyderabad | Saboo
+          Maruti
+        </title>
+        <meta
+          name='title'
+          content='Maruti Suzuki Genuine Accessories & Spare Parts in Hyderabad | Saboo Maruti'
+        />
+        <meta
+          name='description'
+          content='Maruti Suzuki Genuine Accessories & Spare Parts in Hyderabad. Saboo Maruti sell all kind of genuine accessories & spare parts for Maruti Suzuki cars & Nexa cars with warranty. Visit saboomaruti.in or call us 9848898488 for Maruti spare parts.'
+        />
+      </Helmet>
       <div>
         <Header />
         <Swiper

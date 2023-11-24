@@ -81,12 +81,12 @@ function Gallery() {
       <Header />
       <Helmet>
         <title>
-          Maruti Suzuki Nexa Showroom Images in Hyderabad | Maruti Suzuki Nexa
-          Workshop Images
+          Maruti Suzuki Showroom Images in Hyderabad | Maruti Suzuki Workshop
+          Images
         </title>
         <meta
           name='title'
-          content='Maruti Suzuki Nexa Showroom Images in Hyderabad | Maruti Suzuki Nexa Workshop Images '
+          content='Maruti Suzuki Showroom Images in Hyderabad | Maruti Suzuki Workshop Images'
         />
         <meta
           name='description'

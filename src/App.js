@@ -56,7 +56,7 @@ import Toursdzire from './screens/Tour/TourS';
 import Tourveeco from './screens/Tour/TourV';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { IoCloseCircle, IoLogoWhatsapp } from 'react-icons/io5';
+import { IoCloseCircle } from 'react-icons/io5';
 // import { BsTelephoneForward } from 'react-icons/bs';
 import { Transition, Dialog } from '@headlessui/react';
 import axios from 'axios';
@@ -78,16 +78,15 @@ import BrezzaCNG from './screens/CNG/BrezzaCNG';
 import PriceList from './screens/more/PriceList';
 import AccessoryTest from './screens/more/AccessoryTest';
 import AwardsTest from './screens/more/AwardsTest';
-import { Login } from '@emotion-icons/heroicons-outline';
+// import { Login } from '@emotion-icons/heroicons-outline';
 import LoginPage from './screens/Login/Login';
-import CareersPage from './screens/Careers/Careers';
-import ApplicationForm from './screens/Careers/Careers';
+
 import Careers from './screens/Careers/Careers';
 // import CarEnquiry from './components/home/CarEnquiry';
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const ScrollTop = () => {
     const { pathname } = useLocation();
@@ -105,7 +104,7 @@ function App() {
 
   const Popup = () => {
     const [number, setNumber] = useState('');
-    const [methodpopup, setMethodPopup] = useState();
+    // const [methodpopup, setMethodPopup] = useState();
 
     // function handleSubmit() {
     //   setLoading(true);
@@ -546,19 +545,33 @@ function LeadPopup() {
                     id='LEADCF6'
                     name='LEADCF6'
                     onChange={(e) => setModel(e.target.value)}
-                    className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                    className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                   >
                     <option>Select Model</option>
-                    <option value='ALTO'>ALTO</option>
-                    <option value='ALTO K10'>ALTO K10</option>
-                    <option value='WAGON R'>WAGON R</option>
-                    <option value='CELERIO'>CELERIO</option>
-                    <option value='SWIFT'>SWIFT</option>
-                    <option value='DZIRE'>DZIRE</option>
-                    <option value='S-PRESSO'>S-PRESSO</option>
-                    <option value='ERTIGA'>ERTIGA</option>
-                    <option value='BREZZA'>BREZZA</option>
-                    <option value='EECO'>EECO</option>
+                    <optgroup label='Hatchback'>
+                      <option value='Alto K10'>Alto K10</option>
+                      <option value='Alto 800'>Alto</option>
+                      <option value='Wagon R'>Wagon R</option>
+                      <option value='Celerio'>Celerio</option>
+                      <option value='Swift'>Swift</option>
+                    </optgroup>
+
+                    <optgroup label='Sedan'>
+                      <option value='Dzire'>Dzire</option>
+                    </optgroup>
+
+                    <optgroup label='micro SUV'>
+                      <option value='S-Presso'>S-Presso</option>
+                    </optgroup>
+                    <optgroup label='MPV'>
+                      <option value='Ertiga'>Ertiga</option>
+                    </optgroup>
+                    <optgroup label='SUV'>
+                      <option value='Brezza'>Brezza</option>
+                    </optgroup>
+                    <optgroup label='Mini Van'>
+                      <option value='Eeco'>Eeco</option>
+                    </optgroup>
                   </select>
                 </div>
                 <div>
@@ -582,10 +595,13 @@ function LeadPopup() {
               </div>
 
               <p className='text-gray-900 mb-2 p-2 mt-5'>
-                <span className='font-semibold'>Disclaimer :</span> I agree that
-                by clicking the ‘Submit’ button below, I am explicitly
-                soliciting a call / Message from Saboo Maruti (RKS Motor Pvt.
-                Ltd) or its Representatives on my ‘Mobile’
+                <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
+                <a
+                  href='/maruti-car-terms-and-conditions'
+                  className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                >
+                  Terms and Conditions
+                </a>
               </p>
               <button
                 type='submit'

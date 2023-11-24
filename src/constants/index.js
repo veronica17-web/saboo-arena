@@ -3,10 +3,10 @@ export const sliders = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
   // },
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-    alt: 'Website Dhanteras Saboo RKS Motor November Offers',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+  //   alt: 'Website Dhanteras Saboo RKS Motor November Offers',
+  // },
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Website_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp',
@@ -69,10 +69,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-    alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+  //   alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
@@ -144,10 +144,10 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-    alt: 'Website Dhanteras Saboo RKS Motor November Offers',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+  //   alt: 'Website Dhanteras Saboo RKS Motor November Offers',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
@@ -180,10 +180,10 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
-  {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-    alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
-  },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
+  //   alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
@@ -226,7 +226,7 @@ export const products = [
     transmission: 'AGS / 5 MT',
     mileage: '24.90*',
     seating: '5',
-    fuel: 'Petrol',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 2,
@@ -241,9 +241,9 @@ export const products = [
     power: '75.8',
     engine: 'K15C Smart Hybrid',
     transmission: '6 AT/5 MT',
-    mileage: '20.15*',
+    mileage: '19.80*',
     seating: '5',
-    fuel: 'Petrol',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 3,
@@ -260,7 +260,7 @@ export const products = [
     transmission: '5 MT/AT',
     mileage: '22.56*',
     seating: '5',
-    fuel: 'petrol',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 4,
@@ -275,9 +275,9 @@ export const products = [
     power: '66',
     engine: 'K Series VVT',
     transmission: '5 MT/AT',
-    mileage: '31.12*',
+    mileage: '22.61*',
     seating: '5',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 5,
@@ -294,7 +294,7 @@ export const products = [
     transmission: '5 MT/AT',
     mileage: '25.30*',
     seating: '5',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 6,
@@ -309,9 +309,9 @@ export const products = [
     power: '66',
     engine: 'K12N',
     transmission: '5 MT/AT',
-    mileage: '34.05*',
+    mileage: '25.19*',
     seating: '5',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 7,
@@ -326,9 +326,9 @@ export const products = [
     power: '35.3',
     engine: 'F8D Petrol',
     transmission: ' 5 MT',
-    mileage: '31.59*',
+    mileage: '22.05*',
     seating: '4,5',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 8,
@@ -343,9 +343,9 @@ export const products = [
     power: '75.8',
     engine: 'K15C Smart Hybrid',
     transmission: '6 AT/5 MT',
-    mileage: '26.11*',
+    mileage: '20.51*',
     seating: '7',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 9,
@@ -360,9 +360,9 @@ export const products = [
     power: '49',
     engine: 'K10C',
     transmission: ' 5 MT/AT',
-    mileage: '35.60*',
+    mileage: '26.68*',
     seating: '5',
-    fuel: 'petrol/cng',
+    fuel: 'Petrol/CNG',
   },
   {
     id: 10,
@@ -377,9 +377,9 @@ export const products = [
     power: '54',
     engine: 'G12B',
     transmission: '5 MT',
-    mileage: '20.88*',
+    mileage: '19.71*',
     seating: '5,7',
-    fuel: 'petrol/CNG',
+    fuel: 'Petrol/CNG',
   },
 ];
 

@@ -1,8 +1,8 @@
 const serviceCenterBanner = [
-  {
-    id: 1,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp',
-  },
+  // {
+  //   id: 1,
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp',
+  // },
 
 
   // {

@@ -297,10 +297,6 @@ function TourH1Alto() {
                 >
                   <option>Select Model</option>
                   <option value='Alto Tour H1'>TOUR H1</option>
-                  <option value='WagonR Tour H3'>TOUR H3</option>
-                  <option value='Dzire Tour S'>TOUR S</option>
-                  <option value='Eeco Tour V'>TOUR V</option>
-                  <option value='Ertiga Tour M'>TOUR M</option>
                 </select>
               </div>
               <div>
@@ -367,25 +363,26 @@ function TourH1Alto() {
                 'SUBMIT'
               )}
             </button>
-            <div className='flex items-start py-1 ' >
-             
-             <div className='ml-2 text-sm'>
-               <label
-                 htmlFor='disclaimer'
-                 className='font-medium text-gray-700'
-               >
-                 <span className='text-white font-bold'>Disclaimer</span > 
-                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
-                 <a
-              href='/maruti-car-terms-and-conditions'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='px-2  text-sm  text-red-600 '
-            >
-            Terms and Conditions
-            </a>
-               </label>
-             </div>
+            <div className='flex items-start py-1 '>
+              <div className='ml-2 text-sm'>
+                <label
+                  htmlFor='disclaimer'
+                  className='font-medium text-gray-700'
+                >
+                  <span className='text-white font-bold'>Disclaimer</span>
+                  <span className='text-white'>
+                    : By clicking 'SUBMIT', you have agreed to our
+                  </span>
+                  <a
+                    href='/maruti-car-terms-and-conditions'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-2  text-sm  text-red-600 '
+                  >
+                    Terms and Conditions
+                  </a>
+                </label>
+              </div>
             </div>
           </form>
         </div>

@@ -105,15 +105,15 @@ function Dzire() {
     <>
       <Helmet>
         <title>
-          Maruti Dzire On Road Price in Hyderabad | Maruti Dzire Offers
+          Maruti Dzire On Road Price in Secunderabad, Hyderabad & 2023 Offers
         </title>
         <meta
           name='title'
-          content='Maruti Dzire On Road Price in Hyderabad | Maruti Dzire Offers'
+          content='Maruti Dzire On Road Price in Secunderabad, Hyderabad & 2023 Offers'
         />
         <meta
           name='description'
-          content='Maruti Dzire in Secunderabad & Hyderabad. Dzire 2022 Price Starts at 6.24* LakhBest price & offers on Maruti Dzire at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Dzire online.'
+          content='Maruti Dzire in Secunderabad & Hyderabad. Best price & offers on Maruti Dzire at Saboo Maruti. Finance facility also available at the dealership. Please visit your nearest Showroom for best deals. Also, Get On-Road Price for Maruti Dzire online.'
         />
         {/* <meta
           name="keywords"
@@ -243,19 +243,33 @@ function Dzire() {
                   id='LEADCF6'
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
-                  className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                 >
                   <option>Select Model</option>
-                  <option value='ALTO'>ALTO</option>
-                  <option value='ALTO K10'>ALTO K10</option>
-                  <option value='WAGON R'>WAGON R</option>
-                  <option value='CELERIO'>CELERIO</option>
-                  <option value='SWIFT'>SWIFT</option>
-                  <option value='DZIRE'>DZIRE</option>
-                  <option value='S-PRESSO'>S-PRESSO</option>
-                  <option value='ERTIGA'>ERTIGA</option>
-                  <option value='BREZZA'>BREZZA</option>
-                  <option value='EECO'>EECO</option>
+                  <optgroup label='Hatchback'>
+                    <option value='Alto K10'>Alto K10</option>
+                    <option value='Alto 800'>Alto</option>
+                    <option value='Wagon R'>Wagon R</option>
+                    <option value='Celerio'>Celerio</option>
+                    <option value='Swift'>Swift</option>
+                  </optgroup>
+
+                  <optgroup label='Sedan'>
+                    <option value='Dzire'>Dzire</option>
+                  </optgroup>
+
+                  <optgroup label='micro SUV'>
+                    <option value='S-Presso'>S-Presso</option>
+                  </optgroup>
+                  <optgroup label='MPV'>
+                    <option value='Ertiga'>Ertiga</option>
+                  </optgroup>
+                  <optgroup label='SUV'>
+                    <option value='Brezza'>Brezza</option>
+                  </optgroup>
+                  <optgroup label='Mini Van'>
+                    <option value='Eeco'>Eeco</option>
+                  </optgroup>
                 </select>
               </div>
               <div>
@@ -305,9 +319,9 @@ function Dzire() {
               a call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its
               Representatives on my ‘Mobile’
             </p> */}
-             <button
-              className="h-10 inline-flex justify-center mr-3 py-2 px-4 mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-              type="submit"
+            <button
+              className='h-10 inline-flex justify-center mr-3 py-2 px-4 mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+              type='submit'
               disabled={
                 pattern.test(phone) && phone.length === 10 ? false : true
               }
@@ -316,33 +330,34 @@ function Dzire() {
               // onClick={handleSubmit}
             >
               {loading ? (
-                <div className="flex items-center justify-center">
-                  <CgSpinner className="animate-spin h-5 mr-2 text-white w-5" />
+                <div className='flex items-center justify-center'>
+                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
                   Loading
                 </div>
               ) : (
-                "SUBMIT"
+                'SUBMIT'
               )}
             </button>
-            <div className='flex items-start py-1 ' >
-             
-             <div className='ml-2 text-sm'>
-               <label
-                 htmlFor='disclaimer'
-                 className='font-medium text-gray-700'
-               >
-                 <span className='text-white font-bold'>Disclaimer</span > 
-                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
-                 <a
-              href='/maruti-car-terms-and-conditions'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='px-2  text-sm  text-red-600 '
-            >
-            Terms and Conditions
-            </a>
-               </label>
-             </div>
+            <div className='flex items-start py-1 '>
+              <div className='ml-2 text-sm'>
+                <label
+                  htmlFor='disclaimer'
+                  className='font-medium text-gray-700'
+                >
+                  <span className='text-white font-bold'>Disclaimer</span>
+                  <span className='text-white'>
+                    : By clicking 'SUBMIT', you have agreed to our
+                  </span>
+                  <a
+                    href='/maruti-car-terms-and-conditions'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-2  text-sm  text-red-600 '
+                  >
+                    Terms and Conditions
+                  </a>
+                </label>
+              </div>
             </div>
           </form>
         </div>
@@ -691,34 +706,10 @@ const CarsSlider = () => {
                                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                               >
                                 <option>Select Model</option>
-                                <option value='Maruti Alto K10'>
-                                  Maruti Alto K10
-                                </option>
-                                <option value='Maruti Alto 800'>
-                                  Maruti Alto
-                                </option>
-                                <option value='Maruti Wagon R'>
-                                  Maruti Wagon R
-                                </option>
-                                <option value='Maruti Celerio'>
-                                  Maruti New Celerio
-                                </option>
-                                <option value='Maruti Swift'>
-                                  Maruti Swift
-                                </option>
-                                <option value='Maruti Dzire'>
-                                  Maruti Dzire
-                                </option>
-                                <option value='Maruti S-Presso'>
-                                  Maruti S-Presso
-                                </option>
-                                <option value='Maruti Ertiga'>
-                                  Maruti Ertiga
-                                </option>
-                                <option value='Maruti Brezza'>
-                                  Maruti Brezza
-                                </option>
-                                <option value='Maruti Eeco'>Maruti Eeco</option>
+
+                                <optgroup label='Sedan'>
+                                  <option value='Dzire'>Dzire</option>
+                                </optgroup>
                               </select>
                             </div>
                           </div>
@@ -738,23 +729,23 @@ const CarsSlider = () => {
                               Service.
                             </label>
                           </div> */}
-                           <div className="flex items-start ">
-                            <div className="ml-2  text-sm">
+                          <div className='flex items-start '>
+                            <div className='ml-2  text-sm'>
                               <label
-                                htmlFor="disclaimer"
-                                className="font-medium text-gray-700"
+                                htmlFor='disclaimer'
+                                className='font-medium text-gray-700'
                               >
-                                <span className="text-black font-bold">
+                                <span className='text-black font-bold'>
                                   Disclaimer
                                 </span>
-                                <span className="text-black">
+                                <span className='text-black'>
                                   : By clicking 'SUBMIT', you have agreed to our
                                 </span>
                                 <a
-                                  href="/maruti-car-terms-and-conditions"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="px-2  text-sm  text-red-600 "
+                                  href='/maruti-car-terms-and-conditions'
+                                  target='_blank'
+                                  rel='noopener noreferrer'
+                                  className='px-2  text-sm  text-red-600 '
                                 >
                                   Terms and Conditions
                                 </a>

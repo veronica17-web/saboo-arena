@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { RiArrowRightSLine } from 'react-icons/ri';
+import { FaXTwitter } from 'react-icons/fa6';
 import {
   BsFacebook,
-  BsTwitter,
   BsYoutube,
   BsPinterest,
   BsInstagram,
 } from 'react-icons/bs';
+
 import { ImLinkedin } from 'react-icons/im';
 
 const navigation = {
@@ -57,7 +58,7 @@ const navigation = {
     { name: 'CONTACT US', to: '/contact-maruti-suzuki-showroom' },
   ],
   financeInsurance: [
-    { name: 'CAREERS', to: '/' },
+    { name: 'CAREERS', to: '/careers' },
     { name: 'PAYMENTS', to: '/payment' },
     { name: 'CORPORATE', to: '/corporate' },
     { name: 'FINANCE', to: '/maruti-suzuki-car-finance-services' },
@@ -196,7 +197,7 @@ function Footer() {
                   target='_blank'
                   rel='noreferrer'
                 >
-                  <BsTwitter />
+                  <FaXTwitter />
                 </a>
                 <a
                   href='https://www.youtube.com/channel/UCcX41w_0KU95uunUdNcP8TA?view_as=subscriber'

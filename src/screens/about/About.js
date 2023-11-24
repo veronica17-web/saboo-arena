@@ -2,12 +2,12 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import Header from '../../components/header/Header';
 import ReadMoreReact from 'read-more-react';
-import ReactReadMoreReadLess from 'react-read-more-read-less';
+
 
 import '../../App.css';
 
-const secondPara =
-  'Our unwavering commitment to exceptional service quality and customer satisfaction has established a stellar reputation, and we are excited to continue growing in an ever-evolving business landscape. As a customer-centric organization, we strive to exceed your expectations every time. Our dedication to this vision is reflected in our remarkable sales numbers, with the highest referral sales and repeat buyers in India. We are proud to have sold over 1,00,000 Maruti Suzuki cars to date and serviced over 10,00,000 cars, a testament to our commendable growth trajectory at Saboo RKS';
+// const secondPara =
+//   'Our unwavering commitment to exceptional service quality and customer satisfaction has established a stellar reputation, and we are excited to continue growing in an ever-evolving business landscape. As a customer-centric organization, we strive to exceed your expectations every time. Our dedication to this vision is reflected in our remarkable sales numbers, with the highest referral sales and repeat buyers in India. We are proud to have sold over 1,00,000 Maruti Suzuki cars to date and serviced over 10,00,000 cars, a testament to our commendable growth trajectory at Saboo RKS';
 
 const longText =
   "At Saboo RKS Group, we have a robust presence in Hyderabad with extensive coverage that includes five sales outlets, nine workshops, four True Value (pre-owned) sales outlets, one commercial outlet, and two premium car outlets, Nexa. As Hyderabad's leading automobile dealership, we have been at the forefront of driving growth in automobile sales and service over the last four decades. Our unwavering commitment to customer satisfaction is reflected in our extensive network and our belief in the 'Customers for Life' concept. We consistently strive to offer world-class products and services that provide the best value for money to our customers. Saboo RKS Group's values of dependability, assurance, trustworthiness, and loyalty have gained the trust of our customers since our inception, and we continue to prioritize understanding and anticipating their needs to ensure our continued success.";

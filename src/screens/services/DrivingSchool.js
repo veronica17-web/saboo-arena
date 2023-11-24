@@ -22,7 +22,7 @@ function DrivingSchool() {
         />
         <meta
           name='description'
-          content='Maruti Driving School in Hyderabad. Special initiatives that have lady instructors for women learners. Get world-class driving training at Maruti Driving School. Call now 9848898488 for fees & Offers.'
+          content='Maruti Driving School in Hyderabad. Special initiatives that have lady instructors for women learners. Get world-class driving training at Maruti Driving School. Call now 9848898488 for fees & Offers.'
         />
         <meta name='keywords' content='suzuki, maruti suzuki suzuki' />
         <meta name='author' content='Broaddcast' />

@@ -141,16 +141,16 @@ function Offers() {
     <>
       <Helmet>
         <title>
-          Offers on Maruti Suzuki Cars |Exchange offers & Discounts on Maruti
-          Cars
+          Maruti Suzuki New Diwali Offers November 2023, Discounts & Deals in
+          Hyderabad
         </title>
         <meta
           name='title'
-          content='Offers on Maruti Suzuki Cars |Exchange offers & Discounts on Maruti Cars'
+          content='Maruti Suzuki New Car Offers 2023, Discounts & Deals in Hyderabad'
         />
         <meta
           name='description'
-          content='Maruti Suzuki new car offers, discounts & deals in Hyderabad. Get exclusive offers and discounts on your favorite Maruti cars from Saboo RKS authorized Maruti Suzuki dealer in Hyderabad. Visit now your nearest Saboo RKS showroom for on going offers. Call now.'
+          content='Maruti Suzuki New Diwali Offers November 2023, discounts & deals in Hyderabad. Get exclusive offers and discounts on your favorite Maruti cars from Saboo RKS authorized Maruti Suzuki dealer in Hyderabad. Visit now your nearest Saboo RKS showroom for on going offers. Call now.'
         />
         <meta
           name='keywords'
