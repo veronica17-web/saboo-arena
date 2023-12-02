@@ -182,4 +182,31 @@ const wagonrVariants = [
   },
 ];
 
-export { wagonrSliders, wagonrColors, wagonrVariants };
+const wagonrMileage = [
+  {
+    id: 1,
+
+    transmission: 'manual',
+    engine: '1.0L Petrol ',
+    mileage: '24.35 KM/L',
+    amileage: '25.19 KM/L',
+  },
+  {
+    id: 2,
+
+    transmission: 'manual',
+    engine: '1.2L petrol ',
+    mileage: '23.56 KM/L',
+    amileage: '24.43 KM/L',
+  },
+  {
+    id: 3,
+
+    transmission: 'automatic',
+    engine: '1.0L S-CNG ',
+    mileage: '34.05 KM/KG ',
+    amileage: '',
+  },
+];
+
+export { wagonrSliders, wagonrColors, wagonrVariants, wagonrMileage };

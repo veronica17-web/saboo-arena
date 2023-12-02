@@ -28,34 +28,36 @@ const navigation = {
     { name: 'EECO', to: '/maruti-eeco-on-road-price-in-hyderabad' },
   ],
   cng: [
+    { name: 'Alto CNG', to: '/maruti-alto-800-cng-on-road-price-in-hyderabad' },
     {
-      name: 'Brezza CNG',
-      to: '/maruti-brezza-cng-on-road-price',
-    },    {
       name: 'Alto K10 CNG',
       to: '/alto-k10-cng',
     },
     { name: 'Swift CNG', to: '/maruti-new-swift-cng' },
-    { name: 'Alto CNG', to: '/maruti-alto-800-cng-on-road-price-in-hyderabad' },
 
     {
       name: 'Wagon R CNG',
       to: '/maruti-wagonr-cng-on-road-price-in-hyderabad',
     },
     {
+      name: 'Celerio CNG',
+      to: '/maruti-celerio-cng-on-road-price-in-hyderabad',
+    },
+    {
       name: 'Dzire CNG',
       to: '/maruti-swift-dzire-cng-on-road-price-in-hyderabad',
     },
+    { name: 'Ertiga CNG', to: '/maruti-ertiga-cng-on-road-price-in-hyderabad' },
     {
       name: 'S-Presso CNG',
       to: '/maruti-s-presso-cng-on-road-price-in-hyderabad',
     },
-    { name: 'Ertiga CNG', to: '/maruti-ertiga-cng-on-road-price-in-hyderabad' },
-    { name: 'EECO CNG', to: '/maruti-eeco-cng-on-road-price-in-hyderabad' },
     {
-      name: 'Celerio CNG',
-      to: '/maruti-celerio-cng-on-road-price-in-hyderabad',
+      name: 'Brezza CNG',
+      to: '/maruti-brezza-cng-on-road-price',
     },
+
+    { name: 'EECO CNG', to: '/maruti-eeco-cng-on-road-price-in-hyderabad' },
   ],
   tour: [
     { name: 'TOUR H1', to: '/maruti-alto-tour-h1-on-road-price-in-hyderabad' },

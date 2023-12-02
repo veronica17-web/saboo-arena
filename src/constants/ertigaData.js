@@ -209,4 +209,25 @@ const ertigaVariants = [
   },
 ];
 
-export { ertigaSliders, ertigaColors, ertigaVariants };
+const ertigaMileage = [
+  {
+    id: 1,
+    fueltype: 'petrol',
+    transmission: 'manual',
+    mileage: '20.51 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'petrol',
+    transmission: 'automatic',
+    mileage: '20.30 KM/L',
+  },
+  {
+    id: 3,
+    fueltype: 'cng',
+    transmission: 'manual',
+    mileage: '26.11 KM/KG',
+  },
+];
+
+export { ertigaSliders, ertigaColors, ertigaVariants, ertigaMileage };

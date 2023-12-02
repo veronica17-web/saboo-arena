@@ -214,7 +214,7 @@ export const products = [
   {
     id: 1,
     name: 'Alto K10',
-    price: '3.99 - 5.83 L',
+    price: '3.99 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/alto-k10-logo-bw.webp',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
     brouchure:
@@ -231,7 +231,7 @@ export const products = [
   {
     id: 2,
     name: 'Brezza',
-    price: '7.99 - 13.96 L',
+    price: '8.29 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/logo/brezza-new-logo.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-brezza.webp',
     brouchure:
@@ -248,7 +248,7 @@ export const products = [
   {
     id: 3,
     name: 'SWIFT',
-    price: '5.91 - 8.85 L',
+    price: '5.99 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Swift.jpg',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
     brouchure:
@@ -265,7 +265,7 @@ export const products = [
   {
     id: 4,
     name: 'Dzire',
-    price: '6.24 - 9.17 L',
+    price: '6.51 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Dzire.jpg',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp',
     brouchure:
@@ -282,7 +282,7 @@ export const products = [
   {
     id: 5,
     name: 'S-Presso',
-    price: '4.25 - 5.99 L',
+    price: '4.26 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/spresso.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     brouchure:
@@ -299,7 +299,7 @@ export const products = [
   {
     id: 6,
     name: 'Wagon R',
-    price: '5.47 - 7.20 L',
+    price: '5.54 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/wagonr.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     brouchure:
@@ -316,7 +316,7 @@ export const products = [
   {
     id: 7,
     name: 'Alto',
-    price: '3.39 - 4.05 L',
+    price: '3.54 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/alto.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
     brouchure:
@@ -333,7 +333,7 @@ export const products = [
   {
     id: 8,
     name: 'Ertiga',
-    price: '8.41 - 12.79 L',
+    price: '8.64 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/Ertiga.jpg',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-ertiga.webp',
     brouchure:
@@ -350,7 +350,7 @@ export const products = [
   {
     id: 9,
     name: 'Celerio',
-    price: '5.25 - 7.00 L',
+    price: '5.36 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/celerio.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     brouchure:
@@ -367,7 +367,7 @@ export const products = [
   {
     id: 10,
     name: 'Eeco',
-    price: '4.63 - 4.92 L',
+    price: '5.27 L',
     logo: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/index/eeco.png',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-eeco.webp',
     brouchure:

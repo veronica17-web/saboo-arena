@@ -105,79 +105,100 @@ const dzireVariants = [
     id: 1,
     title: 'lxi',
     transmission: 'manual',
-    mileage: '23.3',
+
     price: '6,51,500',
   },
   {
     id: 2,
     title: 'vxi ',
     transmission: 'manual',
-    mileage: '23.3',
+
     price: '7,44,250',
   },
   {
     id: 3,
     title: 'zxi ',
     transmission: 'manual',
-    mileage: '23.3',
+
     price: '8,12,250',
   },
   {
     id: 4,
     title: 'zxi+ ',
     transmission: 'manual',
-    mileage: '23.3',
+
     price: '8,83,750',
   },
   {
     id: 5,
     title: 'vxi ags ',
     transmission: 'automatic',
-    mileage: '24.1',
+
     price: '7,99,250',
   },
   {
     id: 6,
     title: 'zxi ags ',
     transmission: 'automatic',
-    mileage: '23.3',
+
     price: '8,67,250',
   },
   {
     id: 7,
     title: 'zxi+ ags',
     transmission: 'automatic',
-    mileage: '23.3',
+
     price: '9,38,750',
   },
   {
     id: 8,
     title: 'vxi CNG 1.2l',
     transmission: 'manual',
-    mileage: '31.12',
+
     price: '8,39,250',
   },
   {
     id: 9,
     title: 'zxi CNG 1.2l',
     transmission: 'manual',
-    mileage: '23.26',
+
     price: '9,07,250',
   },
   {
     id: 10,
     title: 'tour s std (o)',
     transmission: 'manual',
-    mileage: '19.95',
+
     price: '6,51,000',
   },
   {
     id: 11,
     title: 'tour s std (o) - cng',
     transmission: 'manual',
-    mileage: '26.55',
+
     price: '7,46,000',
   },
 ];
 
-export { dzireSliders, dzireColors, dzireVariants };
+const dzireMileage = [
+  {
+    id: 1,
+    fueltype: 'petrol',
+    transmission: 'manual',
+    mileage: '22.41 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'petrol ',
+    transmission: 'automatic',
+    mileage: '22.61 KM/L',
+  },
+  {
+    id: 3,
+    fueltype: 'cng ',
+    transmission: 'manual',
+    mileage: '31.12 KM/KG',
+  },
+];
+
+export { dzireSliders, dzireColors, dzireVariants, dzireMileage };

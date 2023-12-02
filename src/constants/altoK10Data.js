@@ -94,12 +94,12 @@ const altoK10Colors = [
   },
 ];
 
-const altoK10Variants = [
+const altok10Mileage = [
   {
     id: 1,
     title: 'std',
     transmission: 'manual',
-    mileage: '24.39 km/l',
+    mileage: '24.39',
     price: '3,99,000',
   },
   {
@@ -146,4 +146,31 @@ const altoK10Variants = [
   },
 ];
 
-export { altoK10Sliders, altoK10Colors, altoK10Variants };
+const altoK10Variants = [
+  {
+    id: 1,
+    title: 'Petrol',
+    transmission: 'manual',
+    mileage: '24.39 KM/L',
+  },
+  {
+    id: 2,
+    title: 'Petrol',
+    transmission: 'Automatic',
+    mileage: '24.90 KM/L',
+  },
+  {
+    id: 3,
+    title: 'VXi CNG',
+    transmission: 'Manual',
+    mileage: '33.85 KM/KG',
+  },
+  {
+    id: 4,
+    title: 'LXI CNG',
+    transmission: 'Manual',
+    mileage: '33.40 KM/KG',
+  },
+];
+
+export { altoK10Sliders, altoK10Colors, altoK10Variants, altok10Mileage };

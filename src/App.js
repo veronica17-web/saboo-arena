@@ -594,7 +594,7 @@ function LeadPopup() {
                 </div>
               </div>
 
-              <p className='text-gray-900 mb-2 p-2 mt-5'>
+              <p className='text-gray-900 mb-2 p-2 mt-5 text-xs'>
                 <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
                 <a
                   href='/maruti-car-terms-and-conditions'

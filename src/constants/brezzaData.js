@@ -245,4 +245,31 @@ const brezzaVariants = [
   },
 ];
 
-export { brezzaSliders, brezzaColors, brezzaVariants };
+const brezzaMileage = [
+  {
+    id: 1,
+    fueltype: 'Petrol (LXI and VXI)',
+    transmission: 'manual',
+    mileage: '17.38 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'Petrol (ZXI and ZXI+)',
+    transmission: 'manual',
+    mileage: '17.38 KM/L',
+  },
+  {
+    id: 3,
+    fueltype: 'petrol',
+    transmission: 'automatic',
+    mileage: '19.80 KM/L',
+  },
+  {
+    id: 4,
+    fueltype: 'cng',
+    transmission: 'manual',
+    mileage: '25.51 KM/KG',
+  },
+];
+
+export { brezzaSliders, brezzaColors, brezzaVariants, brezzaMileage };

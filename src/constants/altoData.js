@@ -103,6 +103,21 @@ const altoColors = [
   },
 ];
 
+const altoMileage = [
+  {
+    id: 1,
+    title: 'Petrol',
+    transmission: 'manual',
+    mileage: '22.05 KM/L',
+  },
+  {
+    id: 2,
+    title: 'CNG',
+    transmission: 'manual',
+    mileage: '31.59 KM/KG',
+  },
+];
+
 const altoVariants = [
   {
     id: 1,
@@ -148,4 +163,4 @@ const altoVariants = [
   },
 ];
 
-export { altoSliders, altoColors, altoVariants };
+export { altoSliders, altoColors, altoVariants, altoMileage };

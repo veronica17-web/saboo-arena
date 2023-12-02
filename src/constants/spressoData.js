@@ -189,4 +189,31 @@ const spressoVariants = [
   },
 ];
 
-export { spressoSliders, spressoColors, spressoVariants };
+const spressoMileage = [
+  {
+    id: 1,
+    fueltype: 'Petrol',
+    variant: 'Std MT, LXi MT',
+    mileage: '24.12 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'Petrol',
+    variant: 'VXi MT, VXi+ MT',
+    mileage: '24.76 KM/L',
+  },
+  {
+    id: 3,
+    fueltype: 'petrol',
+    variant: 'VXi(O) AGS, VXi+(O) AGS',
+    mileage: '25.30 KM/L',
+  },
+  {
+    id: 4,
+    fueltype: 'cng',
+    variant: 'lxi mt, vxi mt',
+    mileage: '32.73 KM/KG',
+  },
+];
+
+export { spressoSliders, spressoColors, spressoVariants, spressoMileage };

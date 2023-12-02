@@ -144,5 +144,19 @@ const eecoVariants = [
     price: '8,27,000',
   },
 ];
+const eecoMileage = [
+  {
+    id: 1,
+    fueltype: 'Petrol',
+    transmission: 'manual',
+    mileage: '19.71 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'CNG',
+    transmission: 'manual',
+    mileage: '26.78 KM/KG',
+  },
+];
 
-export { eecoSliders, eecoColors, eecoVariants };
+export { eecoSliders, eecoColors, eecoVariants, eecoMileage };

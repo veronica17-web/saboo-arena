@@ -81,58 +81,109 @@ const celerioVariants = [
     id: 1,
     title: 'lxi',
     transmission: 'manual',
-    mileage: '17.03',
+    mileage: '25.24',
     price: '5,36,500',
   },
   {
     id: 2,
     title: 'vxi',
     transmission: 'manual',
-    mileage: '17.03',
+    mileage: '25.24',
     price: '5,83,500',
   },
   {
     id: 3,
     title: 'zxi',
     transmission: 'manual',
-    mileage: '17.03',
+    mileage: '25.24',
     price: '6,11,500',
   },
   {
     id: 4,
     title: 'ZXI+',
     transmission: 'manual',
-    mileage: '18.76',
+    mileage: '24.97',
     price: '6,59,500',
   },
   {
     id: 5,
     title: 'VXI AGS',
     transmission: 'automatic',
-    mileage: '17.03',
+    mileage: '26.68',
     price: '6,38,500',
   },
   {
     id: 6,
     title: 'ZXI AGS',
     transmission: 'automatic',
-    mileage: '17.03',
+    mileage: '26.00 ',
     price: '6,66,500',
   },
   {
     id: 7,
     title: 'ZXI+ AGS',
     transmission: 'automatic',
-    mileage: '18.76',
+    mileage: '26.00',
     price: '7,14,500',
   },
   {
     id: 8,
     title: 'VXI CNG',
     transmission: 'MANUAL',
-    mileage: '18.76',
+    mileage: '34.43',
     price: '6,73,500',
   },
 ];
 
-export { celerioSliders, celerioColors, celerioVariants };
+const celerioMileage = [
+  {
+    id: 1,
+    fueltype: 'petrol',
+    transmission: 'LXi MT',
+    mileage: '25.24 KM/L',
+  },
+  {
+    id: 2,
+    fueltype: 'petrol',
+    transmission: 'VXi MT',
+    mileage: '25.24 KM/L',
+  },
+  {
+    id: 3,
+    fueltype: 'cng',
+    transmission: 'VXi CNG MT',
+    mileage: '34.43 KM/KG',
+  },
+  {
+    id: 4,
+    fueltype: 'petrol',
+    transmission: 'VXi AGS',
+    mileage: '26.68 KM/L',
+  },
+  {
+    id: 5,
+    fueltype: 'petrol',
+    transmission: 'ZXi MT',
+    mileage: '25.24 KM/L',
+  },
+  {
+    id: 6,
+    fueltype: 'petrol',
+    transmission: 'ZXi AGS',
+    mileage: '26.00 KM/L',
+  },
+  {
+    id: 7,
+    fueltype: 'petrol',
+    transmission: 'ZXi+ MT',
+    mileage: '24.97 KM/L',
+  },
+  {
+    id: 8,
+    fueltype: 'petrol',
+    transmission: 'ZXi+ AGS',
+    mileage: '26.00 KM/L',
+  },
+];
+
+export { celerioSliders, celerioColors, celerioVariants, celerioMileage };

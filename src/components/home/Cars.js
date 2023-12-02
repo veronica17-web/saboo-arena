@@ -48,28 +48,32 @@ const VehicleProducts = () => {
       <div className='grid sm:grid-1 lg:grid-cols-3 gap-2 container mx-auto pb-5'>
         {products.map((item, index) => (
           <div
-            className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'
+            className='flex flex-col bg-white rounded-md shadow-md border border-gray-300 hover:shadow-lg  transform transition duration-500 hover:scale-106'
             key={index}
           >
             <div className='flex-auto overflow-hidden'>
               <Link to={item.explore}>
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className='mx-auto product_image lg:h-[250px] h-[250px] w-full object-cover object-center'
-                />
+                <div className='relative'>
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className='mx-auto product_image lg:h-[250px] h-[250px] w-full object-cover object-center rounded-t-md'
+                  />
+                  <div className='absolute inset-0 opacity-10 rounded-t-md'></div>
+                </div>
               </Link>
             </div>
-            <div className='flex-auto bg-white'>
+            <div className='flex-auto bg-white rounded-b-md'>
               <div>
                 <div className='flex items-center justify-between p-5 '>
-                  <img src={item.logo} alt={item.name} className='h-8 ' />
+                  <img src={item.logo} alt={item.name} className='h-5 w-auto' />
                   <div>
-                    <p className='flex items-center font-bold'>
+                    <p className='flex items-center font-bold text-xl'>
                       <BiRupee />
-                      {item.price}*
+                      {item.price}
+                      <sup>*</sup>
                     </p>{' '}
-                    <p className='font-light'>ex-showroom</p>
+                    <p className='font-extralight text-xs mx-1'>ex-showroom</p>
                   </div>
                 </div>
                 <div className='flex items-center justify-center space-x-2 p-2.5 mb-2'>
@@ -85,14 +89,13 @@ const VehicleProducts = () => {
                     rel='noreferrer'
                     className='border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase rounded'
                   >
-                    View Brochure
+                    Brochure
                   </a>
                 </div>
               </div>
             </div>
           </div>
         ))}
-
         <div className='sm:col-span-2'>
           <a href='/maruti-car-service-centers-near-me'>
             {' '}
