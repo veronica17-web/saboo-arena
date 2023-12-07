@@ -10,6 +10,7 @@ import {
   wagonrSliders,
   wagonrVariants,
 } from '../../constants/wagonrData';
+import WagonR from '../../assets/banners/vehicles/Buy Maruti Suzuki Wagon R in 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -144,9 +145,9 @@ function Wagonr() {
         <meta property='twitter:image' content='img/og-tags/wagonr.webp' />
       </Helmet>
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-wagon-r/newwagonr_banner.webp'
+        src={WagonR}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Wagon r 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -237,6 +238,7 @@ function Wagonr() {
                     name='LEADCF6'
                     onChange={(e) => setModel(e.target.value)}
                     className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Wagon R'
                   >
                     <option>Select Model</option>
                     <optgroup label='Hatchback'>

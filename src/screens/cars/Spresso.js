@@ -10,6 +10,7 @@ import {
   spressoVariants,
   spressoMileage,
 } from '../../constants/spressoData';
+import SpressoBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki SPresso 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -142,11 +143,7 @@ function Spresso() {
         <meta property='twitter:image' content='img/og-tags/s-presso.webp' />
       </Helmet>
       <Header />
-      <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/cars/new-spresso/new-spresso-banner.webp'
-        className='max-w-full w-full lg:mt-16'
-        alt='1'
-      />
+      <img src={SpressoBanner} className='max-w-full w-full lg:mt-16' alt='1' />
       <CarsSlider />
       <div className='mx-5'>
         <Colors />
@@ -237,8 +234,9 @@ function Spresso() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='S-Presso'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
 
                   <optgroup label='micro SUV'>
                     <option value='S-Presso'>S-Presso</option>

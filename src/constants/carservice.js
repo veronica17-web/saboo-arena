@@ -11,7 +11,7 @@ const serviceCenterBanner = [
   // },
   {
     id: 2,
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Saboo-Maruti-Suzuki-Service-Banner.webp',
+    img: require('../assets/banners/Maruti-Suzuki-Arena-December-Year-end-2023-Book-Your-Car-for-Service.webp'),
   },
 ];
 

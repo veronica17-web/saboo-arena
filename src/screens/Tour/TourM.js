@@ -154,13 +154,13 @@ function TourM() {
             <div>
               <p>Petrol</p>
               <p>
-                16.11 &nbsp; <span className='text-red-600'>km/l*</span>
+                20.30 &nbsp; <span className='text-red-600'>km/l*</span>
               </p>
             </div>
             <div>
               <p>CNG</p>
               <p>
-                20.88 &nbsp; <span className='text-red-600'>km/kg*</span>
+                26.11 &nbsp; <span className='text-red-600'>km/kg*</span>
               </p>
             </div>
           </div>
@@ -176,9 +176,10 @@ function TourM() {
           <select
             onChange={(e) => setPrice(e.target.value)}
             className='w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+            defaultValue=''
           >
-            <option value='₹ 9,52,000*'>ERTIGA TOUR M PETROL</option>
-            <option value='₹ 10,47,000*'>ERTIGA TOUR M (O) CNG</option>
+            <option value='₹ 9,75,000*'>ERTIGA TOUR M PETROL</option>
+            <option value='₹ 10,70,000*'>ERTIGA TOUR M (O) CNG</option>
           </select>
         </div>
       </div>
@@ -304,12 +305,10 @@ function TourM() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Ertiga Tour M'
                 >
-                  <option>Select Model</option>
-                  <option value='Alto Tour H1'>TOUR H1</option>
-                  <option value='WagonR Tour H3'>TOUR H3</option>
-                  <option value='Dzire Tour S'>TOUR S</option>
-                  <option value='Eeco Tour V'>TOUR V</option>
+                  <option disabled>Select Model</option>
+
                   <option value='Ertiga Tour M'>TOUR M</option>
                 </select>
               </div>
@@ -383,25 +382,26 @@ function TourM() {
                 'SUBMIT'
               )}
             </button>
-            <div className='flex items-start py-1 ' >
-             
-             <div className='ml-2 text-sm'>
-               <label
-                 htmlFor='disclaimer'
-                 className='font-medium text-gray-700'
-               >
-                 <span className='text-white font-bold'>Disclaimer</span > 
-                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
-                 <a
-              href='/maruti-car-terms-and-conditions'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='px-2  text-sm  text-red-600 '
-            >
-            Terms and Conditions
-            </a>
-               </label>
-             </div>
+            <div className='flex items-start py-1 '>
+              <div className='ml-2 text-sm'>
+                <label
+                  htmlFor='disclaimer'
+                  className='font-medium text-gray-700'
+                >
+                  <span className='text-white font-bold'>Disclaimer</span>
+                  <span className='text-white'>
+                    : By clicking 'SUBMIT', you have agreed to our
+                  </span>
+                  <a
+                    href='/maruti-car-terms-and-conditions'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-2  text-sm  text-red-600 '
+                  >
+                    Terms and Conditions
+                  </a>
+                </label>
+              </div>
             </div>
           </form>
         </div>

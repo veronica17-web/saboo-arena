@@ -10,6 +10,7 @@ import {
   swiftVariants,
   swiftMileage,
 } from '../../constants/swiftData';
+import SwiftBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Swift 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -141,9 +142,9 @@ function Swift() {
       <Header />
 
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Maruti-New-swift/Saboo-RKS-Maurti-Suzuki-Arena-New-Swift.webp'
+        src={SwiftBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki new Swift 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -235,8 +236,9 @@ function Swift() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Swift'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
                   <optgroup label='Hatchback'>
                     <option value='Swift'>Swift</option>
                   </optgroup>

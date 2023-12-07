@@ -99,7 +99,11 @@ const Slider = () => {
       >
         {serviceCenterBanner.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.img} alt='offers' className='w-full' />
+            <img
+              src={item.img}
+              alt='Maruti Suzuki Arena Hyderabad December Year end 2023 Book Your Car for Service'
+              className='w-full h-auto'
+            />
           </SwiperSlide>
         ))}
 

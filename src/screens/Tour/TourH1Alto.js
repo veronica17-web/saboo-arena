@@ -150,7 +150,7 @@ function TourH1Alto() {
             <p className='font-thin '>CNG</p>
             <h4>
               <strong>
-                34.56
+                33.85
                 <span>
                   &nbsp; km/kg<sup>*</sup>
                 </span>
@@ -162,7 +162,7 @@ function TourH1Alto() {
             </div>
           </div>
           <div className=''>
-            <strong>₹ 4,80,500*</strong>
+            <strong>₹ 5,96,000*</strong>
             <p>Select Car Variant</p>
             <select className='w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'>
               <option selected>ALTO TOUR H1 (O)</option>
@@ -294,8 +294,9 @@ function TourH1Alto() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Alto Tour H1'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
                   <option value='Alto Tour H1'>TOUR H1</option>
                 </select>
               </div>

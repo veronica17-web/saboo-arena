@@ -1,16 +1,16 @@
 export const sliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
-  //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
-  // },
+  {
+    img: require('../assets/banners/new/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
+    alt: 'Maruti Suzuki Year End Saboo RKS Motor December Offers',
+  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
   //   alt: 'Website Dhanteras Saboo RKS Motor November Offers',
   // },
 
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Website_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp',
-    alt: 'Website Maruti Suzuki No1 SUV Maker Saboo RKS Motor October Offers',
+    img: require('../assets/banners/new/Website_Maruti_Suzuki_No1_SUV_Maker_Saboo_RKS_Motor_October_Offers.webp'),
+    alt: 'Maruti Suzuki No1 SUV Maker Saboo RKS Motor October Offers',
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Maruti_Suzuki_Service_Ganesh_Chaturthi_September_Offers_Saboo_RKS_Motor.webp',
@@ -22,8 +22,8 @@ export const sliders = [
   // },
 
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp',
-    alt: 'royal platinum',
+    img: require('../assets/banners/new/Website+Maruti+Suzuki+Arena+Royal+Platinum+Award+.webp'),
+    alt: 'Maruti Suzuki Royal Platinum Award',
   },
 
   {
@@ -33,7 +33,7 @@ export const sliders = [
 
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-new-banner-dec23.webp',
-    alt: 'new-spresso-banner',
+    alt: 'Maruti Suzuki Arena New Banner Dec 23',
   },
 
   {
@@ -69,10 +69,10 @@ export const sliders = [
 ];
 
 export const mobileSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-  //   alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
-  // },
+  {
+    img: require('../assets/banners/new/Mobile Banner/Website_Mobile_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
+    alt: 'Maruti Suzuki Year End  2023 Saboo RKS Motor December Offers',
+  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers',
@@ -144,10 +144,10 @@ export const mobileSliders = [
 ];
 
 export const offersSliders = [
-  // {
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
-  //   alt: 'Website Dhanteras Saboo RKS Motor November Offers',
-  // },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp',
+    alt: 'Website Year End Saboo RKS Motor December Offers',
+  },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
@@ -200,6 +200,10 @@ export const mobileOffersSliders = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
   //   alt: 'sep 2023 offer teachers day',
   // },
+  {
+    img: require('../assets/banners/new/Mobile Banner/Website_Mobile_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
+    alt: 'Maruti Suzuki Year End  2023 Saboo RKS Motor December Offers',
+  },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',
@@ -740,50 +744,57 @@ export const truevalue = [
 ];
 export const workshop = [
   {
+    map: 'https://www.google.com/maps/place/Maruti+Suzuki+Service+(Saboo+RKS+Motor,+Kodangal)/@17.1103785,77.6146916,15z/data=!4m14!1m7!3m6!1s0x3bc96d55b6000b0d:0xc4f577e7882e0954!2sMaruti+Suzuki+Service+(Saboo+RKS+Motor,+Kodangal)!8m2!3d17.1103785!4d77.6146916!16s%2Fg%2F11vjcm4s1h!3m5!1s0x3bc96d55b6000b0d:0xc4f577e7882e0954!8m2!3d17.1103785!4d77.6146916!16s%2Fg%2F11vjcm4s1h?entry=ttu',
+    address: 'Kodangal',
+    image:
+      'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-showroom/RKS-Motor-Maruti-Suzuki-Arena-Center-Near-Me-Kodangal.webp',
+  },
+  {
     map: 'https://www.google.com/maps/place/Maruti+Suzuki+Arena+-+Saboo+RKS+Motor+Pvt.+Ltd/@17.424164,78.457337,15z/data=!4m6!3m5!1s0x3bcb974b6feb9ea5:0x1e0a3e3dabcb8701!8m2!3d17.4241643!4d78.4573371!16s%2Fg%2F1tc_zym2?hl=en&entry=ttu',
-    address: ' Workshop - Somajiguda',
+    address: 'Somajiguda',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Somajiguda.webp',
   },
+
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+-+Maruti+Suzuki+Car+Dealer+(+Service+Center,+Moosarambagh)/@17.384806,78.507173,13z/data=!4m6!3m5!1s0x3bcb992fc2460627:0x6eec84cd9e149fab!8m2!3d17.3848063!4d78.5071734!16s%2Fg%2F11jzcb46x8?hl=en&entry=ttu',
-    address: 'Workshop - Moosarambagh',
+    address: 'Moosarambagh',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Malakpet-Moosarambagh.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Rks+Motors+Pvt.+Ltd.+-+Maruti+Service/@17.39843,78.554267,15z/data=!4m6!3m5!1s0x3bcb993aa273c193:0x31688c76343b7377!8m2!3d17.3984304!4d78.5542668!16s%2Fg%2F11pqcp886k?hl=en&entry=ttu',
-    address: 'Workshop - Uppal',
+    address: 'Uppal',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Uppal.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Service+Center,+Tadbund,+Secunderabad)/@17.451964,78.486607,15z/data=!4m6!3m5!1s0x3bcb9b59fcccc4c3:0x94b782fa83589a15!8m2!3d17.4519643!4d78.486607!16s%2Fg%2F11h_sz_f3h?hl=en&entry=ttu',
-    address: 'Workshop - Tadbund',
+    address: 'Tadbund',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Tadbund.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+Nampally+-+Maruti+Suzuki+Car+Dealer(NEXA,+ARENA,+Service+Center,+TrueValue+%26+Driving+School+)/@17.393985,78.46998,15z/data=!4m6!3m5!1s0x3bcb976366ed87d9:0x7cb0979b572d6610!8m2!3d17.3939849!4d78.4699801!16s%2Fg%2F11c1qryf39?hl=en&entry=ttu',
-    address: 'Workshop - Nampally',
+    address: 'Nampally',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Nampally.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Car+Dealer+(Kushaiguda,+Secunderabad)/@17.476452,78.573193,15z/data=!4m6!3m5!1s0x3bcb9c7c4829c807:0xe33d0f61aa143664!8m2!3d17.4764521!4d78.5731928!16s%2Fg%2F11gbffbwcn?hl=en&entry=ttu',
-    address: 'Workshop - Kushaiguda',
+    address: 'Kushaiguda',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Nexa-Service-Center-Near-Me-Kushaiguda.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+Motor/@17.480811,78.421741,15z/data=!4m6!3m5!1s0x3bcb91ae48fe6963:0xbbc59173810f4bd8!8m2!3d17.480811!4d78.4217405!16s%2Fg%2F124yq1dsg?hl=en&entry=ttu',
-    address: 'Workshop - Kukatpally',
+    address: 'Kukatpally',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/Kukatpally.webp',
   },
   {
     map: 'https://www.google.com/maps/place/Saboo+RKS+Motor+-+Maruti+Suzuki+Sales+%26+Service+(Shamirpet,+Secunderabad)/@17.627171,78.569861,15z/data=!4m6!3m5!1s0x3bcb81bc18d30c3b:0x5f74a496d6d6fd97!8m2!3d17.627171!4d78.5698606!16s%2Fg%2F11nx66bdfc?hl=en&entry=ttu',
-    address: 'Workshop - Shamirpet',
+    address: 'Shamirpet',
     image:
       'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/showroom+locations/webp-showrooms/webp-service/RKS-Motor-Maruti-Suzuki-Service-Center-Near-Me-Shamirpet.webp',
   },

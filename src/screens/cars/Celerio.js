@@ -10,6 +10,8 @@ import {
   celerioSliders,
   celerioVariants,
 } from '../../constants/celerioData';
+
+import CelerioBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Celerio 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -142,9 +144,9 @@ function Celerio() {
         <meta property='twitter:image' content='img/og-tags/celerio.webp' />
       </Helmet>
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-new-celerio/Maruti-Suzuki-Celerio-January18.webp'
+        src={CelerioBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Celerio 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -236,8 +238,9 @@ function Celerio() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Celerio'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
                   <optgroup label='Hatchback'>
                     <option value='Celerio'>Celerio</option>
                   </optgroup>

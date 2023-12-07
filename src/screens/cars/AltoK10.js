@@ -10,6 +10,7 @@ import {
   altoK10Variants,
   altok10Mileage,
 } from '../../constants/altoK10Data';
+import AltoK10Banner from '../../assets/banners/vehicles/Alto K10 Banner.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -146,9 +147,9 @@ function AltoK10() {
       <Header />
 
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/new-alto-k10/Alto+_Web+Banner.webp'
+        src={AltoK10Banner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Alto K10 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -240,8 +241,9 @@ function AltoK10() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Alto K10'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
                   <optgroup label='Hatchback'>
                     <option value='Alto K10'>Alto K10</option>
                   </optgroup>

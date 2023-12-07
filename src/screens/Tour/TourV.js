@@ -154,13 +154,13 @@ function TourV() {
             <div>
               <p>Petrol</p>
               <p>
-                16.11 &nbsp; <span className='text-red-600'>km/l*</span>
+                19.71 &nbsp; <span className='text-red-600'>km/l*</span>
               </p>
             </div>
             <div>
               <p>CNG</p>
               <p>
-                20.88 &nbsp; <span className='text-red-600'>km/kg*</span>
+                26.78 &nbsp; <span className='text-red-600'>km/kg*</span>
               </p>
             </div>
           </div>
@@ -177,10 +177,10 @@ function TourV() {
             onChange={(e) => setPrice(e.target.value)}
             className='w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
           >
-            <option value='4,96,200'>TOUR V 5 STR AC (O) 1.2L</option>
-            <option value='4,60,200'>TOUR V 5 STR STD (O) 1.2L</option>
-            <option value='4,89,200'>TOUR V 7 STR STD (O) 1.2L</option>
-            <option value='5,91,200'>TOUR V 5 STR AC (O) CNG</option>
+            <option value='5,60,000'>TOUR V 5 STR AC (O) 1.2L</option>
+            <option value='5,24,000'>TOUR V 5 STR STD (O) 1.2L</option>
+            <option value='5,53,000'>TOUR V 7 STR STD (O) 1.2L</option>
+            <option value='6,50,000'>TOUR V 5 STR AC (O) CNG</option>
           </select>
         </div>
       </div>
@@ -305,13 +305,11 @@ function TourV() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Eeco Tour V'
                 >
-                  <option>Select Model</option>
-                  <option value='Alto Tour H1'>TOUR H1</option>
-                  <option value='WagonR Tour H3'>TOUR H3</option>
-                  <option value='Dzire Tour S'>TOUR S</option>
+                  <option disabled>Select Model</option>
+
                   <option value='Eeco Tour V'>TOUR V</option>
-                  <option value='Ertiga Tour M'>TOUR M</option>
                 </select>
               </div>
               <div>
@@ -361,7 +359,7 @@ function TourV() {
               a call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its
               Representatives on my ‘Mobile’
             </p> */}
-           <button
+            <button
               type='submit'
               disabled={
                 pattern.test(phone) && phone.length === 10 ? false : true
@@ -378,25 +376,26 @@ function TourV() {
                 'SUBMIT'
               )}
             </button>
-            <div className='flex items-start py-1 ' >
-             
-             <div className='ml-2 text-sm'>
-               <label
-                 htmlFor='disclaimer'
-                 className='font-medium text-gray-700'
-               >
-                 <span className='text-white font-bold'>Disclaimer</span > 
-                 <span  className='text-white'>: By clicking 'SUBMIT', you have agreed to our</span>
-                 <a
-              href='/maruti-car-terms-and-conditions'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='px-2  text-sm  text-red-600 '
-            >
-            Terms and Conditions
-            </a>
-               </label>
-             </div>
+            <div className='flex items-start py-1 '>
+              <div className='ml-2 text-sm'>
+                <label
+                  htmlFor='disclaimer'
+                  className='font-medium text-gray-700'
+                >
+                  <span className='text-white font-bold'>Disclaimer</span>
+                  <span className='text-white'>
+                    : By clicking 'SUBMIT', you have agreed to our
+                  </span>
+                  <a
+                    href='/maruti-car-terms-and-conditions'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='px-2  text-sm  text-red-600 '
+                  >
+                    Terms and Conditions
+                  </a>
+                </label>
+              </div>
             </div>
           </form>
         </div>

@@ -10,6 +10,7 @@ import {
   ertigaVariants,
   ertigaMileage,
 } from '../../constants/ertigaData';
+import ErtigaBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Ertiga 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -141,9 +142,9 @@ function Ertiga() {
       </Helmet>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-ertiga/SabooRKSMotor_Maruti_Suzuki_Arena_Next_Gen_Ertiga.webp'
+        src={ErtigaBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Ertiga 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -234,6 +235,7 @@ function Ertiga() {
                     name='LEADCF6'
                     onChange={(e) => setModel(e.target.value)}
                     className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                    defaultValue='Ertiga'
                   >
                     <option>Select Model</option>
 

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 // import { BsCalendarCheck } from "react-icons/bs";
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
+import AltoBanner from '../../assets/banners/vehicles/Maruti Suzuki Alto 800 Price in Hyderabad.webp';
 import { Dialog, Transition } from '@headlessui/react';
 import {
   altoColors,
@@ -146,9 +147,9 @@ export function Alto() {
       <Header />
 
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/saboomaruti/cars/alto800/alto-banner.webp'
+        src={AltoBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='alto car banner'
+        alt='Maruti Suzuki Alto 800 Price in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -239,8 +240,9 @@ export function Alto() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Alto 800'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
                   <optgroup label='Hatchback'>
                     <option value='Alto 800'>Alto</option>
                   </optgroup>

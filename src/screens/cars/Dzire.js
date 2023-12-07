@@ -11,6 +11,7 @@ import {
   dzireVariants,
   dzireMileage,
 } from '../../constants/dzireData';
+import DzireBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Swift Dzire 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -152,9 +153,9 @@ function Dzire() {
       </Helmet>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-dzire/Maruti-Suzuki-Breeza-Taillight-SlideShow.webp'
+        src={DzireBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Swift Dzire 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -246,8 +247,9 @@ function Dzire() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Dzire'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
 
                   <optgroup label='Sedan'>
                     <option value='Dzire'>Dzire</option>

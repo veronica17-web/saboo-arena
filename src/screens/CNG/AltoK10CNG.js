@@ -279,8 +279,9 @@ function AltoK10CNG() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Alto k10 CNG'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
 
                   <option value='Alto k10 CNG'>Alto K10 CNG</option>
                 </select>

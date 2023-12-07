@@ -362,6 +362,9 @@ function Contact() {
                               <option value='Workshop - Somajiguda'>
                                 Somajiguda
                               </option>
+                              <option value='Workshop - Kodangal'>
+                                Kodangal
+                              </option>
                               <option value='Workshop - Moosarambagh'>
                                 Moosarambagh
                               </option>
@@ -396,7 +399,7 @@ function Contact() {
                           </select>
                         </div>
 
-                        <div>
+                        <div className='col-span-2'>
                           <label className='block text-sm font-medium text-gray-700'>
                             Model
                           </label>
@@ -477,7 +480,31 @@ function Contact() {
                         </div>
                       </div>
 
-                      <p className='text-gray-700'>
+                      <div className='flex items-start '>
+                        <div className='ml-2  text-sm'>
+                          <label
+                            htmlFor='disclaimer'
+                            className='font-medium text-gray-700'
+                          >
+                            <span className='text-black font-bold'>
+                              Disclaimer
+                            </span>
+                            <span className='text-black'>
+                              : By clicking 'SUBMIT', you have agreed to our
+                            </span>
+                            <a
+                              href='/maruti-car-terms-and-conditions'
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='px-2  text-sm  text-red-600 '
+                            >
+                              Terms and Conditions
+                            </a>
+                          </label>
+                        </div>
+                      </div>
+
+                      {/* <p className='text-gray-700'>
                         <span className='text-black font-bold'>Disclaimer</span>
                         : I agree that by clicking the ‘Submit’ button below, I
                         am explicitly soliciting a call/Message from Saboo
@@ -499,7 +526,7 @@ function Contact() {
                             Please Agree with following Disclaimer
                           </label>
                         </div>
-                      </div>
+                      </div> */}
                       <button
                         className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
                         type='submit'

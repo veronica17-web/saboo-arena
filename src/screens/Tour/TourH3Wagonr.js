@@ -157,13 +157,13 @@ function TourH3Wagonr() {
             <div>
               <p>Petrol</p>
               <p>
-                25.40 &nbsp; <span className='text-red-600'>km/l*</span>
+                25.19 &nbsp; <span className='text-red-600'>km/l*</span>
               </p>
             </div>
             <div>
               <p>CNG</p>
               <p>
-                34.73 &nbsp; <span className='text-red-600'>km/kg*</span>
+                34.05 &nbsp; <span className='text-red-600'>km/kg*</span>
               </p>
             </div>
           </div>
@@ -180,8 +180,8 @@ function TourH3Wagonr() {
             onChange={(e) => setPrice(e.target.value)}
             className='w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
           >
-            <option value='5,44,500'>TOUR H3 1L</option>
-            <option value='6,39,500'>TOUR H3 CNG 1L</option>
+            <option value='5,51,500'>TOUR H3 1L</option>
+            <option value='6,41,500'>TOUR H3 CNG 1L</option>
           </select>
         </div>
       </div>
@@ -308,8 +308,9 @@ function TourH3Wagonr() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='WagonR Tour H3'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
 
                   <option value='WagonR Tour H3'>TOUR H3</option>
                 </select>

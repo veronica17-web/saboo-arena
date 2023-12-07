@@ -10,6 +10,8 @@ import {
   eecoVariants,
   eecoMileage,
 } from '../../constants/eecoData';
+import EecoBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Eeco 2023 in Hyderabad.webp';
+
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -142,9 +144,9 @@ function Eeco() {
       </Helmet>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/maruti-eeco/eeco-banner.webp'
+        src={EecoBanner}
         className='max-w-full w-full lg:mt-16'
-        alt='1'
+        alt='Buy Maruti Suzuki Eeco 2023 in Hyderabad'
       />
       <CarsSlider />
       <div className='mx-5'>
@@ -236,8 +238,9 @@ function Eeco() {
                   name='LEADCF6'
                   onChange={(e) => setModel(e.target.value)}
                   className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  defaultValue='Eeco'
                 >
-                  <option>Select Model</option>
+                  <option disabled>Select Model</option>
 
                   <optgroup label='Mini Van'>
                     <option value='Eeco'>Eeco</option>

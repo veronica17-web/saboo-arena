@@ -21,6 +21,7 @@ import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 
 // const width = window.innerWidth;
+
 function Home() {
   return (
     <>
@@ -41,7 +42,10 @@ function Home() {
           name='keywords'
           content='Maruti Suzuki Dealers, Maruti Authorized Dealers, Nexa Dealers Maruti Car Dealers in Hyderabad, Offers on Maruti Cars, offers on maruti cars Hyderabad, maruti car offers 2022, maruti showroom near me, maruti service center near me'
         />
-        <meta property="og:image" content="https://www.saboogroups.com/assets/images/black-logo.png"></meta>
+        <meta
+          property='og:image'
+          content='https://www.saboogroups.com/assets/images/black-logo.png'
+        ></meta>
         <meta name='author' content='Broaddcast' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.saboomaruti.in/' />
@@ -49,7 +53,7 @@ function Home() {
           property='og:title'
           content='Maruti Suzuki Authorized Dealers in Hyderabad & Secunderabad | Saboo Maruti'
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
 
         <meta
           property='og:description'
