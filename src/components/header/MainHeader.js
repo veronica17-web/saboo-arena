@@ -8,6 +8,10 @@ const navigation = {
   pages: [
     { name: 'Home', to: '/' },
     { name: 'About us', to: '/about-maruti-suzuki-dealers' },
+    {
+      name: 'Driving School',
+      to: '/maruti-suzuki-driving-school',
+    },
   ],
   vehicles: [
     { name: 'Alto', to: '/maruti-alto-800-on-road-price-in-hyderabad' },
@@ -89,10 +93,6 @@ const navigation = {
     {
       name: 'Subscribe',
       to: '/subscribe',
-    },
-    {
-      name: 'Driving School',
-      to: '/maruti-suzuki-driving-school',
     },
   ],
 

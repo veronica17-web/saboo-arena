@@ -3,6 +3,11 @@ export const sliders = [
     img: require('../assets/banners/new/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
     alt: 'Maruti Suzuki Year End Saboo RKS Motor December Offers',
   },
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/saboo-driving-school-december-2023.webp',
+    alt: 'Best Driving School in Hyderabad',
+  },
+
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
   //   alt: 'Website Dhanteras Saboo RKS Motor November Offers',
@@ -211,6 +216,13 @@ export const mobileOffersSliders = [
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/sliders/mobile_sliders/S-cng_mobile.webp',
     alt: 'banner-3',
+  },
+];
+
+export const DrivingSchoolSliders = [
+  {
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
+    alt: 'banner-1',
   },
 ];
 

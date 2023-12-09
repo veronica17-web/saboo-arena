@@ -97,10 +97,10 @@ const VehicleProducts = () => {
           </div>
         ))}
         <div className='sm:col-span-2'>
-          <a href='/maruti-car-service-centers-near-me'>
+          <a href='/maruti-suzuki-driving-school'>
             {' '}
             <img
-              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/arena-homepage-banner.webp'
+              src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/new-tile-banner.webp'
               className='lg:mx-auto product_image lg:h-[400px] lg:w-full rounded-md shadow-2xl'
               alt='banner'
             />

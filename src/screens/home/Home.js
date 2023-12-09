@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from '../../components/home/Slider';
 import CarEnquiry from '../../components/home/CarEnquiry';
 import MobileSlider from '../../components/home/MobileSlider';
@@ -20,9 +20,21 @@ import { reviews } from '../../constants/carservice';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 
-// const width = window.innerWidth;
-
 function Home() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <>
       <Helmet>
@@ -74,10 +86,10 @@ function Home() {
       </Helmet>
 
       <Header />
-      {/* {width > 425 ? <Slider /> : <MobileSlider />} */}
-      <Slider />
+      {width <= 425 ? <MobileSlider /> : <Slider />}
+      {/* <Slider /> */}
       {/* <Confetti /> */}
-      <MobileSlider />
+      {/* <MobileSlider /> */}
       <CarEnquiry />
       <Cars />
       <About />
