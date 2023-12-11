@@ -83,6 +83,7 @@ function Home() {
           content='Saboo Maruti authorized Maruti Suzuki dealer in Hyderabad & Secunderabad. Get best deals & offers on new Maruti Celerio, Maruti Swift, Maruti brezza,Maruti S-Presso, Maruti Wagon R, Maruti Ertiga, Maruti Alto 800, Maruti Eeco, Maruti Omni, Maruti Vitara brezza.'
         />
         <meta property='twitter:image' content='img/og-tags/saboo_rks.webp' />
+        <meta name="facebook-domain-verification" content="md4mdsmejpjm33sfbb9akud4erg4k0" />
       </Helmet>
 
       <Header />
