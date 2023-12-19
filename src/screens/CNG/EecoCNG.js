@@ -98,7 +98,7 @@ function EecoCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>EECO S-CNG</p>
             <p className='font-bold text-green-900'>
-              5.94 lakh <sup>*</sup>
+              5.56 lakh <sup>*</sup>
               <p className='font-light text-green-900'>ex-show room price</p>
             </p>
 

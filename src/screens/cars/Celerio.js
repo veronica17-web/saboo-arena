@@ -11,7 +11,6 @@ import {
   celerioVariants,
 } from '../../constants/celerioData';
 
-import CelerioBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Celerio 2023 in Hyderabad.webp';
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -144,7 +143,7 @@ function Celerio() {
         <meta property='twitter:image' content='img/og-tags/celerio.webp' />
       </Helmet>
       <img
-        src={CelerioBanner}
+        src={require('../../assets/banners/Celerio Petrol.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='Buy Maruti Suzuki Celerio 2023 in Hyderabad'
       />

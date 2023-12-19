@@ -147,7 +147,7 @@ function BrezzaCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>BREZZA S-CNG</p>
             <p className='font-bold text-green-900'>
-              9.14 Lakh <sup>*</sup>
+              9.24 Lakh <sup>*</sup>
               <p className='font-light text-red-400'>ex-show room price</p>
             </p>
 

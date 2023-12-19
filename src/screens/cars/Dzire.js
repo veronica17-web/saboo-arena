@@ -11,7 +11,7 @@ import {
   dzireVariants,
   dzireMileage,
 } from '../../constants/dzireData';
-import DzireBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Swift Dzire 2023 in Hyderabad.webp';
+
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -153,7 +153,7 @@ function Dzire() {
       </Helmet>
       <Header />
       <img
-        src={DzireBanner}
+        src={require('../../assets/banners/Dzire 2.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='Buy Maruti Suzuki Swift Dzire 2023 in Hyderabad'
       />

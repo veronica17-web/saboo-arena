@@ -147,7 +147,7 @@ function AltoK10CNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>New Alto K10 S-CNG</p>
             <p className='font-bold text-green-900'>
-              5.94 Lakh <sup>*</sup>
+              5.96 Lakh <sup>*</sup>
               <p className='font-light text-red-400'>ex-show room price</p>
             </p>
 

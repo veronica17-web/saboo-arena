@@ -147,7 +147,7 @@ function WagonrCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>New wAGONR S-CNG</p>
             <p className='font-bold text-green-900'>
-              6.42 lakh <sup>*</sup>
+              6.44 lakh <sup>*</sup>
               <p className='font-light text-green-900'>ex-show room price</p>
             </p>
 

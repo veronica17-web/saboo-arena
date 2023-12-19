@@ -148,7 +148,7 @@ function AltoCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>New Alto S-CNG</p>
             <p className='font-bold text-green-900'>
-              5.03 lakh <sup>*</sup>
+              5.13 lakh <sup>*</sup>
               <p className='font-light text-red-400'>ex-show room price</p>
             </p>
 

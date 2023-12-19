@@ -238,7 +238,7 @@ function Wagonr() {
                     name='LEADCF6'
                     onChange={(e) => setModel(e.target.value)}
                     className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                  defaultValue='Wagon R'
+                    defaultValue='Wagon R'
                   >
                     <option>Select Model</option>
                     <optgroup label='Hatchback'>

@@ -147,7 +147,7 @@ function DzireCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>DZIRE S-CNG</p>
             <p className='font-bold text-green-900'>
-              8.23 lakh <sup>*</sup>
+              7.46 lakh <sup>*</sup>
               <p className='font-light text-green-900'>ex-show room price</p>
             </p>
 

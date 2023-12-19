@@ -10,7 +10,7 @@ import {
   swiftVariants,
   swiftMileage,
 } from '../../constants/swiftData';
-import SwiftBanner from '../../assets/banners/vehicles/Buy Maruti Suzuki Swift 2023 in Hyderabad.webp';
+
 import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import { toast } from 'react-toastify';
@@ -142,7 +142,7 @@ function Swift() {
       <Header />
 
       <img
-        src={SwiftBanner}
+        src={require('../../assets/banners/Swift Petrol.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='Buy Maruti Suzuki new Swift 2023 in Hyderabad'
       />

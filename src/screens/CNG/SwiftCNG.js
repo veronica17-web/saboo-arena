@@ -150,7 +150,7 @@ function SwiftCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>New Swift S-CNG</p>
             <p className='font-bold text-green-900'>
-              7.77 lakh <sup>*</sup>
+              7.85 lakh <sup>*</sup>
               <p className='font-light text-red-400'>ex-show room price</p>
             </p>
 

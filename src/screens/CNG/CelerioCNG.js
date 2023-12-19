@@ -91,7 +91,7 @@ function CelerioCNG() {
     <>
       <Header />
       <img
-        src='https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/CNG/Celerio_Web-Banner.webp'
+        src={require('../../assets/banners/Celerio CNG.webp')}
         className='max-w-full w-full lg:mt-16'
         alt='1'
       />
@@ -100,7 +100,7 @@ function CelerioCNG() {
           <div className='space-y-3 justify-between px-6'>
             <p className='uppercase font-bold text-4xl'>Celerio S-CNG</p>
             <p className='font-bold text-green-900'>
-              6.69 lakh <sup>*</sup>
+              6.73 lakh <sup>*</sup>
               <p className='font-light text-green-900'>ex-show room price</p>
             </p>
 
