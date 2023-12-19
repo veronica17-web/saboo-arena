@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import ImageGallery from 'react-image-gallery';
 import AltoBanner from '../../assets/banners/vehicles/Maruti Suzuki Alto 800 Price in Hyderabad.webp';
+
 import { Dialog, Transition } from '@headlessui/react';
 import {
   altoColors,

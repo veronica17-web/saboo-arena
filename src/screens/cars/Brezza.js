@@ -443,7 +443,7 @@ const CarsSlider = () => {
       <div className='my-auto'>
         <div className='flex flex-col items-center sm:flex-row sm:items-start'>
           <p className='text-3xl font-semibold mb-2 sm:mb-0 sm:mr-4'>
-            Maruti Brezza
+            Maruti Suzuki Brezza
           </p>
           <img
             className='w-12 h-7  mr-2'
