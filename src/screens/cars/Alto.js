@@ -860,7 +860,8 @@ const Table = () => {
               </td>
 
               <td className='border border-slate-300 px-3 py-1.5'>
-                ₹&nbsp;{item.price} Lakh<sup>*</sup>
+                ₹&nbsp;{item.price} Lakh
+                <sup>*</sup>
               </td>
             </tr>
           ))}
@@ -897,7 +898,10 @@ const PriceTable = () => {
                 {item.transmission}
               </td>
               <td className='border border-slate-300 px-3 py-1.5'>
-                {item.mileage} <sup>*</sup>
+                {item.mileage}{' '}
+                <span className='font-extralight'>
+                  <sup>*</sup>
+                </span>
               </td>
             </tr>
           ))}

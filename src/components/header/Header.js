@@ -124,12 +124,11 @@ const TopHeader = () => {
       </div>
       <div className='space-x-3 lg:flex items-center'>
         <div className='flex items-center justify-center space-x-5'>
-          <div className='flex items-center space-x-1 font-bold'>
+          <div className='flex items-center space-x-1 font-normal'>
             Contact Us &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;
             <a href='https://wa.me/+919848898488'>
               <FaWhatsapp size={20} />
             </a>
-            
           </div>
           &nbsp;&nbsp;
           <div className='border text-black h-5 lg:flex space-y-4'></div>
@@ -141,7 +140,7 @@ const TopHeader = () => {
           &nbsp;&nbsp;
           <div className='border text-black h-5 lg:flex space-y-4'></div>
           <div className='flex items-center space-x-1 justify-center sm:justify-start'>
-          <a href='mailto:info@saboomaruti.in'>
+            <a href='mailto:info@saboomaruti.in'>
               <FaEnvelope />
             </a>
           </div>

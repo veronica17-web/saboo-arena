@@ -67,11 +67,17 @@ const VehicleProducts = () => {
               <div>
                 <div className='flex items-center justify-between p-5 '>
                   <img src={item.logo} alt={item.name} className='h-5 w-auto' />
+
                   <div>
                     <p className='flex items-center font-bold text-xl'>
-                      <BiRupee />
+                      <span className='text-xs'>
+                        {' '}
+                        <BiRupee />
+                      </span>
                       {item.price}
-                      <sup>*</sup>
+                      <span className='font-extralight'>
+                        <sup>*</sup>
+                      </span>
                     </p>{' '}
                     <p className='font-extralight text-xs mx-1'>ex-showroom</p>
                   </div>

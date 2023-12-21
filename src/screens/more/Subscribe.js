@@ -6,9 +6,9 @@ function Subscribe() {
       <div className='container mx-auto'>
         <div className=' block lg:flex items-center justify-between lg:px-20 space-y-3 lg:space-y-0'>
           <div>
-            <p className='text-gray-100 text-center text-2xl uppercase tracking-wider'>
+            <p className='text-gray-100 text-center text-2xl font-extralight uppercase tracking-wider'>
               Subscribe and Get Notified <br></br>
-              about our Latest offers.
+              about our Latest offers
             </p>
           </div>
 
@@ -19,7 +19,7 @@ function Subscribe() {
               placeholder='Email Address'
               name='Email'
             />
-            <button className='bg-blue-900 text-white py-3 px-5 rounded-br rounded-tr'>
+            <button className='bg-blue-900 text-white py-3 px-5 font-semibold rounded-br rounded-tr'>
               Get Notified
             </button>
           </form>

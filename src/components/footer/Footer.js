@@ -48,12 +48,12 @@ const navigation = {
     { name: 'WORKSHOPS', to: '/maruti-suzuki-car-service-center' },
     { name: 'TRUE VALUE', to: '/true-value' },
     {
-      name: 'MARUTI SUZUKI DRIVING SCHOOL',
+      name: 'DRIVING SCHOOL',
       to: '/maruti-driving-school-locations',
     },
   ],
   about: [
-    { name: 'ABOUT RKS MOTOR PVT LTD', to: '/about-maruti-suzuki-dealers' },
+    { name: 'RKS MOTOR PVT LTD', to: '/about-maruti-suzuki-dealers' },
     // { name: "CAREERS", to: "/contact-us" },
     { name: 'CONTACT US', to: '/contact-maruti-suzuki-showroom' },
   ],
@@ -64,12 +64,12 @@ const navigation = {
     { name: 'FINANCE', to: '/maruti-suzuki-car-finance-services' },
     { name: 'INSURANCE', to: '/maruti-suzuki-car-insurance-renewal' },
     { name: 'SERVICE', to: '/maruti-car-service-centers-near-me' },
-    { name: 'SUBSCRIBE', to: '/subscribe' },
+    // { name: 'SUBSCRIBE', to: '/subscribe' },
     { name: 'TERMS & CONDITIONS', to: '/maruti-car-terms-and-conditions' },
     { name: 'FAQ', to: '/faq' },
-    { name: "ANNUAL REPORT '21", to: '/Annual_Return_2021' },
-    { name: "ANNUAL REPORT '22", to: '/Annual_Return_2022' },
-    { name: 'CSR POLICY', to: '/' },
+    // { name: "ANNUAL REPORT '21", to: '/Annual_Return_2021' },
+    // { name: "ANNUAL REPORT '22", to: '/Annual_Return_2022' },
+    // { name: 'CSR POLICY', to: '/' },
   ],
 };
 
@@ -81,18 +81,18 @@ function Footer() {
         <div className='container mx-auto'>
           <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6'>
             {/* col starts */}
-            <div className='text-black space-y-3'>
-              <p className='text-blue-800 font-bold text-lg'>
+            <div className='text-black space-y-3 md:pr-8 lg:pr-0 pr-5'>
+              <p className='text-blue-800 font-bold text-lg  md:text-xl'>
                 <span className='text-2xl text-rose-600 font-black'>| </span>
                 MARUTI CARS
               </p>
-              <div className='flex flex-col space-y-3 font-semibold text-black scale-100'>
+              <div className='flex flex-col space-y-3 text-sm font-normal  text-black scale-100'>
                 {navigation.cars.map((item, index) => (
                   <div
-                    className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:text-gray-800'
+                    className='flex border-b pb-2 border-gray-200 items-center text-gray-900 hover:font-bold'
                     key={index}
                   >
-                    <RiArrowRightSLine />
+                    <RiArrowRightSLine className='text-gray-400' />
                     <Link to={item.to}>{item.name}</Link>
                   </div>
                 ))}
@@ -100,33 +100,36 @@ function Footer() {
             </div>
 
             {/* col starts */}
-            <div className='text-black space-y-3 '>
+            <div className='text-black space-y-3 md:mt-4 lg:mt-0 mt-5'>
               <p className='text-blue-800 font-bold text-lg'>
                 <span className='text-2xl text-rose-600 font-black'>| </span>
                 OUTLETS
               </p>
-              <div className='flex flex-col space-y-3 font-semibold text-black'>
+              <div className='flex flex-col space-y-3 font-normal text-black text-sm'>
                 {navigation.corporate.map((item, index) => (
                   <div
-                    className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:text-gray-800'
+                    className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:font-bold'
                     key={index}
                   >
-                    <RiArrowRightSLine />
+                    <RiArrowRightSLine className='text-gray-400' />
                     <Link to={item.to}>{item.name}</Link>
                   </div>
                 ))}
               </div>
-              <p className='text-blue-800 font-bold text-lg'>
-                <span className='text-2xl text-rose-600 font-black'>| </span>
-                ABOUT US
-              </p>
-              <div className='flex flex-col space-y-3 font-semibold text-black'>
+              <div className='text-black space-y-3 md:mt-4 lg:mt-0 mt-5'>
+                <p className='text-blue-800 font-bold text-lg'>
+                  <span className='text-2xl text-rose-600 font-black'>| </span>
+                  ABOUT US
+                </p>
+              </div>
+
+              <div className='flex flex-col space-y-3 font-normal text-black text-sm'>
                 {navigation.about.map((item, index) => (
                   <div
                     className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:text-gray-800'
                     key={index}
                   >
-                    <RiArrowRightSLine />
+                    <RiArrowRightSLine className='text-gray-400' />
                     <Link to={item.to}>{item.name}</Link>
                   </div>
                 ))}
@@ -134,18 +137,18 @@ function Footer() {
             </div>
 
             {/* col starts */}
-            <div className='text-black space-y-3'>
+            <div className='text-black space-y-3 md:mt-4 lg:mt-0 mt-5'>
               <p className='text-blue-800 font-bold text-lg'>
                 <span className='text-2xl text-rose-600 font-black'>| </span>
                 USEFUL LINKS
               </p>
-              <div className='flex flex-col space-y-3 font-semibold text-black'>
+              <div className='flex flex-col space-y-3 font-normal text-black text-sm'>
                 {navigation.financeInsurance.map((item, index) => (
                   <div
-                    className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:text-gray-800'
+                    className='flex border-b pb-2 border-gray-200 items-center text-gray-800 hover:font-bold'
                     key={index}
                   >
-                    <RiArrowRightSLine />
+                    <RiArrowRightSLine className='text-gray-400' />
                     <Link to={item.to}>{item.name}</Link>
                   </div>
                 ))}
@@ -153,13 +156,13 @@ function Footer() {
             </div>
 
             {/* col starts */}
-            <div className='text-black space-y-3'>
+            <div className='text-black space-y-3 md:mt-4 lg:mt-0 mt-5'>
               <p className='text-blue-800 font-bold text-lg'>
                 <span className='text-2xl text-rose-600 font-black'>| </span>
                 CONTACT US
               </p>
               <div className='flex flex-col space-y-3 font-semibold text-black'>
-                <h1 className='text-2xl text-blue-800 text-semibold'>
+                <h1 className='text-2xl text-blue-800 text-extrabold'>
                   RKS MOTOR PVT. LTD.
                 </h1>
               </div>
@@ -167,21 +170,24 @@ function Footer() {
               <p className='py-2'>
                 <a
                   href='mailto:info@saboomaruti.in'
-                  className=' bg-[#293e91] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-3'
+                  className=' bg-[#293e91] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-3 hover:bg-blue-700'
                 >
                   info@saboomaruti.in
                 </a>
               </p>
               <a
                 href='tel:9848898488'
-                className=' bg-[#293e91] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-1'
+                className=' bg-[#293e91] text-white px-3 py-1.5 rounded shadow-sm text-sm mt-1 hover:bg-blue-700'
               >
                 +91 98488 98488
               </a>
               <p className='mt-3 text-black font-light'>
-                <b className='font-bold tracking-wide'>Address: </b>RKS Motor -
-                Saboo Towers, 6-3-905, Raj Bhavan Rd, Somajiguda, Hyderabad,
-                Telangana 500082
+                <span className='font-bold tracking-wide text-xs'>
+                  Address:<br></br>
+                </span>
+                RKS Motor - Saboo Towers,<br></br> 6-3-905, Raj Bhavan Rd,
+                <br></br>
+                Somajiguda, Hyderabad,<br></br> Telangana - 500082
               </p>
               <p className='font-bold'>Social Links</p>
               <div className='flex items-center space-x-3'>
@@ -240,7 +246,7 @@ function Footer() {
             <div className='flex items-center space-x-2 text-sm'>
               <Link
                 to='/maruti-car-terms-and-conditions'
-                className='hover:text-red-500'
+                className='hover:text-red-500 sm:text-extralight'
               >
                 Terms & Conditions
               </Link>

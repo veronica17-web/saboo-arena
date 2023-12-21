@@ -38,7 +38,7 @@
     "react-toastify": "^8.2.0",
     "react-use-window-size": "^1.0.1",
     "read-more-react": "^1.0.10",
-    "swiper": "^8.1.4",
+    "swiper": "^8.4.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

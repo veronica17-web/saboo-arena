@@ -174,13 +174,16 @@ function MainHeader() {
       <div className='navigation'>
         <ul className='menu'>
           {navigation.pages.map((page, index) => (
-            <li className='menu-item' key={index}>
+            <li className='menu-item font-semibold' key={index}>
               <Link to={page.to}>{page.name}</Link>
             </li>
           ))}
           <li className='menu-item'>
-            <a href='javascript:void(0)' className='flex items-center sub-btn'>
-              Vehicles <ChevronDownIcon className='h-5 w-5' />
+            <a
+              href='javascript:void(0)'
+              className='flex items-center sub-btn font-semibold'
+            >
+              Vehicles <ChevronDownIcon className='h-4 w-6' />
             </a>
             <ul className='sub-menu'>
               {/* {navigation.vehicles.map((vehicle, index) => (
@@ -228,8 +231,11 @@ function MainHeader() {
             </ul>
           </li>
           <li className='menu-item'>
-            <a href='javascript:void(0)' className='flex items-center sub-btn'>
-              Services <ChevronDownIcon className='h-5 w-5' />
+            <a
+              href='javascript:void(0)'
+              className='flex items-center sub-btn font-semibold'
+            >
+              Services <ChevronDownIcon className='h-4 w-6' />
             </a>
             <ul className='sub-menu' style={{ width: '27%' }}>
               {navigation.servicepages.map((item, index) => (
@@ -240,8 +246,11 @@ function MainHeader() {
             </ul>
           </li>
           <li className='menu-item'>
-            <a href='javascript:void(0)' className='flex items-center sub-btn'>
-              Outlets <ChevronDownIcon className='h-5 w-5' />
+            <a
+              href='javascript:void(0)'
+              className='flex items-center sub-btn font-semibold'
+            >
+              Outlets <ChevronDownIcon className='h-4 w-6' />
             </a>
             <ul className='sub-menu' style={{ width: '27%' }}>
               {navigation.outlets.map((item, index) => (
@@ -252,8 +261,11 @@ function MainHeader() {
             </ul>
           </li>
           <li className='menu-item'>
-            <a href='javascript:void(0)' className='flex items-center sub-btn'>
-              More <ChevronDownIcon className='h-5 w-5' />
+            <a
+              href='javascript:void(0)'
+              className='flex items-center sub-btn font-semibold'
+            >
+              More <ChevronDownIcon className='h-4 w-6' />
             </a>
             <ul className='sub-menu'>
               {navigation.more.map((item, index) => (

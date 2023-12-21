@@ -242,7 +242,7 @@ function Offers() {
             className='flex flex-col bg-[#eee] rounded shadow-lg border relative overflow-hidden'
             key={item.name}
           >
-            <p className='absolute top-3 -right-7 uppercase text-sm text-center text-white rotate-45 bg-[#ec1b23] py-1 w-28'>
+            <p className='absolute shadow-xl top-3 -right-7 uppercase text-sm text-center text-white rotate-45 bg-[#ec1b23] py-1 w-28'>
               Offer
             </p>
 
@@ -257,11 +257,13 @@ function Offers() {
                     <i>{item.name}</i>
                   </p>
                   <p className='font-bold'>
-                    <span className='text-sm font-light'>
+                    <span className='text-sm font-light text-gray-600'>
                       Save up to <br />{' '}
                     </span>
-                    <span className='text-red-500 text-xl uppercase'>
-                      {/* <sup>*</sup> */}₹ {item.price}
+                    <span className='text-red-500 text-xl uppercase '>
+                      {/* <sup>*</sup> */}
+                      <span className='font-extralight text-xs'>₹</span>{' '}
+                      {item.price}
                     </span>
                     &nbsp;&nbsp;&nbsp;
                     <span className='text-blue-500'>{item.discount}</span>

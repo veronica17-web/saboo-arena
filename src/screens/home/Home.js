@@ -18,18 +18,20 @@ import 'swiper/css/navigation';
 import { Autoplay } from 'swiper';
 import { reviews } from '../../constants/carservice';
 import Header from '../../components/header/Header';
+
 import { Helmet } from 'react-helmet';
 
 function Home() {
-  const [width, setWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth);
     };
 
     window.addEventListener('resize', handleResize);
 
+    // Cleanup the event listener on component unmount
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -83,11 +85,14 @@ function Home() {
           content='Saboo Maruti authorized Maruti Suzuki dealer in Hyderabad & Secunderabad. Get best deals & offers on new Maruti Celerio, Maruti Swift, Maruti brezza,Maruti S-Presso, Maruti Wagon R, Maruti Ertiga, Maruti Alto 800, Maruti Eeco, Maruti Omni, Maruti Vitara brezza.'
         />
         <meta property='twitter:image' content='img/og-tags/saboo_rks.webp' />
-        <meta name="facebook-domain-verification" content="md4mdsmejpjm33sfbb9akud4erg4k0" />
+        <meta
+          name='facebook-domain-verification'
+          content='md4mdsmejpjm33sfbb9akud4erg4k0'
+        />
       </Helmet>
 
       <Header />
-      {width <= 425 ? <MobileSlider /> : <Slider />}
+      {windowWidth <= 425 ? <MobileSlider /> : <Slider />}
       {/* <Slider /> */}
       {/* <Confetti /> */}
       {/* <MobileSlider /> */}
@@ -104,7 +109,9 @@ const Testimonials = () => {
   return (
     <div className='container mx-auto my-5'>
       <p className='text-3xl text-blue-800 text-center '>Testimonials</p>
-      <p className='mb-8 text-center'>Discover what others have to say</p>
+      <p className='mb-8 text-center font-extralight'>
+        Discover what others have to say
+      </p>
       <Swiper
         slidesPerView={1}
         loop={true}

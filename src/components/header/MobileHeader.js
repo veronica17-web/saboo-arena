@@ -1,18 +1,7 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Tab, Transition } from '@headlessui/react';
-import {
-  MenuIcon,
-  SearchIcon,
-  ShoppingBagIcon,
-  XIcon,
-} from '@heroicons/react/outline';
-import {
-  FaHome,
-  FaCar,
-  FaPhoneAlt,
-  FaBars,
-  FaPercentage,
-} from 'react-icons/fa';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+
 import './mobile.css';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -20,10 +9,12 @@ import { useEffect } from 'react';
 const navigation = {
   pages: [
     { name: 'Home', to: '/' },
-    { name: 'About us', to: '/about-maruti-suzuki-dealers' },
-    { name: 'Arena Vehicles', to: '/maruti-suzuki-new-cars' },
-    { name: 'CNG Vehicles', to: '/maruti-suzuki-cng-cars' },
-    { name: 'Tour Vehicles', to: '/maruti-suzuki-tour-cars' },
+    { name: 'About RKS Motor', to: '/about-maruti-suzuki-dealers' },
+  ],
+  vehicles: [
+    { name: 'Arena ', to: '/maruti-suzuki-new-cars' },
+    { name: 'CNG ', to: '/maruti-suzuki-cng-cars' },
+    { name: 'Tour ', to: '/maruti-suzuki-tour-cars' },
   ],
   servicepages: [
     {
@@ -39,11 +30,12 @@ const navigation = {
       to: '/corporate',
     },
     {
-      name: 'Subscribe',
-      to: '/subscribe',
+      name: 'Payment',
+      to: '/payment',
     },
+
     {
-      name: 'Driving School',
+      name: 'Learn Driving',
       to: '/maruti-suzuki-driving-school',
     },
   ],
@@ -161,7 +153,20 @@ function MobileHeader() {
                   <XIcon className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
-
+              <div className='flex justify-center items-center p-2'>
+                {/* Logo for larger screens (hidden on smaller screens) */}
+                <img
+                  src='https://www.saboogroups.com/assets/images/black-logo.png'
+                  alt='Logo'
+                  className='hidden sm:block max-w-full h-auto'
+                />
+                {/* Logo for smaller screens (hidden on larger screens) */}
+                <img
+                  src='https://www.saboogroups.com/assets/images/black-logo.png'
+                  alt='Logo'
+                  className='sm:hidden max-w-full h-10'
+                />
+              </div>
               {/* Links */}
               <Tab.Group
                 as='div'
@@ -174,7 +179,23 @@ function MobileHeader() {
                 onClick={() => setOpen(false)}
               >
                 {navigation.pages.map((page) => (
-                  <div key={page.name} className='flow-root'>
+                  <div key={page.name} className='flow-root text-xl'>
+                    <Link
+                      to={page.to}
+                      className='-m-2 p-2 block font-normal text-gray-700'
+                    >
+                      {page.name}
+                    </Link>
+                  </div>
+                ))}
+              </div>
+              <div
+                className='border-t border-gray-200 py-6 px-4 space-y-6'
+                onClick={() => setOpen(false)}
+              >
+                <div className='font-bold text-blue-900 text-2xl'>Vehicles</div>
+                {navigation.vehicles.map((page) => (
+                  <div key={page.name} className='flow-root text-xl'>
                     <Link
                       to={page.to}
                       className='-m-2 p-2 block font-normal text-gray-700'
@@ -189,8 +210,9 @@ function MobileHeader() {
                 className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
+                <div className='font-bold text-blue-900 text-2xl'>Services</div>
                 {navigation.servicepages.map((page) => (
-                  <div key={page.name} className='flow-root'>
+                  <div key={page.name} className='flow-root text-xl'>
                     <Link
                       to={page.to}
                       className='-m-2 p-2 block font-normal text-gray-700'
@@ -205,8 +227,9 @@ function MobileHeader() {
                 className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
+                <div className='font-bold text-blue-900 text-2xl'>Outlets</div>
                 {navigation.outlets.map((page) => (
-                  <div key={page.name} className='flow-root'>
+                  <div key={page.name} className='flow-root text-xl'>
                     <Link
                       to={page.to}
                       className='-m-2 p-2 block font-normal text-gray-700'
@@ -221,8 +244,9 @@ function MobileHeader() {
                 className='border-t border-gray-200 py-6 px-4 space-y-6'
                 onClick={() => setOpen(false)}
               >
+                <div className='font-bold text-blue-900 text-2xl'>More</div>
                 {navigation.more.map((page) => (
-                  <div key={page.name} className='flow-root'>
+                  <div key={page.name} className='flow-root text-xl'>
                     <Link
                       to={page.to}
                       className='-m-2 p-2 block font-normal text-gray-700'
