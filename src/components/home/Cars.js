@@ -85,7 +85,7 @@ const VehicleProducts = () => {
                 <div className='flex items-center justify-center space-x-2 p-2.5 mb-2'>
                   <Link
                     to='/compare-cars'
-                    className='bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded'
+                    className='bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded bg-gradient-to-b from-blue-900 to-blue-500 '
                   >
                     Compare
                   </Link>

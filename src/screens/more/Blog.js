@@ -40,7 +40,7 @@ function Blog() {
       </Helmet>
       <Header />
       <img
-        src={require("../../assets/banners/blog-screen-banner.webp")}
+        src={require("../../assets/arena-blog-popup-banner.webp")}
         className="w-full lg:mt-16"
         alt="blog-screen-banner"
       />

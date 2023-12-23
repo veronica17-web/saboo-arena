@@ -174,7 +174,7 @@ function App() {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as='div'
-          className='fixed inset-0 overflow-y-auto z-20'
+          className='fixed inset-0 overflow-y-auto z-20 '
           onClose={() => setOpen(false)}
         >
           <div className='flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0'>
@@ -206,22 +206,33 @@ function App() {
               leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
             >
               <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full'>
-                <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
+                <div className='bg-blue-100 px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
                   <div className='text-left'>
                     <button
                       className='absolute right-2 top-2 outline-none'
                       onClick={() => setOpen(false)}
                     >
-                      <IoCloseCircle size={28} />
+                      <IoCloseCircle size={28} className='text-red-700' />
                     </button>
 
+                    {/* <img
+                    src={loginkey}
+                    alt='logo'
+                    className='w-full h-16 m-auto'
+                  /> */}
                     <img
-                      src={loginkey}
-                      alt='logo'
-                      className='w-full h-16 m-auto'
+                      src={require('../src/assets/only-popup.png')}
+                      alt='Logo'
+                      className='w-100 h-30 '
                     />
-                    <h4 className='text-center text-red-600 font-bold mt-4'>
-                      Get A Quote/Offer
+
+                    <h4 className='text-center text-gray-900 font-normal text-xl mt-4'>
+                      <span className='text-sm'>Welcome to RKS Motor</span>{' '}
+                      <br></br>
+                      <span className='text-blue-900 font-semibold'>
+                        Explore our wide range of cars and find the perfect ride
+                        for you!
+                      </span>
                     </h4>
                     <LeadPopup />
                   </div>
@@ -515,7 +526,7 @@ function LeadPopup() {
                 <div className='grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-4'>
                   <div>
                     <input
-                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-900 focus:border-blue-900'
                       placeholder='Name'
                       id='Last_Name'
                       name='Last Name'
@@ -525,7 +536,7 @@ function LeadPopup() {
                   </div>
                   <div>
                     <input
-                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-900 focus:border-blue-900'
                       placeholder='Phone'
                       minLength='10'
                       maxLength='10'
@@ -546,7 +557,7 @@ function LeadPopup() {
                       id='LEADCF6'
                       name='LEADCF6'
                       onChange={(e) => setModel(e.target.value)}
-                      className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-900 focus:border-blue-900'
                     >
                       <option>Select Model</option>
                       <optgroup label='Hatchback'>
@@ -560,7 +571,6 @@ function LeadPopup() {
                       <optgroup label='Sedan'>
                         <option value='Dzire'>Dzire</option>
                       </optgroup>
-
                       <optgroup label='micro SUV'>
                         <option value='S-Presso'>S-Presso</option>
                       </optgroup>
@@ -580,7 +590,7 @@ function LeadPopup() {
                       id='LEADCF23'
                       name='LEADCF23'
                       onChange={(e) => setOutlet(e.target.value)}
-                      className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-900 focus:border-blue-900 sm:text-sm'
                     >
                       <option>Select Outlet</option>
                       <option value='Somajiguda'>Somajiguda</option>
@@ -597,7 +607,7 @@ function LeadPopup() {
               </form>
 
               <div className='flex-grow max-w-md'>
-                <p className='text-gray-900 mb-2 p-2 mt-5 text-xs'>
+                <p className='text-gray-900 mb-2 p-2 mb-10 text-xs'>
                   <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
                   <a
                     href='/maruti-car-terms-and-conditions'

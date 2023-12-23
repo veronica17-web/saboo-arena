@@ -2,19 +2,19 @@ import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './header.css';
-import {
-  BsFacebook,
-  BsTwitter,
-  BsYoutube,
-  BsPinterest,
-  BsInstagram,
-} from 'react-icons/bs';
-import { ImLinkedin } from 'react-icons/im';
+// import {
+//   BsFacebook,
+//   BsTwitter,
+//   BsYoutube,
+//   BsPinterest,
+//   BsInstagram,
+// } from 'react-icons/bs';
+// import { ImLinkedin } from 'react-icons/im';
 import MobileHeader from './MobileHeader';
 import MainHeader from './MainHeader';
 // import TestHeader from "./TestHeader";
 // import MobileMenuHeader from "./MobileMenuHeader";
-import Confetti from 'react-confetti';
+// import Confetti from 'react-confetti';
 
 function Header() {
   return (
@@ -110,13 +110,13 @@ const TopHeader = () => {
       <div className='flex items-center space-x-4 justify-center md-10'>
         <Link
           to='/maruti-suzuki-car-offers-page'
-          className='uppercase bg-blue-800 text-white px-3 py-1.5 rounded shadow-sm text-sm'
+          className='uppercase text-white px-3 py-1.5 rounded shadow-sm text-sm bg-gradient-to-b from-blue-900 to-blue-600 hover:from-red-700 hover:to-red-900'
         >
           Offers
         </Link>
         <Link
           to='/maruti-car-service-centers-near-me'
-          className='uppercase bg-blue-800 text-white px-3 py-1.5 rounded shadow-sm text-sm'
+          className='uppercase  text-white px-3 py-1.5 rounded shadow-sm text-sm bg-gradient-to-b from-blue-900 to-blue-500 hover:from-red-700 hover:to-red-900'
         >
           Service your car
         </Link>
