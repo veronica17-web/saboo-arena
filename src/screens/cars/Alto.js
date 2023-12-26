@@ -160,8 +160,9 @@ export function Alto() {
       </div>
       <div className='bg-[#1b72b7] py-12 mt-12'>
         <div className='container mx-auto space-y-5 lg:px-0 px-5'>
-          <h3 className='text-xl font-semibold text-white'>
-            GET ALTO ON-ROAD PRICE IN HYDERABAD
+          <h3 className='text-xl font-normal text-white normal-case'>
+            Discover Alto's excitement - Enquire today for a personalised
+            experience!
           </h3>
           <form
             action='https://crm.zoho.in/crm/WebToLeadForm'
@@ -319,17 +320,17 @@ export function Alto() {
               <div className='ml-2 text-sm'>
                 <label
                   htmlFor='disclaimer'
-                  className='font-medium text-gray-700'
+                  className='font-medium text-gray-700 italic'
                 >
                   <span className='text-white font-bold'>Disclaimer</span>
-                  <span className='text-white'>
-                    : By clicking 'SUBMIT', you have agreed to our
+                  <span className='text-white font-extralight'>
+                    : By clicking 'SUBMIT', you agree to our
                   </span>
                   <a
                     href='/maruti-car-terms-and-conditions'
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='px-2  text-sm  text-red-600 '
+                    className='px-2  text-sm font-bold  text-red-700 '
                   >
                     Terms and Conditions
                   </a>

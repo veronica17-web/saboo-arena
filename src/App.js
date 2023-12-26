@@ -56,7 +56,7 @@ import Toursdzire from './screens/Tour/TourS';
 import Tourveeco from './screens/Tour/TourV';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { IoCloseCircle } from 'react-icons/io5';
+import { IoCloseCircle, IoLogoWhatsapp } from 'react-icons/io5';
 // import { BsTelephoneForward } from 'react-icons/bs';
 import { Transition, Dialog } from '@headlessui/react';
 import axios from 'axios';
@@ -78,15 +78,16 @@ import BrezzaCNG from './screens/CNG/BrezzaCNG';
 import PriceList from './screens/more/PriceList';
 import AccessoryTest from './screens/more/AccessoryTest';
 import AwardsTest from './screens/more/AwardsTest';
-// import { Login } from '@emotion-icons/heroicons-outline';
+import { Login } from '@emotion-icons/heroicons-outline';
 import LoginPage from './screens/Login/Login';
-
+import CareersPage from './screens/Careers/Careers';
+import ApplicationForm from './screens/Careers/Careers';
 import Careers from './screens/Careers/Careers';
 // import CarEnquiry from './components/home/CarEnquiry';
 
 function App() {
   const [open, setOpen] = useState(false);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const ScrollTop = () => {
     const { pathname } = useLocation();
@@ -104,7 +105,7 @@ function App() {
 
   const Popup = () => {
     const [number, setNumber] = useState('');
-    // const [methodpopup, setMethodPopup] = useState();
+    const [methodpopup, setMethodPopup] = useState();
 
     // function handleSubmit() {
     //   setLoading(true);
@@ -174,7 +175,7 @@ function App() {
       <Transition.Root show={open} as={Fragment}>
         <Dialog
           as='div'
-          className='fixed inset-0 overflow-y-auto z-20 '
+          className='fixed inset-0 overflow-y-auto z-20'
           onClose={() => setOpen(false)}
         >
           <div className='flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0'>
@@ -206,26 +207,20 @@ function App() {
               leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
             >
               <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full'>
-                <div className='bg-blue-100 px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
+                <div className='bg-blue-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
                   <div className='text-left'>
                     <button
                       className='absolute right-2 top-2 outline-none'
                       onClick={() => setOpen(false)}
                     >
-                      <IoCloseCircle size={28} className='text-red-700' />
+                      <IoCloseCircle size={28} className='text-red-600' />
                     </button>
 
-                    {/* <img
-                    src={loginkey}
-                    alt='logo'
-                    className='w-full h-16 m-auto'
-                  /> */}
                     <img
                       src={require('../src/assets/only-popup.png')}
                       alt='Logo'
-                      className='w-100 h-30 '
+                      className='w-100 h-30'
                     />
-
                     <h4 className='text-center text-gray-900 font-normal text-xl mt-4'>
                       <span className='text-sm'>Welcome to RKS Motor</span>{' '}
                       <br></br>
@@ -489,137 +484,122 @@ function LeadPopup() {
     <>
       <div className='mx-5'>
         <div className=' text-gray-900 py-1 mt-12'>
-          <div className='container mx-auto space-y-2 lg:px-0 px-5'>
-            <div className='flex flex-wrap gap-4'>
-              <form
-                action='https://crm.zoho.in/crm/WebToLeadForm'
-                name='WebToLeads54158000007156717'
-                method={method}
-                acceptCharset='UTF-8'
-                className='flex-grow max-w-md'
-              >
-                <input
-                  type='text'
-                  className='hidden'
-                  name='xnQsjsdp'
-                  value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
-                />
-                <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-                <input
-                  type='text'
-                  className='hidden'
-                  name='xmIwtLD'
-                  value='3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283'
-                />
-                <input
-                  type='text'
-                  className='hidden'
-                  name='actionType'
-                  value='TGVhZHM='
-                />
-                <input
-                  type='text'
-                  className='hidden'
-                  name='returnURL'
-                  value='https://www.saboomaruti.in/'
-                />
-                <div className='grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-4'>
-                  <div>
-                    <input
-                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-900 focus:border-blue-900'
-                      placeholder='Name'
-                      id='Last_Name'
-                      name='Last Name'
-                      onChange={(e) => setName(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div>
-                    <input
-                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-900 focus:border-blue-900'
-                      placeholder='Phone'
-                      minLength='10'
-                      maxLength='10'
-                      id='Mobile'
-                      name='Phone'
-                      value={phone}
-                      onChange={(e) =>
-                        setPhone(
-                          e.target.value.replace(/[^1-9 ]/g, '') &&
-                            e.target.value.replace(/ /g, '')
-                        )
-                      }
-                    />
-                  </div>
-
-                  <div>
-                    <select
-                      id='LEADCF6'
-                      name='LEADCF6'
-                      onChange={(e) => setModel(e.target.value)}
-                      className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-900 focus:border-blue-900'
-                    >
-                      <option>Select Model</option>
-                      <optgroup label='Hatchback'>
-                        <option value='Alto K10'>Alto K10</option>
-                        <option value='Alto 800'>Alto</option>
-                        <option value='Wagon R'>Wagon R</option>
-                        <option value='Celerio'>Celerio</option>
-                        <option value='Swift'>Swift</option>
-                      </optgroup>
-
-                      <optgroup label='Sedan'>
-                        <option value='Dzire'>Dzire</option>
-                      </optgroup>
-                      <optgroup label='micro SUV'>
-                        <option value='S-Presso'>S-Presso</option>
-                      </optgroup>
-                      <optgroup label='MPV'>
-                        <option value='Ertiga'>Ertiga</option>
-                      </optgroup>
-                      <optgroup label='SUV'>
-                        <option value='Brezza'>Brezza</option>
-                      </optgroup>
-                      <optgroup label='Mini Van'>
-                        <option value='Eeco'>Eeco</option>
-                      </optgroup>
-                    </select>
-                  </div>
-                  <div>
-                    <select
-                      id='LEADCF23'
-                      name='LEADCF23'
-                      onChange={(e) => setOutlet(e.target.value)}
-                      className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-900 focus:border-blue-900 sm:text-sm'
-                    >
-                      <option>Select Outlet</option>
-                      <option value='Somajiguda'>Somajiguda</option>
-                      <option value='Malakpet'>Malakpet</option>
-                      <option value='Secunderabad'>Secunderabad</option>
-                      <option value='Kushaiguda'>Kushaiguda</option>
-                      <option value='Kompally'>Kompally</option>
-                      <option value='Shamirpet'>Shamirpet</option>
-                      <option value='Narsingi'>Narsingi</option>
-                      <option value='Kodangal'>Kodangal</option>
-                    </select>
-                  </div>
+          <div className='container mx-auto space-y-6 lg:px-0 px-5'>
+            <form
+              action='https://crm.zoho.in/crm/WebToLeadForm'
+              name='WebToLeads54158000007156717'
+              method={method}
+              // method='POST'
+              acceptCharset='UTF-8'
+            >
+              <input
+                type='text'
+                className='hidden'
+                name='xnQsjsdp'
+                value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+              />
+              <input type='hidden' name='zc_gad' id='zc_gad' value='' />
+              <input
+                type='text'
+                className='hidden'
+                name='xmIwtLD'
+                value='3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283'
+              />
+              <input
+                type='text'
+                className='hidden'
+                name='actionType'
+                value='TGVhZHM='
+              />
+              <input
+                type='text'
+                className='hidden'
+                name='returnURL'
+                value='https://www.saboomaruti.in/'
+              />
+              <div className='grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-4'>
+                <div>
+                  <input
+                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                    placeholder='Name'
+                    id='Last_Name'
+                    name='Last Name'
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
                 </div>
-              </form>
+                <div>
+                  <input
+                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                    placeholder='Phone'
+                    minlength='10'
+                    maxlength='10'
+                    id='Mobile'
+                    name='Phone'
+                    value={phone}
+                    onChange={(e) =>
+                      setPhone(
+                        e.target.value.replace(/[^1-9 ]/g, '') &&
+                          e.target.value.replace(/ /g, '')
+                      )
+                    }
+                  />
+                </div>
 
-              <div className='flex-grow max-w-md'>
-                <p className='text-gray-900 mb-2 p-2 mb-10 text-xs'>
-                  <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
-                  <a
-                    href='/maruti-car-terms-and-conditions'
-                    className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                <div>
+                  <select
+                    id='LEADCF6'
+                    name='LEADCF6'
+                    onChange={(e) => setModel(e.target.value)}
+                    className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                   >
-                    Terms and Conditions
-                  </a>
-                </p>
+                    <option>Select Model</option>
+                    <option value='ALTO'>ALTO</option>
+                    <option value='ALTO K10'>ALTO K10</option>
+                    <option value='WAGON R'>WAGON R</option>
+                    <option value='CELERIO'>CELERIO</option>
+                    <option value='SWIFT'>SWIFT</option>
+                    <option value='DZIRE'>DZIRE</option>
+                    <option value='S-PRESSO'>S-PRESSO</option>
+                    <option value='ERTIGA'>ERTIGA</option>
+                    <option value='BREZZA'>BREZZA</option>
+                    <option value='EECO'>EECO</option>
+                  </select>
+                </div>
+                <div>
+                  <select
+                    id='LEADCF23'
+                    name='LEADCF23'
+                    onChange={(e) => setOutlet(e.target.value)}
+                    className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  >
+                    <option>Select Outlet</option>
+                    <option value='Somajiguda'>Somajiguda</option>
+                    <option value='Malakpet'>Malakpet</option>
+                    <option value='Secunderabad'>Secunderabad</option>
+                    <option value='Kushaiguda'>Kushaiguda</option>
+                    <option value='Kompally'>Kompally</option>
+                    <option value='Shamirpet'>Shamirpet</option>
+                    <option value='Narsingi'>Narsingi</option>
+                    <option value='Kodangal'>Kodangal</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className='text-gray-900 mb-2 p-2 mb-10 text-xs'>
+                <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
+                <a
+                  href='/maruti-car-terms-and-conditions'
+                  className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                >
+                  Terms and Conditions
+                </a>
+              </div>
+              <div className='flex items-center justify-center'>
                 <button
                   type='submit'
                   onClick={handleSubmit}
-                  className='h-10 inline-flex justify-center mr-3 py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                  className='h-10 inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 >
                   {loading ? (
                     <div className='flex items-center justify-center'>
@@ -631,7 +611,7 @@ function LeadPopup() {
                   )}
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
