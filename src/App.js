@@ -22,7 +22,6 @@ import Finance from './screens/services/Finance';
 import Corporate from './screens/services/Corporate';
 import ServiceSubscribe from './screens/services/ServiceSubscribe';
 import DrivingSchool from './screens/services/DrivingSchool';
-import loginkey from './assets/login_key.svg';
 
 //confetti
 // import Confetti from 'react-confetti';
@@ -56,7 +55,7 @@ import Toursdzire from './screens/Tour/TourS';
 import Tourveeco from './screens/Tour/TourV';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { IoCloseCircle, IoLogoWhatsapp } from 'react-icons/io5';
+import { IoCloseCircle } from 'react-icons/io5';
 // import { BsTelephoneForward } from 'react-icons/bs';
 import { Transition, Dialog } from '@headlessui/react';
 import axios from 'axios';
@@ -78,10 +77,10 @@ import BrezzaCNG from './screens/CNG/BrezzaCNG';
 import PriceList from './screens/more/PriceList';
 import AccessoryTest from './screens/more/AccessoryTest';
 import AwardsTest from './screens/more/AwardsTest';
-import { Login } from '@emotion-icons/heroicons-outline';
+// import { Login } from '@emotion-icons/heroicons-outline';
 import LoginPage from './screens/Login/Login';
-import CareersPage from './screens/Careers/Careers';
-import ApplicationForm from './screens/Careers/Careers';
+// import CareersPage from './screens/Careers/Careers';
+// import ApplicationForm from './screens/Careers/Careers';
 import Careers from './screens/Careers/Careers';
 // import CarEnquiry from './components/home/CarEnquiry';
 
@@ -206,14 +205,17 @@ function App() {
               leaveFrom='opacity-100 translate-y-0 sm:scale-100'
               leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
             >
-              <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full'>
+              <div className='relative inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full'>
                 <div className='bg-blue-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
                   <div className='text-left'>
                     <button
                       className='absolute right-2 top-2 outline-none'
                       onClick={() => setOpen(false)}
                     >
-                      <IoCloseCircle size={28} className='text-red-600' />
+                      <IoCloseCircle
+                        size={28}
+                        className='text-red-600 hover:text-red-900'
+                      />
                     </button>
 
                     <img
@@ -222,9 +224,11 @@ function App() {
                       className='w-100 h-30'
                     />
                     <h4 className='text-center text-gray-900 font-normal text-xl mt-4'>
-                      <span className='text-sm'>Welcome to RKS Motor</span>{' '}
+                      <span className='text-sm text-lg'>
+                        Welcome to RKS Motor
+                      </span>{' '}
                       <br></br>
-                      <span className='text-blue-900 font-semibold'>
+                      <span className='text-blue-900 font-semibold text-3xl'>
                         Explore our wide range of cars and find the perfect ride
                         for you!
                       </span>
@@ -482,28 +486,29 @@ function LeadPopup() {
   }
   return (
     <>
-      <div className='mx-5'>
+      <div className='max-w-4xl p-2'>
         <div className=' text-gray-900 py-1 mt-12'>
           <div className='container mx-auto space-y-6 lg:px-0 px-5'>
             <form
               action='https://crm.zoho.in/crm/WebToLeadForm'
-              name='WebToLeads54158000007156717'
+              name='WebToLeads54158000083979838'
               method={method}
               // method='POST'
               acceptCharset='UTF-8'
             >
+              <div></div>
               <input
                 type='text'
                 className='hidden'
                 name='xnQsjsdp'
-                value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+                value='c74cc4baa2079f2637d12188693a8bb7a822a54f015337983612fcbc54e9f529'
               />
               <input type='hidden' name='zc_gad' id='zc_gad' value='' />
               <input
                 type='text'
                 className='hidden'
                 name='xmIwtLD'
-                value='3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283'
+                value='adcef2507910e0e3ba3fffde446eb242f3dba817a00c872b6a7d471bc1ce61d0bd840c68a483b37a9012f6016a3ceeb4'
               />
               <input
                 type='text'
@@ -517,11 +522,14 @@ function LeadPopup() {
                 name='returnURL'
                 value='https://www.saboomaruti.in/'
               />
-              <div className='grid lg:grid-cols-1 md:grid-cols-2 grid-cols-1 gap-4'>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4'>
                 <div>
+                  <label className='block text-sm font-light text-gray-700'>
+                    Name
+                  </label>
                   <input
                     className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                    placeholder='Name'
+                    placeholder='Enter your name'
                     id='Last_Name'
                     name='Last Name'
                     onChange={(e) => setName(e.target.value)}
@@ -529,9 +537,12 @@ function LeadPopup() {
                   />
                 </div>
                 <div>
+                  <label className='block text-sm font-light text-gray-700'>
+                    Phone
+                  </label>
                   <input
                     className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                    placeholder='Phone'
+                    placeholder='Enter your phone number'
                     minlength='10'
                     maxlength='10'
                     id='Mobile'
@@ -547,6 +558,9 @@ function LeadPopup() {
                 </div>
 
                 <div>
+                  <label className='block text-sm font-light text-gray-700'>
+                    Model
+                  </label>
                   <select
                     id='LEADCF6'
                     name='LEADCF6'
@@ -567,6 +581,9 @@ function LeadPopup() {
                   </select>
                 </div>
                 <div>
+                  <label className='block text-sm font-light text-gray-700'>
+                    Outlet
+                  </label>
                   <select
                     id='LEADCF23'
                     name='LEADCF23'
@@ -586,24 +603,25 @@ function LeadPopup() {
                 </div>
               </div>
 
-              <div className='text-gray-900 mb-2 p-2 mb-10 text-xs'>
-                <span className='font-semibold'>Disclaimer :</span> I agree to{' '}
+              <div className='text-gray-900 mb-7 p-2 text-xs'>
+                <span className='font-semibold'>Disclaimer :</span> By clicking
+                'SUBMIT',&nbsp; you agree to our
                 <a
                   href='/maruti-car-terms-and-conditions'
-                  className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'
+                  className=' text-blue-600 hover:text-blue-800 visited:text-purple-600'
                 >
-                  Terms and Conditions
+                  &nbsp;Terms and Conditions
                 </a>
               </div>
-              <div className='flex items-center justify-center'>
+              <div className='flex flex-col items-center'>
                 <button
                   type='submit'
                   onClick={handleSubmit}
-                  className='h-10 inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                  className='w-full mb-3 sm:mb-0 sm:ml-3 sm:w-auto sm:text-sm inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                 >
                   {loading ? (
                     <div className='flex items-center justify-center'>
-                      <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                      <CgSpinner className='animate-spin h-5 mr-2 text-white' />
                       Loading
                     </div>
                   ) : (

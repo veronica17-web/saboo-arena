@@ -212,19 +212,19 @@ function CarEnquiry() {
                     id='LDTuvid'
                     name='LDTuvid'
                   />
-                  <Dialog.Panel className='relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full'>
-                    <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
+                  <Dialog.Panel className='relative bg-blue-200 p-4 text-left  rounded-2xl overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full '>
+                    <div className='bg-blue-200 px-4 pt-5 pb-4 sm:p-6 sm:pb-4 lg:p-10'>
                       <div className='mt-3'>
                         <Dialog.Title
                           as='h3'
-                          className='text-lg leading-6 font-medium text-gray-900 text-center'
+                          className='text-lg leading-6 font-medium text-blue-900 text-center'
                         >
                           Book A Test Drive / Get Offers
                         </Dialog.Title>
                         <div className='mt-2 space-y-3'>
-                          <div className='mt-2  space-y-3'>
-                            <div>
-                              <label className='block text-sm font-medium text-gray-700'>
+                          <div className='mt-2 space-y-3'>
+                            <div className=''>
+                              <label className='block text-sm font-light text-gray-700'>
                                 Name
                               </label>
                               <input
@@ -238,7 +238,7 @@ function CarEnquiry() {
                             </div>
 
                             <div>
-                              <label className='block text-sm font-medium text-gray-700'>
+                              <label className='block text-sm font-light text-gray-700'>
                                 Email
                               </label>
                               <input
@@ -252,11 +252,11 @@ function CarEnquiry() {
                             </div>
 
                             <div>
-                              <label className='block text-sm font-medium text-gray-700'>
+                              <label className='block text-sm font-light text-gray-700'>
                                 Phone
                               </label>
                               <input
-                                className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
+                                className='mt-1 px-2 focus:ring-blue-200 focus:border-blue-200 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                                 type='text'
                                 maxLength='10'
                                 minLength='10'
@@ -286,7 +286,7 @@ function CarEnquiry() {
                             </div>
 
                             <div>
-                              <label className='block text-sm font-medium text-gray-700'>
+                              <label className='block text-sm font-light text-gray-700'>
                                 Model
                               </label>
                               <select
@@ -340,7 +340,7 @@ function CarEnquiry() {
                             </label>
                           </div> */}
                           <div className='flex items-start '>
-                            <div className='ml-2  text-sm'>
+                            <div className='ml-2 italic text-xs'>
                               <label
                                 htmlFor='disclaimer'
                                 className='font-medium text-gray-700'
@@ -348,16 +348,16 @@ function CarEnquiry() {
                                 <span className='text-black font-bold'>
                                   Disclaimer
                                 </span>
-                                <span className='text-black'>
-                                  : By clicking 'SUBMIT', you have agreed to our
+                                <span className='text-black font-light text-xs'>
+                                  : By clicking 'SUBMIT',&nbsp; you agree to our
                                 </span>
                                 <a
                                   href='/maruti-car-terms-and-conditions'
                                   target='_blank'
                                   rel='noopener noreferrer'
-                                  className='px-2  text-sm  text-red-600 '
+                                  className='font-semibold text-xs  text-red-600 '
                                 >
-                                  Terms and Conditions
+                                  &nbsp;Terms and Conditions
                                 </a>
                               </label>
                             </div>
@@ -365,7 +365,7 @@ function CarEnquiry() {
                         </div>
                       </div>
                     </div>
-                    <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
+                    <div className='bg-blue-200 px-2 py-5 pt-1 pd-2 sm:px-6 sm:flex sm:flex-row-reverse flex flex-col items-center justify-center'>
                       <button
                         type='submit'
                         disabled={
@@ -374,13 +374,14 @@ function CarEnquiry() {
                             : true
                         }
                         onClick={handleSubmit}
-                        className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
+                        className='w-full mb-2 sm:mb-0 sm:ml-2 sm:w-1/3 sm:text-sm inline-flex justify-center rounded-md border border-transparent px-3 py-2 bg-blue-900 shadow-md text-base font-medium text-white hover:bg-green-700 focus:outline-none'
                       >
                         Submit
                       </button>
+
                       <button
                         type='button'
-                        className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+                        className='w-full inline-flex justify-center rounded-md border-solid border-blue-900 border shadow-md px-3 py-2 bg-blue-200 text-base font-medium text-blue-900 hover:bg-red-700 hover:border-red-700 hover:text-white focus:outline-none sm:w-1/3 sm:text-sm'
                         onClick={() => setOpen(false)}
                         ref={cancelButtonRef}
                       >

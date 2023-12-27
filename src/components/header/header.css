@@ -44,14 +44,14 @@
     user-select: none;
   }
 
-  .menu-item>a {
+  .menu-item > a {
     color: #fff;
     font-size: 1em;
-    margin: 0 20px;
+    margin: 0 15px;
     padding: 25px 0;
   }
 
-  .menu-item>a:hover {
+  .menu-item > a:hover {
     color: #fff;
   }
 
@@ -103,22 +103,28 @@
   }
 
   .menu-item .sub-menu .cng:hover {
-    background: linear-gradient(90deg,
-        #28a745 33%,
-        rgb(0 212 255 / 70%) 100%) !important;
+    background: linear-gradient(
+      90deg,
+      #28a745 33%,
+      rgb(0 212 255 / 70%) 100%
+    ) !important;
   }
 
   /* arena */
   .menu-item .sub-menu .arena:hover {
-    background: linear-gradient(90deg,
-        #121aad 33%,
-        rgb(0 212 255 / 70%) 100%) !important;
+    background: linear-gradient(
+      90deg,
+      #121aad 33%,
+      rgb(0 212 255 / 70%) 100%
+    ) !important;
   }
 
   .menu-item .sub-menu .tour:hover {
-    background: linear-gradient(90deg,
-        #121aad 33%,
-        rgb(0 212 255 / 70%) 100%) !important;
+    background: linear-gradient(
+      90deg,
+      #121aad 33%,
+      rgb(0 212 255 / 70%) 100%
+    ) !important;
   }
 
   .menu-item .sub-menu .sub-item:last-child:hover {
@@ -155,14 +161,11 @@
   .more .more-menu .more-item:hover {
     background: #4080ef;
   }
-
-
 }
 
 /* min width closes */
 
 @media (max-width: 1024px) {
-
   .main_header_01,
   .is-sticky {
     display: none;

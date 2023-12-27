@@ -13,10 +13,16 @@ function ArenaCars() {
         className='w-full lg:mt-20'
         alt='banner'
       />
-      <p className='text-red-500 text-center text-2xl mt-4'>Maruti Cars</p>
-      <p className='text-sm text-center mb-4 px-5'>
-        Our professional and well trained staff is ready to assist you.
-      </p>
+      <div className='m-10'>
+        {' '}
+        <p className='text-red-500 text-center text-2xl mt-4'>
+          Explore the Unrivaled Excellence of Maruti Suzuki Arena Cars
+        </p>
+        <p className='text-sm text-center mb-4 px-5 font-light text-gray-500'>
+          Our professional and well trained staff is ready to assist you.
+        </p>
+      </div>
+
       <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto px-5 pb-5'>
         {products.map((item, index) => (
           <div

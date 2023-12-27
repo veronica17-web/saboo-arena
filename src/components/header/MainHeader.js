@@ -174,14 +174,14 @@ function MainHeader() {
       <div className='navigation'>
         <ul className='menu'>
           {navigation.pages.map((page, index) => (
-            <li className='menu-item font-semibold' key={index}>
+            <li className='menu-item font-normal' key={index}>
               <Link to={page.to}>{page.name}</Link>
             </li>
           ))}
           <li className='menu-item'>
             <a
               href='javascript:void(0)'
-              className='flex items-center sub-btn font-semibold'
+              className='flex items-center sub-btn font-normal'
             >
               Vehicles <ChevronDownIcon className='h-4 w-6' />
             </a>
@@ -233,7 +233,7 @@ function MainHeader() {
           <li className='menu-item'>
             <a
               href='javascript:void(0)'
-              className='flex items-center sub-btn font-semibold'
+              className='flex items-center sub-btn font-normal'
             >
               Services <ChevronDownIcon className='h-4 w-6' />
             </a>
@@ -248,7 +248,7 @@ function MainHeader() {
           <li className='menu-item'>
             <a
               href='javascript:void(0)'
-              className='flex items-center sub-btn font-semibold'
+              className='flex items-center sub-btn font-normal'
             >
               Outlets <ChevronDownIcon className='h-4 w-6' />
             </a>
@@ -263,7 +263,7 @@ function MainHeader() {
           <li className='menu-item'>
             <a
               href='javascript:void(0)'
-              className='flex items-center sub-btn font-semibold'
+              className='flex items-center sub-btn font-normal'
             >
               More <ChevronDownIcon className='h-4 w-6' />
             </a>

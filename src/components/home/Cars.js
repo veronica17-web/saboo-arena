@@ -11,7 +11,7 @@ function Cars() {
           <div className='flex items-center justify-center my-3'>
             <Link
               to='/maruti-suzuki-car-offers-page'
-              className='animate-pulse bg-blue-800 text-white py-2 font-light tracking-wide px-4 md:px-6 md:py-2 text-sm md:text-base rounded hover:bg-rose-700 hover:border-red duration-300 ease-in'
+              className=' bg-blue-800 text-white py-2 font-light tracking-wide px-4 md:px-6 md:py-2 text-sm md:text-base rounded hover:bg-rose-700 hover:border-red duration-300 ease-in'
             >
               View Offers
             </Link>
@@ -85,7 +85,7 @@ const VehicleProducts = () => {
                 <div className='flex items-center justify-center space-x-2 p-2.5 mb-2'>
                   <Link
                     to='/compare-cars'
-                    className='bg-blue-800 hover:bg-rose-700 hover:border hover:text-red duration-300 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded bg-gradient-to-b from-blue-900 to-blue-500 '
+                    className='bg-blue-800 hover:bg-rose-700 hover:border  duration-100 ease-in text-white p-2 text-sm uppercase w-full max-w-[44%] text-center rounded  '
                   >
                     Compare
                   </Link>
@@ -93,7 +93,7 @@ const VehicleProducts = () => {
                     href={item.brouchure}
                     target='_blank'
                     rel='noreferrer'
-                    className='border border-black  p-2 max-w-[44%] w-full text-center text-sm uppercase rounded'
+                    className='border border-blue-900 text-blue-900 hover:border-red-900  hover:text-red-900 p-2 max-w-[44%] w-full text-center text-sm uppercase rounded'
                   >
                     Brochure
                   </a>
