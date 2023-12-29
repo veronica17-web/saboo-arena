@@ -12,7 +12,7 @@ import { CgSpinner } from 'react-icons/cg';
 import { Helmet } from 'react-helmet';
 
 function TourS() {
-  const [price, setPrice] = useState('6,21,000');
+  const [price, setPrice] = useState('6,51,000');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
