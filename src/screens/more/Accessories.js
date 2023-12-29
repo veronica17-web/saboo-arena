@@ -1,25 +1,26 @@
 import Header from '../../components/header/Header';
-import React, { useRef, useState, Fragment } from 'react';
+import React, { useRef, useState, useEffect, Fragment, useMemo } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { toast } from 'react-toastify';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper';
 import { Newaccesoriessliders } from '../../constants';
 import { Helmet } from 'react-helmet';
+import axios from 'axios';
+import { CgSpinner } from 'react-icons/cg';
 
 const Accessory = () => {
   const navigationPrevRef = useRef(null);
   const navigationNextRef = useRef(null);
-  const [phone, setPhone] = useState('');
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
-      });
-    }
-  }
+  // const pattern = /^[6-9][0-9]{6,9}$/;
+  // if (phone !== '' && phone.length === 10) {
+  //   if (!pattern.test(phone)) {
+  //     toast.error('Enter valid phone number', {
+  //       theme: 'colored',
+  //     });
+  //   }
+  // }
 
   return (
     <>
@@ -63,7 +64,7 @@ const Accessory = () => {
           <h1 className='text-xl md:text-2xl lg:text-3xl pt-2 font-semibold'>
             ACCESSORIES
           </h1>
-          <p className='text-xl md:text-xl lg:text-xl p-2'>
+          <p className='text-xl md:text-2xl lg:text-2xl p-2'>
             Explore a World of Stylish Accessories for Every Occasion
           </p>
         </div>
@@ -76,16 +77,92 @@ const Accessory = () => {
 export function CardDefault({ cardData }) {
   const { imageUrl, title, price, description } = cardData;
   const [open, setOpen] = useState(false);
+
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
-  if (phone !== '' && phone.length === 10) {
-    if (!pattern.test(phone)) {
-      toast.error('Enter valid phone number', {
-        theme: 'colored',
+  const [model, setModel] = useState('');
+  const [method, setMethod] = useState();
+  const [loader, setLoader] = useState(false);
+  // const [outlet, setOutlet] = useState('');
+  const [showToast, setShowToast] = useState(false);
+  function handleSubmit() {
+    setLoader(true);
+
+    // First API call
+    axios
+      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+        name: name,
+        // email: email,
+        phone: phone,
+        model: model,
+        // outlet: outlet,
+      })
+      .then((res) => {
+        setMethod('POST');
+        toast.success('Enquiry sent successfully');
+      })
+      .catch((err) => {
+        setLoader(false);
+        toast.error('Something went wrong!');
+        console.log(err);
       });
-    }
+
+    // Second API call
+    axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+      Our Sales consultant will contact you shortly.
+      
+      Regards
+      RKS Motor Pvt. Ltd.
+      98488 98488
+      www.saboomaruti.in
+      www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        // Handle the response from the SMS API if needed
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        // Handle errors from the SMS API if needed
+      })
+      .finally(() => {
+        setLoader(false);
+      });
   }
+
+  // const pattern = /^[6-9][0-9]{6,9}$/;
+  // if (phone !== '' && phone.length === 10) {
+  //   if (!pattern.test(phone)) {
+  //     toast.error('Enter valid phone number', {
+  //       theme: 'colored',
+  //     });
+  //   }
+  // }
+
+  const pattern = useMemo(() => {
+    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  }, []);
+
+  useEffect(() => {
+    if (
+      phone !== '' &&
+      phone.length === 10 &&
+      !pattern.test(phone) &&
+      !loader
+    ) {
+      if (!showToast) {
+        toast.error('Enter a valid phone number', {
+          theme: 'colored',
+        });
+        setShowToast(true);
+      }
+    } else {
+      setShowToast(false);
+    }
+  }, [phone, pattern, loader, showToast]);
 
   const cancelButtonRef = useRef(null);
 
@@ -152,7 +229,7 @@ export function CardDefault({ cardData }) {
             </div>
             <button
               onClick={() => setOpen(true)}
-              className='bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-900 active:bg-blue-700 transition duration-300'
+              className='bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-500 focus:outline-none  focus:ring-blue-900 active:bg-blue-700 transition duration-300'
             >
               Buy Now
             </button>
@@ -193,7 +270,7 @@ export function CardDefault({ cardData }) {
                 <form
                   action='https://crm.zoho.in/crm/WebToLeadForm'
                   name='WebToLeads54158000000752015'
-                  method='POST'
+                  method={method}
                   acceptCharset='UTF-8'
                 >
                   <input
@@ -234,11 +311,11 @@ export function CardDefault({ cardData }) {
                     name='LDTuvid'
                   />
                   <Dialog.Panel className='relative bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:max-w-lg sm:w-full'>
-                    <div className='bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
+                    <div className='bg-blue-100 px-4 pt-5 pb-4 sm:p-6 sm:pb-4'>
                       <div className='mt-3'>
                         <Dialog.Title
                           as='h3'
-                          className='text-lg leading-6 font-medium text-gray-900 text-center'
+                          className='text-2xl leading-6 font-medium text-blue-900 text-center'
                         >
                           Explore our accessory options for an upgrade!
                         </Dialog.Title>
@@ -252,6 +329,7 @@ export function CardDefault({ cardData }) {
                                 type='text'
                                 id='Last_Name'
                                 name='Last Name'
+                                onChange={(e) => setName(e.target.value)}
                                 required
                                 className='mt-1 px-2 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border border-gray-600 rounded-md h-10'
                               />
@@ -306,6 +384,7 @@ export function CardDefault({ cardData }) {
                               <select
                                 id='LEADCF6'
                                 name='LEADCF6'
+                                onChange={(e) => setModel(e.target.value)}
                                 required
                                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                               >
@@ -328,7 +407,7 @@ export function CardDefault({ cardData }) {
                             </div>
                           </div>
 
-                          <div className='flex items-center space-x-2 mb-5'>
+                          <div className='flex items-center space-x-2 mb-5 text-xs'>
                             <p className='text-gray-900 mb-2 mt-1'>
                               <span className='font-semibold'>
                                 Disclaimer :
@@ -342,16 +421,31 @@ export function CardDefault({ cardData }) {
                         </div>
                       </div>
                     </div>
-                    <div className='bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
+                    <div className='bg-blue-100 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse'>
                       <button
+                        className='h-10 inline-flex justify-center mr-3 py-2 px-4  mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-900 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
                         type='submit'
-                        className='w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none sm:ml-3 sm:w-auto sm:text-sm'
+                        disabled={
+                          pattern.test(phone) && phone.length === 10
+                            ? false
+                            : true
+                        }
+                        onClick={handleSubmit}
+                        // type='submit'
+                        // onClick={handleSubmit}
                       >
-                        Submit
+                        {loader ? (
+                          <div className='flex items-center justify-center'>
+                            <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                            Loading
+                          </div>
+                        ) : (
+                          'SUBMIT'
+                        )}
                       </button>
                       <button
                         type='button'
-                        className='mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 focus:outline-none  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm'
+                        className='h-10 inline-flex justify-center mr-3 py-2 px-4  mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-black bg-gray-300 hover:bg-red-700 hover:text-white focus:outline-none focus:ring-offset-1 focus:ring-black'
                         onClick={() => setOpen(false)}
                         ref={cancelButtonRef}
                       >
