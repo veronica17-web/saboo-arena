@@ -86,7 +86,7 @@ import Careers from './screens/Careers/Careers';
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   const ScrollTop = () => {
     const { pathname } = useLocation();
@@ -103,8 +103,8 @@ function App() {
   };
 
   const Popup = () => {
-    const [number, setNumber] = useState('');
-    const [methodpopup, setMethodPopup] = useState();
+    // const [number, setNumber] = useState('');
+    // const [methodpopup, setMethodPopup] = useState();
 
     // function handleSubmit() {
     //   setLoading(true);
@@ -145,15 +145,15 @@ function App() {
     //   setLoading(false);
     // }
 
-    const pattern = /^[6-9][0-9]{6,9}$/;
-    if (number !== '' && number.length === 10) {
-      if (!pattern.test(number)) {
-        sessionStorage.setItem('popup', 'false');
-        toast.error('Enter valid phone number', {
-          theme: 'colored',
-        });
-      }
-    }
+    // const pattern = /^[6-9][0-9]{6,9}$/;
+    // if (number !== '' && number.length === 10) {
+    //   if (!pattern.test(number)) {
+    //     sessionStorage.setItem('popup', 'false');
+    //     toast.error('Enter valid phone number', {
+    //       theme: 'colored',
+    //     });
+    //   }
+    // }
 
     // function handleSubmit() {
     //   setLoading(true);
@@ -426,74 +426,113 @@ function LeadPopup() {
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
   const [outlet, setOutlet] = useState('');
-  const [method, setMethod] = useState('');
+  // const [method, setMethod] = useState('');
   const [loading, setLoading] = useState(false);
+  // const [email, setEmail] = useState('noname@gmail.com');
+  const [submitted, setSubmitted] = useState(false);
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setLoading(true);
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          // email: email,
+          model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
+
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/popup', {
+          name: name,
+          phone: phone,
+          // email: email,
+          model: model,
+          outlet: outlet
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
+
+    // Second API call
+    await axios
+      .get(
+        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
+      )
+      .then((res) => {
+        console.log('SMS API Response:', res.data);
+        setSubmitted(true);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error sending SMS:', err);
+        setSubmitted(true);
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
+    }
+  }, [submitted]);
+
+  // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
-      sessionStorage.setItem('popup', 'false');
       toast.error('Enter valid phone number', {
         theme: 'colored',
       });
     }
   }
 
-  function handleSubmit() {
-    setLoading(true);
-
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
-
-    // Second API call
-    axios
-      .get(
-        `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
-      )
-      .then((res) => {
-        console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
-      })
-      .catch((err) => {
-        console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
   return (
     <>
       <div className='max-w-4xl p-2'>
         <div className=' text-gray-900 py-1 mt-12'>
           <div className='container mx-auto space-y-6 lg:px-0 px-5'>
             <form
-              action='https://crm.zoho.in/crm/WebToLeadForm'
+              id='arenaCarEnq2'
+              action={
+                pattern.test(phone) && phone.length === 10
+                  ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                  : '#'
+              }
               name='WebToLeads54158000083979838'
-              method={method}
-              // method='POST'
+              method={'POST'}
               acceptCharset='UTF-8'
             >
               <div></div>
@@ -545,16 +584,28 @@ function LeadPopup() {
                     placeholder='Enter your phone number'
                     minlength='10'
                     maxlength='10'
-                    id='Mobile'
+                    id='Phone'
                     name='Phone'
                     value={phone}
+                    required
+                    minLength="10"
+                    maxLength="10"
                     onChange={(e) =>
                       setPhone(
-                        e.target.value.replace(/[^1-9 ]/g, '') &&
-                          e.target.value.replace(/ /g, '')
+                        e.target.value.replace(/[^1-9 ]/g, "") &&
+                          e.target.value.replace(/ /g, "")
                       )
                     }
                   />
+                   {phone.length > 7 && phone.length < 10 ? (
+                <small className="text-red-500">
+                  Phone number must be 10 digits
+                </small>
+              ) : !pattern.test(phone) && phone.length === 10 ? (
+                <small className="text-red-500">Phone number is invalid</small>
+              ) : (
+                ""
+              )}
                 </div>
 
                 <div>
