@@ -4,7 +4,6 @@ const serviceCenterBanner = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_04.webp',
   // },
 
-
   // {
   //   id: 2,
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/nexa/banners/Maruti_Suzuki_Service_Navratri_dussehra_Saboo_RKS_Motor_02.webp',
@@ -12,6 +11,10 @@ const serviceCenterBanner = [
   {
     id: 2,
     img: require('../assets/banners/Maruti-Suzuki-Arena-December-Year-end-2023-Book-Your-Car-for-Service.webp'),
+  },
+  {
+    id: 3,
+    img: require('../assets/banners/Maruti-Suzuki-Book-A-Service-in-Somajiguda-Hyderabad-2023.webp'),
   },
 ];
 

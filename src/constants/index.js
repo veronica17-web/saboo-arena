@@ -1,7 +1,10 @@
 export const sliders = [
   {
-    img: require('../assets/banners/new/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
-    alt: 'Maruti Suzuki Year End Saboo RKS Motor December Offers',
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-banner-2024.webp'),
+    alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
+  },
+  {
+    img: require('../assets/banners/Maruti-Suzuki-Book-A-Service-in-Somajiguda-Hyderabad-2023.webp'),
   },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/saboo-driving-school-december-2023.webp',
@@ -75,8 +78,8 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: require('../assets/banners/new/Mobile Banner/Website_Mobile_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
-    alt: 'Maruti Suzuki Year End  2023 Saboo RKS Motor December Offers',
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.jpg.webp'),
+    alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
   },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_02.webp',

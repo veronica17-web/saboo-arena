@@ -463,7 +463,7 @@ function LeadPopup() {
           phone: phone,
           // email: email,
           model: model,
-          outlet: outlet
+          outlet: outlet,
         })
         .then((res) => {
           toast.success('Enquiry sent successfully');
@@ -588,24 +588,26 @@ function LeadPopup() {
                     name='Phone'
                     value={phone}
                     required
-                    minLength="10"
-                    maxLength="10"
+                    minLength='10'
+                    maxLength='10'
                     onChange={(e) =>
                       setPhone(
-                        e.target.value.replace(/[^1-9 ]/g, "") &&
-                          e.target.value.replace(/ /g, "")
+                        e.target.value.replace(/[^1-9 ]/g, '') &&
+                          e.target.value.replace(/ /g, '')
                       )
                     }
                   />
-                   {phone.length > 7 && phone.length < 10 ? (
-                <small className="text-red-500">
-                  Phone number must be 10 digits
-                </small>
-              ) : !pattern.test(phone) && phone.length === 10 ? (
-                <small className="text-red-500">Phone number is invalid</small>
-              ) : (
-                ""
-              )}
+                  {phone.length > 7 && phone.length < 10 ? (
+                    <small className='text-red-500'>
+                      Phone number must be 10 digits
+                    </small>
+                  ) : !pattern.test(phone) && phone.length === 10 ? (
+                    <small className='text-red-500'>
+                      Phone number is invalid
+                    </small>
+                  ) : (
+                    ''
+                  )}
                 </div>
 
                 <div>
