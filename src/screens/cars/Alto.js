@@ -18,84 +18,105 @@ import { toast } from 'react-toastify';
 
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
+
 // import { showrooms } from "../../constants";
 
 export function Alto() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [model, setModel] = useState('');
-  const [method, setMethod] = useState();
+  // const [method, setMethod] = useState();
   const [loading, setLoading] = useState(false);
   const [outlet, setOutlet] = useState('');
+  const [submitted, setSubmitted] = useState(false);
   // Inside your component function
-  const [showToast, setShowToast] = useState(false);
+  // const [showToast, setShowToast] = useState(false);
 
-  function handleSubmit() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          // email: email,
+          model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/popup', {
+          name: name,
+          phone: phone,
+          // email: email,
+          model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
+  };
 
   useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
     }
-  }, [phone, pattern, loading, showToast]);
+  }, [submitted]);
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
+  }
 
   return (
     <>
@@ -158,6 +179,7 @@ export function Alto() {
         <Table />
         <PriceTable />
       </div>
+
       <div className='bg-[#1b72b7] py-12 mt-12'>
         <div className='container mx-auto space-y-5 lg:px-0 px-5'>
           <h3 className='text-xl font-normal text-white normal-case'>
@@ -165,10 +187,14 @@ export function Alto() {
             experience!
           </h3>
           <form
-            action='https://crm.zoho.in/crm/WebToLeadForm'
+            id='arenaCarEnq2'
+            action={
+              pattern.test(phone) && phone.length === 10
+                ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                : '#'
+            }
             name='WebToLeads54158000083979838'
-            method={method}
-            // method='POST'
+            method={'POST'}
             acceptCharset='UTF-8'
           >
             <input
@@ -210,13 +236,15 @@ export function Alto() {
               <div>
                 <input
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                  placeholder='Phone'
-                  value={phone}
-                  id='Mobile'
-                  name='Phone'
-                  required
+                  placeholder='Enter your phone number'
                   minlength='10'
                   maxlength='10'
+                  id='Phone'
+                  name='Phone'
+                  value={phone}
+                  required
+                  minLength='10'
+                  maxLength='10'
                   onChange={(e) =>
                     setPhone(
                       e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -224,7 +252,7 @@ export function Alto() {
                     )
                   }
                 />
-                {phone.length > 0 && phone.length < 10 ? (
+                {phone.length > 7 && phone.length < 10 ? (
                   <small className='text-red-500'>
                     Phone number must be 10 digits
                   </small>
@@ -298,18 +326,13 @@ export function Alto() {
               Representatives on my ‘Mobile’
             </p> */}
             <button
-              className='h-10 inline-flex justify-center mr-3 py-2 px-4 mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
               type='submit'
-              disabled={
-                pattern.test(phone) && phone.length === 10 ? false : true
-              }
               onClick={handleSubmit}
-              // type='submit'
-              // onClick={handleSubmit}
+              className='h-10 inline-flex justify-center mr-3 py-2 px-4  mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
             >
               {loading ? (
                 <div className='flex items-center justify-center'>
-                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
+                  <CgSpinner className='animate-spin h-5 mr-2 text-white' />
                   Loading
                 </div>
               ) : (

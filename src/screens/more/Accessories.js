@@ -221,12 +221,12 @@ export function CardDefault({ cardData }) {
           <div className='mb-2'>
             <h2 className='text-lg font-semibold text-gray-900'>{title}</h2>
           </div>
-          <p className='text-gray-600 font-normal'>{description}</p>
+          <p className='text-gray-600 font-normal text-sm'>{description}</p>
           <div className='mt-4 flex items-center justify-between'>
-            <div className='text-blue-700 font-medium text-lg'>
+            {/* <div className='text-blue-700 font-medium text-lg'>
               ₹ {price}
               <span className=''>*</span>
-            </div>
+            </div> */}
             <button
               onClick={() => setOpen(true)}
               className='bg-blue-700 text-white py-2 px-4 rounded-lg hover:bg-blue-500 focus:outline-none  focus:ring-blue-900 active:bg-blue-700 transition duration-300'
@@ -670,34 +670,7 @@ const tabsData = [
         description: '990J0M53M00-020',
       },
       // Line 2
-      {
-        imageUrl:
-          'https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/old_20210309/q6/77862m78l00-0pg_1.jpg',
-        title: 'Door Still Gaurd',
-        price: '107',
-        description: '990J0M69RP6-030',
-      },
-      {
-        imageUrl:
-          'https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/2021/05/990j0m55r00-020_1.jpg',
-        title: 'Door Still Guard',
-        price: '150',
-        description: '990J0M55R00-020',
-      },
-      {
-        imageUrl:
-          'https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/2020/11/990j0m53m00-020_1.jpg',
-        title: 'Door Still Gaurd',
-        price: '150',
-        description: '990J0M53M00-020',
-      },
-      {
-        imageUrl:
-          'https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/2020/11/990j0m53m00-020_1.jpg',
-        title: 'Real Parcel Tray',
-        price: '150',
-        description: '990J0M53M00-020',
-      },
+
       //line 3
       {
         imageUrl:
@@ -723,7 +696,7 @@ const tabsData = [
       {
         imageUrl:
           'https://marutisuzukiarenaprodcdn.azureedge.net/-/media/marutigeniuneaccessories_27112019/partsimages/2022/08/18/88910m53t00-r3f_1.jpg',
-        title: 'Door Still Guard',
+        title: 'Rear Parcel Tray',
         price: '619',
         description: '88910M53T00-R3F',
       },

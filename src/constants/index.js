@@ -153,9 +153,13 @@ export const mobileSliders = [
 
 export const offersSliders = [
   {
-    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp',
-    alt: 'Website Year End Saboo RKS Motor December Offers',
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-banner-2024.webp'),
+    alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
   },
+  // {
+  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Year_End_Saboo_RKS_Motor_December_Offers.webp',
+  //   alt: 'Website Year End Saboo RKS Motor December Offers',
+  // },
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Maruti_Suzuki_Navratri_+dussehra_Saboo_RKS_Motor_October_Offers_03.webp',
   //   alt: 'Maruti Suzuki Navratri dussehra Saboo RKS Motor October Offers ',
@@ -188,6 +192,12 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
+
+  {
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.jpg.webp'),
+    alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
+  },
+  
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
   //   alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
@@ -208,10 +218,10 @@ export const mobileOffersSliders = [
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website+Mobile+Maruti+Suzuki+Arena+Teachers+day+September+Offers+Saboo+RKS+Motor(1).webp',
   //   alt: 'sep 2023 offer teachers day',
   // },
-  {
-    img: require('../assets/banners/new/Mobile Banner/Website_Mobile_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
-    alt: 'Maruti Suzuki Year End  2023 Saboo RKS Motor December Offers',
-  },
+  // {
+  //   img: require('../assets/banners/new/Mobile Banner/Website_Mobile_Year_End_Saboo_RKS_Motor_December_Offers.webp'),
+  //   alt: 'Maruti Suzuki Year End  2023 Saboo RKS Motor December Offers',
+  // },
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/mobile_banner.webp',
     alt: 'banner-1',
