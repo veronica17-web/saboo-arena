@@ -6,6 +6,7 @@ export const sliders = [
   {
     img: require('../assets/banners/Maruti-Suzuki-Book-A-Service-in-Somajiguda-Hyderabad-2023.webp'),
   },
+
   {
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/saboo-driving-school-december-2023.webp',
     alt: 'Best Driving School in Hyderabad',
@@ -78,7 +79,7 @@ export const sliders = [
 
 export const mobileSliders = [
   {
-    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.jpg.webp'),
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.webp'),
     alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
   },
   // {
@@ -192,12 +193,11 @@ export const offersSliders = [
 ];
 
 export const mobileOffersSliders = [
-
   {
-    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.jpg.webp'),
+    img: require('../assets/banners/Maruti-Suzuki-Arena-New-Year-Mobile-banner-2024.webp'),
     alt: 'Buy New Maruti Suzuki Car in 2024 with great discount offers',
   },
-  
+
   // {
   //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/banners/Website_Mobile_Dhanteras_Saboo_RKS_Motor_November_Offers.webp',
   //   alt: 'Website Mobile Dhanteras Saboo RKS Motor November Offers',
