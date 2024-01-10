@@ -1,4 +1,4 @@
-import React, { useState, Fragment, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
@@ -11,105 +11,104 @@ import axios from 'axios';
 function Corporate() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
-
-  const [method, setMethod] = useState();
+  // const [model, setModel] = useState('Alto 800');
+  const [email, setEmail] = useState('noname@gmail.com');
+  // const [method, setMethod] = useState();
   const [loading, setLoading] = useState(false);
   const [outlet, setOutlet] = useState('');
-  const [email, setEmail] = useState('');
-  const [showToast, setShowToast] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   //testing second event
 
-  function handleSubmit2() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    if (!name || !phone || !email) {
+      toast.error('Please fill in all required fields.');
+      return;
+    }
     setLoading(true);
-    // First API call
-    axios
-      .post('https://arena-backend-zj42.onrender.com/corporate', {
-        name: name,
-        phone: phone,
-        outlet: outlet,
-        email: email,
-      })
-      .then((res) => {
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+          // model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
-  function handleSubmit() {
-    setLoading(true);
-
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-
-        outlet: outlet,
-        email: email,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+          // model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
+  };
 
   useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
     }
-  }, [phone, pattern, loading, showToast]);
+  }, [submitted]);
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
+  }
 
   return (
     <>
@@ -166,135 +165,15 @@ function Corporate() {
             Please fill out the form and we'll get back to you right away !
           </p>
 
-          {/* <form
-            action='https://crm.zoho.in/crm/WebToLeadForm'
-            name='WebToLeads54158000007156717'
-            method={method}
-            // method='POST'
-            acceptCharset='UTF-8'
-          >
-            <input
-              type='text'
-              className='hidden'
-              name='xnQsjsdp'
-              value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
-            />
-            <input type='hidden' name='zc_gad' id='zc_gad' value='' />
-            <input
-              type='text'
-              className='hidden'
-              name='xmIwtLD'
-              value='3e4c511e1bfac462fb9ac158b261b0d3a71de3d00f508dc0492cb2893d56c4b9'
-            />
-            <input
-              type='text'
-              className='hidden'
-              name='actionType'
-              value='TGVhZHM='
-            />
-            <input
-              type='text'
-              className='hidden'
-              name='returnURL'
-              value='https://www.saboomaruti.in/thank-you-for-contact-us'
-            />
-            <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4'>
-              <div>
-                <input
-                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                  placeholder='Name'
-                  id='Last_Name'
-                  name='Last Name'
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </div>
-              <div>
-                <input
-                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                  placeholder='Phone'
-                  minlength='10'
-                  maxlength='10'
-                  id='Mobile'
-                  name='Phone'
-                  value={phone}
-                  onChange={(e) =>
-                    setPhone(
-                      e.target.value.replace(/[^1-9 ]/g, '') &&
-                        e.target.value.replace(/ /g, '')
-                    )
-                  }
-                />
-              </div>
-
-              <div>
-                <select
-                  id='LEADCF23'
-                  name='LEADCF23'
-                  onChange={(e) => setOutlet(e.target.value)}
-                  className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                >
-                  <option>Select Outlet</option>
-                  <option value='RKS Motor - Somajiguda'>
-                    RKS Motor - Somajiguda
-                  </option>
-                  <option value='RKS Motor - Malakpet'>
-                    RKS Motor - Malakpet
-                  </option>
-                  <option value='RKS Motor - Secunderabad'>
-                    RKS Motor - Secunderabad
-                  </option>
-                  <option value='RKS Motor - Kushaiguda'>
-                    RKS Motor - Kushaiguda
-                  </option>
-                  <option value='RKS Motor - Kompally'>
-                    RKS Motor - Kompally
-                  </option>
-                  <option value='RKS Motor - Shamirpet'>
-                    RKS Motor - Shamirpet
-                  </option>
-                  <option value='RKS Motor - Narsingi'>
-                    RKS Motor - Narsingi
-                  </option>
-                  <option value='RKS Motor - Kodangal'>
-                    RKS Motor - Kodangal
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div className='flex items-center space-x-1 my-3'>
-              <input id='comments' name='comments' type='checkbox' required />
-              <label htmlFor='comments' className='font-medium text-gray-200'>
-                I Agree
-              </label>
-            </div>
-            <p className='text-gray-200 mb-2'>
-              <span className='font-semibold'>Disclaimer :</span> I agree that
-              by clicking the ‘Submit’ button below, I am explicitly soliciting
-              a call / Message from Saboo Maruti (RKS Motor Pvt. Ltd) or its
-              Representatives on my ‘Mobile’
-            </p>
-            <button
-              type='submit'
-              onClick={handleSubmit}
-              className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-            >
-              {loading ? (
-                <div className='flex items-center justify-center'>
-                  <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
-                  Loading
-                </div>
-              ) : (
-                'SUBMIT'
-              )}
-            </button>
-          </form> */}
-
           <form
-            action='https://crm.zoho.in/crm/WebToLeadForm'
+            id='arenaCarEnq2'
+            action={
+              pattern.test(phone) && phone.length === 10
+                ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                : '#'
+            }
             name='WebToLeads54158000083979838'
-            method={method}
-            // method='POST'
+            method={'POST'}
             acceptCharset='UTF-8'
           >
             <input
@@ -379,6 +258,7 @@ function Corporate() {
                     ftype='email'
                     id='Email'
                     name='Email'
+                    required
                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
@@ -481,11 +361,7 @@ function Corporate() {
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                // onClick={handleSubmit}
-                onClick={() => {
-                  handleSubmit();
-                  handleSubmit2();
-                }}
+                onClick={handleSubmit}
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>

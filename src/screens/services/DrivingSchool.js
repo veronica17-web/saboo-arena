@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
@@ -192,80 +192,108 @@ const DrivingSchoolForm = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
 
-  const [email, setEmail] = useState('');
-  const [method, setMethod] = useState();
+  const [email, setEmail] = useState('noname@gmail.com');
+
   const [loading, setLoading] = useState(false);
   const [outlet, setOutlet] = useState('');
-  // Inside your component function
-  const [showToast, setShowToast] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!name || !phone || !email || !outlet) {
+      toast.error('Please fill in all required fields.');
+      return;
+    }
+
     setLoading(true);
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
 
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-        email: email,
+          email: email,
 
-        outlet: outlet,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+          setSubmitted(true);
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
+
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+
+          email: email,
+
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
+  };
 
   useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
     }
-  }, [phone, pattern, loading, showToast]);
+  }, [submitted]);
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
+  }
 
   return (
     <>
@@ -275,21 +303,26 @@ const DrivingSchoolForm = () => {
             Start Your Driving Journey
           </h3>
           <form
-            action='https://crm.zoho.in/crm/WebToLeadForm'
-            name='WebToLeads54158000001051349'
-            method={method}
+            id='arenaCarEnq2'
+            action={
+              pattern.test(phone) && phone.length === 10
+                ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                : '#'
+            }
+            name='WebToLeads54158000083979838'
+            method={'POST'}
             acceptCharset='UTF-8'
           >
             <input
               type='hidden'
               name='xnQsjsdp'
-              value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+              value='c74cc4baa2079f2637d12188693a8bb7a822a54f015337983612fcbc54e9f529'
             />
             <input type='hidden' name='zc_gad' id='zc_gad' value='' />
             <input
               type='hidden'
               name='xmIwtLD'
-              value='3e4c511e1bfac462fb9ac158b261b0d3e54ddbaf41eb8a08b30b4fc061369283'
+              value='adcef2507910e0e3ba3fffde446eb242f3dba817a00c872b6a7d471bc1ce61d0bd840c68a483b37a9012f6016a3ceeb4'
             />
             <input type='hidden' name='actionType' value='TGVhZHM=' />
             <input
@@ -353,13 +386,18 @@ const DrivingSchoolForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
                 />
+                {email.length > 0 && !emailPattern.test(email) ? (
+                  <small className='text-red-500'>Invalid email address</small>
+                ) : (
+                  ''
+                )}
               </div>
               <div>
                 <select
                   id='LEADCF23'
                   name='LEADCF23'
                   onChange={(e) => setOutlet(e.target.value)}
-                  className='block w-full h-10 py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                  className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
                 >
                   <option>Select Driving School</option>
                   <option value='MDS - Kushaiguda'>MDS - Kushaiguda</option>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import Header from '../../components/header/Header';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -6,61 +7,88 @@ import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
 
 const PaymentTest = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState('Payment Enquiry');
   const [phone, setPhone] = useState('');
-
-  const [method, setMethod] = useState();
+  // const [submitted, setSubmitted] = useState(false);
+  // const [method, setMethod] = useState();
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [model, setModel] = useState('Payment Enquiry');
 
-  const [email, setEmail] = useState('');
-
-  function handleSubmit() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          model: model,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        phone: phone,
-
-        email: email,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+          name: name,
+          phone: phone,
+          model: model,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
+  };
 
-  const pattern = /^[6-9][0-9]{6,9}$/;
+  useEffect(() => {
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
+    }
+  }, [submitted]);
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
   if (phone !== '' && phone.length === 10) {
     if (!pattern.test(phone)) {
       toast.error('Enter valid phone number', {
@@ -89,52 +117,6 @@ const PaymentTest = () => {
                   <div className='border-t border-gray-200' />
                 </div>
               </div>
-              {/* <table class=' border-collapse border text-center border-slate-400 p-2'>
-                <thead>
-                  <tr>
-                    <td className='text-sm text-gray-900 border border-slate-300 font-light px-6 py-4 whitespace-nowrap'>
-                      Name:
-                    </td>
-                    <th className='text-sm text-gray-900 border border-slate-300 font-strong px-6 py-4 whitespace-nowrap'>
-                      RKS Motor Pvt. Ltd.
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className='p-10'>
-                  <tr className=''>
-                    <td className='text-sm text-gray-900 border border-slate-300 font-light px-6 py-4 whitespace-nowrap'>
-                      Ac.No:
-                    </td>
-                    <th className='text-sm text-gray-900 border border-slate-300 font-strong px-6 py-4 whitespace-nowrap'>
-                      50200004137964
-                    </th>
-                  </tr>
-                  <tr>
-                    <td className='text-sm text-gray-900 border border-slate-300 font-light px-6 py-4 whitespace-nowrap'>
-                      Bank:
-                    </td>
-                    <th className='text-sm text-gray-900 border border-slate-300 font-strong px-6 py-4 whitespace-nowrap'>
-                      HDFC Bank
-                    </th>
-                  </tr>
-                  <tr>
-                    <td className='text-sm text-gray-900 border border-slate-300 font-light px-6 py-4 whitespace-nowrap'>
-                      Branch:
-                    </td>
-                    <th className='text-sm text-gray-900 border border-slate-300 font-strong px-6 py-4 whitespace-nowrap'>
-                      Somajiguda, Hyderabad
-                    </th>
-                  </tr>
-                  <tr>
-                    <td className='text-sm text-gray-900 border border-slate-300 font-light px-6 py-4 whitespace-nowrap'>
-                      RTGS/NEFT IFSC Code:
-                    </td>
-                    <th className='text-sm text-gray-900 border border-slate-300 font-strong px-6 py-4 whitespace-nowrap'>
-                      HDFC0000512
-                    </th>
-                  </tr>
-                </tbody>
-              </table> */}
 
               <div class='overflow-x-auto relative m-6 mt-2 md-2'>
                 <table class='w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border text-center border-slate-400'>
@@ -196,10 +178,14 @@ const PaymentTest = () => {
 
             <div className='overflow-hidden col-span-2 shadow sm:rounded-md p-4'>
               <form
-                action='https://crm.zoho.in/crm/WebToLeadForm'
+                id='arenaCarEnq2'
+                action={
+                  pattern.test(phone) && phone.length === 10
+                    ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                    : '#'
+                }
                 name='WebToLeads54158000083979838'
-                method={method}
-                // method='POST'
+                method={'POST'}
                 acceptCharset='UTF-8'
               >
                 <input
@@ -266,32 +252,22 @@ const PaymentTest = () => {
                         onChange={(e) => setName(e.target.value)}
                       />
                     </div>
-                    <div>
-                      <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
-                        Email
-                      </label>
-                      <input
-                        className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                        type='text'
-                        id='Email'
-                        name='Email'
-                        onChange={(e) => setEmail(e.target.value)}
-                      />
-                    </div>
 
                     <div>
                       <label className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
                         Phone
                       </label>
                       <input
-                        className='border h-10 outline-none px-3 rounded-md w-full focus:ring-red-500 focus:border-red-500'
-                        type='text'
+                        className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                        placeholder='Enter your phone number'
+                        minlength='10'
+                        maxlength='10'
                         id='Phone'
-                        minLength='10'
-                        maxLength='10'
-                        required
                         name='Phone'
                         value={phone}
+                        required
+                        minLength='10'
+                        maxLength='10'
                         onChange={(e) =>
                           setPhone(
                             e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -299,24 +275,32 @@ const PaymentTest = () => {
                           )
                         }
                       />
-                    </div>
-                    <div>
-                      <label
-                        for='message'
-                        class='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
-                      >
-                        Comments
-                      </label>
-                      <textarea
-                        id='Description'
-                        rows='1'
-                        name='Description'
-                        class='block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
-                        placeholder='Your message...'
-                      ></textarea>
+                      {phone.length > 7 && phone.length < 10 ? (
+                        <small className='text-red-500'>
+                          Phone number must be 10 digits
+                        </small>
+                      ) : !pattern.test(phone) && phone.length === 10 ? (
+                        <small className='text-red-500'>
+                          Phone number is invalid
+                        </small>
+                      ) : (
+                        ''
+                      )}
                     </div>
                   </div>
+                  <div className=''>
+                    <select
+                      id='LEADCF6'
+                      name='LEADCF6'
+                      onChange={(e) => setModel(e.target.value)}
+                      className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                      defaultValue='Payment Enquiry'
+                    >
+                      <option disabled>Select Model</option>
 
+                      <option value='Payment Enquiry'>Payment Enquiry</option>
+                    </select>
+                  </div>
                   {/* <p className='text-gray-700'>
                     <span className='text-black font-bold'>Disclaimer</span>: I
                     agree that by clicking the ‘Submit’ button below, I am
@@ -339,20 +323,23 @@ const PaymentTest = () => {
                       </label>
                     </div>
                   </div> */}
-                  <button
-                    type='submit'
-                    onClick={handleSubmit}
-                    className='h-10 inline-flex justify-center mr-3 py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-                  >
-                    {loading ? (
-                      <div className='flex items-center justify-center'>
-                        <CgSpinner className='animate-spin h-5 mr-2 text-white w-5' />
-                        Loading
-                      </div>
-                    ) : (
-                      'SUBMIT'
-                    )}
-                  </button>
+                  <div className='flex items-center justify-center'>
+                    <button
+                      type='submit'
+                      onClick={handleSubmit}
+                      className='h-10 inline-flex justify-center mr-3 py-2 px-4  mt-4 mb-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-800 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                    >
+                      {loading ? (
+                        <div className='flex items-center justify-center'>
+                          <CgSpinner className='animate-spin h-5 mr-2 text-white' />
+                          Loading
+                        </div>
+                      ) : (
+                        'SUBMIT'
+                      )}
+                    </button>
+                  </div>
+
                   <div className='flex items-start py-1 '>
                     <div className='ml-2 text-sm'>
                       <label

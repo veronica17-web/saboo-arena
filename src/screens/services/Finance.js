@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
@@ -11,115 +11,204 @@ function Finance() {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [outlet, setOutlet] = useState('');
-  const [comments, setComments] = useState('');
-  const [method, setMethod] = useState();
-  const [model, setModel] = useState('');
-  const [purchaseTime, setPurchaseTime] = useState('');
-  const [formLoanAmount, setFormLoanAmount] = useState('');
-  const [loanDuration, setLoanDuration] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  // const [method, setMethod] = useState();
+  // const [model, setModel] = useState('');
+  // const [purchaseTime, setPurchaseTime] = useState('');
+  // const [formLoanAmount, setFormLoanAmount] = useState('');
+  // const [loanDuration, setLoanDuration] = useState('');
   const [loading, setLoading] = useState(false);
 
-  const [showToast, setShowToast] = useState(false);
-
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
-
-  useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
-    }
-  }, [phone, pattern, loading, showToast]);
-
-  function handleSubmit() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
-    axios
-      .post('https://saboogroups.com/admin/api/arena-finance', {
-        name: name,
-        phone: phone,
-        email: email,
-        outlet: outlet,
-        comments: comments,
-        model: model,
-        purchase_time: purchaseTime,
-        loan_amount: formLoanAmount,
-        loan_duration: loanDuration,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+          message: message,
+          // model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
+
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+          message: message,
+          // model: model,
+          outlet: outlet,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
+    }
+  }, [submitted]);
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
   }
 
-  function handleSubmit2() {
-    setLoading(true);
-    // First API call
-    axios
-      .post('https://arena-backend-zj42.onrender.com/finance', {
-        name: name,
-        phone: phone,
-        email: email,
-        outlet: outlet,
-        comments: comments,
-        model: model,
-        purchase_time: purchaseTime,
-        loan_amount: formLoanAmount,
-        loan_duration: loanDuration,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-  }
+  // const [showToast, setShowToast] = useState(false);
+
+  // const pattern = useMemo(() => {
+  //   return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  // }, []);
+
+  // useEffect(() => {
+  //   if (
+  //     phone !== '' &&
+  //     phone.length === 10 &&
+  //     !pattern.test(phone) &&
+  //     !loading
+  //   ) {
+  //     if (!showToast) {
+  //       toast.error('Enter a valid phone number', {
+  //         theme: 'colored',
+  //       });
+  //       setShowToast(true);
+  //     }
+  //   } else {
+  //     setShowToast(false);
+  //   }
+  // }, [phone, pattern, loading, showToast]);
+
+  // function handleSubmit() {
+  //   setLoading(true);
+  //   axios
+  //     .post('https://saboogroups.com/admin/api/arena-finance', {
+  //       name: name,
+  //       phone: phone,
+  //       email: email,
+  //       outlet: outlet,
+  //       comments: comments,
+  //       model: model,
+  //       purchase_time: purchaseTime,
+  //       loan_amount: formLoanAmount,
+  //       loan_duration: loanDuration,
+  //     })
+  //     .then((res) => {
+  //       setMethod('POST');
+  //       toast.success('Enquiry sent successfully');
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
+  //       toast.error('Something went wrong!');
+  //       console.log(err);
+  //     });
+
+  //   // Second API call
+  //   axios
+  //     .get(
+  //       `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
+  //     Our Sales consultant will contact you shortly.
+
+  //     Regards
+  //     RKS Motor Pvt. Ltd.
+  //     98488 98488
+  //     www.saboomaruti.in
+  //     www.saboonexa.in&type=1&template_id=1407168967467983613`
+  //     )
+  //     .then((res) => {
+  //       console.log('SMS API Response:', res.data);
+  //       // Handle the response from the SMS API if needed
+  //     })
+  //     .catch((err) => {
+  //       console.error('Error sending SMS:', err);
+  //       // Handle errors from the SMS API if needed
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }
+
+  // function handleSubmit2() {
+  //   setLoading(true);
+  //   // First API call
+  //   axios
+  //     .post('https://arena-backend-zj42.onrender.com/finance', {
+  //       name: name,
+  //       phone: phone,
+  //       email: email,
+  //       outlet: outlet,
+  //       comments: comments,
+  //       model: model,
+  //       purchase_time: purchaseTime,
+  //       loan_amount: formLoanAmount,
+  //       loan_duration: loanDuration,
+  //     })
+  //     .then((res) => {
+  //       setMethod('POST');
+  //       toast.success('Enquiry sent successfully');
+  //     })
+  //     .catch((err) => {
+  //       setLoading(false);
+  //       toast.error('Something went wrong!');
+  //       console.log(err);
+  //     })
+  //     .finally(() => {
+  //       setLoading(false);
+  //     });
+  // }
 
   const [loanAmount, setLoanAmount] = useState('');
   const [loanTerm, setLoanTerm] = useState('');
@@ -223,24 +312,28 @@ function Finance() {
         <div className='grid md:grid-cols-2 gap-4 px-5 mt-5'>
           {/* new grid column opens */}
           <form
-            action='https://crm.zoho.in/crm/WebToLeadForm'
-            name='WebToLeads54158000001051349'
-            method={method}
-            // method='POST'
+            id='arenaCarEnq2'
+            action={
+              pattern.test(phone) && phone.length === 10
+                ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                : '#'
+            }
+            name='WebToLeads54158000083979838'
+            method={'POST'}
             acceptCharset='UTF-8'
           >
             <input
               type='text'
               style={{ display: 'none' }}
               name='xnQsjsdp'
-              value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+              value='c74cc4baa2079f2637d12188693a8bb7a822a54f015337983612fcbc54e9f529'
             />
             <input type='hidden' name='zc_gad' id='zc_gad' value='' />
             <input
               type='text'
               style={{ display: 'none' }}
               name='xmIwtLD'
-              value='3e4c511e1bfac462fb9ac158b261b0d3df2ae6eb9f9847d50cb87f439855b4e4'
+              value='adcef2507910e0e3ba3fffde446eb242f3dba817a00c872b6a7d471bc1ce61d0bd840c68a483b37a9012f6016a3ceeb4'
             />
             <input
               type='text'
@@ -335,14 +428,18 @@ function Finance() {
                   Comments
                 </label>
                 <textarea
-                  className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                  className='border h-20 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500'
                   type='text'
-                  onChange={(e) => setComments(e.target.value)}
-                  name='user_comments'
+                  id='message'
+                  name='message'
+                  placeholder='Enter your message'
+                  onChange={(e) => setMessage(e.target.value)}
                 ></textarea>
               </div>
 
-              <p className='uppercase font-bold text-md'>
+              {/* check here later */}
+
+              {/* <div><p className='uppercase font-bold text-md'>
                 share loan requirements :
               </p>
               <div className='grid md:grid-cols-2 gap-3'>
@@ -424,7 +521,8 @@ function Finance() {
                     name='car_loan_duration_years'
                   />
                 </div>
-              </div>
+              </div></div> */}
+
               {/* <p className='text-gray-700'>
                 <span className='text-black font-bold'>Disclaimer</span>: I
                 agree that by clicking the ‘Submit’ button below, I am
@@ -457,7 +555,6 @@ function Finance() {
 
                 onClick={() => {
                   handleSubmit();
-                  handleSubmit2();
                 }}
               >
                 {loading ? (

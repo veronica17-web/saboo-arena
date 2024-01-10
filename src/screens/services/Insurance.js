@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import Header from '../../components/header/Header';
@@ -8,100 +8,93 @@ import { Helmet } from 'react-helmet';
 
 function Insurance() {
   const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('noname@gmail.com');
   const [name, setName] = useState('');
   const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const [method, setMethod] = useState();
-  const [showToast, setShowToast] = useState(false);
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
-
-  useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
-    }
-  }, [phone, pattern, loading, showToast]);
-
-  function handleSubmit() {
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     setLoading(true);
-    axios
-      .post('https://saboogroups.com/admin/api/arena-insurance', {
-        name: name,
-        phone: phone,
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
-        email: email,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+          name: name,
+          phone: phone,
+          email: email,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
+  };
 
-  function handleSubmit2() {
-    setLoading(true);
-    // First API call
-    axios
-      .post('https://arena-backend-zj42.onrender.com/insurance', {
-        Last_Name: name,
-        Email: email,
-        Phone: phone,
-        // outlet: outlet,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      })
-      .finally(() => {
-        setLoading(false);
+  useEffect(() => {
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
+    }
+  }, [submitted]);
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
       });
+    }
   }
 
   return (
@@ -170,18 +163,21 @@ function Insurance() {
           will benefit in the long run.
         </p>
         <form
-          action='https://crm.zoho.in/crm/WebToLeadForm'
-          name='WebToLeads54158000001051349'
-          method={method}
-          // method='POST'
+          id='arenaCarEnq2'
+          action={
+            pattern.test(phone) && phone.length === 10
+              ? 'https://crm.zoho.in/crm/WebToLeadForm'
+              : '#'
+          }
+          name='WebToLeads54158000083979838'
+          method={'POST'}
           acceptCharset='UTF-8'
-          className='space-y-5'
         >
           <input
             type='text'
             style={{ display: 'none' }}
             name='xnQsjsdp'
-            value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+            value='adcef2507910e0e3ba3fffde446eb242f3dba817a00c872b6a7d471bc1ce61d0bd840c68a483b37a9012f6016a3ceeb4'
           />
           <input type='hidden' name='zc_gad' id='zc_gad' value='' />
           <input
@@ -316,6 +312,11 @@ function Insurance() {
                 name='Email'
                 onChange={(e) => setEmail(e.target.value)}
               />
+              {email.length > 0 && !emailPattern.test(email) ? (
+                <small className='text-red-500'>Invalid email address</small>
+              ) : (
+                ''
+              )}
             </div>
 
             <div>
@@ -383,14 +384,10 @@ function Insurance() {
             </div>
           </div> */}
           <button
-            className='bg-blue-800 hover:bg-red-500 duration-500 text-white rounded py-2.5 px-5'
+            className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
             type='submit'
             disabled={pattern.test(phone) && phone.length === 10 ? false : true}
-            // onClick={handleSubmit}
-            onClick={() => {
-              handleSubmit();
-              handleSubmit2();
-            }}
+            onClick={handleSubmit}
           >
             {loading ? (
               <div className='flex items-center justify-center'>
@@ -398,7 +395,7 @@ function Insurance() {
                 Loading
               </div>
             ) : (
-              'Get Your Insurance Now'
+              'SUBMIT'
             )}
           </button>
           <div className='flex items-start py-1 '>
