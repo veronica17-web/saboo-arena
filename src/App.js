@@ -103,73 +103,6 @@ function App() {
   };
 
   const Popup = () => {
-    // const [number, setNumber] = useState('');
-    // const [methodpopup, setMethodPopup] = useState();
-
-    // function handleSubmit() {
-    //   setLoading(true);
-    //   axios
-    //     .post('popup', {
-    //       phone: number,
-    //     })
-    //     .then((res) => {
-    //       setMethodPopup('POST');
-    //     })
-    //     .catch((err) => {
-    //       toast.error('Something went wrong');
-    //       setLoading(false);
-    //     });
-    //   axios
-    //     .get(
-    //       `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${number}&msg=Thank you for showing interest in Maruti Suzuki.
-    //     Our Sales consultant will contact you shortly.
-
-    //     Regards
-    //     RKS Motor Pvt. Ltd.
-    //     98488 98488
-    //     www.saboomaruti.in
-    //     www.saboonexa.in&type=1&template_id=1407168967467983613`
-    //     )
-    //     .then((res) => {
-    //       console.log('SMS API Response:', res.data);
-    //       // Handle the response from the SMS API if needed
-    //     })
-    //     .catch((err) => {
-    //       console.error('Error sending SMS:', err);
-    //       // Handle errors from the SMS API if needed
-    //     })
-    //     .finally(() => {
-    //       setLoading(false);
-    //     });
-
-    //   setLoading(false);
-    // }
-
-    // const pattern = /^[6-9][0-9]{6,9}$/;
-    // if (number !== '' && number.length === 10) {
-    //   if (!pattern.test(number)) {
-    //     sessionStorage.setItem('popup', 'false');
-    //     toast.error('Enter valid phone number', {
-    //       theme: 'colored',
-    //     });
-    //   }
-    // }
-
-    // function handleSubmit() {
-    //   setLoading(true);
-    //   try {
-    //     axios.post('https://saboogroups.com/admin/api/arena-popup', {
-    //       phone: number,
-    //     });
-    //     setMethodPopup('POST');
-    //     setLoading(false);
-    //   } catch (error) {
-    //     toast.error('Something went wrong');
-    //     setLoading(false);
-    //     console.log(error);
-    //   }
-    // }
-
     return (
       <Transition.Root show={open} as={Fragment}>
         <Dialog
@@ -433,6 +366,12 @@ function LeadPopup() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!name || !phone ) {
+      toast.error('Please fill in all required fields.');
+      return;
+    }
+
     setLoading(true);
     try {
       await axios

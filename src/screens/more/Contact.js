@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { toast } from 'react-toastify';
 import { Tab } from '@headlessui/react';
@@ -8,93 +8,124 @@ import Header from '../../components/header/Header';
 import { Helmet } from 'react-helmet';
 import axios from 'axios';
 import { CgSpinner } from 'react-icons/cg';
-import { Input } from '@material-tailwind/react';
-import {
-  TextField,
-  Select,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  Button,
-  CircularProgress,
-} from '@mui/material';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function Contact() {
   const [phone, setPhone] = useState('');
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('noname@gmail.com');
   const [outlet, setOutlet] = useState('');
   const [model, setModel] = useState('');
-  const [method, setMethod] = useState();
+  const [subject, setSubject] = useState('');
+  // const [method, setMethod] = useState();
+  const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [showToast, setShowToast] = useState(false);
-  function handleSubmit() {
-    setLoading(true);
+  const [submitted, setSubmitted] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState(null);
 
-    // First API call
-    axios
-      .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
-        name: name,
-        email: email,
-        phone: phone,
-        model: model,
-        outlet: outlet,
-      })
-      .then((res) => {
-        setMethod('POST');
-        toast.success('Enquiry sent successfully');
-      })
-      .catch((err) => {
-        setLoading(false);
-        toast.error('Something went wrong!');
-        console.log(err);
-      });
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!name || !phone || !model || !subject || !captchaValue) {
+      toast.error('Please fill in all required fields.');
+      return;
+    }
+
+    if (!captchaValue) {
+      toast.error('Please complete the reCAPTCHA challenge.');
+      return;
+    }
+    setLoading(true);
+    try {
+      await axios
+        .post('https://saboogroups.com/admin/api/arena-onRoadPrice', {
+          name: name,
+          phone: phone,
+          subject: subject,
+          email: email,
+          model: model,
+          outlet: outlet,
+          message: message,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+          setSubmitted(true);
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+      console.log('Captcha value:', captchaValue);
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
+
+    try {
+      await axios
+        .post('https://arena-backend-zj42.onrender.com/contactUs', {
+          name: name,
+          phone: phone,
+          subject: subject,
+          email: email,
+          model: model,
+          outlet: outlet,
+          message: message,
+        })
+        .then((res) => {
+          toast.success('Enquiry sent successfully');
+        })
+        .catch((err) => {
+          setLoading(false);
+          toast.error('Something went wrong!');
+          console.log(err);
+        });
+    } catch (error) {
+      // toast.error("Something went wrong!");
+      setLoading(false);
+    }
 
     // Second API call
-    axios
+    await axios
       .get(
         `https://www.smsstriker.com/API/sms.php?username=saboorks&password=LqHk1wBeI&from=RKSMOT&to=${phone}&msg=Thank you for showing interest in Maruti Suzuki.
-      Our Sales consultant will contact you shortly.
-      
-      Regards
-      RKS Motor Pvt. Ltd.
-      98488 98488
-      www.saboomaruti.in
-      www.saboonexa.in&type=1&template_id=1407168967467983613`
+   Our Sales consultant will contact you shortly.
+   
+   Regards
+   RKS Motor Pvt. Ltd.
+   98488 98488
+   www.saboomaruti.in
+   www.saboonexa.in&type=1&template_id=1407168967467983613`
       )
       .then((res) => {
         console.log('SMS API Response:', res.data);
-        // Handle the response from the SMS API if needed
+        setSubmitted(true);
+        setLoading(false);
       })
       .catch((err) => {
         console.error('Error sending SMS:', err);
-        // Handle errors from the SMS API if needed
-      })
-      .finally(() => {
+        setSubmitted(true);
         setLoading(false);
       });
-  }
-  const pattern = useMemo(() => {
-    return /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
-  }, []);
+  };
 
   useEffect(() => {
-    if (
-      phone !== '' &&
-      phone.length === 10 &&
-      !pattern.test(phone) &&
-      !loading
-    ) {
-      if (!showToast) {
-        toast.error('Enter a valid phone number', {
-          theme: 'colored',
-        });
-        setShowToast(true);
-      }
-    } else {
-      setShowToast(false);
+    if (submitted) {
+      document.getElementById('arenaCarEnq2').submit();
     }
-  }, [phone, pattern, loading, showToast]);
+  }, [submitted]);
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const pattern = /^(?![6-9]{10}$)(?!.*(\d)(?:-?\1){9})[6-9]\d{9}$/;
+  if (phone !== '' && phone.length === 10) {
+    if (!pattern.test(phone)) {
+      toast.error('Enter valid phone number', {
+        theme: 'colored',
+      });
+    }
+  }
 
   return (
     <>
@@ -226,24 +257,28 @@ function Contact() {
                 {/* Car Enquiry */}
                 <Tab.Panel>
                   <form
-                    action='https://crm.zoho.in/crm/WebToLeadForm'
-                    name='WebToLeads54158000001051349'
-                    method={method}
-                    // method='POST'
+                    id='arenaCarEnq2'
+                    action={
+                      pattern.test(phone) && phone.length === 10
+                        ? 'https://crm.zoho.in/crm/WebToLeadForm'
+                        : '#'
+                    }
+                    name='WebToLeads54158000083979838'
+                    method={'POST'}
                     acceptCharset='UTF-8'
                   >
                     <input
                       type='text'
                       className='hidden'
                       name='xnQsjsdp'
-                      value='5b07d0b8ffc394794f6ba099ffd2ccc4accb79c8063e25060b4c64de95d0347b'
+                      value='c74cc4baa2079f2637d12188693a8bb7a822a54f015337983612fcbc54e9f529'
                     />
                     <input type='hidden' name='zc_gad' id='zc_gad' value='' />
                     <input
                       type='text'
                       className='hidden'
                       name='xmIwtLD'
-                      value='3e4c511e1bfac462fb9ac158b261b0d3a71de3d00f508dc0492cb2893d56c4b9'
+                      value='adcef2507910e0e3ba3fffde446eb242f3dba817a00c872b6a7d471bc1ce61d0bd840c68a483b37a9012f6016a3ceeb4'
                     />
                     <input
                       type='text'
@@ -261,7 +296,7 @@ function Contact() {
                       <div className='grid md:grid-cols-2 gap-3 mb-3'>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
-                            Name
+                            Name<span className='sub text-red-600'>*</span>
                           </label>
                           <input
                             type='text'
@@ -274,17 +309,19 @@ function Contact() {
                         </div>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
-                            Phone
+                            Phone<span className='sub text-red-600'>*</span>
                           </label>
                           <input
                             className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                            type='text'
-                            maxLength='10'
-                            minLength='10'
-                            required
+                            placeholder='Enter your phone number'
+                            minlength='10'
+                            maxlength='10'
                             id='Phone'
                             name='Phone'
                             value={phone}
+                            required
+                            minLength='10'
+                            maxLength='10'
                             onChange={(e) =>
                               setPhone(
                                 e.target.value.replace(/[^1-9 ]/g, '') &&
@@ -292,7 +329,7 @@ function Contact() {
                               )
                             }
                           />
-                          {phone.length > 0 && phone.length < 10 ? (
+                          {phone.length > 7 && phone.length < 10 ? (
                             <small className='text-red-500'>
                               Phone number must be 10 digits
                             </small>
@@ -314,8 +351,16 @@ function Contact() {
                             ftype='email'
                             id='Email'
                             name='Email'
+                            placeholder='Enter your email'
                             onChange={(e) => setEmail(e.target.value)}
                           />
+                          {email.length > 0 && !emailPattern.test(email) ? (
+                            <small className='text-red-500'>
+                              Invalid email address
+                            </small>
+                          ) : (
+                            ''
+                          )}
                         </div>
                         <div>
                           <label className='block text-sm font-medium text-gray-700'>
@@ -411,7 +456,7 @@ function Contact() {
 
                         <div className='col-span-2'>
                           <label className='block text-sm font-medium text-gray-700'>
-                            Model
+                            Model<span className='sub text-red-600'>*</span>
                           </label>
                           <select
                             id='LEADCF6'
@@ -446,6 +491,47 @@ function Contact() {
                             </optgroup>
                           </select>
                         </div>
+                      </div>
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Subject <span className='sub text-red-600'>*</span>
+                          &nbsp;&nbsp;
+                          <span className='text-xs text-red-600 font-normal'>
+                            Select your type of enquiry
+                          </span>
+                        </label>
+                        <select
+                          id='LEADCF23'
+                          name='LEADCF23'
+                          onChange={(e) => setSubject(e.target.value)}
+                          className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                        >
+                          <option value='General Enquiry'>
+                            General Enquiry
+                          </option>
+
+                          <option value='Sales'>Sales</option>
+                          <option value='Service'>Service</option>
+                          <option value='Driving School'>Driving School</option>
+                          <option value='Offers'>Latest Offers</option>
+                          <option value='Finance'>Finance</option>
+                          <option value='Insurance'>Insurance</option>
+                          <option value='Accessories'>Accessories</option>
+                          <option value='Other'>Other</option>
+                        </select>
+                      </div>
+                      <div>
+                        <label className='block text-sm font-medium text-gray-700'>
+                          Comments
+                        </label>
+                        <textarea
+                          className='border h-20 outline-none px-1 rounded-md w-full focus:ring-red-500 focus:border-red-500'
+                          type='text'
+                          id='message'
+                          name='message'
+                          placeholder='Enter your message'
+                          onChange={(e) => setMessage(e.target.value)}
+                        ></textarea>
                       </div>
 
                       <div className='zcwf_row wfrm_fld_dpNn hidden'>
@@ -537,6 +623,10 @@ function Contact() {
                           </label>
                         </div>
                       </div> */}
+                      <ReCAPTCHA
+                        sitekey='6LcXK0wpAAAAAM_YuNjB0Q3c_5_ee9vTG8aQFjFn'
+                        onChange={(value) => setCaptchaValue(value)}
+                      />
                       <button
                         className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
                         type='submit'
@@ -1133,11 +1223,13 @@ function Contact() {
           <div className='col-span-1 px-3 mt-4 space-y-3'>
             <a href='tel:9848898488' className='flex items-center'>
               <FaPhoneAlt className='mr-2 text-gray-700' />
-              Sales | 9848898488
+              <span className='font-extralight'>Customer Support</span> &nbsp;|
+              9848898488
             </a>
             <a href='tel:9848898488' className='flex items-center'>
               <FaEnvelope className='mr-2 text-gray-700' />
-              Email | info@saboomaruti.in
+              <span className='font-extralight'>Email </span>&nbsp;|
+              info@saboomaruti.in
             </a>
             <div className='flex items-center text-center flex-col space-y-3'>
               <Link

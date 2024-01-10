@@ -58,6 +58,9 @@ const navigation = {
     { name: 'CONTACT US', to: '/contact-maruti-suzuki-showroom' },
   ],
   financeInsurance: [
+    { name: 'ARENA CARS', to: '/maruti-suzuki-new-cars' },
+    { name: 'CNG CARS', to: '/maruti-suzuki-cng-cars' },
+    { name: `TOUR CARS`, to: '/maruti-suzuki-tour-cars' },
     { name: 'CAREERS', to: '/careers' },
     { name: 'PAYMENTS', to: '/payment' },
     { name: 'CORPORATE', to: '/corporate' },

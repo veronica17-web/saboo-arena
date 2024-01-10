@@ -19,7 +19,7 @@ const offer_products = [
   {
     name: 'Alto K10',
     // price: '61000',
-    price: '64,000',
+    price: '59,000',
     logo: 'Alto k10',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-k10.webp',
     explore: '/maruti-alto-800-on-road-price-in-hyderabad',
@@ -33,33 +33,33 @@ const offer_products = [
   // },
   {
     name: 'S-Presso',
-    price: '59,000',
+    price: '54,000',
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-spresso.webp',
     explore: '/maruti-s-presso-on-road-price-in-hyderabad',
   },
   {
     name: 'WagonR ',
-    price: '64,000', //56000
+    price: '59,000', //56000
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-wagonr.webp',
     explore: '/maruti-wagon-r-on-road-price-in-hyderabad',
   },
-  // {
-  //   name: 'Alto',
-  //   price: '0', //15000
-  //   logo: 'Alto',
-  //   img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
-  //   explore: '/maruti-alto-800-on-road-price-in-hyderabad',
-  // },
+  {
+    name: 'Alto',
+    price: '15000', //15000
+    logo: 'Alto',
+    img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-alto800.webp',
+    explore: '/maruti-alto-800-on-road-price-in-hyderabad',
+  },
 
   {
     name: 'Celerio',
-    price: '64,000', //61000
+    price: '59,000', //61000
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-celerio.webp',
     explore: '/the-all-new-celerio',
   },
   {
     name: 'Swift',
-    price: '54,000', //49000
+    price: '49,000', //49000
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-swift.webp',
     explore: '/maruti-swift-car-on-road-price-in-hyderabad',
   },
@@ -72,7 +72,7 @@ const offer_products = [
   // },
   {
     name: 'Dzire',
-    price: '25,000', //10000
+    price: '20,000', //10000
     img: 'https://images-saboomaruti-in.s3.ap-south-1.amazonaws.com/Arena/thumnails/arena-dzire.webp',
     explore: '/maruti-swift-dzire-on-road-price-in-hyderabad',
   },
@@ -142,7 +142,8 @@ function Offers() {
     <>
       <Helmet>
         <title>
-        Discover Exclusive Maruti Suzuki Car Deals at our Somajiguda, Hyderabad Showroom | Latest Offers & Special Discounts | Saboo RKS
+          Discover Exclusive Maruti Suzuki Car Deals at our Somajiguda,
+          Hyderabad Showroom | Latest Offers & Special Discounts | Saboo RKS
         </title>
         <meta
           name='title'
@@ -224,6 +225,11 @@ function Offers() {
           Hurry and take advantage of these exciting offers available for a
           limited time until the end of {months[new Date().getMonth()]}-
           {new Date().getFullYear()}.
+        </p>
+        <p className='w-full container mx-auto my-auto  text-sm italic font-extralight text-red-500'>
+          <span className='font-semibold'>Disclaimer:</span> Exclusive offer
+          alert! Limited-time savings on 2023 models—avail the deal before
+          stocks run out.
         </p>
         {/* <p>
           Last Chance to buy, before price hike. Limited Period to avail

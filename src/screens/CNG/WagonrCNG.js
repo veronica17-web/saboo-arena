@@ -125,8 +125,8 @@ function WagonrCNG() {
           </div>
         </div>
       </div>
-<WagonRCarEnquiry />
-   
+      <WagonRCarEnquiry />
+
       <div className='container mx-auto pt-6 lg:px-0 md:px-3 py-6'>
         <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-2'>
           <div className='space-y-3 justify-between px-6'>
@@ -253,7 +253,7 @@ const WagonRCarEnquiry = ({ title, carName }) => {
     <div className='bg-[#1b72b7] py-12 mt-12'>
       <div className='container mx-auto space-y-5 lg:px-0 px-5'>
         <h3 className='text-xl font-normal text-white normal-case'>
-          Get Swift CNG On-Road price in Hyderabad
+          Get WagonR CNG On-Road price in Hyderabad
         </h3>
         <form
           id='arenaCarEnq2'
@@ -337,11 +337,11 @@ const WagonRCarEnquiry = ({ title, carName }) => {
                 name='LEADCF6'
                 onChange={(e) => setModel(e.target.value)}
                 className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                defaultValue='Swift CNG'
+                defaultValue='WagonR CNG'
               >
                 <option disabled>Select Model</option>
 
-                <option value='Swift CNG'>Swift CNG</option>
+                <option value='WagonR CNG'>WagonR CNG</option>
               </select>
             </div>
             <div>
