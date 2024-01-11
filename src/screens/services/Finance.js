@@ -14,10 +14,10 @@ function Finance() {
   const [message, setMessage] = useState('');
   const [submitted, setSubmitted] = useState(false);
   // const [method, setMethod] = useState();
-  // const [model, setModel] = useState('');
-  // const [purchaseTime, setPurchaseTime] = useState('');
-  // const [formLoanAmount, setFormLoanAmount] = useState('');
-  // const [loanDuration, setLoanDuration] = useState('');
+  const [model, setModel] = useState('');
+  const [purchaseTime, setPurchaseTime] = useState('');
+  const [formLoanAmount, setFormLoanAmount] = useState('');
+  const [loanDuration, setLoanDuration] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event) => {
@@ -29,9 +29,12 @@ function Finance() {
           name: name,
           phone: phone,
           email: email,
-          message: message,
-          // model: model,
+          comments: message,
+          model: model,
           outlet: outlet,
+          purchase_time: purchaseTime,
+          loan_amount: formLoanAmount,
+          loan_duration: loanDuration,
         })
         .then((res) => {
           toast.success('Enquiry sent successfully');
@@ -48,13 +51,16 @@ function Finance() {
 
     try {
       await axios
-        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+        .post('https://arena-backend-zj42.onrender.com/finance', {
           name: name,
           phone: phone,
           email: email,
-          message: message,
-          // model: model,
+          comments: message,
+          model: model,
           outlet: outlet,
+          purchase_time: purchaseTime,
+          loan_amount: formLoanAmount,
+          loan_duration: loanDuration,
         })
         .then((res) => {
           toast.success('Enquiry sent successfully');
@@ -439,89 +445,91 @@ function Finance() {
 
               {/* check here later */}
 
-              {/* <div><p className='uppercase font-bold text-md'>
-                share loan requirements :
-              </p>
-              <div className='grid md:grid-cols-2 gap-3'>
-                <div>
-                  <label className='block text-sm font-medium text-gray-700'>
-                    Model
-                  </label>
-                  <select
-                    id='LEADCF6'
-                    name='LEADCF6'
-                    onChange={(e) => setModel(e.target.value)}
-                    className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                  >
-                    <option>Select Model</option>
-                    <optgroup label='Hatchback'>
-                      <option value='Alto K10'>Alto K10</option>
-                      <option value='Alto 800'>Alto</option>
-                      <option value='Wagon R'>Wagon R</option>
-                      <option value='Celerio'>Celerio</option>
-                      <option value='Swift'>Swift</option>
-                    </optgroup>
+              <div>
+                <p className='uppercase font-bold text-md'>
+                  share loan requirements :
+                </p>
+                <div className='grid md:grid-cols-2 gap-3'>
+                  <div>
+                    <label className='block text-sm font-medium text-gray-700'>
+                      Model
+                    </label>
+                    <select
+                      id='LEADCF6'
+                      name='LEADCF6'
+                      onChange={(e) => setModel(e.target.value)}
+                      className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                    >
+                      <option>Select Model</option>
+                      <optgroup label='Hatchback'>
+                        <option value='Alto K10'>Alto K10</option>
+                        <option value='Alto 800'>Alto</option>
+                        <option value='Wagon R'>Wagon R</option>
+                        <option value='Celerio'>Celerio</option>
+                        <option value='Swift'>Swift</option>
+                      </optgroup>
 
-                    <optgroup label='Sedan'>
-                      <option value='Dzire'>Dzire</option>
-                    </optgroup>
+                      <optgroup label='Sedan'>
+                        <option value='Dzire'>Dzire</option>
+                      </optgroup>
 
-                    <optgroup label='micro SUV'>
-                      <option value='S-Presso'>S-Presso</option>
-                    </optgroup>
-                    <optgroup label='MPV'>
-                      <option value='Ertiga'>Ertiga</option>
-                    </optgroup>
-                    <optgroup label='SUV'>
-                      <option value='Brezza'>Brezza</option>
-                    </optgroup>
-                    <optgroup label='Mini Van'>
-                      <option value='Eeco'>Eeco</option>
-                    </optgroup>
-                  </select>
+                      <optgroup label='micro SUV'>
+                        <option value='S-Presso'>S-Presso</option>
+                      </optgroup>
+                      <optgroup label='MPV'>
+                        <option value='Ertiga'>Ertiga</option>
+                      </optgroup>
+                      <optgroup label='SUV'>
+                        <option value='Brezza'>Brezza</option>
+                      </optgroup>
+                      <optgroup label='Mini Van'>
+                        <option value='Eeco'>Eeco</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <div>
+                    <label className='block text-sm font-medium text-gray-700'>
+                      Purchase Time
+                    </label>
+                    <select
+                      onChange={(e) => setPurchaseTime(e.target.value)}
+                      name='car_purchase_time'
+                      className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
+                    >
+                      <option>Select Purchase Time</option>
+                      <option>Immediate</option>
+                      <option>2 Weeks</option>
+                      <option>3 Weeks</option>
+                      <option>4 Weeks</option>
+                      <option>4-6 Weeks</option>
+                      <option>6+ Weeks</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className='block text-sm font-medium text-gray-700'>
+                      Loan Amount
+                    </label>
+                    <input
+                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                      type='text'
+                      id='Company'
+                      name='Company'
+                      onChange={(e) => setFormLoanAmount(e.target.value)}
+                    />
+                  </div>
+                  <div>
+                    <label className='block text-sm font-medium text-gray-700'>
+                      Loan Duration
+                    </label>
+                    <input
+                      className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
+                      type='text'
+                      onChange={(e) => setLoanDuration(e.target.value)}
+                      name='car_loan_duration_years'
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label className='block text-sm font-medium text-gray-700'>
-                    Purchase Time
-                  </label>
-                  <select
-                    onChange={(e) => setPurchaseTime(e.target.value)}
-                    name='car_purchase_time'
-                    className='block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm'
-                  >
-                    <option>Select Purchase Time</option>
-                    <option>Immediate</option>
-                    <option>2 Weeks</option>
-                    <option>3 Weeks</option>
-                    <option>4 Weeks</option>
-                    <option>4-6 Weeks</option>
-                    <option>6+ Weeks</option>
-                  </select>
-                </div>
-                <div>
-                  <label className='block text-sm font-medium text-gray-700'>
-                    Loan Amount
-                  </label>
-                  <input
-                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                    type='text'
-                    id='Company'
-                    name='Company'
-                    onChange={(e) => setFormLoanAmount(e.target.value)}
-                  />
-                </div>
-                <div>
-                  <label className='block text-sm font-medium text-gray-700'>
-                    Loan Duration
-                  </label>
-                  <input
-                    className='border h-10 outline-none px-3 rounded-md w-full focus:ring-blue-500 focus:border-blue-500'
-                    type='text'
-                    onChange={(e) => setLoanDuration(e.target.value)}
-                    name='car_loan_duration_years'
-                  />
-                </div>
-              </div></div> */}
+              </div>
 
               {/* <p className='text-gray-700'>
                 <span className='text-black font-bold'>Disclaimer</span>: I
@@ -546,16 +554,12 @@ function Finance() {
                 </div>
               </div> */}
               <button
-                className='bg-blue-800 rounded flex items-center text-white px-4 py-1.5'
+                className='bg-blue-800 hover:bg-red-600 duration-500 text-white rounded py-2.5 px-10'
                 type='submit'
                 disabled={
                   pattern.test(phone) && phone.length === 10 ? false : true
                 }
-                // onClick={handleSubmit}
-
-                onClick={() => {
-                  handleSubmit();
-                }}
+                onClick={handleSubmit}
               >
                 {loading ? (
                   <div className='flex items-center justify-center'>
@@ -563,7 +567,7 @@ function Finance() {
                     Loading
                   </div>
                 ) : (
-                  'Get Your Loan Now'
+                  'SUBMIT'
                 )}
               </button>
               <div className='flex items-start py-1 '>

@@ -38,7 +38,7 @@ function Insurance() {
 
     try {
       await axios
-        .post('https://arena-backend-zj42.onrender.com/onRoadPrice', {
+        .post('https://arena-backend-zj42.onrender.com/insurance', {
           name: name,
           phone: phone,
           email: email,
